@@ -13,11 +13,11 @@ import numpy as np
 df = pd.read_csv('/Users/aasnayemgazzalichowdhury/Desktop/Uni Documents/2024 Session 2/COMP3850/Cleaning/cleaned_dataset2.csv')
 
 # Add empty column for DriverGender
-df['DriverGender'] = np.nan
+df['driverGender'] = np.nan
 
 # Change ClaimStatus column to Fraud
 # Convert 'A' to 0 and 'D' to 1
-df['Fraud'] = df['ClaimStatus'].map({'A':0, 'D':1}) #Approved is not fraudulent and Denied is fraudulent
+df['fraud'] = df['claimStatus'].map({'A':0, 'D':1}) #Approved is not fraudulent and Denied is fraudulent
 
 # Define Distribution of AccidentType
 accident_type_distribution = {
@@ -30,7 +30,7 @@ accident_type_distribution = {
 np.random.seed(0)  # For reproducibility
 
 # Generate AccidentType based on the distribution
-df['AccidentType'] = np.random.choice(
+df['accidentType'] = np.random.choice(
     list(accident_type_distribution.keys()),
     size=len(df),
     p=list(accident_type_distribution.values())
@@ -44,7 +44,7 @@ def distribution_num_vehicles_involved(accident_type):
         return 1
 
 # Generate NumVehiclesInvolved based on the distribution
-df['NumVehiclesInvolved'] = df['AccidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
+df['numVehiclesInvolved'] = df['accidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
 
 # Define Distribution of VehicleAge
 vehicle_age_distribution = {
@@ -72,7 +72,7 @@ vehicle_age_distribution = {
 }
 
 # Generate VehicleAge based on the distribution
-df['VehicleAge'] = np.random.choice(
+df['vehicleAge'] = np.random.choice(
     list(vehicle_age_distribution.keys()),
     size=len(df),
     p=list(vehicle_age_distribution.values())
@@ -86,7 +86,7 @@ insurance_access_distribution = {
 }
 
 # Generate InsuranceAccess based on the distribution
-df['InsuranceAccess'] = np.random.choice(
+df['insuranceAccess'] = np.random.choice(
     list(insurance_access_distribution.keys()),
     size=len(df),
     p=list(insurance_access_distribution.values())
@@ -94,17 +94,17 @@ df['InsuranceAccess'] = np.random.choice(
 
 # Create 'DriverExperience' column
 np.random.seed(0)  # For reproducibility
-df['DriverExperience'] = df['DriverAge'] - 16 - np.random.randint(0, 7, size=len(df))
+df['driverExperience'] = df['driverAge'] - 16 - np.random.randint(0, 7, size=len(df))
 
 # Create 'LicenceType' column based on 'DriverExperience'
 conditions = [
-    (df['DriverExperience'] < 1),
-    (df['DriverExperience'] >= 1) & (df['DriverExperience'] < 3),
-    (df['DriverExperience'] >= 3) & (df['DriverExperience'] < 5),
-    (df['DriverExperience'] >= 5)
+    (df['driverExperience'] < 1),
+    (df['driverExperience'] >= 1) & (df['driverExperience'] < 3),
+    (df['driverExperience'] >= 3) & (df['driverExperience'] < 5),
+    (df['driverExperience'] >= 5)
 ]
 choices = ['Ls', 'P1', 'P2', 'Full']
-df['LicenceType'] = np.select(conditions, choices, default='')
+df['licenceType'] = np.select(conditions, choices, default='')
 
 # Drop unwanted columns
 df = df.drop(['TXN_DATE_TIME', 'TRANSACTION_ID', 'CUSTOMER_ID', 'POLICY_NUMBER',
@@ -116,7 +116,7 @@ df = df.drop(['TXN_DATE_TIME', 'TRANSACTION_ID', 'CUSTOMER_ID', 'POLICY_NUMBER',
 
 
 # Reorder columns
-df = df[['TimeAsCustomer', 'DriverAge', 'InsuranceAccess', 'InsurancePremium', 'DriverGender', 'EducationLevel', 'AccidentType', 'IncidentSeverity', 'AuthoritiesInvolved', 'IncidentTime', 'NumVehiclesInvolved', 'NumBodilyInjuries', 'PoliceReportBool', 'TotalClaimAmount', 'Fraud', 'VehicleAge', 'DriverExperience', 'LicenceType']]
+df = df[['timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender', 'educationLevel', 'accidentType', 'incidentSeverity', 'authoritiesInvolved', 'incidentTime', 'numVehiclesInvolved', 'numBodilyInjuries', 'policeReportBool', 'totalClaimAmount', 'fraud', 'vehicleAge', 'driverExperience', 'licenceType']]
 
 # Save the cleaned dataframe to a new CSV file
 df.to_csv('/Users/aasnayemgazzalichowdhury/Desktop/Uni Documents/2024 Session 2/COMP3850/Enriching/cleanedEnriched_Dataset2.csv', index=False)
