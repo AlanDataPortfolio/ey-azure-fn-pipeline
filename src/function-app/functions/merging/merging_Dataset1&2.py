@@ -17,6 +17,9 @@ df2 = pd.read_csv('/Users/aasnayemgazzalichowdhury/Desktop/Uni Documents/2024 Se
 # Combine the two datasets using concat function
 df_concat = pd.concat([df1, df2])
 
+# Set the index to start from 1 and not reset after 1000
+df_concat.index = range(1, len(df_concat) + 1)
+
 #Set index name to 'index'
 df_concat.index.name = 'index'
 
