@@ -16,8 +16,11 @@ df = pd.read_csv(input_file_path)
 fraud_count = df['fraud'].value_counts()
 print(f"Fraud count (0 = non-fraud, 1 = fraud):\n{fraud_count}")
 
+# Save the original dataset
+original_df = df.copy()
+
 # Separate features and target ('fraud')
-X = df.drop(columns=['fraud', 'drivergender'])  # Drop 'fraud' and 'drivergender' before applying SMOTE
+X = df.drop(columns=['fraud'])  # Drop only the 'fraud' column before applying SMOTE
 y = df['fraud']  # 'fraud' column (target)
 
 # Separate numeric and non-numeric columns
@@ -38,32 +41,50 @@ X_numeric_resampled = pd.DataFrame(X_numeric_resampled, columns=numeric_columns)
 # Round numeric values and convert them to integers
 X_numeric_resampled = X_numeric_resampled.round(0).astype(int)
 
-# For non-numeric (categorical) data, including the 'drivergender' column, replicate the pattern with blank values
+# For non-numeric (categorical) data, replicate the original pattern
 X_categorical_resampled = pd.DataFrame()
 
-# For each non-numeric column, replicate the original pattern
+# Replicate the original pattern for each non-numeric column except 'drivergender'
 for column in non_numeric_columns:
-    X_categorical_resampled[column] = X[column].sample(n=len(X_numeric_resampled), replace=True).reset_index(drop=True)
+    if column != 'drivergender':  # Skip 'drivergender' for now
+        X_categorical_resampled[column] = X[column].sample(n=len(X_numeric_resampled), replace=True).reset_index(drop=True)
 
-# For the 'drivergender' column, preserve the original distribution of 1s, 0s, and NaNs
-gender_resampled = df['drivergender'].sample(n=len(X_numeric_resampled), replace=True, weights=df['drivergender'].value_counts(normalize=True, dropna=False)).reset_index(drop=True)
+# For the 'drivergender' column, preserve the original distribution of 0s, 1s, and NaNs
+drivergender_resampled = df['drivergender'].sample(
+    n=len(X_numeric_resampled), 
+    replace=True, 
+    weights=df['drivergender'].value_counts(normalize=True, dropna=False)
+).reset_index(drop=True)
 
-# Combine resampled numeric data, categorical data, and the resampled 'drivergender' column
-X_resampled = pd.concat([X_numeric_resampled.reset_index(drop=True), X_categorical_resampled, gender_resampled], axis=1)
+# Add 'drivergender' to the categorical columns
+X_categorical_resampled['drivergender'] = drivergender_resampled
 
-# Add 'fraud' target back
+# Combine resampled numeric and categorical data
+X_resampled = pd.concat([X_numeric_resampled.reset_index(drop=True), X_categorical_resampled], axis=1)
+
+# Add 'fraud' target back to the resampled data
 df_resampled = pd.DataFrame(X_resampled)
 df_resampled['fraud'] = y_resampled
 
-# Set index to start from 1 and ensure no duplicate indexes
-df_resampled.index = range(1, len(df_resampled) + 1)
-df_resampled.index.name = 'index'
+# Ensure both datasets have the same columns
+df_resampled = df_resampled[original_df.columns]
+
+# Reset the index of both the original and resampled datasets
+original_df.reset_index(drop=True, inplace=True)
+df_resampled.reset_index(drop=True, inplace=True)
+
+# Combine original dataset and SMOTE-generated dataset
+final_df = pd.concat([original_df, df_resampled], ignore_index=True)
+
+# Set the index to start from 1
+final_df.index = range(1, len(final_df) + 1)
+final_df.index.name = 'index'
 
 # Define the relative path for the output file
 output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'merged', 'smote6500dataset.csv')
 
-# Save the resampled dataset to the specified path
-df_resampled.to_csv(output_file_path, index=True)
+# Save the final dataset (original + SMOTE-generated) to the specified path
+final_df.to_csv(output_file_path, index=True)
 
 # Print a statement to indicate the process is done
 print(f"Balanced dataset saved to '{output_file_path}'")
