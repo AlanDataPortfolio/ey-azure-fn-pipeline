@@ -13,7 +13,7 @@ input_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'dat
 df = pd.read_csv(input_file_path)
 
 # Set the number of synthetic rows you want to generate
-num_samples = 3000
+num_samples = 4000
 
 # Generate synthetic data by sampling from the original data's distribution (excluding the 'fraud' column)
 columns_to_sample = df.columns.difference(['fraud'])
