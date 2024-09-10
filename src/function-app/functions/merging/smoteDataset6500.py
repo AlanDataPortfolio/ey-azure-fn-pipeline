@@ -2,6 +2,7 @@ import pandas as pd
 import os
 from imblearn.over_sampling import SMOTE
 from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import LabelEncoder
 
 # Get the current directory of the script (within the Git repo)
 script_dir = os.path.dirname(os.path.abspath(__file__))
@@ -31,38 +32,35 @@ non_numeric_columns = X.select_dtypes(exclude=['number']).columns
 imputer = SimpleImputer(strategy='mean')
 X_numeric_imputed = imputer.fit_transform(X[numeric_columns])
 
-# Apply SMOTE only on numeric data
-smote = SMOTE(sampling_strategy='auto', random_state=42)
-X_numeric_resampled, y_resampled = smote.fit_resample(X_numeric_imputed, y)
-
-# Convert the resampled numeric data back to a DataFrame
-X_numeric_resampled = pd.DataFrame(X_numeric_resampled, columns=numeric_columns)
-
-# Round numeric values and convert them to integers
-X_numeric_resampled = X_numeric_resampled.round(0).astype(int)
-
-# For non-numeric (categorical) data, replicate the original pattern
-X_categorical_resampled = pd.DataFrame()
-
-# Replicate the original pattern for each non-numeric column except 'drivergender'
+# Encode categorical columns (except 'drivergender') using LabelEncoder
+label_encoders = {}
 for column in non_numeric_columns:
     if column != 'drivergender':  # Skip 'drivergender' for now
-        X_categorical_resampled[column] = X[column].sample(n=len(X_numeric_resampled), replace=True).reset_index(drop=True)
+        le = LabelEncoder()
+        X[column] = le.fit_transform(X[column].astype(str))
+        label_encoders[column] = le  # Save the encoder to decode after SMOTE
 
-# For the 'drivergender' column, preserve the original distribution of 0s, 1s, and NaNs
-drivergender_resampled = df['drivergender'].sample(
-    n=len(X_numeric_resampled), 
-    replace=True, 
-    weights=df['drivergender'].value_counts(normalize=True, dropna=False)
-).reset_index(drop=True)
+# Impute 'drivergender' column (fill NaN with mode for SMOTE processing)
+X['drivergender'] = X['drivergender'].fillna(X['drivergender'].mode()[0])
 
-# Add 'drivergender' to the categorical columns
-X_categorical_resampled['drivergender'] = drivergender_resampled
+# Apply SMOTE to balance the dataset (both numeric and categorical encoded columns)
+smote = SMOTE(sampling_strategy='auto', random_state=42)
+X_resampled, y_resampled = smote.fit_resample(X, y)
 
-# Combine resampled numeric and categorical data
-X_resampled = pd.concat([X_numeric_resampled.reset_index(drop=True), X_categorical_resampled], axis=1)
+# Convert the resampled numeric data back to a DataFrame
+X_resampled = pd.DataFrame(X_resampled, columns=X.columns)
 
-# Add 'fraud' target back to the resampled data
+# Decode categorical columns back to original form
+for column, le in label_encoders.items():
+    X_resampled[column] = le.inverse_transform(X_resampled[column].astype(int))
+
+# Round numeric values and convert them to integers
+X_resampled[numeric_columns] = X_resampled[numeric_columns].round(0).astype(int)
+
+# Ensure 'drivergender' retains its NaN values
+X_resampled['drivergender'] = X_resampled['drivergender'].replace(X['drivergender'].mode()[0], pd.NA)
+
+# Combine resampled data with 'fraud' target
 df_resampled = pd.DataFrame(X_resampled)
 df_resampled['fraud'] = y_resampled
 
