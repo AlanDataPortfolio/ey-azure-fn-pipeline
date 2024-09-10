@@ -17,7 +17,7 @@ fraud_count = df['fraud'].value_counts()
 print(f"Fraud count (0 = non-fraud, 1 = fraud):\n{fraud_count}")
 
 # Separate features and target ('fraud')
-X = df.drop(columns=['fraud'])  # All columns except 'fraud'
+X = df.drop(columns=['fraud', 'drivergender'])  # Drop 'fraud' and 'drivergender' before applying SMOTE
 y = df['fraud']  # 'fraud' column (target)
 
 # Separate numeric and non-numeric columns
@@ -38,20 +38,25 @@ X_numeric_resampled = pd.DataFrame(X_numeric_resampled, columns=numeric_columns)
 # Round numeric values and convert them to integers
 X_numeric_resampled = X_numeric_resampled.round(0).astype(int)
 
-# For non-numeric (categorical) data, randomly sample from the original data
-X_categorical_resampled = X[non_numeric_columns].sample(n=len(X_numeric_resampled), replace=True).reset_index(drop=True)
+# For non-numeric (categorical) data, including the 'drivergender' column, replicate the pattern with blank values
+X_categorical_resampled = pd.DataFrame()
 
-# Combine resampled numeric data and resampled non-numeric data
-X_resampled = pd.concat([X_numeric_resampled.reset_index(drop=True), X_categorical_resampled], axis=1)
+# For each non-numeric column, replicate the original pattern
+for column in non_numeric_columns:
+    X_categorical_resampled[column] = X[column].sample(n=len(X_numeric_resampled), replace=True).reset_index(drop=True)
 
-# Combine resampled features and target into a new DataFrame
+# For the 'drivergender' column, preserve the original distribution of 1s, 0s, and NaNs
+gender_resampled = df['drivergender'].sample(n=len(X_numeric_resampled), replace=True, weights=df['drivergender'].value_counts(normalize=True, dropna=False)).reset_index(drop=True)
+
+# Combine resampled numeric data, categorical data, and the resampled 'drivergender' column
+X_resampled = pd.concat([X_numeric_resampled.reset_index(drop=True), X_categorical_resampled, gender_resampled], axis=1)
+
+# Add 'fraud' target back
 df_resampled = pd.DataFrame(X_resampled)
-df_resampled['fraud'] = y_resampled  # Add the target column back
+df_resampled['fraud'] = y_resampled
 
-# Set the index to start from 1
+# Set index to start from 1 and ensure no duplicate indexes
 df_resampled.index = range(1, len(df_resampled) + 1)
-
-# Set index name to 'index'
 df_resampled.index.name = 'index'
 
 # Define the relative path for the output file
