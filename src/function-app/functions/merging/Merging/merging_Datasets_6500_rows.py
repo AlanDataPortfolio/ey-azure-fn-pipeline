@@ -13,11 +13,21 @@ df2 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'dat
 # Load synthesized data from 'SynthesisedMethod1.csv'
 df3 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'SynthesisedMethod1.csv'))
 
-# Drop the 'index' column in the synthesized dataset
-df3 = df3.drop('index', axis=1)
+# Remove any 'index' columns in all datasets before concatenation to avoid duplicates
+df1 = df1.drop(columns=['index'], errors='ignore')
+df2 = df2.drop(columns=['index'], errors='ignore')
+df3 = df3.drop(columns=['index'], errors='ignore')
+
+# Standardize column names to lowercase to avoid duplicate names with different cases
+df1.columns = df1.columns.str.lower()
+df2.columns = df2.columns.str.lower()
+df3.columns = df3.columns.str.lower()
 
 # Combine the three datasets using concat function
 df_concat = pd.concat([df1, df2, df3])
+
+# Drop any duplicated columns (that have the same name but contain no data)
+df_concat = df_concat.loc[:, ~df_concat.columns.duplicated()]
 
 # Set the index to start from 1 and not reset after 1000
 df_concat.index = range(1, len(df_concat) + 1)
