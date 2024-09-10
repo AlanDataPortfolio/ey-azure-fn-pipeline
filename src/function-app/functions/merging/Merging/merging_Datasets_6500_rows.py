@@ -7,24 +7,19 @@ base_path = os.getcwd()
 # Load dataset 1 from 'merged_Dataset.csv'
 df1 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'merged', 'merged_Dataset.csv'))
 
-# Load dataset 2 from 'cleanedEnriched_Dataset2.csv'
-df2 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'enriched', 'cleanedEnriched_Dataset2.csv'))
-
 # Load synthesized data from 'SynthesisedMethod1.csv'
-df3 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'SynthesisedMethod1.csv'))
+df2 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'SynthesisedMethod1.csv'))
 
-# Remove any 'index' columns in all datasets before concatenation to avoid duplicates
+# Remove any 'index' columns in both datasets before concatenation to avoid duplicates
 df1 = df1.drop(columns=['index'], errors='ignore')
 df2 = df2.drop(columns=['index'], errors='ignore')
-df3 = df3.drop(columns=['index'], errors='ignore')
 
 # Standardize column names to lowercase to avoid duplicate names with different cases
 df1.columns = df1.columns.str.lower()
 df2.columns = df2.columns.str.lower()
-df3.columns = df3.columns.str.lower()
 
-# Combine the three datasets using concat function
-df_concat = pd.concat([df1, df2, df3])
+# Combine the two datasets using concat function
+df_concat = pd.concat([df1, df2])
 
 # Drop any duplicated columns (that have the same name but contain no data)
 df_concat = df_concat.loc[:, ~df_concat.columns.duplicated()]
