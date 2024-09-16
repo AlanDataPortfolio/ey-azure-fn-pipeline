@@ -47,6 +47,7 @@ def distribution_num_vehicles_involved(accident_type):
 # Generate NumVehiclesInvolved based on the distribution
 df_motor['numVehiclesInvolved'] = df_motor['accidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
 
+
 # Define Distribution of VehicleAge
 vehicle_age_distribution = {
     '0': 0.047,
@@ -95,6 +96,7 @@ df_motor['insuranceAccess'] = np.random.choice(
 
 # Create 'DriverExperience' column
 np.random.seed(0)  # For reproducibility
+  
 df_motor['driverExperience'] = df_motor['driverAge'] - 16 - np.random.randint(0, 7, size=len(df_motor))
 
 # Create 'LicenceType' column based on 'DriverExperience'
@@ -114,3 +116,4 @@ output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'd
 df_motor.to_csv(output_file_path, index=False)
 
 print("Data enrichment completed. The enriched dataset has been saved to 'cleanedEnriched_dataset2.csv'.")
+
