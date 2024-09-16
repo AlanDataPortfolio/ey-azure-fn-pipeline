@@ -1,23 +1,24 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Sep  2 14:52:22 2024
-
-@author: aasnayemgazzalichowdhury
-"""
-
+import os
 import pandas as pd
 import numpy as np
 
-# Load the dataset
-df = pd.read_csv('/Users/aasnayemgazzalichowdhury/Desktop/Uni Documents/2024 Session 2/COMP3850/Cleaning/cleaned_dataset2.csv')
+# Get the directory of the current script
+script_dir = os.path.dirname(__file__)
+
+# Construct the relative path to the cleaned dataset
+input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset2.csv')
+
+# Load the cleaned dataset
+df_motor = pd.read_csv(input_file_path)
+
+# Multiply the InsurancePremium column by 12
+df_motor['insurancePremium'] *= 12
+
+# Round InsurancePremium to whole numbers
+df_motor['insurancePremium'] = df_motor['insurancePremium'].round().astype(int)
 
 # Add empty column for DriverGender
-df['driverGender'] = np.nan
-
-# Change ClaimStatus column to Fraud
-# Convert 'A' to 0 and 'D' to 1
-df['fraud'] = df['claimStatus'].map({'A':0, 'D':1}) #Approved is not fraudulent and Denied is fraudulent
+df_motor['driverGender'] = np.nan
 
 # Define Distribution of AccidentType
 accident_type_distribution = {
@@ -30,9 +31,9 @@ accident_type_distribution = {
 np.random.seed(0)  # For reproducibility
 
 # Generate AccidentType based on the distribution
-df['accidentType'] = np.random.choice(
+df_motor['accidentType'] = np.random.choice(
     list(accident_type_distribution.keys()),
-    size=len(df),
+    size=len(df_motor),
     p=list(accident_type_distribution.values())
 )
 
@@ -44,7 +45,8 @@ def distribution_num_vehicles_involved(accident_type):
         return 1
 
 # Generate NumVehiclesInvolved based on the distribution
-df['numVehiclesInvolved'] = df['accidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
+df_motor['numVehiclesInvolved'] = df_motor['accidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
+
 
 # Define Distribution of VehicleAge
 vehicle_age_distribution = {
@@ -72,9 +74,9 @@ vehicle_age_distribution = {
 }
 
 # Generate VehicleAge based on the distribution
-df['vehicleAge'] = np.random.choice(
+df_motor['vehicleAge'] = np.random.choice(
     list(vehicle_age_distribution.keys()),
-    size=len(df),
+    size=len(df_motor),
     p=list(vehicle_age_distribution.values())
 ).astype(int)
 
@@ -86,39 +88,32 @@ insurance_access_distribution = {
 }
 
 # Generate InsuranceAccess based on the distribution
-df['insuranceAccess'] = np.random.choice(
+df_motor['insuranceAccess'] = np.random.choice(
     list(insurance_access_distribution.keys()),
-    size=len(df),
+    size=len(df_motor),
     p=list(insurance_access_distribution.values())
 )
 
 # Create 'DriverExperience' column
 np.random.seed(0)  # For reproducibility
-df['driverExperience'] = df['driverAge'] - 16 - np.random.randint(0, 7, size=len(df))
+  
+df_motor['driverExperience'] = df_motor['driverAge'] - 16 - np.random.randint(0, 7, size=len(df_motor))
 
 # Create 'LicenceType' column based on 'DriverExperience'
 conditions = [
-    (df['driverExperience'] < 1),
-    (df['driverExperience'] >= 1) & (df['driverExperience'] < 3),
-    (df['driverExperience'] >= 3) & (df['driverExperience'] < 5),
-    (df['driverExperience'] >= 5)
+    (df_motor['driverExperience'] < 1),
+    (df_motor['driverExperience'] >= 1) & (df_motor['driverExperience'] < 3),
+    (df_motor['driverExperience'] >= 3) & (df_motor['driverExperience'] < 5),
+    (df_motor['driverExperience'] >= 5)
 ]
 choices = ['Ls', 'P1', 'P2', 'Full']
-df['licenceType'] = np.select(conditions, choices, default='')
+df_motor['licenceType'] = np.select(conditions, choices, default='')
 
-# Drop unwanted columns
-df = df.drop(['TXN_DATE_TIME', 'TRANSACTION_ID', 'CUSTOMER_ID', 'POLICY_NUMBER',
-                          'POLICY_EFF_DT', 'LOSS_DT', 'REPORT_DT', 'INSURANCE_TYPE',
-                          'CUSTOMER_NAME', 'ADDRESS_LINE1', 'ADDRESS_LINE2', 'CITY', 'STATE',
-                          'POSTAL_CODE', 'SSN', 'MARITAL_STATUS', 'EMPLOYMENT_STATUS', 'NO_OF_FAMILY_MEMBERS',
-                          'RISK_SEGMENTATION', 'HOUSE_TYPE', 'SOCIAL_CLASS', 'ROUTING_NUMBER', 'ACCT_NUMBER',
-                          'INCIDENT_STATE', 'INCIDENT_CITY', 'AGENT_ID', 'VENDOR_ID'], axis=1)
+# Construct the path for saving the enriched output CSV file
+output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'enriched', 'cleanedEnriched_dataset2.csv')
 
+# Save the enriched dataframe to the output CSV file
+df_motor.to_csv(output_file_path, index=False)
 
-# Reorder columns
-df = df[['timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender', 'educationLevel', 'accidentType', 'incidentSeverity', 'authoritiesInvolved', 'incidentTime', 'numVehiclesInvolved', 'numBodilyInjuries', 'policeReportBool', 'totalClaimAmount', 'fraud', 'vehicleAge', 'driverExperience', 'licenceType']]
+print("Data enrichment completed. The enriched dataset has been saved to 'cleanedEnriched_dataset2.csv'.")
 
-# Save the cleaned dataframe to a new CSV file
-df.to_csv('/Users/aasnayemgazzalichowdhury/Desktop/Uni Documents/2024 Session 2/COMP3850/Enriching/cleanedEnriched_Dataset2.csv', index=False)
-
-print("Data processing completed. The cleaned dataset has been saved to the relevant folder'.")
