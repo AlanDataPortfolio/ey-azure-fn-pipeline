@@ -6,6 +6,9 @@ from scipy import stats
 # Load the dataset
 df = pd.read_csv('D:/Documents/GitHub/PACE/ey-azure-fn-pipeline/assets/data/raw/dataset3.csv')
 
+# Remove the '$' and ',' from INCOME column and convert it to numeric
+df['INCOME'] = df['INCOME'].replace('[\$,]', '', regex=True).astype(float)
+
 # Remove rows where INCOME or OCCUPATION is missing
 df = df[df['INCOME'].notnull() & df['OCCUPATION'].notnull()]
 
@@ -32,3 +35,4 @@ if anova_result.pvalue < 0.05:
     print("There is a significant relationship between OCCUPATION and INCOME.")
 else:
     print("There is no significant relationship between OCCUPATION and INCOME.")
+
