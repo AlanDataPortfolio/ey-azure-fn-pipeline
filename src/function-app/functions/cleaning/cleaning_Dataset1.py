@@ -34,10 +34,16 @@ df.rename(columns={
 df['policeReportBool'] = df['policeReportBool'].replace({'?': 'NO'})
 df['authoritiesInvolved'] = df['authoritiesInvolved'].fillna('None')
 
-# Construct the path for saving the output CSV file
-output_file_path = os.path.join(script_dir, 'cleaned_dataset1.csv')
 
-# Save the cleaned dataframe to the output CSV file
+# Construct the relative path to the output dataset
+output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset1.csv')
+
+# Ensure the output directory exists
+output_dir = os.path.dirname(output_file_path)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"Created directory: {output_dir}")
+
+# Save enriched dataset
 df.to_csv(output_file_path, index=False)
-
-print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_dataset1.csv'.")
+print(f"Enriched dataset saved to {output_file_path}.")
