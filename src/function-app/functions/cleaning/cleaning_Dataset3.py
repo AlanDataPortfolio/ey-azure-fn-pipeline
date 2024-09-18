@@ -5,6 +5,7 @@
 import pandas as pd
 import numpy as np
 import os
+from scipy import stats
 from sklearn.svm import SVR
 from sklearn.impute import SimpleImputer
 from sklearn.pipeline import Pipeline
@@ -19,7 +20,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.feature_selection import SelectFromModel
-from imblearn.over_sampling import SMOTE
+# Removed SMOTE as per discussion
 
 # CLEAN DATASET
 
@@ -40,6 +41,7 @@ print(f"Dataset loaded. Shape: {df.shape}")
 
 # Function to clean and convert columns to numeric
 def clean_numeric_column(df, column):
+    """Cleans and converts columns to numeric values."""
     df[column] = df[column].replace(r'[\$,]', '', regex=True).astype(float)
 
 # Columns to convert
@@ -165,75 +167,76 @@ median_income = np.median(non_zero_income)
 df['INCOME'] = df['INCOME'].fillna(median_income)
 print(f"Missing values in 'INCOME' after imputation: {df['INCOME'].isnull().sum()}")
 
+# Standardize Occupation Values
+print("Standardizing 'OCCUPATION' values...")
+df['OCCUPATION'] = df['OCCUPATION'].str.replace('z_', '')
+
+# Perform ANOVA to see if income differs by occupation
+print("Performing ANOVA between 'OCCUPATION' and 'INCOME'...")
+
+# Remove rows with missing INCOME or OCCUPATION
+df_anova = df[df['INCOME'].notnull() & df['OCCUPATION'].notnull()]
+df_anova = df_anova[df_anova['INCOME'] > 0]
+
+# Group the data by OCCUPATION and calculate the mean income for each group
+occupation_income = df_anova.groupby('OCCUPATION')['INCOME'].mean()
+print("\nMean income per occupation:")
+print(occupation_income)
+
+# Perform a one-way ANOVA to test if income differs significantly between occupations
+occupation_groups = [group['INCOME'].values for name, group in df_anova.groupby('OCCUPATION')]
+anova_result = stats.f_oneway(*occupation_groups)
+
+print("\nANOVA test result:")
+print(f"F-statistic: {anova_result.statistic}, p-value: {anova_result.pvalue}")
+
+# Interpret the ANOVA result
+if anova_result.pvalue < 0.05:
+    print("There is a significant relationship between OCCUPATION and INCOME.")
+else:
+    print("There is no significant relationship between OCCUPATION and INCOME.")
+
+# Impute OCCUPATION based on INCOME brackets
+print("Imputing missing 'OCCUPATION' based on 'INCOME' correlation...")
+
+# Define income ranges for each occupation based on the mean values
+occupation_ranges = {
+    'Blue Collar': (0, 60000),
+    'Clerical': (30000, 40000),
+    'Doctor': (120000, 140000),
+    'Home Maker': (0, 25000),
+    'Lawyer': (85000, 95000),
+    'Manager': (80000, 95000),
+    'Professional': (70000, 80000),
+    'Student': (0, 15000)
+}
+
+# Function to assign occupation based on income
+def assign_occupation(income):
+    for occupation, (low, high) in occupation_ranges.items():
+        if low <= income <= high:
+            return occupation
+    return None  # If income doesn't fall in any range
+
+# Apply this function to fill missing occupations based on income
+df['OCCUPATION'] = df.apply(
+    lambda row: assign_occupation(row['INCOME']) if pd.isnull(row['OCCUPATION']) else row['OCCUPATION'],
+    axis=1
+)
+
+# For cases with missing income or no matching range, randomly assign occupations
+missing_occupation = df['OCCUPATION'].isnull()
+if missing_occupation.sum() > 0:
+    print(f"Randomly assigning 'OCCUPATION' to {missing_occupation.sum()} missing entries...")
+    random_occupations = df['OCCUPATION'].dropna().sample(missing_occupation.sum(), replace=True)
+    df.loc[missing_occupation, 'OCCUPATION'] = random_occupations.values
+
+print(f"Missing values in 'OCCUPATION' after imputation: {df['OCCUPATION'].isnull().sum()}")
+
 # Impute HOME_VAL Column
 print("Imputing 'HOME_VAL' column using KNN imputation...")
 df['HOME_VAL'] = df_imputed['HOME_VAL']
 print(f"Missing values in 'HOME_VAL' after imputation: {df['HOME_VAL'].isnull().sum()}")
-
-# Impute Occupation Column
-
-print("Imputing 'OCCUPATION' column using RandomForestClassifier...")
-
-# Split the data into rows with known and unknown 'OCCUPATION'
-train_data_OCCUPATION = df[df['OCCUPATION'].notnull()]
-test_data_OCCUPATION = df[df['OCCUPATION'].isnull()]
-
-# Ensure there are rows in X_test for prediction
-if test_data_OCCUPATION.empty:
-    print("No missing 'OCCUPATION' values to predict.")
-else:
-    # Prepare training and testing data
-    X_train_OCCUPATION = train_data_OCCUPATION.drop(['OCCUPATION'], axis=1)
-    y_train_OCCUPATION = train_data_OCCUPATION['OCCUPATION']
-    X_test_OCCUPATION = test_data_OCCUPATION.drop(['OCCUPATION'], axis=1)
-
-    # Impute missing values
-    imputer_OCCUPATION = SimpleImputer(strategy='most_frequent')
-    X_train_OCCUPATION = pd.DataFrame(imputer_OCCUPATION.fit_transform(X_train_OCCUPATION), columns=X_train_OCCUPATION.columns)
-    X_test_OCCUPATION = pd.DataFrame(imputer_OCCUPATION.transform(X_test_OCCUPATION), columns=X_test_OCCUPATION.columns)
-
-    # Handle Class Imbalance with SMOTE
-    smote_OCCUPATION = SMOTE(random_state=42)
-    X_train_resampled_OCCUPATION, y_train_resampled_OCCUPATION = smote_OCCUPATION.fit_resample(X_train_OCCUPATION, y_train_OCCUPATION)
-
-    # Hyperparameter tuning using RandomizedSearchCV
-    param_grid_OCCUPATION = {
-        'n_estimators': [100, 200, 500],
-        'max_features': ['sqrt', 'log2', None],
-        'max_depth': [10, 20, 30, None],
-        'min_samples_split': [2, 5, 10],
-        'min_samples_leaf': [1, 2, 4],
-        'bootstrap': [True, False]
-    }
-
-    # Create a RandomForestClassifier with randomized search
-    clf_OCCUPATION = RandomForestClassifier(random_state=42)
-    random_search_OCCUPATION = RandomizedSearchCV(clf_OCCUPATION, param_distributions=param_grid_OCCUPATION,
-                                                  n_iter=10, cv=3, random_state=42, n_jobs=-1)
-    random_search_OCCUPATION.fit(X_train_resampled_OCCUPATION, y_train_resampled_OCCUPATION)
-
-    # Feature Selection based on importance
-    selector_OCCUPATION = SelectFromModel(random_search_OCCUPATION.best_estimator_, threshold='median')
-    X_train_selected_OCCUPATION = selector_OCCUPATION.fit_transform(X_train_resampled_OCCUPATION, y_train_resampled_OCCUPATION)
-    X_test_selected_OCCUPATION = selector_OCCUPATION.transform(X_test_OCCUPATION)
-
-    # Train the best model on the selected features
-    best_clf_OCCUPATION = random_search_OCCUPATION.best_estimator_
-    best_clf_OCCUPATION.fit(X_train_selected_OCCUPATION, y_train_resampled_OCCUPATION)
-
-    # Predict missing 'OCCUPATION' values for the test data
-    predicted_occupation_encoded = best_clf_OCCUPATION.predict(X_test_selected_OCCUPATION)
-
-    # Convert the predicted encoded values back to their original categorical values
-    le_occupation = label_encoders['OCCUPATION']
-    predicted_occupation = le_occupation.inverse_transform(predicted_occupation_encoded)
-
-    # Replace the missing 'OCCUPATION' values in the original dataframe
-    missing_indices = df[df['OCCUPATION'].isnull()].index
-    df.loc[missing_indices, 'OCCUPATION'] = predicted_occupation
-
-# Check if missing values are imputed
-print(f"Missing values in 'OCCUPATION': {df['OCCUPATION'].isnull().sum()}")
 
 # Impute CAR_AGE column
 print("Imputing 'CAR_AGE' column using median...")
@@ -297,14 +300,17 @@ education_mapping = {
 df['EDUCATION'] = df['EDUCATION'].replace(education_mapping)
 
 # Standardize 'OCCUPATION' column
-print("Standardizing 'OCCUPATION' column...")
+print("Final standardization of 'OCCUPATION' column...")
 df['OCCUPATION'] = df['OCCUPATION'].str.strip().str.title()
 df['OCCUPATION'] = df['OCCUPATION'].replace({
-    'Z_Blue Collar': 'Blue Collar',
+    'Blue Collar': 'Blue Collar',
     'Manager': 'Manager',
     'Professional': 'Professional',
     'Clerical': 'Clerical',
-    'Doctor': 'Doctor'
+    'Doctor': 'Doctor',
+    'Home Maker': 'Home Maker',
+    'Lawyer': 'Lawyer',
+    'Student': 'Student'
 })
 
 # Standardize 'CAR_TYPE' column
@@ -331,3 +337,4 @@ if not os.path.exists(output_dir):
 # Save cleaned dataset
 df.to_csv(output_file_path, index=False)
 print(f"Cleaned dataset saved to {output_file_path}.")
+
