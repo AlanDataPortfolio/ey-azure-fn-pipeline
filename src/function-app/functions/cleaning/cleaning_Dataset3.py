@@ -324,7 +324,7 @@ print("Dataset standardized.")
 # SAVE CLEANED DATASET
 
 # Correct relative path for saving the cleaned file
-output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_Dataset3.csv')
+output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset3.csv')
 
 # Ensure the output directory exists
 output_dir = os.path.dirname(output_file_path)

@@ -1,7 +1,8 @@
+import os
 import pandas as pd
 
-# Construct the relative path to the input dataset
-input_file_path = 'assets/data/raw/dataset2.csv'
+# Construct the absolute path to the input dataset on the D: drive
+input_file_path = 'D:/Documents/GitHub/PACE/ey-azure-fn-pipeline/assets/data/raw/dataset2.csv'
 
 # Load the dataset
 df = pd.read_csv(input_file_path)
@@ -27,10 +28,10 @@ df_motor.rename(columns={
     'CLAIM_STATUS': 'claimStatus',
 }, inplace=True)
 
-# Construct the path for saving the cleaned output CSV file
-output_file_path = 'assets/data/cleaned/cleaned_Dataset2.csv'
+# Construct the absolute path for saving the cleaned output CSV file on the D: drive
+output_file_path = 'D:/Documents/GitHub/PACE/ey-azure-fn-pipeline/assets/data/cleaned/cleaned_dataset2.csv'
 
-# Save the cleaned dataframe to the output CSV file
+# Ensure proper casing when saving the file
 df_motor.to_csv(output_file_path, index=False)
 
-print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_Dataset2.csv'.")
+print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_dataset2.csv'.")
