@@ -7,8 +7,8 @@ script_dir = os.path.dirname(__file__)
 # Construct the relative path to the input dataset
 input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'raw', 'dataset1.csv')
 
-# Load the dataset
-df = pd.read_csv(input_file_path)
+# Load the dataset, ensuring 'None' is not treated as NaN
+df = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
 
 # Rename columns for clarity and easier access (using camelCase)
 df.rename(columns={
@@ -30,10 +30,9 @@ df.rename(columns={
     'auto_year': 'vehicleYear'
 }, inplace=True)
 
-# Handle missing values
+# Handle missing values, ensuring 'None' is preserved in 'authoritiesInvolved'
 df['policeReportBool'] = df['policeReportBool'].replace({'?': 'NO'})
 df['authoritiesInvolved'] = df['authoritiesInvolved'].fillna('None')
-
 
 # Construct the relative path to the output dataset
 output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset1.csv')
@@ -46,4 +45,4 @@ if not os.path.exists(output_dir):
 
 # Save enriched dataset
 df.to_csv(output_file_path, index=False)
-print(f"Enriched dataset saved to {output_file_path}.")
+print(f"Cleaned dataset saved to {output_file_path}.")
