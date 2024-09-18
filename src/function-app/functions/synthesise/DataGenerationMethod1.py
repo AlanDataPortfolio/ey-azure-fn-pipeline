@@ -7,7 +7,7 @@ import os
 base_path = os.getcwd()
 
 # Construct the path to the input dataset (relative to the working directory)
-input_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'merged', 'merged_Dataset.csv')
+input_file_path = os.path.join(base_path, 'assets', 'data', 'merged', 'merged_Dataset.csv')
 
 # Load your original dataset
 df = pd.read_csv(input_file_path)
@@ -30,7 +30,7 @@ for column in synthetic_data.select_dtypes(include=[np.number]).columns.differen
     synthetic_data[column] = synthetic_data[column].clip(lower=0)  # Ensure no negative values
 
 # Construct the path for saving the output CSV file (relative to the working directory)
-output_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'SynthesisedMethod1.csv')
+output_file_path = os.path.join(base_path, 'assets', 'data', 'synthesised', 'synthesised_Method1.csv')
 
 # Save the synthetic data to the specified path
 synthetic_data.to_csv(output_file_path, index=False)
