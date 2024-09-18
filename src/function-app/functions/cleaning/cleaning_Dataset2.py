@@ -28,9 +28,9 @@ df_motor.rename(columns={
 }, inplace=True)
 
 # Construct the path for saving the cleaned output CSV file
-output_file_path = 'assets/data/cleaned/cleaned_Dataset2.csv'
+output_file_path = 'assets/data/cleaned/cleaned_dataset2.csv'
 
 # Save the cleaned dataframe to the output CSV file
 df_motor.to_csv(output_file_path, index=False)
 
-print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_Dataset2.csv'.")
+print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_dataset2.csv'.")
