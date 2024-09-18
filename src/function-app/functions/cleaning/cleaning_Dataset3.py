@@ -40,7 +40,6 @@ print(f"Dataset loaded. Shape: {df.shape}")
 
 # Function to clean and convert columns to numeric
 def clean_numeric_column(df, column):
-    """Cleans and converts columns to numeric values."""
     df[column] = df[column].replace(r'[\$,]', '', regex=True).astype(float)
 
 # Columns to convert
@@ -100,59 +99,64 @@ print("Numeric columns imputed.")
 
 # Impute YOJ Column
 
-# Split into complete and missing data
-print("Imputing 'YOJ' column using RandomForest...")
-df_complete_YOJ = df[df['YOJ'].notnull()].copy()
-df_missing_YOJ = df[df['YOJ'].isnull()].copy()
+# Check if there are any missing values for 'YOJ' before RandomForest imputation
+print(f"Missing values in 'YOJ' before RandomForest imputation: {df['YOJ'].isnull().sum()}")
 
-# Separate the target variable from features
-y_complete_YOJ = df_complete_YOJ['YOJ']
-X_complete_YOJ = df_complete_YOJ.drop(columns=['YOJ'])
-X_missing_YOJ = df_missing_YOJ.drop(columns=['YOJ'])
+if df['YOJ'].isnull().sum() > 0:
+    print("Imputing 'YOJ' column using RandomForest...")
+    df_complete_YOJ = df[df['YOJ'].notnull()].copy()
+    df_missing_YOJ = df[df['YOJ'].isnull()].copy()
 
-# Filter out columns not in X_complete
-numerical_columns_YOJ = [col for col in numerical_columns if col in X_complete_YOJ.columns]
-categorical_columns_YOJ = [col for col in categorical_columns if col in X_complete_YOJ.columns]
+    # Separate the target variable from features
+    y_complete_YOJ = df_complete_YOJ['YOJ']
+    X_complete_YOJ = df_complete_YOJ.drop(columns=['YOJ'])
+    X_missing_YOJ = df_missing_YOJ.drop(columns=['YOJ'])
 
-# Prepare the column transformer to handle categorical and numerical data
-preprocessor_YOJ = ColumnTransformer(
-    transformers=[
-        ('num', Pipeline(steps=[
-            ('imputer', SimpleImputer(strategy='mean')),
-            ('scaler', StandardScaler())
-        ]), numerical_columns_YOJ),
-        ('cat', Pipeline(steps=[
-            ('imputer', SimpleImputer(strategy='most_frequent')),
-            ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))
-        ]), categorical_columns_YOJ)
-    ]
-)
+    # Filter out columns not in X_complete
+    numerical_columns_YOJ = [col for col in numerical_columns if col in X_complete_YOJ.columns]
+    categorical_columns_YOJ = [col for col in categorical_columns if col in X_complete_YOJ.columns]
 
-# Define the pipeline with RandomForestRegressor
-pipeline_impute_YOJ = Pipeline(steps=[
-    ('preprocessor', preprocessor_YOJ),
-    ('regressor', RandomForestRegressor(n_estimators=100, random_state=42))
-])
+    # Prepare the column transformer to handle categorical and numerical data
+    preprocessor_YOJ = ColumnTransformer(
+        transformers=[
+            ('num', Pipeline(steps=[
+                ('imputer', SimpleImputer(strategy='mean')),
+                ('scaler', StandardScaler())
+            ]), numerical_columns_YOJ),
+            ('cat', Pipeline(steps=[
+                ('imputer', SimpleImputer(strategy='most_frequent')),
+                ('onehot', OneHotEncoder(handle_unknown='ignore', sparse_output=False))
+            ]), categorical_columns_YOJ)
+        ]
+    )
 
-# Define parameter grid for hyperparameter tuning
-param_grid_YOJ = {
-    'regressor__n_estimators': [50, 100, 200],
-    'regressor__max_depth': [None, 10, 20, 30]
-}
+    # Define the pipeline with RandomForestRegressor
+    pipeline_impute_YOJ = Pipeline(steps=[
+        ('preprocessor', preprocessor_YOJ),
+        ('regressor', RandomForestRegressor(n_estimators=100, random_state=42))
+    ])
 
-# Perform GridSearchCV
-grid_search_YOJ = GridSearchCV(pipeline_impute_YOJ, param_grid_YOJ, cv=5, scoring='neg_mean_squared_error')
-grid_search_YOJ.fit(X_complete_YOJ, y_complete_YOJ)
+    # Define parameter grid for hyperparameter tuning
+    param_grid_YOJ = {
+        'regressor__n_estimators': [50, 100, 200],
+        'regressor__max_depth': [None, 10, 20, 30]
+    }
 
-# Use the best model to predict missing values
-best_pipeline_YOJ = grid_search_YOJ.best_estimator_
-y_predicted_YOJ = best_pipeline_YOJ.predict(X_missing_YOJ)
+    # Perform GridSearchCV
+    grid_search_YOJ = GridSearchCV(pipeline_impute_YOJ, param_grid_YOJ, cv=5, scoring='neg_mean_squared_error')
+    grid_search_YOJ.fit(X_complete_YOJ, y_complete_YOJ)
 
-# Fill missing values
-df.loc[df['YOJ'].isnull(), 'YOJ'] = y_predicted_YOJ
+    # Use the best model to predict missing values
+    best_pipeline_YOJ = grid_search_YOJ.best_estimator_
+    y_predicted_YOJ = best_pipeline_YOJ.predict(X_missing_YOJ)
 
-# Check if missing values are filled
-print(f"Remaining missing values in 'YOJ': {df['YOJ'].isnull().sum()}")
+    # Fill missing values
+    df.loc[df['YOJ'].isnull(), 'YOJ'] = y_predicted_YOJ
+
+    # Check if missing values are filled
+    print(f"Remaining missing values in 'YOJ' after RandomForest imputation: {df['YOJ'].isnull().sum()}")
+else:
+    print("No missing values for 'YOJ' found. Skipping RandomForest imputation.")
 
 # Impute INCOME Column
 print("Imputing 'INCOME' column using median of non-zero values...")
@@ -252,7 +256,7 @@ X_predict_CLMAMT = df_predict_CLMAMT[numerical_columns + categorical_columns]
 preprocessor_CLMAMT = ColumnTransformer(
     transformers=[
         ('num', StandardScaler(), numerical_columns),
-        ('cat', OneHotEncoder(handle_unknown='ignore', sparse=False), categorical_columns)
+        ('cat', OneHotEncoder(handle_unknown='ignore', sparse_output=False), categorical_columns)
     ]
 )
 
@@ -327,4 +331,3 @@ if not os.path.exists(output_dir):
 # Save cleaned dataset
 df.to_csv(output_file_path, index=False)
 print(f"Cleaned dataset saved to {output_file_path}.")
-
