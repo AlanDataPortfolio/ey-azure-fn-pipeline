@@ -1,7 +1,4 @@
-# Enriching Dataset 3
-
 # ENRICHING DATASET 3
-# Noor's Version
 
 # IMPORT NECESSARY LIBRARIES
 import pandas as pd
@@ -30,12 +27,25 @@ columns_to_drop = ['ID', 'KIDSDRIV', 'BIRTH', 'HOMEKIDS', 'YOJ', 'INCOME', 'PARE
 df = df.drop(columns=columns_to_drop)
 print(f"Columns dropped. Remaining columns: {df.columns.tolist()}")
 
+# RENAME COLUMNS
+print("Renaming columns...")
+df.rename(columns={
+    'AGE': 'driverAge',
+    'EDUCATION': 'educationLevel',
+    'CLM_AMT': 'totalClaimAmount',
+    'CAR_AGE': 'vehicleAge',
+    'REVOKED': 'fraud'
+}, inplace=True)
+
+# Convert fraud column to 0 (No) and 1 (Yes)
+df['fraud'] = df['fraud'].map({'No': 0, 'Yes': 1})
+
 # Create New Columns
 
-# Assuming 'AGE' represents the driver's age
+# Assuming 'driverAge' represents the driver's age
 print("Generating 'driverExperience' column...")
 np.random.seed(0)  # For reproducibility
-df['driverExperience'] = df['AGE'] - 16 - np.random.randint(0, 7, size=len(df))
+df['driverExperience'] = df['driverAge'] - 16 - np.random.randint(0, 7, size=len(df))
 
 # Create 'licenceType' column based on 'driverExperience'
 print("Generating 'licenceType' column...")
@@ -53,6 +63,19 @@ df['licenceType'] = np.select(conditions, choices, default='')
 print("Converting numeric columns to whole numbers...")
 numeric_cols = df.select_dtypes(include=['float64', 'int64']).columns
 df[numeric_cols] = df[numeric_cols].round(0).astype(int)
+
+# REARRANGE COLUMNS
+column_order = [
+    'timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender', 'educationLevel',
+    'accidentType', 'incidentSeverity', 'authoritiesInvolved', 'incidentTime', 'numVehiclesInvolved',
+    'numBodilyInjuries', 'policeReportBool', 'totalClaimAmount', 'fraud', 'vehicleAge',
+    'driverExperience', 'licenceType'
+]
+
+# Only keep columns that exist in the current dataframe
+column_order = [col for col in column_order if col in df.columns]
+
+df = df[column_order]
 
 # Save the Enriched Dataset
 
