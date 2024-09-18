@@ -1,11 +1,7 @@
-import os
 import pandas as pd
 
-# Get the directory of the current script
-script_dir = os.path.dirname(__file__)
-
 # Construct the relative path to the input dataset
-input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'raw', 'dataset2.csv')
+input_file_path = 'assets/data/raw/dataset2.csv'
 
 # Load the dataset
 df = pd.read_csv(input_file_path)
@@ -32,7 +28,7 @@ df_motor.rename(columns={
 }, inplace=True)
 
 # Construct the path for saving the cleaned output CSV file
-output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_Dataset2.csv')
+output_file_path = 'assets/data/cleaned/cleaned_Dataset2.csv'
 
 # Save the cleaned dataframe to the output CSV file
 df_motor.to_csv(output_file_path, index=False)
