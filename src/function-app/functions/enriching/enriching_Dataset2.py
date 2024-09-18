@@ -107,6 +107,9 @@ conditions = [
 choices = ['Ls', 'P1', 'P2', 'Full']
 df_motor['licenceType'] = np.select(conditions, choices, default='')
 
+# Map 'claimStatus' to Fraud (1) and Not Fraud (0)
+df_motor['Fraud'] = df_motor['claimStatus'].map({'A': 0, 'D': 1})
+
 # Select only the required columns
 required_columns = [
     'timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender',
