@@ -1,5 +1,4 @@
 # CLEANING DATASET 3
-# Noor's Version
 
 # IMPORT NECESSARY LIBRARIES
 import pandas as pd
@@ -20,7 +19,6 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split, RandomizedSearchCV
 from sklearn.feature_selection import SelectFromModel
-# Removed SMOTE as per discussion
 
 # CLEAN DATASET
 
