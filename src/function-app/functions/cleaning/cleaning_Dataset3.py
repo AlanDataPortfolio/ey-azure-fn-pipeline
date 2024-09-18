@@ -216,7 +216,23 @@ df['OCCUPATION'] = df['OCCUPATION'].str.strip().str.title().replace({
 
 print("Dataset standardized.")
 
+
 # SAVE CLEANED DATASET
+
+# Ensure output directory is constructed correctly with relative path
+script_dir = os.path.dirname(__file__)
+
+# Correct relative path for saving the cleaned file
 output_file_path = os.path.join(script_dir, '..', '..', 'assets', 'data', 'cleaned', 'cleaned_Dataset3.csv')
+
+# Ensure the output directory exists
+output_dir = os.path.dirname(output_file_path)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"Created directory: {output_dir}")
+
+# Save cleaned dataset
 df.to_csv(output_file_path, index=False)
 print(f"Cleaned dataset saved to {output_file_path}.")
+
+
