@@ -13,7 +13,7 @@ df1 = pd.read_csv(os.path.join(base_dir, 'enriched', 'cleanedEnriched_Dataset1.c
 # Load dataset 2, ensuring 'none' is not treated as NaN
 df2 = pd.read_csv(os.path.join(base_dir, 'enriched', 'cleanedEnriched_Dataset2.csv'), na_values=[], keep_default_na=False)
 
-# Load dataset 3, ensuring 'none' is not treated as NaN
+# Load dataset 3 (which lacks some columns), ensuring 'none' is not treated as NaN
 df3 = pd.read_csv(os.path.join(base_dir, 'enriched', 'cleanedEnriched_Dataset3.csv'), na_values=[], keep_default_na=False)
 
 # Load synthesized data method 1, ensuring 'none' is not treated as NaN
@@ -29,9 +29,14 @@ df5 = df5.drop('index', axis=1, errors='ignore')
 # Combine the datasets using the concat function
 df_concat = pd.concat([df1, df2, df3, df4, df5])
 
-# Ensure 'none' values are preserved in all string columns, especially 'authoritiesInvolved'
-for col in df_concat.select_dtypes(include=['object']).columns:
-    df_concat[col] = df_concat[col].fillna('none')
+# Fill 'none' only for columns that are expected to have 'none' in existing rows,
+# but keep other columns where they should remain NaN if not present in the datasets
+columns_to_fill_none = ['driverGender', 'accidentType', 'incidentSeverity', 'authoritiesInvolved']
+
+for col in columns_to_fill_none:
+    if col in df_concat.columns:
+        # Fill only the rows where these columns originally exist, leave the rest as NaN
+        df_concat[col] = df_concat[col].where(df_concat[col].notna(), None)
 
 # Set the index to start from 1 and not reset 
 df_concat.index = range(1, len(df_concat) + 1)
