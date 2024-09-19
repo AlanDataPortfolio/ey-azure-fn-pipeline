@@ -13,8 +13,8 @@ import os
 CWD = os.getcwd()
 
 # Construct the relative path to the input dataset
-input_file_path_dataset1 = os.path.join(CWD, 'assets', 'data', 'cleaned', 'enriched_dataset1.csv')
-input_file_path_dataset2 = os.path.join(CWD, 'assets', 'data', 'cleaned', 'enriched_dataset2.csv')
+input_file_path_dataset1 = os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset1.csv')
+input_file_path_dataset2 = os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset2.csv')
 
 # Load dataset 1
 df1 = pd.read_csv(input_file_path_dataset1)
