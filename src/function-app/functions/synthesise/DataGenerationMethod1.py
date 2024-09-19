@@ -12,16 +12,12 @@ input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'da
 # Load your original dataset
 df = pd.read_csv(input_file_path)
 
-# **Step 1: Ensure 'accidentType' is of string type**
-df['accidentType'] = df['accidentType'].astype(str)
+# Ensure that 'authoritiesInvolved' contains no blanks or NaN values
+df['authoritiesInvolved'] = df['authoritiesInvolved'].replace('', 'none').fillna('none')
 
-# **Step 2: Replace 'nan', empty strings, and actual NaN values with 'none'**
-df['accidentType'] = df['accidentType'].replace(['nan', 'None', ''], 'none')  # Handle string 'nan', 'None', and empty strings
-df['accidentType'] = df['accidentType'].fillna('none')  # Handle actual NaN values
-
-# **Optional: Verify that there are no missing values in 'accidentType'**
-print("Unique values in 'accidentType' after cleaning:", df['accidentType'].unique())
-print("Number of missing 'accidentType' in df:", df['accidentType'].isna().sum())
+# **Optional: Verify that there are no missing values in 'authoritiesInvolved'**
+print("Unique values in 'authoritiesInvolved' after cleaning:", df['authoritiesInvolved'].unique())
+print("Number of missing 'authoritiesInvolved' in df:", df['authoritiesInvolved'].isna().sum())
 
 # Set the number of synthetic rows you want to generate
 num_samples = 4000
@@ -33,14 +29,12 @@ synthetic_data = df[columns_to_sample].sample(n=num_samples, replace=True, rando
 # Add the 'fraud' column back without modification
 synthetic_data['fraud'] = df['fraud'].sample(n=num_samples, replace=True, random_state=0).reset_index(drop=True)
 
-# **Ensure 'accidentType' in synthetic_data is cleaned in case of any reintroduced missing values**
-synthetic_data['accidentType'] = synthetic_data['accidentType'].astype(str)
-synthetic_data['accidentType'] = synthetic_data['accidentType'].replace(['nan', 'None', ''], 'none')
-synthetic_data['accidentType'] = synthetic_data['accidentType'].fillna('none')
+# **Ensure 'authoritiesInvolved' in synthetic_data is cleaned in case of any reintroduced missing values**
+synthetic_data['authoritiesInvolved'] = synthetic_data['authoritiesInvolved'].replace('', 'none').fillna('none')
 
-# **Optional: Verify that there are no missing values in 'accidentType' in synthetic_data**
-print("Unique values in 'accidentType' in synthetic_data after cleaning:", synthetic_data['accidentType'].unique())
-print("Number of missing 'accidentType' in synthetic_data:", synthetic_data['accidentType'].isna().sum())
+# **Optional: Verify that there are no missing values in 'authoritiesInvolved' in synthetic_data**
+print("Unique values in 'authoritiesInvolved' in synthetic_data after cleaning:", synthetic_data['authoritiesInvolved'].unique())
+print("Number of missing 'authoritiesInvolved' in synthetic_data:", synthetic_data['authoritiesInvolved'].isna().sum())
 
 # Optionally, add some noise to numeric columns (excluding 'fraud') and ensure no negatives
 for column in synthetic_data.select_dtypes(include=[np.number]).columns.difference(['fraud']):
