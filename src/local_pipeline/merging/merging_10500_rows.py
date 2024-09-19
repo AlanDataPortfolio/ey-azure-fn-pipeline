@@ -4,23 +4,20 @@
 import os
 import pandas as pd
 
-# Get the directory of the current script
-script_dir = os.path.dirname(os.path.abspath(__file__))
-
-# Construct the relative paths to the datasets
-base_dir = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data')
+# Define the base path (working directory)
+CWD = os.getcwd()
 
 # Load dataset 1 (cleanedEnriched_Dataset1)
-df1 = pd.read_csv(os.path.join(base_dir, 'enriched', 'cleanedEnriched_Dataset1.csv'), na_values=[], keep_default_na=False)
+df1 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset1.csv'), na_values=[], keep_default_na=False)
 
 # Load dataset 2 (cleanedEnriched_Dataset2)
-df2 = pd.read_csv(os.path.join(base_dir, 'enriched', 'cleanedEnriched_Dataset2.csv'), na_values=[], keep_default_na=False)
+df2 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset2.csv'), na_values=[], keep_default_na=False)
 
 # Load synthesized data method 1 (synthesized_Method1)
-df3 = pd.read_csv(os.path.join(base_dir, 'synthesised', 'synthesized_Method1.csv'), na_values=[], keep_default_na=False)
+df3 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'synthesised', 'synthesised_method1.csv'), na_values=[], keep_default_na=False)
 
 # Load synthesized data method 2 (synthesized_Method2)
-df4 = pd.read_csv(os.path.join(base_dir, 'synthesised', 'synthesized_Method2.csv'), na_values=[], keep_default_na=False)
+df4 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'synthesised', 'synthesised_method2.csv'), na_values=[], keep_default_na=False)
 
 # Drop the 'driverGender' and 'index' columns from all datasets (if they exist)
 columns_to_drop = ['driverGender', 'index']
@@ -40,7 +37,7 @@ df_concat.index = range(1, len(df_concat) + 1)
 df_concat.index.name = 'index'
 
 # Output file path for the merged dataset
-output_file_path = os.path.join(base_dir, 'merged', 'mergedDataset_10500.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'merged', 'merged_10500_rows.csv')
 
 # Ensure the output directory exists
 output_dir = os.path.dirname(output_file_path)
