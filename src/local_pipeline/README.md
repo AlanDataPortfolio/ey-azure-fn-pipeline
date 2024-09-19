@@ -1,0 +1,1 @@
+This folder keeps all scripts that are written in base python that will imitate the data pipeline that will eventually be deployed on Azure.
