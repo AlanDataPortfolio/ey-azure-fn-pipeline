@@ -7,8 +7,8 @@ script_dir = os.path.dirname(__file__)
 # Construct the relative path to the input dataset
 input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'raw', 'dataset2.csv')
 
-# Load the dataset
-df = pd.read_csv(input_file_path)
+# Load the dataset, ensuring 'none' is not treated as NaN
+df = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
 
 # Filter for motor claims
 df_motor = df.loc[df["INSURANCE_TYPE"] == "Motor"].copy()
@@ -31,10 +31,18 @@ df_motor.rename(columns={
     'CLAIM_STATUS': 'claimStatus',
 }, inplace=True)
 
-# Construct the path for saving the cleaned output CSV file
+# Ensure 'none' values are preserved in 'authoritiesInvolved' column
+df_motor['authoritiesInvolved'] = df_motor['authoritiesInvolved'].fillna('none')
+
+# Construct the relative path to the output dataset
 output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset2.csv')
 
-# Save the cleaned dataframe to the output CSV file
-df_motor.to_csv(output_file_path, index=False)
+# Ensure the output directory exists
+output_dir = os.path.dirname(output_file_path)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"Created directory: {output_dir}")
 
-print("Data cleaning completed. The cleaned dataset has been saved to 'cleaned_dataset2.csv'.")
+# Save the cleaned dataset
+df_motor.to_csv(output_file_path, index=False)
+print(f"Cleaned dataset saved to {output_file_path}.")

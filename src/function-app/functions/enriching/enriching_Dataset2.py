@@ -8,8 +8,8 @@ script_dir = os.path.dirname(__file__)
 # Construct the relative path to the cleaned dataset
 input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset2.csv')
 
-# Load the cleaned dataset
-df_motor = pd.read_csv(input_file_path)
+# Load the cleaned dataset, ensuring 'none' is not treated as NaN
+df_motor = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
 
 # Multiply the InsurancePremium column by 12
 df_motor['insurancePremium'] *= 12
@@ -46,7 +46,6 @@ def distribution_num_vehicles_involved(accident_type):
 
 # Generate NumVehiclesInvolved based on the distribution
 df_motor['numVehiclesInvolved'] = df_motor['accidentType'].apply(lambda x: distribution_num_vehicles_involved(x)).round().astype(int)
-
 
 # Define Distribution of VehicleAge
 vehicle_age_distribution = {
@@ -96,7 +95,6 @@ df_motor['insuranceAccess'] = np.random.choice(
 
 # Create 'DriverExperience' column
 np.random.seed(0)  # For reproducibility
-  
 df_motor['driverExperience'] = df_motor['driverAge'] - 16 - np.random.randint(0, 7, size=len(df_motor))
 
 # Create 'LicenceType' column based on 'DriverExperience'
@@ -109,6 +107,23 @@ conditions = [
 choices = ['Ls', 'P1', 'P2', 'Full']
 df_motor['licenceType'] = np.select(conditions, choices, default='')
 
+# Map 'claimStatus' to Fraud (1) and Not Fraud (0)
+df_motor['fraud'] = df_motor['claimStatus'].map({'A': 0, 'D': 1})
+
+# Ensure 'none' is preserved in 'authoritiesInvolved' column
+df_motor['authoritiesInvolved'] = df_motor['authoritiesInvolved'].fillna('none')
+
+# Select only the required columns
+required_columns = [
+    'timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender',
+    'educationLevel', 'accidentType', 'incidentSeverity', 'authoritiesInvolved',
+    'incidentTime', 'numVehiclesInvolved', 'numBodilyInjuries', 'policeReportBool',
+    'totalClaimAmount', 'fraud', 'vehicleAge', 'driverExperience', 'licenceType'
+]
+
+# Filter the dataframe to keep only the required columns
+df_motor = df_motor[required_columns]
+
 # Construct the path for saving the enriched output CSV file
 output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'enriched', 'cleanedEnriched_dataset2.csv')
 
@@ -116,4 +131,3 @@ output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'd
 df_motor.to_csv(output_file_path, index=False)
 
 print("Data enrichment completed. The enriched dataset has been saved to 'cleanedEnriched_dataset2.csv'.")
-

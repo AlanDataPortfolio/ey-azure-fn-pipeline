@@ -5,11 +5,11 @@ import numpy as np
 # Get the directory of the current script
 script_dir = os.path.dirname(__file__)
 
-# Construct the relative path to the input cleaned dataset
-input_file_path = os.path.join(script_dir, '..', 'cleaning', 'cleaned_dataset1.csv')
+# Construct the relative path to the input dataset
+input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_Dataset1.csv')
 
-# Load the cleaned dataset
-df = pd.read_csv(input_file_path)
+# Load the cleaned dataset, ensuring 'none' is not treated as NaN
+df = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
 
 # Convert 'policeReportBool' column to numerical
 df['policeReportBool'] = df['policeReportBool'].map({'YES': 1, 'NO': 0})
@@ -43,6 +43,9 @@ df['licenceType'] = np.select(conditions, choices, default='')
 # Convert 'insurancePremium' to whole numbers
 df['insurancePremium'] = df['insurancePremium'].round(0).astype(int)
 
+# Ensure 'none' is preserved in 'authoritiesInvolved' column
+df['authoritiesInvolved'] = df['authoritiesInvolved'].fillna('none')
+
 # Drop unnecessary columns
 columns_to_drop = ['policy_number', 'policy_bind_date', 'policy_state', 'policy_csl', 'umbrella_limit',
                    'insured_zip', 'insured_occupation', 'insured_hobbies', 'insured_relationship',
@@ -51,10 +54,17 @@ columns_to_drop = ['policy_number', 'policy_bind_date', 'policy_state', 'policy_
                    'property_claim', 'vehicle_claim', 'auto_make', 'auto_model']
 df.drop(columns=columns_to_drop, inplace=True)
 
-# Construct the path for saving the enriched output CSV file
-output_file_path = os.path.join(script_dir, 'cleanedEnriched_dataset1.csv')
+# Save the Enriched Dataset
 
-# Save the enriched dataframe to the output CSV file
+# Construct the relative path to the output dataset
+output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'enriched', 'cleanedEnriched_dataset1.csv')
+
+# Ensure the output directory exists
+output_dir = os.path.dirname(output_file_path)
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"Created directory: {output_dir}")
+
+# Save enriched dataset
 df.to_csv(output_file_path, index=False)
-
-print("Data enrichment completed. The enriched dataset has been saved to 'cleanedEnriched_dataset1.csv'.")
+print(f"Enriched dataset saved to {output_file_path}.")
