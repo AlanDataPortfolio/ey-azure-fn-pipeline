@@ -4,11 +4,11 @@ from sdv.metadata import SingleTableMetadata
 from sdv.single_table import CTGANSynthesizer
 from sdv.evaluation.single_table import evaluate_quality
 
-# Define the base path (working directory)
-base_path = os.getcwd()
+# Get the directory of the current script
+CWD = os.getcwd()
 
-# Construct the path to the input dataset (relative to the working directory)
-input_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'merged', 'merged_Dataset.csv')
+# Construct the relative path to the input dataset
+input_file_path = os.path.join(CWD, 'assets', 'data', 'merged', 'merged_dataset_1_2.csv')
 
 # Load your original dataset
 df = pd.read_csv(input_file_path)
@@ -50,7 +50,7 @@ quality_report = evaluate_quality(
 )
 
 # Construct the path for saving the output CSV file (relative to the working directory)
-output_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'synthesized_Method2.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'synthesised', 'synthesised_method2.csv')
 
 # Save the synthetic data to the specified path
 synthetic_df.to_csv(output_file_path, index=False)
