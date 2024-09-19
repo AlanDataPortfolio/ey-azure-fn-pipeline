@@ -2,13 +2,13 @@ import pandas as pd
 import os
 
 # Define the base path (working directory)
-base_path = os.getcwd()
+CWD = os.getcwd()
 
 # Load dataset 1 from 'merged_Dataset.csv'
-df1 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'merged', 'merged_Dataset.csv'))
+df1 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'merged', 'merged_dataset_1_2.csv'))
 
 # Load synthesized data from 'SynthesisedMethod1.csv'
-df2 = pd.read_csv(os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'synthesised', 'SynthesisedMethod1.csv'))
+df2 = pd.read_csv(os.path.join(CWD, 'assets', 'data', 'synthesised', 'synthesised_method1.csv'))
 
 # Remove any 'index' columns in both datasets before concatenation to avoid duplicates
 df1 = df1.drop(columns=['index'], errors='ignore')
@@ -31,7 +31,7 @@ df_concat.index = range(1, len(df_concat) + 1)
 df_concat.index.name = 'index'
 
 # Define the path for the output file
-output_file_path = os.path.join(base_path, 'ey-azure-fn-pipeline', 'assets', 'data', 'merged', 'merged6500.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'merged', 'merged_6500_rows.csv')
 
 # Save the combined dataset to the specified path
 df_concat.to_csv(output_file_path, index=True)
