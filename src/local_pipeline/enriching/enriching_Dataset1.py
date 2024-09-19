@@ -6,7 +6,7 @@ import numpy as np
 CWD = os.getcwd()
 
 # Construct the relative path to the input dataset
-input_file_path = os.path.join(CWD, 'assets', 'data', 'raw', 'cleaned_dataset1.csv')
+input_file_path = os.path.join(CWD, 'assets', 'data', 'cleaned', 'cleaned_dataset1.csv')
 
 # Load the cleaned dataset, ensuring 'none' is not treated as NaN
 df = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
@@ -57,7 +57,7 @@ df.drop(columns=columns_to_drop, inplace=True)
 # Save the Enriched Dataset
 
 # Construct the relative path to the output dataset
-output_file_path = os.path.join(CWD, 'enriched_dataset1.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset1.csv')
 
 # Ensure the output directory exists
 output_dir = os.path.dirname(output_file_path)
