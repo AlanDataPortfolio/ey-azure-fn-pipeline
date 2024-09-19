@@ -8,10 +8,10 @@ import os
 # Load Cleaned Dataset
 
 # Get the directory of the current script
-script_dir = os.path.dirname(__file__)
+CWD = os.getcwd()
 
 # Construct the relative path to the input dataset
-input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_Dataset3.csv')
+input_file_path = os.path.join(CWD, 'assets', 'data', 'raw', 'cleaned_dataset3.csv')
 
 # Load the dataset
 print("Loading cleaned dataset...")
@@ -80,7 +80,7 @@ df = df[column_order]
 # Save the Enriched Dataset
 
 # Construct the relative path to the output dataset
-output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'enriched', 'cleanedEnriched_dataset3.csv')
+output_file_path = os.path.join(CWD, 'enriched_dataset3.csv')
 
 # Ensure the output directory exists
 output_dir = os.path.dirname(output_file_path)
