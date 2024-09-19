@@ -4,10 +4,10 @@ import numpy as np
 import os
 
 # Get the directory of the current script
-script_dir = os.path.dirname(__file__)
+CWD = os.getcwd()
 
-# Construct the relative path to the merged dataset
-input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'merged', 'merged_Dataset.csv')
+# Construct the relative path to the input dataset
+input_file_path = os.path.join(CWD, 'assets', 'data', 'merged', 'merged_dataset_1_2.csv')
 
 # Load your original dataset
 df = pd.read_csv(input_file_path)
@@ -44,7 +44,7 @@ for column in synthetic_data.select_dtypes(include=[np.number]).columns.differen
     synthetic_data[column] = synthetic_data[column].clip(lower=0)  # Ensure no negative values
 
 # Construct the path for saving the enriched output CSV file
-output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'synthesised', 'synthesized_Method1.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'synthesised', 'synthesised_method1.csv')
 
 # Save the synthetic data to the specified path
 synthetic_data.to_csv(output_file_path, index=False)

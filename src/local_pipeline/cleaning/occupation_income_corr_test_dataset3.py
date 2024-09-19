@@ -2,9 +2,16 @@
 
 import pandas as pd
 from scipy import stats
+import os
+
+# Get the directory of the current script
+CWD = os.getcwd()
+
+# Construct the relative path to the input dataset
+input_file_path = os.path.join(CWD, 'assets', 'data', 'raw', 'dataset3.csv')
 
 # Load the dataset
-df = pd.read_csv('D:/Documents/GitHub/PACE/ey-azure-fn-pipeline/assets/data/raw/dataset3.csv')
+df = pd.read_csv(input_file_path)
 
 # Remove the '$' and ',' from INCOME column and convert it to numeric
 df['INCOME'] = df['INCOME'].replace('[\$,]', '', regex=True).astype(float)

@@ -1,0 +1,1 @@
+This folder keeps all Github Actions scripts that automate the deployment of Terraform and Azure Functions scripts.

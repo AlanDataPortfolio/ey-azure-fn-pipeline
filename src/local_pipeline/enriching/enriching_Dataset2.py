@@ -3,10 +3,10 @@ import pandas as pd
 import numpy as np
 
 # Get the directory of the current script
-script_dir = os.path.dirname(__file__)
+CWD = os.getcwd()
 
-# Construct the relative path to the cleaned dataset
-input_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'cleaned', 'cleaned_dataset2.csv')
+# Construct the relative path to the input dataset
+input_file_path = os.path.join(CWD, 'assets', 'data', 'cleaned', 'cleaned_dataset2.csv')
 
 # Load the cleaned dataset, ensuring 'none' is not treated as NaN
 df_motor = pd.read_csv(input_file_path, na_values=[], keep_default_na=False)
@@ -125,7 +125,7 @@ required_columns = [
 df_motor = df_motor[required_columns]
 
 # Construct the path for saving the enriched output CSV file
-output_file_path = os.path.join(script_dir, '..', '..', '..', '..', 'assets', 'data', 'enriched', 'cleanedEnriched_dataset2.csv')
+output_file_path = os.path.join(CWD, 'assets', 'data', 'enriched', 'enriched_dataset2.csv')
 
 # Save the enriched dataframe to the output CSV file
 df_motor.to_csv(output_file_path, index=False)

@@ -44,7 +44,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 56,PhD,110,0,12,40,Full
 49,PhD,104,0,14,32,Full
 38,High School,102,0,9,21,Full
-43,Masters,94,0,15,26,Full
+43,Masters,98,0,15,26,Full
 50,PhD,114,0,1,34,Full
 63,PhD,108,0,11,45,Full
 52,High School,115,0,6,32,Full
@@ -76,12 +76,12 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 35,High School,5426,0,4,13,Full
 44,High School,100,0,12,25,Full
 43,Masters,4148,0,15,21,Full
-49,PhD,98,1,18,31,Full
+49,PhD,95,1,18,31,Full
 46,Bachelor,104,1,11,27,Full
 45,PhD,100,0,20,29,Full
-46,Masters,100,1,12,24,Full
-45,Masters,88,0,9,26,Full
-48,Masters,96,0,17,27,Full
+46,Masters,96,1,12,24,Full
+45,Masters,91,0,9,26,Full
+48,Masters,91,0,17,27,Full
 63,PhD,111,0,18,43,Full
 44,Bachelor,111,0,1,27,Full
 45,Bachelor,2371,0,11,27,Full
@@ -148,12 +148,12 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 41,Masters,3524,0,14,22,Full
 49,Bachelor,119,0,1,27,Full
 41,High School,115,0,1,24,Full
-47,Masters,97,0,11,29,Full
+47,Masters,92,0,11,29,Full
 30,High School,105,0,1,13,Full
 44,Masters,101,0,16,24,Full
 46,Bachelor,112,0,7,28,Full
 49,Bachelor,112,0,9,27,Full
-33,Masters,101,0,4,14,Full
+33,Masters,105,0,4,14,Full
 34,High School,106,0,7,18,Full
 44,Masters,93,0,9,25,Full
 43,Bachelor,1807,1,12,25,Full
@@ -208,7 +208,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,High School,98,0,9,30,Full
 43,High School,112,0,5,27,Full
 54,Bachelor,113,0,9,33,Full
-55,Masters,95,0,19,34,Full
+55,Masters,96,0,19,34,Full
 61,High School,104,0,1,39,Full
 50,Masters,103,0,19,33,Full
 62,High School,3705,0,1,46,Full
@@ -221,7 +221,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 38,Masters,97,0,15,21,Full
 42,High School,4380,0,1,26,Full
 31,High School,1826,1,7,15,Full
-44,Masters,104,0,10,24,Full
+44,Masters,100,0,10,24,Full
 41,Masters,113,0,17,22,Full
 36,High School,6716,0,10,17,Full
 48,Bachelor,105,0,10,31,Full
@@ -237,7 +237,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Bachelor,110,0,6,24,Full
 43,High School,97,1,1,21,Full
 53,High School,4257,0,7,32,Full
-40,Masters,100,0,14,23,Full
+40,Masters,98,0,14,23,Full
 31,High School,4277,0,5,14,Full
 32,High School,2832,1,8,10,Full
 58,PhD,19597,0,14,38,Full
@@ -248,7 +248,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,High School,94,0,13,29,Full
 43,Bachelor,97,0,7,24,Full
 41,Bachelor,100,0,8,23,Full
-48,PhD,93,0,17,28,Full
+48,PhD,97,0,17,28,Full
 39,High School,92,0,8,17,Full
 49,High School,115,0,1,30,Full
 45,High School,108,0,1,23,Full
@@ -298,7 +298,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 54,Masters,102,1,18,34,Full
 42,Bachelor,106,0,1,24,Full
 56,PhD,110,0,17,38,Full
-50,PhD,98,0,20,34,Full
+50,PhD,101,0,20,34,Full
 59,High School,101,1,10,42,Full
 51,Masters,106,0,14,30,Full
 53,PhD,686,0,14,37,Full
@@ -327,7 +327,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 29,High School,3418,0,1,12,Full
 45,High School,4423,1,1,26,Full
 37,Bachelor,106,0,9,17,Full
-56,PhD,88,0,17,37,Full
+56,PhD,92,0,17,37,Full
 45,Masters,116,0,1,27,Full
 51,Masters,99,0,8,29,Full
 48,Bachelor,104,0,10,27,Full
@@ -344,7 +344,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,Bachelor,105,0,7,27,Full
 47,PhD,120,0,1,27,Full
 46,High School,100,0,6,25,Full
-42,Masters,94,0,19,21,Full
+42,Masters,93,0,19,21,Full
 44,Masters,120,0,13,26,Full
 36,High School,3644,0,7,17,Full
 33,High School,109,0,1,12,Full
@@ -409,7 +409,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 41,PhD,114,0,1,21,Full
 49,Masters,92,0,15,29,Full
 44,High School,100,0,6,26,Full
-31,PhD,94,0,14,11,Full
+31,PhD,97,0,14,11,Full
 51,Masters,2262,0,1,29,Full
 50,High School,96,0,8,31,Full
 58,High School,40152,1,1,40,Full
@@ -456,7 +456,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 19,High School,120,0,1,3,P2
 49,Bachelor,105,0,7,31,Full
 33,High School,117,0,6,13,Full
-43,Masters,91,0,20,24,Full
+43,Masters,92,0,20,24,Full
 48,High School,98,0,1,30,Full
 45,High School,104,0,6,28,Full
 39,Bachelor,86,0,8,21,Full
@@ -509,7 +509,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Masters,105,0,13,26,Full
 64,Masters,103,0,9,47,Full
 46,Bachelor,101,0,6,29,Full
-39,Masters,92,1,12,17,Full
+39,Masters,94,1,12,17,Full
 69,Bachelor,102,0,11,53,Full
 35,High School,120,0,6,16,Full
 44,Bachelor,96,0,15,28,Full
@@ -608,7 +608,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,High School,105,1,1,25,Full
 44,Masters,5016,1,10,22,Full
 46,Bachelor,101,0,6,29,Full
-55,PhD,103,0,18,37,Full
+55,PhD,100,0,18,37,Full
 52,PhD,104,0,16,33,Full
 43,PhD,115,0,9,25,Full
 52,High School,114,1,1,33,Full
@@ -644,7 +644,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,High School,93,0,1,27,Full
 48,Bachelor,95,0,8,27,Full
 72,Masters,917,0,6,50,Full
-52,Masters,96,0,16,31,Full
+52,Masters,94,0,16,31,Full
 48,High School,102,0,11,30,Full
 40,High School,9162,0,1,21,Full
 49,Bachelor,105,0,7,32,Full
@@ -832,7 +832,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 38,High School,100,0,6,18,Full
 53,Bachelor,109,1,6,34,Full
 56,Bachelor,4539,0,15,40,Full
-52,Masters,100,0,16,32,Full
+52,Masters,99,0,16,32,Full
 39,High School,101,0,7,18,Full
 58,High School,2011,0,1,38,Full
 43,Masters,94,0,16,22,Full
@@ -959,7 +959,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 48,Bachelor,91,0,10,29,Full
 49,Bachelor,4439,0,9,27,Full
 37,High School,109,0,8,17,Full
-48,PhD,97,1,20,28,Full
+48,PhD,95,1,20,28,Full
 30,High School,99,0,1,9,Full
 55,Bachelor,2203,1,12,39,Full
 43,High School,92,0,8,25,Full
@@ -1089,11 +1089,11 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 57,Masters,98,0,11,39,Full
 53,Bachelor,108,0,1,34,Full
 40,Masters,6879,0,16,21,Full
-40,Masters,95,1,18,18,Full
+40,Masters,94,1,18,18,Full
 62,Masters,3288,0,15,42,Full
 47,Bachelor,114,0,7,26,Full
 48,Masters,96,0,21,30,Full
-46,Masters,91,0,14,25,Full
+46,Masters,94,0,14,25,Full
 45,High School,3521,0,9,28,Full
 39,High School,102,0,9,23,Full
 35,High School,103,0,8,15,Full
@@ -1175,7 +1175,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 29,Masters,104,0,8,10,Full
 37,High School,6250,1,1,16,Full
 46,Masters,99,0,15,27,Full
-44,Masters,95,0,18,23,Full
+44,Masters,91,0,18,23,Full
 53,Bachelor,3408,1,9,33,Full
 33,Masters,106,0,15,16,Full
 35,High School,105,0,1,17,Full
@@ -1321,7 +1321,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,High School,103,0,4,29,Full
 39,PhD,97,1,18,19,Full
 39,High School,6653,0,10,22,Full
-53,PhD,100,0,12,37,Full
+53,PhD,96,0,12,37,Full
 29,High School,97,0,1,7,Full
 39,High School,4209,0,1,18,Full
 44,Masters,98,0,13,22,Full
@@ -1331,7 +1331,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 58,High School,3626,1,7,41,Full
 35,PhD,3332,0,13,17,Full
 46,High School,113,0,1,30,Full
-54,Masters,97,0,14,35,Full
+54,Masters,99,0,14,35,Full
 52,High School,107,0,5,33,Full
 26,Bachelor,3760,0,7,8,Full
 29,High School,93,0,9,11,Full
@@ -1443,7 +1443,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,High School,111,0,1,24,Full
 40,Bachelor,100,0,8,21,Full
 41,High School,100,0,1,22,Full
-50,PhD,98,0,15,28,Full
+50,PhD,101,0,15,28,Full
 45,High School,108,0,1,26,Full
 57,Masters,98,0,14,35,Full
 52,Masters,101,0,10,36,Full
@@ -1568,7 +1568,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 35,High School,117,0,1,17,Full
 45,PhD,104,0,5,27,Full
 50,Bachelor,103,0,8,34,Full
-25,PhD,94,1,20,3,P2
+25,PhD,89,1,20,3,P2
 65,Bachelor,94,0,10,45,Full
 38,Bachelor,103,0,13,20,Full
 36,PhD,104,0,10,18,Full
@@ -1604,7 +1604,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 33,High School,97,0,8,16,Full
 38,Bachelor,97,0,10,18,Full
 60,PhD,103,0,20,38,Full
-28,Masters,111,0,16,10,Full
+28,Masters,115,0,16,10,Full
 59,Bachelor,111,0,6,41,Full
 43,High School,109,0,1,22,Full
 40,High School,2593,1,1,22,Full
@@ -1666,7 +1666,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 54,PhD,7940,0,13,33,Full
 33,High School,101,0,8,17,Full
 45,Bachelor,110,0,10,25,Full
-57,Masters,97,0,14,39,Full
+57,Masters,102,0,14,39,Full
 44,High School,110,1,11,27,Full
 56,High School,1914,0,9,34,Full
 55,Bachelor,111,0,10,36,Full
@@ -1694,7 +1694,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,Bachelor,4805,0,7,34,Full
 29,Bachelor,101,0,11,11,Full
 35,High School,108,0,5,18,Full
-32,PhD,94,0,14,13,Full
+32,PhD,90,0,14,13,Full
 51,Masters,6132,1,17,32,Full
 50,High School,6535,0,6,34,Full
 47,Masters,2840,0,9,28,Full
@@ -1797,7 +1797,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 40,High School,107,0,1,23,Full
 45,PhD,106,0,17,25,Full
 32,High School,103,0,1,16,Full
-30,Masters,98,0,16,8,Full
+30,Masters,96,0,16,8,Full
 40,Masters,3361,0,11,22,Full
 45,High School,101,0,6,24,Full
 55,High School,92,0,8,36,Full
@@ -1808,7 +1808,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 51,PhD,97,0,16,32,Full
 35,High School,111,0,1,17,Full
 52,Masters,103,0,11,32,Full
-45,Masters,102,0,13,24,Full
+45,Masters,97,0,13,24,Full
 36,High School,98,0,1,18,Full
 59,Masters,102,0,14,43,Full
 54,PhD,107,0,10,37,Full
@@ -1865,9 +1865,9 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 36,Bachelor,113,0,8,19,Full
 46,Masters,96,0,18,30,Full
 36,Masters,100,0,16,17,Full
-29,PhD,96,0,12,9,Full
+29,PhD,99,0,12,9,Full
 26,High School,120,0,7,4,P2
-44,Masters,95,0,17,24,Full
+44,Masters,91,0,17,24,Full
 52,PhD,115,0,20,32,Full
 34,High School,2199,0,6,15,Full
 53,Bachelor,102,0,1,35,Full
@@ -2050,7 +2050,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 29,High School,96,0,1,12,Full
 36,Masters,98,0,10,17,Full
 61,PhD,107,0,12,40,Full
-55,PhD,98,0,12,36,Full
+55,PhD,94,0,12,36,Full
 50,High School,96,0,1,32,Full
 57,Masters,112,0,9,39,Full
 56,High School,7042,0,10,40,Full
@@ -2070,7 +2070,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 51,Bachelor,103,0,12,33,Full
 30,High School,111,0,1,13,Full
 55,High School,114,0,7,34,Full
-54,PhD,97,0,16,32,Full
+54,PhD,100,0,16,32,Full
 43,High School,19745,0,12,24,Full
 41,Bachelor,5320,0,8,20,Full
 45,High School,113,0,7,29,Full
@@ -2225,7 +2225,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Masters,3925,0,14,27,Full
 44,High School,96,0,6,22,Full
 40,Bachelor,96,0,9,18,Full
-51,Masters,98,0,15,35,Full
+51,Masters,96,0,15,35,Full
 46,Bachelor,3570,0,8,25,Full
 57,Bachelor,4373,0,12,40,Full
 49,Masters,96,0,10,27,Full
@@ -2268,11 +2268,11 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,Masters,102,0,19,28,Full
 56,Bachelor,106,0,5,36,Full
 50,Masters,101,0,16,29,Full
-53,PhD,94,0,9,37,Full
+53,PhD,93,0,9,37,Full
 34,High School,112,0,1,17,Full
 41,High School,120,0,5,20,Full
 42,High School,5039,0,1,24,Full
-52,PhD,97,0,15,35,Full
+52,PhD,95,0,15,35,Full
 36,High School,102,0,3,14,Full
 60,High School,2166,1,1,44,Full
 29,High School,116,1,1,9,Full
@@ -2380,7 +2380,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,High School,4903,0,1,29,Full
 51,High School,110,0,1,35,Full
 42,Masters,95,0,11,25,Full
-49,Masters,107,1,16,27,Full
+49,Masters,108,1,16,27,Full
 49,Masters,102,0,19,28,Full
 32,Bachelor,92,0,15,15,Full
 47,High School,2589,0,1,27,Full
@@ -2394,7 +2394,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 36,Bachelor,4296,0,3,20,Full
 39,High School,2777,0,8,18,Full
 52,Bachelor,4298,0,11,35,Full
-53,Masters,97,0,12,31,Full
+53,Masters,101,0,12,31,Full
 37,Bachelor,119,0,4,19,Full
 57,Masters,2536,0,12,39,Full
 41,High School,1009,0,12,23,Full
@@ -2418,7 +2418,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 26,High School,3997,1,1,7,Full
 42,High School,8496,0,8,22,Full
 44,Bachelor,99,0,14,24,Full
-55,PhD,94,0,9,38,Full
+55,PhD,99,0,9,38,Full
 30,Masters,93,0,24,11,Full
 39,High School,104,0,7,22,Full
 36,High School,104,0,1,15,Full
@@ -2441,10 +2441,10 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Masters,108,0,13,23,Full
 38,High School,9388,0,1,22,Full
 51,Masters,785,0,19,29,Full
-36,Masters,93,0,16,19,Full
+36,Masters,90,0,16,19,Full
 31,High School,4229,0,6,13,Full
 38,Bachelor,105,0,5,18,Full
-47,Masters,101,0,13,31,Full
+47,Masters,99,0,13,31,Full
 36,High School,99,0,1,15,Full
 38,Masters,103,0,15,18,Full
 43,Masters,101,0,15,24,Full
@@ -2536,7 +2536,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 39,High School,105,0,1,17,Full
 44,High School,107,0,8,22,Full
 56,Bachelor,99,0,9,36,Full
-49,Masters,97,1,17,33,Full
+49,Masters,93,1,17,33,Full
 43,High School,110,0,4,27,Full
 46,Bachelor,3180,0,10,30,Full
 37,Bachelor,3439,0,12,17,Full
@@ -2577,7 +2577,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,High School,92,0,8,22,Full
 44,PhD,109,0,15,26,Full
 49,Bachelor,4246,0,9,32,Full
-41,Masters,94,0,20,22,Full
+41,Masters,90,0,20,22,Full
 35,Masters,107,0,9,14,Full
 41,Bachelor,98,0,13,19,Full
 56,Bachelor,98,0,9,38,Full
@@ -2588,7 +2588,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 56,Bachelor,97,0,11,37,Full
 37,Masters,93,0,17,16,Full
 40,Bachelor,103,0,1,20,Full
-41,PhD,96,0,11,20,Full
+41,PhD,94,0,11,20,Full
 45,High School,95,0,8,24,Full
 57,PhD,95,0,11,39,Full
 64,Bachelor,6316,1,11,45,Full
@@ -2607,7 +2607,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 56,Bachelor,295,0,12,40,Full
 45,Masters,1283,0,17,27,Full
 31,High School,4550,0,1,15,Full
-46,PhD,93,0,13,24,Full
+46,PhD,98,0,13,24,Full
 57,High School,90,1,9,35,Full
 53,Masters,3149,0,13,31,Full
 55,High School,101,0,9,36,Full
@@ -2624,7 +2624,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 30,High School,115,0,6,11,Full
 47,Bachelor,98,0,10,31,Full
 52,High School,1131,1,1,34,Full
-41,PhD,97,0,12,23,Full
+41,PhD,99,0,12,23,Full
 42,Masters,104,0,15,25,Full
 32,High School,107,0,1,14,Full
 27,Bachelor,98,0,7,5,Full
@@ -2677,7 +2677,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 49,High School,100,0,8,32,Full
 44,PhD,99,0,17,25,Full
 50,Masters,104,0,10,30,Full
-57,PhD,87,0,10,35,Full
+57,PhD,91,0,10,35,Full
 31,Bachelor,4125,0,9,15,Full
 61,High School,89,0,9,41,Full
 50,Masters,4519,0,12,30,Full
@@ -2756,7 +2756,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,Bachelor,104,0,6,22,Full
 44,High School,103,0,1,23,Full
 38,Bachelor,6787,0,11,22,Full
-30,Masters,107,0,15,8,Full
+30,Masters,106,0,15,8,Full
 48,High School,4715,1,9,31,Full
 36,High School,810,1,1,15,Full
 38,Masters,94,0,15,19,Full
@@ -2783,7 +2783,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 34,Masters,3066,1,1,15,Full
 54,High School,105,0,8,38,Full
 63,Masters,94,0,15,41,Full
-45,PhD,95,0,9,25,Full
+45,PhD,93,0,9,25,Full
 36,High School,99,0,6,18,Full
 49,Masters,5453,0,18,30,Full
 26,High School,3581,0,1,7,Full
@@ -2803,11 +2803,11 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 39,Masters,96,0,9,20,Full
 47,Bachelor,6027,0,2,26,Full
 59,Bachelor,98,0,10,40,Full
-48,PhD,99,0,11,29,Full
+48,PhD,103,0,11,29,Full
 45,Bachelor,102,0,9,23,Full
 43,Masters,96,0,14,26,Full
 45,High School,1379,0,1,26,Full
-52,Masters,91,0,12,34,Full
+52,Masters,94,0,12,34,Full
 49,High School,93,0,5,31,Full
 49,Masters,103,0,10,29,Full
 57,High School,107,1,1,40,Full
@@ -2919,7 +2919,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 37,High School,6480,0,1,20,Full
 49,Masters,98,0,13,31,Full
 44,Bachelor,95,1,11,24,Full
-45,Masters,99,0,21,26,Full
+45,Masters,97,0,21,26,Full
 33,Bachelor,2206,0,8,15,Full
 43,Bachelor,99,0,9,24,Full
 38,High School,104,0,4,20,Full
@@ -2972,7 +2972,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 41,High School,90,0,14,21,Full
 55,Bachelor,114,0,10,33,Full
 35,High School,96,0,9,14,Full
-36,Masters,91,0,16,19,Full
+36,Masters,94,0,16,19,Full
 48,High School,106,0,7,30,Full
 57,High School,91,0,1,41,Full
 53,High School,109,1,1,35,Full
@@ -3004,9 +3004,9 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,Masters,3456,1,10,25,Full
 48,Masters,98,0,12,29,Full
 46,High School,3261,0,8,26,Full
-41,PhD,91,0,9,24,Full
-53,Masters,95,0,17,37,Full
-53,Masters,98,0,7,33,Full
+41,PhD,92,0,9,24,Full
+53,Masters,92,0,17,37,Full
+53,Masters,99,0,7,33,Full
 45,Bachelor,6978,0,1,25,Full
 47,High School,4933,0,1,25,Full
 50,Bachelor,110,0,7,34,Full
@@ -3020,7 +3020,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 35,Bachelor,82,1,9,16,Full
 48,High School,91,1,11,30,Full
 48,High School,111,0,1,27,Full
-58,Masters,96,1,13,40,Full
+58,Masters,93,1,13,40,Full
 58,PhD,111,1,18,36,Full
 32,High School,116,0,6,15,Full
 51,High School,502,0,1,30,Full
@@ -3040,7 +3040,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,High School,9136,0,9,34,Full
 33,High School,111,0,1,14,Full
 43,Masters,97,0,11,23,Full
-55,PhD,95,1,12,38,Full
+55,PhD,96,1,12,38,Full
 40,PhD,94,0,14,24,Full
 37,High School,100,0,8,19,Full
 44,High School,99,0,8,27,Full
@@ -3089,7 +3089,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 37,Bachelor,94,0,9,16,Full
 53,Bachelor,7385,1,12,36,Full
 43,High School,110,0,1,23,Full
-60,PhD,99,0,13,40,Full
+60,PhD,101,0,13,40,Full
 41,Bachelor,110,0,1,23,Full
 43,Bachelor,6003,1,4,23,Full
 40,High School,102,0,1,22,Full
@@ -3144,11 +3144,11 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 57,High School,6035,0,1,38,Full
 40,High School,100,0,1,18,Full
 40,High School,6156,0,1,20,Full
-50,Masters,93,0,17,33,Full
+50,Masters,97,0,17,33,Full
 43,High School,113,0,1,21,Full
 48,Masters,103,0,12,31,Full
 34,Bachelor,5252,0,10,12,Full
-54,PhD,98,0,22,34,Full
+54,PhD,102,0,22,34,Full
 45,Masters,108,0,13,26,Full
 33,High School,96,0,8,16,Full
 40,Bachelor,4782,0,10,22,Full
@@ -3276,7 +3276,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 55,Masters,104,0,5,35,Full
 45,Masters,107,1,12,25,Full
 45,Bachelor,4974,0,9,25,Full
-50,PhD,96,0,10,33,Full
+50,PhD,98,0,10,33,Full
 55,Bachelor,103,0,11,36,Full
 26,High School,8697,0,1,6,Full
 57,High School,6255,1,1,40,Full
@@ -3448,7 +3448,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,High School,113,0,1,28,Full
 56,Bachelor,108,0,8,40,Full
 43,High School,97,1,6,25,Full
-40,PhD,104,0,14,22,Full
+40,PhD,100,0,14,22,Full
 64,Bachelor,93,0,11,44,Full
 30,Masters,105,0,17,9,Full
 61,PhD,106,0,16,41,Full
@@ -3458,7 +3458,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,Bachelor,110,0,10,25,Full
 50,Bachelor,99,0,13,33,Full
 48,Masters,108,1,15,27,Full
-42,Masters,100,0,14,22,Full
+42,Masters,99,0,14,22,Full
 52,Masters,9187,0,18,31,Full
 51,High School,103,0,7,32,Full
 51,High School,104,0,4,29,Full
@@ -3516,7 +3516,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,Masters,109,0,6,30,Full
 45,High School,107,0,4,26,Full
 56,Bachelor,3783,0,13,37,Full
-47,PhD,91,0,11,30,Full
+47,PhD,86,0,11,30,Full
 47,PhD,103,0,11,27,Full
 36,High School,1630,0,1,16,Full
 51,Bachelor,100,1,10,35,Full
@@ -3614,7 +3614,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 22,Bachelor,3225,0,10,5,Full
 63,Masters,102,0,17,44,Full
 34,High School,97,0,1,12,Full
-41,PhD,93,0,15,23,Full
+41,PhD,95,0,15,23,Full
 42,High School,103,0,1,26,Full
 23,Masters,6188,0,16,5,Full
 60,High School,2132,1,1,38,Full
@@ -3640,7 +3640,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 30,High School,755,0,8,11,Full
 39,High School,91,0,8,20,Full
 45,Bachelor,3619,0,8,27,Full
-52,Masters,96,0,12,32,Full
+52,Masters,99,0,12,32,Full
 41,High School,1205,1,8,21,Full
 59,High School,100,0,7,41,Full
 44,High School,110,0,1,22,Full
@@ -3680,7 +3680,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,High School,108,0,11,22,Full
 35,Bachelor,103,0,8,17,Full
 46,High School,107,0,1,30,Full
-46,PhD,98,0,15,28,Full
+46,PhD,100,0,15,28,Full
 47,High School,102,0,1,25,Full
 33,High School,3158,0,2,13,Full
 48,High School,101,1,1,32,Full
@@ -3701,7 +3701,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 49,High School,102,0,1,28,Full
 36,High School,2557,0,4,16,Full
 32,High School,109,1,8,14,Full
-58,Masters,94,0,12,36,Full
+58,Masters,99,0,12,36,Full
 37,Bachelor,93,0,16,19,Full
 50,PhD,100,1,19,28,Full
 51,PhD,96,0,14,35,Full
@@ -3762,7 +3762,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 60,Bachelor,4390,0,4,41,Full
 41,High School,102,0,8,20,Full
 50,PhD,99,0,26,31,Full
-44,Masters,99,0,16,24,Full
+44,Masters,103,0,16,24,Full
 41,Masters,98,0,18,22,Full
 51,High School,109,0,1,30,Full
 51,Masters,102,1,9,34,Full
@@ -3847,7 +3847,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 53,High School,112,0,1,36,Full
 23,High School,123,0,5,4,P2
 38,Masters,96,0,11,17,Full
-46,PhD,99,0,16,27,Full
+46,PhD,103,0,16,27,Full
 59,Bachelor,102,0,13,37,Full
 44,High School,2240,1,1,24,Full
 60,PhD,4104,0,14,38,Full
@@ -3967,13 +3967,13 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 30,Bachelor,95,0,10,11,Full
 42,Bachelor,96,0,13,25,Full
 64,Masters,2432,0,1,46,Full
-44,PhD,92,0,20,22,Full
+44,PhD,94,0,20,22,Full
 45,Bachelor,107,0,6,26,Full
 52,Masters,105,0,12,30,Full
 43,High School,5899,0,1,22,Full
 43,High School,2392,1,7,23,Full
 48,Bachelor,3127,0,9,28,Full
-45,PhD,98,0,11,26,Full
+45,PhD,100,0,11,26,Full
 33,High School,96,0,6,14,Full
 54,PhD,96,0,20,33,Full
 54,High School,118,0,1,38,Full
@@ -4032,7 +4032,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 38,High School,4542,0,1,19,Full
 48,Masters,97,0,10,26,Full
 52,PhD,97,0,11,36,Full
-52,Masters,95,0,15,30,Full
+52,Masters,98,0,15,30,Full
 53,High School,113,0,1,35,Full
 44,Bachelor,108,0,7,22,Full
 58,Bachelor,104,0,4,38,Full
@@ -4061,7 +4061,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 52,Masters,98,0,11,34,Full
 27,Bachelor,92,0,13,8,Full
 55,High School,1646,0,6,38,Full
-53,Masters,96,0,19,33,Full
+53,Masters,94,0,19,33,Full
 31,High School,118,0,1,11,Full
 46,High School,96,0,9,29,Full
 53,Masters,101,0,17,37,Full
@@ -4121,7 +4121,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 57,High School,3007,0,7,38,Full
 50,Bachelor,118,0,1,28,Full
 25,Bachelor,4539,0,12,4,P2
-40,Masters,96,0,13,21,Full
+40,Masters,97,0,13,21,Full
 53,Masters,103,0,14,35,Full
 49,PhD,92,0,13,30,Full
 35,Masters,89,1,19,13,Full
@@ -4254,7 +4254,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 55,Bachelor,102,0,6,33,Full
 52,Bachelor,98,0,12,32,Full
 58,Bachelor,105,0,9,40,Full
-57,PhD,100,0,1,35,Full
+57,PhD,102,0,1,35,Full
 56,PhD,108,0,10,34,Full
 42,PhD,97,0,10,20,Full
 36,Bachelor,105,0,5,20,Full
@@ -4334,7 +4334,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 34,High School,119,1,1,12,Full
 29,High School,3090,0,8,12,Full
 54,Masters,102,0,1,33,Full
-47,Masters,97,0,19,28,Full
+47,Masters,99,0,19,28,Full
 62,High School,123,0,1,41,Full
 58,Masters,39104,0,18,40,Full
 59,PhD,109,0,11,39,Full
@@ -4454,7 +4454,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 60,PhD,3918,0,13,42,Full
 48,Masters,97,0,16,28,Full
 59,High School,106,0,1,40,Full
-51,PhD,93,0,15,33,Full
+51,PhD,98,0,15,33,Full
 48,PhD,98,1,15,30,Full
 33,Bachelor,103,0,12,15,Full
 55,Bachelor,108,0,5,39,Full
@@ -4493,7 +4493,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,Masters,118,0,17,28,Full
 54,Bachelor,99,0,6,35,Full
 60,High School,97,0,8,42,Full
-47,PhD,101,0,17,28,Full
+47,PhD,102,0,17,28,Full
 29,High School,108,0,1,8,Full
 44,High School,4579,0,1,27,Full
 61,PhD,105,0,14,43,Full
@@ -4526,7 +4526,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 59,PhD,3231,0,12,38,Full
 30,High School,3428,1,1,8,Full
 53,Bachelor,4073,0,7,31,Full
-62,Masters,98,0,21,45,Full
+62,Masters,97,0,21,45,Full
 47,High School,109,0,1,29,Full
 42,High School,109,0,8,24,Full
 52,Bachelor,97,0,13,35,Full
@@ -4555,7 +4555,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 51,Masters,97,0,8,29,Full
 42,High School,4798,0,1,25,Full
 51,High School,105,0,1,32,Full
-55,PhD,97,0,10,33,Full
+55,PhD,95,0,10,33,Full
 43,High School,109,0,6,27,Full
 50,High School,104,0,8,29,Full
 50,High School,698,1,1,29,Full
@@ -4615,7 +4615,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 48,High School,109,0,1,26,Full
 49,PhD,96,0,15,33,Full
 33,PhD,10839,0,16,15,Full
-50,PhD,99,0,13,34,Full
+50,PhD,102,0,13,34,Full
 44,Masters,121,0,14,27,Full
 33,Masters,97,0,16,11,Full
 57,PhD,104,0,20,40,Full
@@ -4768,7 +4768,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 37,High School,6932,0,8,18,Full
 41,Bachelor,88,0,10,24,Full
 41,High School,2910,0,9,24,Full
-30,Masters,95,0,14,14,Full
+30,Masters,92,0,14,14,Full
 57,PhD,105,1,13,38,Full
 52,Bachelor,102,1,17,35,Full
 40,High School,111,0,1,21,Full
@@ -4901,7 +4901,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 39,Masters,6993,0,20,17,Full
 44,Masters,97,0,14,23,Full
 57,High School,2575,1,10,37,Full
-49,PhD,100,0,12,31,Full
+49,PhD,99,0,12,31,Full
 51,Bachelor,99,0,14,35,Full
 39,Bachelor,2646,0,9,23,Full
 38,High School,108,0,1,22,Full
@@ -4981,7 +4981,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,High School,7204,1,5,31,Full
 57,Bachelor,92,0,8,39,Full
 29,Bachelor,113,1,9,10,Full
-44,Masters,98,0,18,27,Full
+44,Masters,99,0,18,27,Full
 48,Bachelor,102,0,7,26,Full
 51,Bachelor,96,0,14,31,Full
 48,PhD,5728,0,17,32,Full
@@ -5030,7 +5030,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,Masters,112,0,19,23,Full
 67,High School,1402,0,10,48,Full
 55,Bachelor,98,0,13,33,Full
-51,PhD,104,0,9,35,Full
+51,PhD,99,0,9,35,Full
 36,Bachelor,109,0,1,17,Full
 38,High School,4491,0,8,18,Full
 39,Bachelor,926,1,10,19,Full
@@ -5048,7 +5048,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 42,High School,110,0,1,25,Full
 50,High School,96,0,9,30,Full
 44,High School,104,0,1,24,Full
-54,Masters,97,0,14,32,Full
+54,Masters,98,0,14,32,Full
 45,Bachelor,104,0,10,25,Full
 34,High School,92,0,9,18,Full
 55,High School,104,0,7,39,Full
@@ -5079,7 +5079,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 40,PhD,105,0,12,19,Full
 44,Masters,6281,0,19,24,Full
 49,High School,104,0,1,32,Full
-37,Masters,90,0,11,21,Full
+37,Masters,92,0,11,21,Full
 47,PhD,99,0,15,25,Full
 43,High School,101,1,8,22,Full
 50,High School,108,0,1,29,Full
@@ -5257,7 +5257,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 53,Bachelor,97,0,11,31,Full
 37,High School,101,0,8,17,Full
 50,High School,94,0,5,29,Full
-56,Masters,100,0,13,36,Full
+56,Masters,96,0,13,36,Full
 40,Bachelor,113,0,5,23,Full
 50,Bachelor,100,0,11,29,Full
 51,PhD,109,0,19,34,Full
@@ -5398,7 +5398,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Bachelor,106,0,1,27,Full
 28,Bachelor,4120,0,1,12,Full
 55,Bachelor,109,0,11,38,Full
-51,PhD,102,0,6,35,Full
+51,PhD,100,0,6,35,Full
 54,High School,107,0,8,35,Full
 32,Masters,103,0,13,16,Full
 40,Bachelor,102,0,7,18,Full
@@ -5424,7 +5424,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 24,Bachelor,106,0,7,5,Full
 36,High School,4104,0,7,16,Full
 58,High School,5524,0,10,38,Full
-46,Masters,88,0,15,29,Full
+46,Masters,93,0,15,29,Full
 52,PhD,3975,0,16,34,Full
 29,Bachelor,98,0,9,10,Full
 29,High School,99,1,1,10,Full
@@ -5448,7 +5448,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,Masters,109,1,1,28,Full
 35,High School,101,0,8,17,Full
 54,PhD,111,0,16,37,Full
-48,Masters,98,0,17,32,Full
+48,Masters,100,0,17,32,Full
 39,Bachelor,109,0,7,22,Full
 37,High School,117,0,6,21,Full
 36,High School,110,0,5,14,Full
@@ -5487,7 +5487,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 40,High School,104,0,1,18,Full
 52,Bachelor,102,0,5,30,Full
 44,Bachelor,5125,0,9,28,Full
-52,Masters,100,0,13,34,Full
+52,Masters,99,0,13,34,Full
 31,Bachelor,124,0,1,15,Full
 57,High School,118,0,1,41,Full
 39,High School,6799,0,1,23,Full
@@ -5619,7 +5619,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,High School,99,0,1,24,Full
 65,Masters,100,0,18,43,Full
 51,Bachelor,101,0,11,31,Full
-51,Masters,101,0,17,30,Full
+51,Masters,100,0,17,30,Full
 42,High School,98,0,4,20,Full
 38,High School,105,0,9,22,Full
 49,Masters,97,0,13,30,Full
@@ -5730,7 +5730,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,Bachelor,109,0,3,26,Full
 41,Bachelor,108,0,12,19,Full
 60,PhD,118,0,12,40,Full
-46,Masters,93,0,15,30,Full
+46,Masters,97,0,15,30,Full
 48,High School,1710,0,12,27,Full
 60,Bachelor,4566,0,7,44,Full
 43,High School,106,0,7,27,Full
@@ -5741,7 +5741,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,High School,98,0,3,27,Full
 36,High School,96,1,1,18,Full
 44,High School,865,0,3,23,Full
-41,Masters,101,0,1,24,Full
+41,Masters,103,0,1,24,Full
 43,High School,1942,0,1,23,Full
 45,High School,111,0,1,28,Full
 49,Masters,102,0,11,27,Full
@@ -5875,7 +5875,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,High School,115,0,3,30,Full
 32,High School,105,0,1,11,Full
 46,High School,6639,0,9,28,Full
-58,Masters,91,0,16,36,Full
+58,Masters,96,0,16,36,Full
 36,High School,5984,1,1,17,Full
 38,Bachelor,102,0,7,20,Full
 46,Masters,116,0,12,27,Full
@@ -5913,7 +5913,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 55,Bachelor,103,0,14,37,Full
 51,Bachelor,100,0,8,32,Full
 41,Bachelor,6346,0,7,25,Full
-53,PhD,108,0,16,33,Full
+53,PhD,105,0,16,33,Full
 45,High School,113,0,1,24,Full
 38,High School,98,1,1,20,Full
 29,High School,98,0,1,10,Full
@@ -5976,7 +5976,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,Masters,97,1,11,25,Full
 49,Bachelor,96,0,14,32,Full
 61,Masters,95,0,16,39,Full
-57,Masters,98,0,9,36,Full
+57,Masters,100,0,9,36,Full
 45,Masters,101,0,12,23,Full
 25,High School,3397,0,1,6,Full
 47,High School,7481,1,5,28,Full
@@ -6164,7 +6164,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 33,Bachelor,110,0,9,11,Full
 55,Bachelor,104,0,7,34,Full
 54,High School,106,0,1,33,Full
-56,PhD,100,0,13,36,Full
+56,PhD,98,0,13,36,Full
 47,Masters,106,0,19,26,Full
 53,High School,106,0,1,34,Full
 33,High School,1756,0,7,11,Full
@@ -6400,7 +6400,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,Masters,100,0,12,28,Full
 42,High School,95,0,5,25,Full
 38,High School,95,1,1,18,Full
-55,PhD,108,0,7,39,Full
+55,PhD,107,0,7,39,Full
 55,Bachelor,1125,1,8,36,Full
 45,High School,6868,0,6,26,Full
 54,PhD,102,0,15,37,Full
@@ -6428,7 +6428,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 54,Masters,106,0,14,32,Full
 43,Bachelor,4009,0,12,21,Full
 41,Bachelor,110,0,11,25,Full
-57,Masters,90,0,19,37,Full
+57,Masters,87,0,19,37,Full
 26,High School,111,0,1,6,Full
 49,Bachelor,111,0,7,29,Full
 43,High School,18540,0,3,27,Full
@@ -6441,7 +6441,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 40,PhD,105,0,13,23,Full
 60,Bachelor,7369,0,10,42,Full
 52,Bachelor,5463,0,13,30,Full
-57,PhD,95,0,21,41,Full
+57,PhD,96,0,21,41,Full
 55,Bachelor,107,1,14,36,Full
 57,Bachelor,106,0,13,39,Full
 51,Bachelor,91,0,9,30,Full
@@ -6743,7 +6743,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,High School,116,0,1,26,Full
 55,Masters,98,0,13,34,Full
 47,Bachelor,99,0,11,26,Full
-58,Masters,92,0,21,36,Full
+58,Masters,90,0,21,36,Full
 38,High School,2437,0,12,18,Full
 51,Bachelor,6006,0,14,32,Full
 35,Bachelor,1475,1,15,19,Full
@@ -6931,7 +6931,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 22,High School,2444,0,7,3,P2
 37,High School,99,0,6,18,Full
 28,Bachelor,107,0,4,8,Full
-44,Masters,116,0,17,28,Full
+44,Masters,114,0,17,28,Full
 31,High School,101,0,7,10,Full
 49,Bachelor,38378,0,7,33,Full
 42,Masters,89,0,13,23,Full
@@ -6954,9 +6954,9 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 48,PhD,104,0,18,29,Full
 29,Masters,108,0,17,10,Full
 48,Masters,95,1,12,26,Full
-52,PhD,91,0,11,34,Full
+52,PhD,87,0,11,34,Full
 40,High School,101,0,16,20,Full
-44,PhD,94,0,12,24,Full
+44,PhD,96,0,12,24,Full
 52,High School,97,0,7,36,Full
 45,Bachelor,104,0,1,29,Full
 40,Bachelor,105,0,1,23,Full
@@ -6964,7 +6964,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 57,Masters,105,0,12,37,Full
 45,High School,5434,0,1,24,Full
 48,Masters,94,0,14,27,Full
-51,PhD,93,0,16,32,Full
+51,PhD,89,0,16,32,Full
 48,Bachelor,104,0,10,32,Full
 39,High School,2662,0,1,22,Full
 52,Bachelor,101,0,9,32,Full
@@ -7012,7 +7012,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 30,High School,113,0,1,13,Full
 48,Masters,96,0,17,28,Full
 47,High School,3824,0,1,27,Full
-42,Masters,95,0,12,23,Full
+42,Masters,93,0,12,23,Full
 54,Bachelor,112,1,6,35,Full
 44,Masters,96,0,11,27,Full
 34,High School,8623,0,1,13,Full
@@ -7043,10 +7043,10 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 53,Bachelor,106,0,8,36,Full
 57,PhD,8521,1,13,40,Full
 39,High School,7442,0,1,20,Full
-45,PhD,98,0,17,28,Full
+45,PhD,95,0,17,28,Full
 64,High School,93,0,9,48,Full
 51,Masters,1741,0,17,30,Full
-52,Masters,101,0,1,33,Full
+52,Masters,103,0,1,33,Full
 61,PhD,100,0,14,40,Full
 40,Bachelor,13773,0,1,22,Full
 50,Masters,97,0,18,31,Full
@@ -7114,7 +7114,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 58,PhD,103,0,1,36,Full
 50,Bachelor,89,0,8,34,Full
 44,High School,8861,0,7,27,Full
-35,Masters,101,0,18,19,Full
+35,Masters,97,0,18,19,Full
 37,Masters,5300,0,13,15,Full
 49,Masters,97,0,16,33,Full
 48,Masters,108,0,17,32,Full
@@ -7349,7 +7349,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 39,High School,116,0,6,17,Full
 52,High School,721,0,1,31,Full
 41,Bachelor,7491,0,11,25,Full
-47,PhD,89,0,21,31,Full
+47,PhD,93,0,21,31,Full
 41,High School,96,0,7,19,Full
 37,Masters,5847,1,14,18,Full
 44,High School,5458,0,8,26,Full
@@ -7413,7 +7413,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,Masters,95,1,17,30,Full
 46,High School,91,0,7,25,Full
 47,Bachelor,102,0,2,30,Full
-54,Masters,92,0,14,32,Full
+54,Masters,88,0,14,32,Full
 41,PhD,100,0,17,21,Full
 46,PhD,92,0,9,24,Full
 36,Bachelor,108,0,1,16,Full
@@ -7442,7 +7442,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 47,High School,99,0,7,28,Full
 37,High School,115,0,1,18,Full
 39,High School,3857,0,1,17,Full
-45,Masters,96,0,15,23,Full
+45,Masters,91,0,15,23,Full
 23,High School,6850,0,7,2,P1
 53,High School,120,0,1,33,Full
 31,Masters,103,0,15,15,Full
@@ -7564,12 +7564,12 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 44,Bachelor,112,0,1,23,Full
 59,Bachelor,107,0,10,37,Full
 44,High School,94,1,5,22,Full
-52,PhD,100,0,12,35,Full
+52,PhD,97,0,12,35,Full
 25,Masters,2576,0,16,7,Full
 52,High School,98,0,9,33,Full
 49,Bachelor,104,0,11,28,Full
 53,High School,2150,0,6,36,Full
-57,Masters,89,0,11,41,Full
+57,Masters,92,0,11,41,Full
 49,High School,107,0,8,30,Full
 36,Bachelor,100,0,9,17,Full
 39,High School,107,0,5,22,Full
@@ -7627,7 +7627,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 66,PhD,108,0,10,47,Full
 54,Bachelor,100,0,11,34,Full
 50,Bachelor,106,0,6,29,Full
-63,PhD,85,1,9,46,Full
+63,PhD,88,1,9,46,Full
 41,High School,2849,0,1,19,Full
 49,Masters,105,0,18,29,Full
 48,Masters,97,0,15,27,Full
@@ -7637,12 +7637,12 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 54,Bachelor,97,0,16,35,Full
 29,Masters,113,1,17,12,Full
 46,Bachelor,5323,0,1,30,Full
-44,Masters,105,0,16,23,Full
+44,Masters,106,0,16,23,Full
 61,Bachelor,106,0,6,44,Full
 58,PhD,99,0,17,42,Full
 43,PhD,94,0,16,21,Full
 54,Masters,101,0,9,38,Full
-52,PhD,96,0,12,32,Full
+52,PhD,97,0,12,32,Full
 49,High School,5161,1,9,30,Full
 57,High School,4857,0,3,40,Full
 62,High School,7843,1,1,44,Full
@@ -7685,7 +7685,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 56,Masters,2939,1,17,39,Full
 31,High School,121,1,4,14,Full
 42,Bachelor,1923,1,8,24,Full
-56,PhD,94,0,12,40,Full
+56,PhD,97,0,12,40,Full
 34,High School,5586,0,1,15,Full
 42,Bachelor,106,0,6,23,Full
 52,Bachelor,99,0,13,35,Full
@@ -7786,7 +7786,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 42,Bachelor,4927,0,9,21,Full
 45,High School,112,0,1,25,Full
 57,Bachelor,108,0,7,35,Full
-36,PhD,97,0,1,17,Full
+36,PhD,100,0,1,17,Full
 56,Bachelor,109,1,14,40,Full
 38,PhD,96,0,22,21,Full
 26,High School,3758,0,6,4,P2
@@ -7858,7 +7858,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 41,Bachelor,96,0,8,24,Full
 43,Bachelor,101,0,11,23,Full
 44,Masters,111,0,12,27,Full
-50,Masters,96,0,17,31,Full
+50,Masters,95,0,17,31,Full
 52,Masters,110,0,10,31,Full
 57,Masters,111,0,14,36,Full
 60,Masters,100,0,13,38,Full
@@ -7972,7 +7972,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 48,High School,710,0,1,32,Full
 50,PhD,100,0,12,34,Full
 41,High School,106,0,7,19,Full
-57,Masters,109,0,6,38,Full
+57,Masters,105,0,6,38,Full
 50,PhD,92,0,11,30,Full
 48,Masters,97,0,12,27,Full
 48,Bachelor,101,0,1,32,Full
@@ -7993,7 +7993,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 27,High School,106,0,5,7,Full
 48,High School,106,0,1,30,Full
 43,High School,111,0,6,21,Full
-50,Masters,99,0,19,28,Full
+50,Masters,94,0,19,28,Full
 45,High School,7861,0,5,28,Full
 62,High School,98,0,9,42,Full
 40,Bachelor,110,0,12,23,Full
@@ -8167,11 +8167,11 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 42,High School,96,1,8,25,Full
 43,Bachelor,104,0,1,23,Full
 37,High School,109,0,8,18,Full
-41,Masters,96,0,12,22,Full
+41,Masters,97,0,12,22,Full
 43,Bachelor,100,0,9,26,Full
 43,Bachelor,3686,0,8,26,Full
 53,Bachelor,3822,1,10,34,Full
-50,Masters,92,0,12,33,Full
+50,Masters,88,0,12,33,Full
 49,PhD,91,0,21,31,Full
 47,High School,109,1,1,31,Full
 44,High School,113,0,0,22,Full
@@ -8269,7 +8269,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 52,Bachelor,97,0,12,30,Full
 44,High School,105,0,6,26,Full
 32,High School,1282,1,6,12,Full
-32,PhD,105,0,7,16,Full
+32,PhD,102,0,7,16,Full
 33,High School,224,1,6,15,Full
 41,Bachelor,107,0,10,20,Full
 46,Bachelor,6611,0,12,25,Full
@@ -8302,7 +8302,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 45,High School,104,0,1,28,Full
 55,Bachelor,100,0,11,37,Full
 52,High School,110,0,1,31,Full
-30,PhD,107,1,13,9,Full
+30,PhD,104,1,13,9,Full
 54,Masters,104,0,16,32,Full
 52,Bachelor,106,0,10,30,Full
 34,Bachelor,108,1,7,17,Full
@@ -8484,7 +8484,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Masters,107,0,16,27,Full
 43,High School,97,0,11,27,Full
 46,Bachelor,100,0,10,24,Full
-36,Masters,96,0,13,18,Full
+36,Masters,94,0,13,18,Full
 53,Masters,100,0,19,31,Full
 30,High School,94,0,8,8,Full
 30,High School,101,0,7,8,Full
@@ -8506,7 +8506,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,PhD,124,0,17,34,Full
 49,PhD,114,1,14,32,Full
 48,High School,87,0,8,28,Full
-55,PhD,100,0,10,33,Full
+55,PhD,104,0,10,33,Full
 47,PhD,104,0,13,29,Full
 48,Masters,103,0,21,30,Full
 58,High School,101,0,1,37,Full
@@ -8524,7 +8524,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 54,High School,102,0,1,33,Full
 54,Bachelor,95,0,11,34,Full
 48,Masters,100,0,18,27,Full
-43,PhD,94,0,12,21,Full
+43,PhD,91,0,12,21,Full
 39,High School,3829,0,7,23,Full
 57,PhD,34640,0,11,35,Full
 29,High School,1807,1,7,13,Full
@@ -8543,7 +8543,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 41,High School,105,0,1,25,Full
 43,Masters,112,1,16,26,Full
 46,Bachelor,96,0,13,25,Full
-40,PhD,100,0,5,21,Full
+40,PhD,104,0,5,21,Full
 37,Masters,105,0,13,16,Full
 40,PhD,103,1,19,24,Full
 39,High School,107,0,6,22,Full
@@ -8554,7 +8554,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 30,High School,3518,1,8,8,Full
 48,High School,99,0,1,26,Full
 37,Masters,97,0,16,16,Full
-43,PhD,100,0,17,24,Full
+43,PhD,96,0,17,24,Full
 30,Bachelor,90,0,9,10,Full
 47,High School,103,1,1,29,Full
 44,High School,5153,0,8,24,Full
@@ -8628,14 +8628,14 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 51,High School,4824,0,1,34,Full
 40,Bachelor,104,0,9,24,Full
 56,Bachelor,102,0,7,37,Full
-56,PhD,93,0,10,34,Full
+56,PhD,95,0,10,34,Full
 56,PhD,112,0,15,36,Full
 42,High School,114,0,1,23,Full
 43,Bachelor,106,0,9,24,Full
 28,High School,105,0,1,7,Full
 26,Bachelor,88,0,8,6,Full
 33,Bachelor,104,0,9,14,Full
-49,Masters,101,0,7,31,Full
+49,Masters,102,0,7,31,Full
 41,Masters,99,0,20,20,Full
 41,High School,103,1,1,24,Full
 59,Bachelor,1098,0,11,42,Full
@@ -8655,7 +8655,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 48,High School,97,0,7,30,Full
 46,High School,94,0,9,26,Full
 41,Bachelor,100,0,13,25,Full
-53,PhD,99,0,12,33,Full
+53,PhD,96,0,12,33,Full
 36,Bachelor,4940,0,6,19,Full
 48,High School,111,0,6,27,Full
 61,High School,99,0,8,44,Full
@@ -8689,7 +8689,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 42,Bachelor,109,0,13,22,Full
 43,PhD,105,1,15,23,Full
 36,High School,112,1,1,15,Full
-50,PhD,95,0,8,34,Full
+50,PhD,96,0,8,34,Full
 46,Masters,99,1,22,29,Full
 60,High School,4460,1,9,39,Full
 26,Masters,3851,0,17,6,Full
@@ -8735,7 +8735,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,High School,2582,0,1,24,Full
 37,Bachelor,91,0,9,18,Full
 52,Bachelor,93,0,14,31,Full
-43,PhD,94,0,12,27,Full
+43,PhD,93,0,12,27,Full
 30,Bachelor,98,0,12,8,Full
 25,Bachelor,95,0,10,7,Full
 49,Masters,93,0,16,32,Full
@@ -8753,7 +8753,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,Bachelor,100,1,11,25,Full
 52,Bachelor,103,0,1,33,Full
 63,Masters,99,0,5,44,Full
-51,PhD,90,0,16,29,Full
+51,PhD,92,0,16,29,Full
 56,PhD,97,0,15,36,Full
 39,High School,104,0,6,20,Full
 37,Masters,102,0,14,19,Full
@@ -8780,7 +8780,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 28,High School,3979,0,7,9,Full
 36,Bachelor,91,0,11,20,Full
 43,Bachelor,103,0,18,21,Full
-48,Masters,90,1,23,29,Full
+48,Masters,95,1,23,29,Full
 53,PhD,111,0,17,31,Full
 27,High School,3444,0,7,10,Full
 49,Masters,5521,0,10,27,Full
@@ -8846,7 +8846,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,High School,2977,0,1,28,Full
 42,PhD,111,0,18,22,Full
 33,Bachelor,122,0,4,15,Full
-46,Masters,102,0,20,30,Full
+46,Masters,103,0,20,30,Full
 41,High School,104,0,1,23,Full
 34,Masters,95,0,21,13,Full
 40,Bachelor,4185,0,7,18,Full
@@ -8927,7 +8927,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 51,Bachelor,99,0,12,34,Full
 33,High School,111,0,4,13,Full
 49,High School,2928,0,11,30,Full
-46,Masters,99,0,14,29,Full
+46,Masters,100,0,14,29,Full
 54,High School,94,0,6,34,Full
 43,High School,98,0,6,27,Full
 30,High School,1691,0,1,9,Full
@@ -9123,7 +9123,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 52,PhD,108,0,13,32,Full
 48,Bachelor,103,0,7,26,Full
 56,Bachelor,110,0,7,40,Full
-50,PhD,91,0,22,29,Full
+50,PhD,94,0,22,29,Full
 43,High School,103,0,1,27,Full
 70,PhD,112,0,1,54,Full
 42,Bachelor,95,0,9,21,Full
@@ -9138,7 +9138,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 55,High School,1100,0,1,39,Full
 22,PhD,22352,0,11,6,Full
 42,Bachelor,18392,0,7,24,Full
-48,Masters,99,0,10,27,Full
+48,Masters,95,0,10,27,Full
 38,High School,95,0,8,20,Full
 30,Bachelor,94,0,11,9,Full
 56,Bachelor,97,0,10,36,Full
@@ -9150,7 +9150,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 39,High School,105,0,1,18,Full
 40,Masters,99,0,11,18,Full
 68,High School,93,0,8,50,Full
-48,PhD,93,0,16,30,Full
+48,PhD,98,0,16,30,Full
 36,Masters,5937,0,12,17,Full
 33,Masters,100,0,7,15,Full
 42,Masters,100,0,14,24,Full
@@ -9230,7 +9230,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 46,Bachelor,99,0,13,29,Full
 35,Masters,109,0,15,18,Full
 57,Bachelor,6062,0,11,39,Full
-41,Masters,92,0,12,19,Full
+41,Masters,95,0,12,19,Full
 52,Bachelor,107,0,13,32,Full
 52,Masters,109,0,1,30,Full
 34,High School,3138,1,5,14,Full
@@ -9248,7 +9248,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,Bachelor,2363,0,6,25,Full
 29,High School,100,0,1,11,Full
 53,Masters,109,0,10,32,Full
-47,Masters,97,0,15,26,Full
+47,Masters,93,0,15,26,Full
 41,Bachelor,4398,0,9,21,Full
 48,PhD,91,0,11,30,Full
 36,High School,96,1,1,15,Full
@@ -9285,7 +9285,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,High School,13787,0,6,26,Full
 48,Masters,94,0,14,32,Full
 48,High School,3304,0,6,28,Full
-38,Masters,93,0,9,21,Full
+38,Masters,98,0,9,21,Full
 46,Bachelor,124,0,9,25,Full
 56,Masters,100,0,13,36,Full
 49,Bachelor,106,0,1,30,Full
@@ -9360,10 +9360,10 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,High School,1750,0,1,33,Full
 35,High School,107,0,1,19,Full
 50,High School,106,0,3,33,Full
-52,PhD,97,0,13,34,Full
+52,PhD,94,0,13,34,Full
 54,Masters,96,0,13,34,Full
-53,PhD,97,0,13,34,Full
-56,PhD,99,0,12,34,Full
+53,PhD,92,0,13,34,Full
+56,PhD,95,0,12,34,Full
 51,Masters,2776,0,20,31,Full
 60,High School,5317,0,1,38,Full
 46,PhD,91,0,24,25,Full
@@ -9401,7 +9401,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 37,Masters,103,0,8,15,Full
 46,Masters,4637,0,15,27,Full
 50,Bachelor,103,0,12,30,Full
-54,PhD,101,0,15,33,Full
+54,PhD,106,0,15,33,Full
 35,High School,103,1,1,19,Full
 44,High School,118,0,1,24,Full
 60,High School,97,0,14,42,Full
@@ -9518,7 +9518,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,High School,1647,0,1,27,Full
 34,Masters,98,1,17,16,Full
 48,Masters,98,0,15,29,Full
-48,Masters,96,0,15,27,Full
+48,Masters,97,0,15,27,Full
 54,Bachelor,106,0,7,35,Full
 45,Masters,96,0,10,26,Full
 32,Masters,2457,0,21,13,Full
@@ -9528,13 +9528,13 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,Masters,100,0,15,32,Full
 66,Bachelor,104,0,12,44,Full
 48,PhD,108,0,3,32,Full
-56,Masters,97,0,10,35,Full
+56,Masters,99,0,10,35,Full
 25,Bachelor,95,1,10,6,Full
 39,Bachelor,89,0,13,18,Full
 43,High School,1119,0,1,22,Full
 42,PhD,112,1,13,20,Full
 40,High School,113,0,1,22,Full
-45,Masters,101,0,13,26,Full
+45,Masters,102,0,13,26,Full
 42,Bachelor,106,1,11,21,Full
 47,Masters,4378,0,12,25,Full
 46,High School,91,0,10,27,Full
@@ -9589,13 +9589,13 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 42,High School,100,0,1,22,Full
 40,High School,111,1,7,22,Full
 44,Bachelor,126,0,5,27,Full
-57,Masters,102,0,19,41,Full
+57,Masters,100,0,19,41,Full
 33,High School,102,0,1,11,Full
 57,Bachelor,4101,0,9,36,Full
 46,High School,112,0,6,25,Full
 56,High School,5846,0,8,38,Full
 65,Masters,108,0,12,46,Full
-40,PhD,89,1,16,24,Full
+40,PhD,87,1,16,24,Full
 39,High School,117,0,5,21,Full
 58,Masters,4274,0,12,39,Full
 46,Bachelor,102,0,14,30,Full
@@ -9607,7 +9607,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 50,PhD,7400,0,7,33,Full
 48,High School,92,1,7,27,Full
 42,Masters,95,0,15,20,Full
-55,Masters,95,0,18,36,Full
+55,Masters,99,0,18,36,Full
 41,Masters,97,0,17,24,Full
 48,High School,109,0,7,27,Full
 37,Masters,93,0,14,17,Full
@@ -9735,7 +9735,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 43,High School,99,0,1,25,Full
 53,PhD,113,0,14,31,Full
 46,PhD,4493,0,13,30,Full
-37,Masters,94,0,18,19,Full
+37,Masters,98,0,18,19,Full
 51,Bachelor,100,1,8,33,Full
 38,Masters,98,0,18,18,Full
 52,High School,101,0,1,31,Full
@@ -9747,7 +9747,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 33,High School,112,0,1,15,Full
 36,Bachelor,4363,0,10,15,Full
 27,High School,3790,1,6,11,Full
-53,Masters,96,0,13,34,Full
+53,Masters,100,0,13,34,Full
 39,High School,4144,0,4,21,Full
 32,High School,123,0,1,14,Full
 43,High School,108,0,7,21,Full
@@ -9842,7 +9842,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 57,High School,94,0,11,41,Full
 41,High School,98,0,9,25,Full
 39,High School,6042,0,2,17,Full
-53,PhD,96,0,15,32,Full
+53,PhD,95,0,15,32,Full
 53,Masters,98,0,18,36,Full
 38,Masters,96,0,18,17,Full
 45,Bachelor,104,0,10,27,Full
@@ -9854,7 +9854,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 53,Bachelor,104,0,10,33,Full
 43,High School,119,0,1,26,Full
 55,Masters,99,0,8,36,Full
-50,PhD,102,0,4,31,Full
+50,PhD,100,0,4,31,Full
 47,High School,2738,0,8,29,Full
 48,High School,4941,1,1,30,Full
 41,High School,117,0,1,24,Full
@@ -9925,7 +9925,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 28,High School,103,1,1,6,Full
 44,PhD,90,0,14,24,Full
 40,Masters,1043,1,16,18,Full
-34,Masters,92,0,11,17,Full
+34,Masters,94,0,11,17,Full
 40,High School,126,0,1,20,Full
 32,High School,6445,0,1,16,Full
 37,Bachelor,13810,1,7,21,Full
@@ -9936,7 +9936,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 35,High School,100,0,1,15,Full
 41,Masters,120,0,21,24,Full
 51,Masters,93,0,9,33,Full
-52,PhD,98,0,19,34,Full
+52,PhD,93,0,19,34,Full
 41,Bachelor,101,0,14,22,Full
 52,High School,103,0,1,36,Full
 41,High School,3725,0,10,20,Full
@@ -9999,7 +9999,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 69,Masters,107,0,20,50,Full
 54,Masters,97,0,11,36,Full
 37,High School,117,0,1,15,Full
-43,PhD,109,0,12,22,Full
+43,PhD,106,0,12,22,Full
 55,Bachelor,116,0,5,36,Full
 43,Bachelor,108,0,11,25,Full
 48,High School,102,0,9,31,Full
@@ -10181,7 +10181,7 @@ driverAge,educationLevel,totalClaimAmount,fraud,vehicleAge,driverExperience,lice
 37,Bachelor,116,0,12,19,Full
 47,Bachelor,96,0,10,31,Full
 39,High School,93,0,7,22,Full
-43,PhD,103,0,15,27,Full
+43,PhD,99,0,15,27,Full
 32,Bachelor,3432,0,9,16,Full
 50,Bachelor,95,0,10,30,Full
 52,Masters,99,0,17,34,Full
