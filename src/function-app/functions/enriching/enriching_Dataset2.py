@@ -108,7 +108,7 @@ choices = ['Ls', 'P1', 'P2', 'Full']
 df_motor['licenceType'] = np.select(conditions, choices, default='')
 
 # Map 'claimStatus' to Fraud (1) and Not Fraud (0)
-df_motor['Fraud'] = df_motor['claimStatus'].map({'A': 0, 'D': 1})
+df_motor['fraud'] = df_motor['claimStatus'].map({'A': 0, 'D': 1})
 
 # Ensure 'none' is preserved in 'authoritiesInvolved' column
 df_motor['authoritiesInvolved'] = df_motor['authoritiesInvolved'].fillna('none')
@@ -118,7 +118,7 @@ required_columns = [
     'timeAsCustomer', 'driverAge', 'insuranceAccess', 'insurancePremium', 'driverGender',
     'educationLevel', 'accidentType', 'incidentSeverity', 'authoritiesInvolved',
     'incidentTime', 'numVehiclesInvolved', 'numBodilyInjuries', 'policeReportBool',
-    'totalClaimAmount', 'Fraud', 'vehicleAge', 'driverExperience', 'licenceType'
+    'totalClaimAmount', 'fraud', 'vehicleAge', 'driverExperience', 'licenceType'
 ]
 
 # Filter the dataframe to keep only the required columns
