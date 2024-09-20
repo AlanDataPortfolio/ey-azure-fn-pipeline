@@ -8,12 +8,13 @@ ey-azure-fn-pipeline
 │   │   ├── cleaned
 │   │   │   ├── cleaned_dataset1.csv
 │   │   │   ├── cleaned_dataset2.csv
-│   │   │   └── cleaned_Dataset3.csv
+│   │   │   └── cleaned_dataset3.csv
 │   │   ├── enriched
 │   │   │   ├── enriched_dataset1.csv
 │   │   │   ├── enriched_dataset2.csv
 │   │   │   └── enriched_dataset3.csv
 │   │   ├── merged
+│   │   │   ├── live_demo.csv
 │   │   │   ├── merged_10500_rows.csv
 │   │   │   ├── merged_20000_rows.csv
 │   │   │   ├── merged_6500_rows.csv
@@ -25,7 +26,7 @@ ey-azure-fn-pipeline
 │   │   ├── synthesised
 │   │   |   ├── synthesised_method1.csv
 │   │   |   └── synthesised_method2.csv
-|   |   └─ README.md
+|   |   └── README.md
 │   ├── docs
 │   │   ├── folder_structure.tree
 │   │   ├── guides
@@ -34,35 +35,35 @@ ey-azure-fn-pipeline
 │   │   └── README.md
 │   └── img
 │       └── README.md
-├── src
-│   ├── local_pipeline
-│   │   ├── cleaning
-│   │   │   ├── cleaning_Dataset1.py
-│   │   │   ├── cleaning_Dataset2.py
-│   │   │   ├── cleaning_Dataset3.py
-│   │   │   └── occupation_income_corr_test_dataset3.py
-│   │   ├── enriching
-│   │   │   ├── enriching_Dataset1.py
-│   │   │   ├── enriching_Dataset2.py
-│   │   │   └── enriching_Dataset3.py
-│   │   ├── merging
-│   │   │   ├── merging_10500_rows.py
-│   │   │   ├── merging_20000_rows.py
-│   │   │   ├── merging_6500_rows.py
-│   │   │   └── merging_dataset_1_2.py
-│   │   ├── README.md
-│   │   └── synthesise
-│   │       ├── synthesising_method_1.py
-│   │       └── synthesising_method_2.py
-│   ├── README.md
-│   └── terraform
-│       ├── app-insights.tf
-│       ├── function.tf
-│       ├── main.tf
-│       ├── README.md
-│       ├── terraform.tfvars
-│       ├── variables.tf
-│       └── versions.tf
+└── src
+|   ├── local_pipeline
+|   │   ├── cleaning
+|   │   │   ├── cleaning_dataset1.py
+|   │   │   ├── cleaning_dataset2.py
+|   │   │   ├── cleaning_dataset3.py
+|   │   │   └── occupation_income_corr_test_dataset3.py
+|   │   ├── enriching
+|   │   │   ├── enriching_dataset1.py
+|   │   │   ├── enriching_dataset2.py
+|   │   │   └── enriching_dataset3.py
+|   │   ├── merging
+|   │   │   ├── merging_10500_rows.py
+|   │   │   ├── merging_20000_rows.py
+|   │   │   ├── merging_6500_rows.py
+|   │   │   └── merging_dataset_1_2.py
+|   │   ├── synthesising
+|   │   |   ├── synthesising_method_1.py
+|   │   |   └── synthesising_method_2.py
+|   |   └── README.md
+|   ├── terraform
+|   |   ├── app-insights.tf
+|   |   ├── function.tf
+|   |   ├── main.tf
+|   |   ├── README.md
+|   |   ├── terraform.tfvars
+|   |   ├── variables.tf
+|   |   └── versions.tf
+|   └── README.md
 ├── .gitignore
 ├── LICENSE
 └── README.md
