@@ -26,12 +26,13 @@ resource "azurerm_linux_function_app" "funcapp" {
   service_plan_id            = azurerm_service_plan.main.id
 
   site_config {
-    always_on        = false
-    linux_fx_version = "PYTHON|3.11"
-    scm_type         = "GitHub"
+    always_on = false
     cors {
       allowed_origins     = ["https://portal.azure.com"]
       support_credentials = true
+    }
+    application_stack {
+      python_version = "3.11"
     }
   }
 
@@ -40,14 +41,26 @@ resource "azurerm_linux_function_app" "funcapp" {
 
   }
 
+  auth_settings {
+    enabled          = false
+    default_provider = "Github"
+  }
+
   identity {
     type = "SystemAssigned" #, UserAssigned
     /* identity_ids = [azurerm_user_assigned_identity.functions.id] */
   }
 }
 
+
 resource "azurerm_role_assignment" "storage_blob_data_contributor" {
   principal_id         = azurerm_linux_function_app.funcapp.identity[0].principal_id
   role_definition_name = "Storage Blob Data Contributor"
-  scope                = azurerm_storage_account.target.id
+  scope                = azurerm_storage_account.datalake.id
 }
+
+/* resource "azurerm_user_assigned_identity" "functions" {
+  resource_group_name = azurerm_resource_group.main.name
+  location            = azurerm_resource_group.main.location
+  name                = "mi-${var.application_name}-${var.environment_name}-fn"
+} */
