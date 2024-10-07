@@ -10,7 +10,7 @@ terraform {
     storage_account_name = "sttfstate01092024"
     container_name       = "tfstate01092024"
     key                  = "terraform.tfstate"
-    subscription_id      = var.azure_subscription_id
+    #subscription_id      = var.azure_subscription_id
   }
 }
 
@@ -21,5 +21,5 @@ provider "azurerm" {
       recover_soft_deleted_key_vaults = true
     }
   }
-  subscription_id = var.azure_subscription_id
+  #subscription_id = var.azure_subscription_id
 }
