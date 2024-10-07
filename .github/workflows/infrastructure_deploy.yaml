@@ -38,4 +38,4 @@ jobs:
       run: terraform init
 
     - name: Apply Terraform
-      run: terraform apply -auto-approve -var "azure_subscription_id=${secrets.AZURE_SUBSCRIPTION_ID}"
+      run: terraform apply -auto-approve"
