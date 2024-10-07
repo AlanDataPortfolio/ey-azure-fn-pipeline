@@ -39,5 +39,5 @@ jobs:
 
     - name: Apply Terraform
       env:
-        AZURE_SUBCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
       run: terraform apply -auto-approve -var "azure_subscription_id=${secrets.AZURE_SUBSCRIPTION_ID}"
