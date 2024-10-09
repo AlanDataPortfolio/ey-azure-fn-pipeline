@@ -1,3 +1,5 @@
+// pages/api/getClaim.js
+
 import fs from 'fs';
 import path from 'path';
 import csv from 'csv-parser';
@@ -15,8 +17,8 @@ export default async function handler(req, res) {
     .on('end', () => {
       // Find the first claim with status "open" and outcome "pending"
       const openClaim = claims.find(claim =>
-        claim.status.toLowerCase() === 'open' &&
-        claim.outcome.toLowerCase() === 'pending'
+        claim.claimStatus && claim.claimStatus.toLowerCase() === 'open' &&
+        claim.claimOutcome && claim.claimOutcome.toLowerCase() === 'pending'
       );
 
       if (openClaim) {

@@ -16,11 +16,32 @@ export default function Home() {
       const data = await response.json();
       if (response.ok) {
         // Populate the form with the fetched data
-        setClaimDetails(JSON.stringify(data));
-        setFraudScore(data.fraudProbability || 'N/A');
-        setFraudEvaluation(data.fraudDescription || 'N/A');
-        setClaimStatus(data.status || 'open');
-        setClaimOutcome(data.outcome || 'pending');
+        setClaimDetails(
+          `ClaimID: ${data.ClaimID}\n` +
+          `Time as Customer: ${data.timeAsCustomer}\n` +
+          `Driver Age: ${data.driverAge}\n` +
+          `Insurance Access: ${data.insuranceAccess}\n` +
+          `Insurance Premium: ${data.insurancePremium}\n` +
+          `Driver Gender: ${data.driverGender}\n` +
+          `Education Level: ${data.educationLevel}\n` +
+          `Accident Type: ${data.accidentType}\n` +
+          `Incident Severity: ${data.incidentSeverity}\n` +
+          `Authorities Involved: ${data.authoritiesInvolved}\n` +
+          `Incident Time: ${data.incidentTime}\n` +
+          `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
+          `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
+          `Police Report: ${data.policeReportBool}\n` +
+          `Total Claim Amount: ${data.totalClaimAmount}\n` +
+          `Vehicle Age: ${data.vehicleAge}\n` +
+          `Driver Experience: ${data.driverExperience}\n` +
+          `License Type: ${data.licenseType}\n` +
+          `First Name: ${data.firstName}\n` +
+          `Last Name: ${data.lastName}\n`
+        );
+        setClaimStatus(data.claimStatus || 'open');
+        setClaimOutcome(data.claimOutcome || 'pending');
+        setFraudScore('N/A');
+        setFraudEvaluation('N/A');
         alert('Claim data fetched successfully');
       } else {
         alert(data.message);
@@ -29,12 +50,6 @@ export default function Home() {
       console.error('Error fetching claim:', error);
       alert('An error occurred while fetching the claim');
     }
-  };
-
-  // Placeholder function for checking fraud
-  const checkFraud = () => {
-    alert("Checking fraud analysis...");
-    // Add logic to call the AI/ML model to analyze the claim here
   };
 
   return (
@@ -62,32 +77,14 @@ export default function Home() {
         {/* Claim Details */}
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="claimDetails">Claim Information:</label>
-          <input
-            type="text"
+          <textarea
             id="claimDetails"
             name="claimDetails"
             value={claimDetails}
             placeholder="Claim details will be auto-filled"
-            style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "200px" }}
             readOnly
           />
-        </div>
-
-        {/* Check Fraud Button */}
-        <div style={{ marginBottom: "15px" }}>
-          <button
-            type="button"
-            onClick={checkFraud}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#ff6347",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Check Fraud
-          </button>
         </div>
 
         {/* Fraud Probability */}
@@ -119,7 +116,6 @@ export default function Home() {
 
         {/* Claim Status and Outcome (side by side) */}
         <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-          {/* Claim Status */}
           <div style={{ flex: 1 }}>
             <label htmlFor="claimStatus">Current Claim Status:</label>
             <select
@@ -134,7 +130,6 @@ export default function Home() {
             </select>
           </div>
 
-          {/* Claim Outcome */}
           <div style={{ flex: 1 }}>
             <label htmlFor="claimOutcome">Claim Decision:</label>
             <select
@@ -152,7 +147,6 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Action Buttons */}
         <div style={{ marginTop: "20px" }}>
           <button
             type="button"
