@@ -43,7 +43,7 @@ export default function Home() {
         );
         setClaimStatus(data.claimstatus || 'open');
         setClaimOutcome(data.claimoutcome || 'pending');
-        setClaimDescription(data.claimdescription || '');
+        setClaimDescription(data.claimdescription || 'No description provided');
         setFraudScore('N/A');
         setFraudEvaluation('N/A');
         alert('Claim data fetched successfully');
