@@ -1,4 +1,4 @@
-﻿ClaimID,timeAsCustomer,driverAge,insuranceAccess,insurancePremium,driverGender,educationLevel,accidentType,incidentSeverity,authoritiesInvolved,incidentTime,numVehiclesInvolved,numBodilyInjuries,policeReportBool,totalClaimAmount,vehicleAge,driverExperience,licenseType,firstName,lastName,claimStatus,claimOutcome
+﻿claimId,timeAsCustomer,driverAge,insuranceAccess,insurancePremium,driverGender,educationLevel,accidentType,incidentSeverity,authoritiesInvolved,incidentTime,numVehiclesInvolved,numBodilyInjuries,policeReportBool,totalClaimAmount,vehicleAge,driverExperience,licenseType,firstName,lastName,claimStatus,claimOutcome
 1,50,35,1000,900,0,Bachelor,Collision,Minor Damage,None,13,1,0,0,1200,8,17,Full,James,Anderson,open,pending
 2,111,47,1000,1322,1,PhD,Single Vehicle Collision,Total Loss,Yes,14,1,1,1,6000,14,31,Full,Emily,Thompson,open,pending
 3,80,43,1000,1000,0,Bachelor,Collision,Major Loss,Yes,10,2,1,1,5000,7,26,Full,Michael,Johnson,open,pending

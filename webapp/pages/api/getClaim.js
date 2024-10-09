@@ -10,15 +10,17 @@ export default async function handler(req, res) {
 
   // Read the CSV file
   fs.createReadStream(filePath)
-    .pipe(csv())
+    .pipe(csv({
+      mapHeaders: ({ header }) => header.trim().toLowerCase() // Normalize header names
+    }))
     .on('data', (row) => {
       claims.push(row);
     })
     .on('end', () => {
       // Find the first claim with status "open" and outcome "pending"
       const openClaim = claims.find(claim =>
-        claim.claimStatus && claim.claimStatus.toLowerCase() === 'open' &&
-        claim.claimOutcome && claim.claimOutcome.toLowerCase() === 'pending'
+        claim.claimstatus && claim.claimstatus.toLowerCase() === 'open' &&
+        claim.claimoutcome && claim.claimoutcome.toLowerCase() === 'pending'
       );
 
       if (openClaim) {

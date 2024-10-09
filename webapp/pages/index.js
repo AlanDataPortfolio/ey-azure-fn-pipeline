@@ -6,8 +6,8 @@ export default function Home() {
   const [claimDetails, setClaimDetails] = useState('');
   const [fraudScore, setFraudScore] = useState('');
   const [fraudEvaluation, setFraudEvaluation] = useState('');
-  const [claimStatus, setClaimStatus] = useState('open');
-  const [claimOutcome, setClaimOutcome] = useState('pending');
+  const [claimStatus, setClaimStatus] = useState('');
+  const [claimOutcome, setClaimOutcome] = useState('');
 
   // Function to fetch the first open and pending claim from the API
   const getClaim = async () => {
@@ -17,29 +17,29 @@ export default function Home() {
       if (response.ok) {
         // Populate the form with the fetched data
         setClaimDetails(
-          `ClaimID: ${data.ClaimID}\n` +
-          `Time as Customer: ${data.timeAsCustomer}\n` +
-          `Driver Age: ${data.driverAge}\n` +
-          `Insurance Access: ${data.insuranceAccess}\n` +
-          `Insurance Premium: ${data.insurancePremium}\n` +
-          `Driver Gender: ${data.driverGender}\n` +
-          `Education Level: ${data.educationLevel}\n` +
-          `Accident Type: ${data.accidentType}\n` +
-          `Incident Severity: ${data.incidentSeverity}\n` +
-          `Authorities Involved: ${data.authoritiesInvolved}\n` +
-          `Incident Time: ${data.incidentTime}\n` +
-          `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
-          `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
-          `Police Report: ${data.policeReportBool}\n` +
-          `Total Claim Amount: ${data.totalClaimAmount}\n` +
-          `Vehicle Age: ${data.vehicleAge}\n` +
-          `Driver Experience: ${data.driverExperience}\n` +
-          `License Type: ${data.licenseType}\n` +
-          `First Name: ${data.firstName}\n` +
-          `Last Name: ${data.lastName}\n`
+          `Claim ID: ${data.claimid}\n` +
+          `First Name: ${data.firstname}\n` +
+          `Last Name: ${data.lastname}\n` +
+          `Time as Customer: ${data.timeascustomer}\n` +
+          `Driver Age: ${data.driverage}\n` +
+          `Insurance Access: ${data.insuranceaccess}\n` +
+          `Insurance Premium: ${data.insurancepremium}\n` +
+          `Driver Gender: ${data.drivergender}\n` +
+          `Education Level: ${data.educationlevel}\n` +
+          `Accident Type: ${data.accidenttype}\n` +
+          `Incident Severity: ${data.incidentseverity}\n` +
+          `Authorities Involved: ${data.authoritiesinvolved}\n` +
+          `Incident Time: ${data.incidenttime}\n` +
+          `Num Vehicles Involved: ${data.numvehiclesinvolved}\n` +
+          `Num Bodily Injuries: ${data.numbodilyinjuries}\n` +
+          `Police Report: ${data.policereportbool}\n` +
+          `Total Claim Amount: ${data.totalclaimamount}\n` +
+          `Vehicle Age: ${data.vehicleage}\n` +
+          `Driver Experience: ${data.driverexperience}\n` +
+          `License Type: ${data.licensetype}\n`
         );
-        setClaimStatus(data.claimStatus || 'open');
-        setClaimOutcome(data.claimOutcome || 'pending');
+        setClaimStatus(data.claimstatus || 'open');
+        setClaimOutcome(data.claimoutcome || 'pending');
         setFraudScore('N/A');
         setFraudEvaluation('N/A');
         alert('Claim data fetched successfully');
