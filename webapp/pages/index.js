@@ -1,4 +1,42 @@
+// pages/index.js
+
+import { useState } from 'react';
+
 export default function Home() {
+  const [claimDetails, setClaimDetails] = useState('');
+  const [fraudScore, setFraudScore] = useState('');
+  const [fraudEvaluation, setFraudEvaluation] = useState('');
+  const [claimStatus, setClaimStatus] = useState('open');
+  const [claimOutcome, setClaimOutcome] = useState('pending');
+
+  // Function to fetch the first open and pending claim from the API
+  const getClaim = async () => {
+    try {
+      const response = await fetch('/api/getClaim');
+      const data = await response.json();
+      if (response.ok) {
+        // Populate the form with the fetched data
+        setClaimDetails(JSON.stringify(data));
+        setFraudScore(data.fraudProbability || 'N/A');
+        setFraudEvaluation(data.fraudDescription || 'N/A');
+        setClaimStatus(data.status || 'open');
+        setClaimOutcome(data.outcome || 'pending');
+        alert('Claim data fetched successfully');
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error fetching claim:', error);
+      alert('An error occurred while fetching the claim');
+    }
+  };
+
+  // Placeholder function for checking fraud
+  const checkFraud = () => {
+    alert("Checking fraud analysis...");
+    // Add logic to call the AI/ML model to analyze the claim here
+  };
+
   return (
     <div style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
       <h1>Insurance Claim Processing</h1>
@@ -7,7 +45,7 @@ export default function Home() {
         <div style={{ marginBottom: "15px" }}>
           <button
             type="button"
-            onClick={() => alert("Fetching the first open claim...")}
+            onClick={getClaim}
             style={{
               padding: "10px 20px",
               backgroundColor: "#0070f3",
@@ -28,6 +66,7 @@ export default function Home() {
             type="text"
             id="claimDetails"
             name="claimDetails"
+            value={claimDetails}
             placeholder="Claim details will be auto-filled"
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
             readOnly
@@ -38,7 +77,7 @@ export default function Home() {
         <div style={{ marginBottom: "15px" }}>
           <button
             type="button"
-            onClick={() => alert("Checking fraud analysis...")}
+            onClick={checkFraud}
             style={{
               padding: "10px 20px",
               backgroundColor: "#ff6347",
@@ -58,6 +97,7 @@ export default function Home() {
             type="text"
             id="fraudScore"
             name="fraudScore"
+            value={fraudScore}
             placeholder="Auto-filled by AI"
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
             readOnly
@@ -70,6 +110,7 @@ export default function Home() {
           <textarea
             id="fraudEvaluation"
             name="fraudEvaluation"
+            value={fraudEvaluation}
             placeholder="Auto-filled by AI"
             style={{ width: "100%", padding: "8px", marginTop: "5px", height: "80px" }}
             readOnly
@@ -84,6 +125,8 @@ export default function Home() {
             <select
               id="claimStatus"
               name="claimStatus"
+              value={claimStatus}
+              onChange={(e) => setClaimStatus(e.target.value)}
               style={{ width: "100%", padding: "8px", marginTop: "5px" }}
             >
               <option value="open">Open</option>
@@ -97,6 +140,8 @@ export default function Home() {
             <select
               id="claimOutcome"
               name="claimOutcome"
+              value={claimOutcome}
+              onChange={(e) => setClaimOutcome(e.target.value)}
               style={{ width: "100%", padding: "8px", marginTop: "5px" }}
             >
               <option value="pending">Pending</option>
