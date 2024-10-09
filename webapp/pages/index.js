@@ -8,6 +8,7 @@ export default function Home() {
   const [fraudEvaluation, setFraudEvaluation] = useState('');
   const [claimStatus, setClaimStatus] = useState('');
   const [claimOutcome, setClaimOutcome] = useState('');
+  const [claimDescription, setClaimDescription] = useState('');
 
   // Function to fetch the first open and pending claim from the API
   const getClaim = async () => {
@@ -20,6 +21,8 @@ export default function Home() {
           `Claim ID: ${data.claimid}\n` +
           `First Name: ${data.firstname}\n` +
           `Last Name: ${data.lastname}\n` +
+          `Claim Status: ${data.claimstatus}\n` +
+          `Claim Outcome: ${data.claimoutcome}\n` +
           `Time as Customer: ${data.timeascustomer}\n` +
           `Driver Age: ${data.driverage}\n` +
           `Insurance Access: ${data.insuranceaccess}\n` +
@@ -40,6 +43,7 @@ export default function Home() {
         );
         setClaimStatus(data.claimstatus || 'open');
         setClaimOutcome(data.claimoutcome || 'pending');
+        setClaimDescription(data.claimdescription || '');
         setFraudScore('N/A');
         setFraudEvaluation('N/A');
         alert('Claim data fetched successfully');
@@ -53,7 +57,7 @@ export default function Home() {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "600px", margin: "auto" }}>
+    <div style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
       <h1>Insurance Claim Processing</h1>
       <form>
         {/* Get Claim Button */}
@@ -74,17 +78,57 @@ export default function Home() {
           </button>
         </div>
 
-        {/* Claim Details */}
+        {/* Claim Information */}
         <div style={{ marginBottom: "15px" }}>
           <label htmlFor="claimDetails">Claim Information:</label>
-          <textarea
+          <div
             id="claimDetails"
-            name="claimDetails"
-            value={claimDetails}
-            placeholder="Claim details will be auto-filled"
-            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "200px" }}
+            style={{
+              border: "1px solid #ccc",
+              padding: "10px",
+              marginTop: "5px",
+              height: "200px",
+              overflowY: "auto",
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr",
+              gap: "20px",
+              fontFamily: "monospace",
+              whiteSpace: "pre-wrap",
+            }}
+          >
+            {claimDetails.split('\n').map((line, index) => (
+              <span key={index}>{line}</span>
+            ))}
+          </div>
+        </div>
+
+        {/* Claim Description */}
+        <div style={{ marginBottom: "15px" }}>
+          <label htmlFor="claimDescription">Claim Description:</label>
+          <textarea
+            id="claimDescription"
+            name="claimDescription"
+            value={claimDescription}
+            placeholder="Description of the claim"
+            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
             readOnly
           />
+        </div>
+
+        {/* Check Fraud Button */}
+        <div style={{ marginBottom: "15px" }}>
+          <button
+            type="button"
+            style={{
+              padding: "10px 20px",
+              backgroundColor: "#ff6347",
+              color: "white",
+              border: "none",
+              cursor: "pointer",
+            }}
+          >
+            Check Fraud
+          </button>
         </div>
 
         {/* Fraud Probability */}
