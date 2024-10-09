@@ -83,8 +83,8 @@ export default function Home() {
       const result = await response.json();
       if (response.ok) {
         alert(result.message);
-        // Update the local state to reflect the changes
-        setClaimOutcome(newOutcome);
+        // Clear the form fields after closing the case
+        clearFormFields();
       } else {
         alert(result.message);
       }
@@ -92,6 +92,16 @@ export default function Home() {
       console.error('Error updating claim:', error);
       alert('An error occurred while updating the claim');
     }
+  };
+
+  // Function to clear the form fields
+  const clearFormFields = () => {
+    setClaimDetails('');
+    setClaimDescription('');
+    setFraudScore('');
+    setFraudEvaluation('');
+    setClaimId(null);
+    setClaimOutcome('pending');
   };
 
   return (
@@ -246,4 +256,3 @@ export default function Home() {
     </div>
   );
 }
-
