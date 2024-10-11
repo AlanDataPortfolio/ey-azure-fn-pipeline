@@ -6,20 +6,15 @@ terraform {
     }
   }
   backend "azurerm" {
-    resource_group_name  = "rg-terraform-state"
-    storage_account_name = "sttfstate01092024"
-    container_name       = "tfstate01092024"
+    resource_group_name  = "mq-pace-2024-s2-group-data"
+    storage_account_name = "sttfstate2000" # remove test
+    container_name       = "tfstate2000"
     key                  = "terraform.tfstate"
-    #subscription_id      = var.azure_subscription_id
+    use_azuread_auth     = true
+    use_oidc             = true
   }
 }
 
 provider "azurerm" {
-  features {
-    key_vault {
-      purge_soft_delete_on_destroy    = true
-      recover_soft_deleted_key_vaults = true
-    }
-  }
-  #subscription_id = var.azure_subscription_id
+  features {}
 }

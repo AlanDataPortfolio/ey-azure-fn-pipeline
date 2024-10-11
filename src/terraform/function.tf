@@ -47,11 +47,9 @@ resource "azurerm_linux_function_app" "funcapp" {
   }
 
   identity {
-    type = "SystemAssigned" #, UserAssigned
-    /* identity_ids = [azurerm_user_assigned_identity.functions.id] */
+    type = "SystemAssigned"
   }
 }
-
 
 resource "azurerm_role_assignment" "storage_blob_data_contributor" {
   principal_id         = azurerm_linux_function_app.funcapp.identity[0].principal_id
@@ -59,8 +57,3 @@ resource "azurerm_role_assignment" "storage_blob_data_contributor" {
   scope                = azurerm_storage_account.datalake.id
 }
 
-/* resource "azurerm_user_assigned_identity" "functions" {
-  resource_group_name = azurerm_resource_group.main.name
-  location            = azurerm_resource_group.main.location
-  name                = "mi-${var.application_name}-${var.environment_name}-fn"
-} */
