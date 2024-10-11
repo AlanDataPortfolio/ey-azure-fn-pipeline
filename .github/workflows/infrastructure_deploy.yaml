@@ -27,15 +27,48 @@ jobs:
       with:
         terraform_version: 1.9.5
 
+    # Log into Azure with OIDC integration
     - name: Log in to Azure
+      id: azure_login
       uses: azure/login@v2
       with:
         client-id: ${{ secrets.AZURE_CLIENT_ID }}
         tenant-id: ${{ secrets.AZURE_TENANT_ID }}
         subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
+    # Run az commands to confirm sub access
+    - name: 'Run az commands'
+      run: |
+        az account show
+
+    # Run Terraform init
     - name: Initialize Terraform
+      env:
+        ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       run: terraform init
+      working-directory: ${{ env.WORKING_DIRECTORY }}
+      
+    # Run a Terraform fmt
+    - name: Terraform format
+      id: fmt
+      run: terraform fmt -check
+
+    # Run a Terraform validate
+    - name: Terraform validate
+      id: validate
+      if: success() || failure()
+      env:
+        ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+      run: terraform validate -no-color
 
     - name: Apply Terraform
+      env:
+        ARM_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}
+        ARM_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+        ARM_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
       run: terraform apply -auto-approve
+      working-directory: ${{ env.WORKING_DIRECTORY }}
