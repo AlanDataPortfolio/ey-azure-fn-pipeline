@@ -7,50 +7,39 @@ import { parse } from 'json2csv';
 
 export default async function handler(req, res) {
   const { claimId, claimStatus, claimOutcome, claimNotes, fraudChance, fraudAnalysis } = req.body;
-  const csvFilePath = path.join(process.cwd(), 'claims.csv'); // Path to the CSV file
 
+  const csvFilePath = path.join(process.cwd(), 'claims.csv'); // Path to the CSV file
   const claims = [];
 
   try {
-    // Read and parse the existing CSV data
+    // Read the existing claims from the CSV file
     fs.createReadStream(csvFilePath)
       .pipe(csvParser())
       .on('data', (row) => {
         claims.push(row);
       })
       .on('end', () => {
-        let updated = false;
+        // Find the claim by claimId and update the claim's data
+        const claimIndex = claims.findIndex((claim) => claim.claimID === claimId);
+        if (claimIndex !== -1) {
+          claims[claimIndex].claimStatus = claimStatus || claims[claimIndex].claimStatus;
+          claims[claimIndex].claimOutcome = claimOutcome || claims[claimIndex].claimOutcome;
+          claims[claimIndex].claimNotes = claimNotes || claims[claimIndex].claimNotes;
+          claims[claimIndex].fraudChance = fraudChance || claims[claimIndex].fraudChance;
+          claims[claimIndex].fraudAnalysis = fraudAnalysis || claims[claimIndex].fraudAnalysis;
 
-        // Update the claim with the matching claimId
-        const updatedClaims = claims.map((claim) => {
-          if (claim.claimID === claimId) {
-            updated = true;
-            return {
-              ...claim,
-              claimStatus: claimStatus || claim.claimStatus,
-              claimOutcome: claimOutcome || claim.claimOutcome,
-              claimNotes: claimNotes || claim.claimNotes,
-              fraudChance: fraudChance || claim.fraudChance,
-              fraudAnalysis: fraudAnalysis || claim.fraudAnalysis,
-            };
-          }
-          return claim;
-        });
+          // Convert updated claims array to CSV format
+          const csv = parse(claims, { fields: Object.keys(claims[0]) });
 
-        if (!updated) {
-          return res.status(404).json({ message: 'Claim not found' });
+          // Write the updated data back to the CSV file
+          fs.writeFileSync(csvFilePath, csv);
+          res.status(200).json({ message: 'Claim updated successfully' });
+        } else {
+          res.status(404).json({ message: 'Claim not found' });
         }
-
-        // Convert updated claims data back to CSV format
-        const csv = parse(updatedClaims, { fields: Object.keys(updatedClaims[0]) });
-
-        // Write the updated CSV back to file
-        fs.writeFileSync(csvFilePath, csv);
-
-        res.status(200).json({ message: 'Claim updated successfully' });
       });
   } catch (error) {
-    console.error('Error updating the claim:', error);
+    console.error('Error updating claim:', error);
     res.status(500).json({ message: 'Error updating the claim' });
   }
 }

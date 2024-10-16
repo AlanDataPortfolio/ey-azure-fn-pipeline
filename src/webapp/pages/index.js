@@ -1,5 +1,3 @@
-// pages/index.js
-
 import { useState } from 'react';
 
 export default function Home() {
@@ -7,67 +5,89 @@ export default function Home() {
   const [fraudScore, setFraudScore] = useState('');
   const [fraudAnalysis, setFraudAnalysis] = useState('');
   const [claimOutcome, setClaimOutcome] = useState('');
-  const [claimNotes, setClaimNotes] = useState(''); // New field for claim notes
+  const [claimNotes, setClaimNotes] = useState(''); // Field for claim notes
   const [claimDescription, setClaimDescription] = useState('');
   const [claimId, setClaimId] = useState(null); // Store the current Claim ID for saving
-  const [searchClaimId, setSearchClaimId] = useState(''); // New field for searching by claim ID
+  const [searchClaimId, setSearchClaimId] = useState(''); // Field for searching by claim ID
 
-  // Function to fetch the first open and pending claim from the API
-  const getClaim = async (claimNumber = null) => {
+  // Fetch the first open and pending claim
+  const getFirstOpenClaim = async () => {
     try {
-      const response = await fetch(`/api/getClaim${claimNumber ? '?claimId=' + claimNumber : ''}`);
+      const response = await fetch('/api/getClaim');
       const data = await response.json();
       if (response.ok) {
-        setClaimId(data.claimid); // Save Claim ID for updates
-        setClaimDetails(
-          `Claim ID: ${data.claimid}\n` +
-          `First Name: ${data.firstname}\n` +
-          `Last Name: ${data.lastname}\n` +
-          `Claim Status: ${data.claimstatus}\n` +
-          `Claim Outcome: ${data.claimoutcome}\n` +
-          `Time as Customer: ${data.timeascustomer}\n` +
-          `Driver Age: ${data.driverage}\n` +
-          `Insurance Access: ${data.insuranceaccess}\n` +
-          `Insurance Premium: ${data.insurancepremium}\n` +
-          `Driver Gender: ${data.drivergender}\n` +
-          `Education Level: ${data.educationlevel}\n` +
-          `Accident Type: ${data.accidenttype}\n` +
-          `Incident Severity: ${data.incidentseverity}\n` +
-          `Authorities Involved: ${data.authoritiesinvolved}\n` +
-          `Incident Time: ${data.incidenttime}\n` +
-          `Num Vehicles Involved: ${data.numvehiclesinvolved}\n` +
-          `Num Bodily Injuries: ${data.numbodilyinjuries}\n` +
-          `Police Report: ${data.policereportbool}\n` +
-          `Total Claim Amount: ${data.totalclaimamount}\n` +
-          `Vehicle Age: ${data.vehicleage}\n` +
-          `Driver Experience: ${data.driverexperience}\n` +
-          `License Type: ${data.licensetype}\n`
-        );
-        setClaimOutcome(data.claimoutcome || 'pending');
-        setClaimDescription(data.claimdescription || 'No description provided');
-        setFraudScore(data.fraudChance || 'N/A');
-        setFraudAnalysis(data.fraudAnalysis || 'N/A');
-        setClaimNotes(data.claimNotes || 'No notes available'); // Populate claim notes
-        alert('Claim data fetched successfully');
+        populateClaimDetails(data);
+        alert('First open/pending claim fetched successfully');
       } else {
         alert(data.message);
       }
     } catch (error) {
-      console.error('Error fetching claim:', error);
+      console.error('Error fetching first open/pending claim:', error);
       alert('An error occurred while fetching the claim');
     }
   };
 
-  // Function to update the claim outcome, status, and notes
-  const updateClaim = async (newOutcome) => {
-    if (!claimId) {
-      alert('No claim selected to update');
+  // Fetch a specific claim by claim ID
+  const getClaimById = async () => {
+    if (!searchClaimId) {
+      alert('Please enter a Claim ID');
       return;
     }
 
-    let newStatus = 'open';
-    if (newOutcome === 'approved' || newOutcome === 'denied') {
-      newStatus = 'closed'; // Automatically close the claim if approved or denied
+    try {
+      const response = await fetch(`/api/getClaim?claimId=${searchClaimId}`);
+      const data = await response.json();
+      if (response.ok) {
+        populateClaimDetails(data);
+        alert(`Claim ${searchClaimId} fetched successfully`);
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error fetching claim by ID:', error);
+      alert('An error occurred while fetching the claim');
+    }
+  };
+
+  // Function to populate the form with fetched claim data
+  const populateClaimDetails = (data) => {
+    setClaimId(data.claimID); // Save Claim ID for updates
+    setClaimDetails(
+      `Claim ID: ${data.claimID}\n` +
+      `First Name: ${data.firstname}\n` +
+      `Last Name: ${data.lastname}\n` +
+      `Claim Status: ${data.claimStatus}\n` +
+      `Claim Outcome: ${data.claimOutcome}\n` +
+      `Time as Customer: ${data.timeAsCustomer}\n` +
+      `Driver Age: ${data.driverAge}\n` +
+      `Insurance Access: ${data.insuranceAccess}\n` +
+      `Insurance Premium: ${data.insurancePremium}\n` +
+      `Driver Gender: ${data.driverGender}\n` +
+      `Education Level: ${data.educationLevel}\n` +
+      `Accident Type: ${data.accidentType}\n` +
+      `Incident Severity: ${data.incidentSeverity}\n` +
+      `Authorities Involved: ${data.authoritiesInvolved}\n` +
+      `Incident Time: ${data.incidentTime}\n` +
+      `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
+      `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
+      `Police Report: ${data.policeReportBool}\n` +
+      `Total Claim Amount: ${data.totalClaimAmount}\n` +
+      `Vehicle Age: ${data.vehicleAge}\n` +
+      `Driver Experience: ${data.driverExperience}\n` +
+      `License Type: ${data.licenseType}\n`
+    );
+    setClaimOutcome(data.claimOutcome || 'pending');
+    setClaimDescription(data.claimDescription || 'No description provided');
+    setFraudScore(data.fraudChance || 'N/A');
+    setFraudAnalysis(data.fraudAnalysis || 'N/A');
+    setClaimNotes(data.claimNotes || 'No notes available');
+  };
+
+  // Update the claim on close case
+  const closeCase = async () => {
+    if (!claimId) {
+      alert('No claim selected to close');
+      return;
     }
 
     try {
@@ -78,46 +98,94 @@ export default function Home() {
         },
         body: JSON.stringify({
           claimId,
-          claimStatus: newStatus,
-          claimOutcome: newOutcome,
-          claimNotes, // Include claimNotes in the update
-          fraudChance: fraudScore, // Include fraudChance
-          fraudAnalysis // Include fraudAnalysis
+          claimStatus: 'closed',
+          claimOutcome,
+          claimNotes,
+          fraudChance: fraudScore,
+          fraudAnalysis,
         }),
       });
 
-      const result = await response.json();
       if (response.ok) {
-        alert(result.message);
-        // Clear the form fields after closing the case
-        clearFormFields();
+        alert('Claim closed successfully');
+        clearFields();
       } else {
-        alert(result.message);
+        alert('Error closing the claim');
       }
     } catch (error) {
-      console.error('Error updating claim:', error);
-      alert('An error occurred while updating the claim');
+      console.error('Error closing the claim:', error);
+      alert('An error occurred while closing the claim');
     }
   };
 
-  // Function to clear the form fields
-  const clearFormFields = () => {
+  // Escalate the claim
+  const escalateClaim = async () => {
+    if (!claimId) {
+      alert('No claim selected to escalate');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/updateClaim', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          claimId,
+          claimStatus: 'open',
+          claimOutcome: 'escalated',
+          claimNotes,
+          fraudChance: fraudScore,
+          fraudAnalysis,
+        }),
+      });
+
+      if (response.ok) {
+        alert('Claim escalated to manager');
+        clearFields();
+      } else {
+        alert('Error escalating the claim');
+      }
+    } catch (error) {
+      console.error('Error escalating the claim:', error);
+      alert('An error occurred while escalating the claim');
+    }
+  };
+
+  // Clear all fields after processing
+  const clearFields = () => {
     setClaimDetails('');
-    setClaimDescription('');
+    setClaimOutcome('pending');
+    setClaimNotes('');
     setFraudScore('');
     setFraudAnalysis('');
-    setClaimNotes('');
-    setClaimId(null);
-    setClaimOutcome('pending');
+    setClaimDescription('');
   };
 
   return (
     <div style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
       <h1>Insurance Claim Processing</h1>
-      <form>
-        {/* Claim Number Search */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="searchClaimId">Claim Number:</label>
+
+      {/* Claim Search and Fetch Section */}
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px" }}>
+        {/* Left side: Get First Open Claim Button */}
+        <button
+          type="button"
+          onClick={getFirstOpenClaim}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#0070f3",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Get First Open Claim
+        </button>
+
+        {/* Right side: Search by Claim Number */}
+        <div style={{ display: "flex", gap: "10px" }}>
           <input
             type="text"
             id="searchClaimId"
@@ -125,11 +193,11 @@ export default function Home() {
             value={searchClaimId}
             onChange={(e) => setSearchClaimId(e.target.value)}
             placeholder="Enter claim number"
-            style={{ width: "200px", padding: "8px", marginRight: "10px" }}
+            style={{ width: "200px", padding: "8px" }}
           />
           <button
             type="button"
-            onClick={() => getClaim(searchClaimId)}
+            onClick={getClaimById}
             style={{
               padding: "10px 20px",
               backgroundColor: "#0070f3",
@@ -138,152 +206,152 @@ export default function Home() {
               cursor: "pointer",
             }}
           >
-            Get Claim by Number
+            Get Claim
           </button>
         </div>
+      </div>
 
-        {/* Claim Information */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="claimDetails">Claim Information:</label>
-          <div
-            id="claimDetails"
-            style={{
-              border: "1px solid #ccc",
-              padding: "10px",
-              marginTop: "5px",
-              height: "200px",
-              overflowY: "auto",
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr",
-              gap: "20px",
-              fontFamily: "monospace",
-              whiteSpace: "pre-wrap",
-            }}
-          >
-            {claimDetails.split('\n').map((line, index) => (
-              <span key={index}>{line}</span>
-            ))}
-          </div>
+      {/* Claim Information */}
+      <div style={{ marginBottom: "15px" }}>
+        <label htmlFor="claimDetails">Claim Information:</label>
+        <div
+          id="claimDetails"
+          style={{
+            border: "1px solid #ccc",
+            padding: "10px",
+            marginTop: "5px",
+            height: "200px",
+            overflowY: "auto",
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr",
+            gap: "20px",
+            fontFamily: "monospace",
+            whiteSpace: "pre-wrap",
+          }}
+        >
+          {claimDetails.split('\n').map((line, index) => (
+            <span key={index}>{line}</span>
+          ))}
         </div>
+      </div>
 
-        {/* Claim Description */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="claimDescription">Claim Description:</label>
-          <textarea
-            id="claimDescription"
-            name="claimDescription"
-            value={claimDescription}
-            placeholder="Description of the claim"
-            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
-            readOnly
-          />
-        </div>
+      {/* Claim Description */}
+      <div style={{ marginBottom: "15px" }}>
+        <label htmlFor="claimDescription">Claim Description:</label>
+        <textarea
+          id="claimDescription"
+          name="claimDescription"
+          value={claimDescription}
+          placeholder="Description of the claim"
+          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
+          readOnly
+        />
+      </div>
 
-        {/* Claim Processing Notes */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="claimNotes">Claim Processing Notes:</label>
-          <textarea
-            id="claimNotes"
-            name="claimNotes"
-            value={claimNotes}
-            onChange={(e) => setClaimNotes(e.target.value)}
-            placeholder="Add or update claim processing notes"
-            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
-          />
-        </div>
+      {/* Claim Processing Notes */}
+      <div style={{ marginBottom: "15px" }}>
+        <label htmlFor="claimNotes">Claim Processing Notes:</label>
+        <textarea
+          id="claimNotes"
+          name="claimNotes"
+          value={claimNotes}
+          onChange={(e) => setClaimNotes(e.target.value)}
+          placeholder="Add or update claim processing notes"
+          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
+        />
+      </div>
 
-        {/* Check Fraud Button */}
-        <div style={{ marginBottom: "15px" }}>
-          <button
-            type="button"
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#ff6347",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Check Fraud
-          </button>
-        </div>
+      {/* Fraud Probability */}
+      <div style={{ marginBottom: "15px" }}>
+        <label htmlFor="fraudScore">Fraud Risk Score (%):</label>
+        <input
+          type="text"
+          id="fraudScore"
+          name="fraudScore"
+          value={fraudScore}
+          placeholder="Auto-filled by AI"
+          style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+          readOnly
+        />
+      </div>
 
-        {/* Fraud Probability */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="fraudScore">Fraud Risk Score (%):</label>
-          <input
-            type="text"
-            id="fraudScore"
-            name="fraudScore"
-            value={fraudScore}
-            placeholder="Auto-filled by AI"
+      {/* Fraud Analysis Summary with "Explain More" Button */}
+      <div style={{ marginBottom: "15px", position: "relative" }}>
+        <label htmlFor="fraudAnalysis">Fraud Analysis Summary:</label>
+        <textarea
+          id="fraudAnalysis"
+          name="fraudAnalysis"
+          value={fraudAnalysis}
+          placeholder="Auto-filled by AI"
+          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "80px" }}
+          readOnly
+        />
+        <button
+          type="button"
+          style={{
+            position: "absolute",
+            right: "10px",
+            bottom: "10px",
+            padding: "5px 10px",
+            backgroundColor: "#ff6347",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Explain More
+        </button>
+      </div>
+
+      {/* Claim Outcome */}
+      <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
+        <div style={{ flex: 1 }}>
+          <label htmlFor="claimOutcome">Claim Outcome:</label>
+          <select
+            id="claimOutcome"
+            name="claimOutcome"
+            value={claimOutcome}
+            onChange={(e) => setClaimOutcome(e.target.value)}
             style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-            readOnly
-          />
-        </div>
-
-        {/* Fraud Evaluation Summary */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="fraudAnalysis">Fraud Analysis Summary:</label>
-          <textarea
-            id="fraudAnalysis"
-            name="fraudAnalysis"
-            value={fraudAnalysis}
-            placeholder="Auto-filled by AI"
-            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "80px" }}
-            readOnly
-          />
-        </div>
-
-        {/* Claim Outcome */}
-        <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-          <div style={{ flex: 1 }}>
-            <label htmlFor="claimOutcome">Claim Outcome:</label>
-            <select
-              id="claimOutcome"
-              name="claimOutcome"
-              value={claimOutcome}
-              onChange={(e) => setClaimOutcome(e.target.value)}
-              style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-            >
-              <option value="pending">Pending</option>
-              <option value="escalated">Escalated</option>
-              <option value="approved">Approved</option>
-              <option value="denied">Denied</option>
-            </select>
-          </div>
-        </div>
-
-        <div style={{ marginTop: "20px" }}>
-          <button
-            type="button"
-            onClick={() => updateClaim(claimOutcome)}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#0070f3",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-              marginRight: "10px",
-            }}
           >
-            Close Case
-          </button>
-          <button
-            type="button"
-            onClick={() => updateClaim('escalated')}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#28a745",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Escalate to Manager
-          </button>
+            <option value="pending">Pending</option>
+            <option value="escalated">Escalated</option>
+            <option value="approved">Approved</option>
+            <option value="denied">Denied</option>
+          </select>
         </div>
-      </form>
+      </div>
+
+      {/* Action Buttons */}
+      <div style={{ marginTop: "20px" }}>
+        <button
+          type="button"
+          onClick={closeCase}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#0070f3",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+            marginRight: "10px",
+          }}
+        >
+          Close Case
+        </button>
+        <button
+          type="button"
+          onClick={escalateClaim}
+          style={{
+            padding: "10px 20px",
+            backgroundColor: "#28a745",
+            color: "white",
+            border: "none",
+            cursor: "pointer",
+          }}
+        >
+          Escalate to Manager
+        </button>
+      </div>
     </div>
   );
 }
