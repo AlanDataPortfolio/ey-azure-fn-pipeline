@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const [claimDetails, setClaimDetails] = useState('');
@@ -7,8 +8,21 @@ export default function Home() {
   const [claimOutcome, setClaimOutcome] = useState('');
   const [claimNotes, setClaimNotes] = useState('');
   const [claimDescription, setClaimDescription] = useState('');
-  const [claimId, setClaimId] = useState(null); 
+  const [claimId, setClaimId] = useState(null);
   const [searchClaimId, setSearchClaimId] = useState('');
+  const router = useRouter();
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem('loggedIn');
+    if (!isLoggedIn) {
+      router.push('/login'); // Redirect to login page if not logged in
+    }
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem('loggedIn'); // Remove login session
+    router.push('/login'); // Redirect to login page
+  };  
 
   const getFirstOpenClaim = async () => {
     try {
@@ -51,8 +65,8 @@ export default function Home() {
     setClaimId(data.claimID);
     setClaimDetails(
       `Claim ID: ${data.claimID}\n` +
-      `First Name: ${data.firstName}\n` +  // Fixed firstName
-      `Last Name: ${data.lastName}\n` +    // Fixed lastName
+      `First Name: ${data.firstName}\n` +
+      `Last Name: ${data.lastName}\n` +
       `Claim Status: ${data.claimStatus}\n` +
       `Claim Outcome: ${data.claimOutcome}\n` +
       `Time as Customer: ${data.timeAsCustomer}\n` +
@@ -163,7 +177,24 @@ export default function Home() {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
+    <div style={{ padding: "20px", maxWidth: "800px", margin: "auto", position: "relative" }}>
+      {/* Logout Button */}
+      <button
+        onClick={handleLogout}
+        style={{
+          position: "absolute",
+          top: "10px",
+          right: "10px",
+          padding: "10px 20px",
+          backgroundColor: "#ff6347",
+          color: "white",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        Logout
+      </button>
+
       <h1>Insurance Claim Processing</h1>
 
       {/* Claim Search and Fetch Section */}
