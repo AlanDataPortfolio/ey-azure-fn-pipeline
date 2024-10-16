@@ -5,12 +5,11 @@ export default function Home() {
   const [fraudScore, setFraudScore] = useState('');
   const [fraudAnalysis, setFraudAnalysis] = useState('');
   const [claimOutcome, setClaimOutcome] = useState('');
-  const [claimNotes, setClaimNotes] = useState(''); // Field for claim notes
+  const [claimNotes, setClaimNotes] = useState('');
   const [claimDescription, setClaimDescription] = useState('');
-  const [claimId, setClaimId] = useState(null); // Store the current Claim ID for saving
-  const [searchClaimId, setSearchClaimId] = useState(''); // Field for searching by claim ID
+  const [claimId, setClaimId] = useState(null); 
+  const [searchClaimId, setSearchClaimId] = useState('');
 
-  // Fetch the first open and pending claim
   const getFirstOpenClaim = async () => {
     try {
       const response = await fetch('/api/getClaim');
@@ -27,7 +26,6 @@ export default function Home() {
     }
   };
 
-  // Fetch a specific claim by claim ID
   const getClaimById = async () => {
     if (!searchClaimId) {
       alert('Please enter a Claim ID');
@@ -49,13 +47,12 @@ export default function Home() {
     }
   };
 
-  // Function to populate the form with fetched claim data
   const populateClaimDetails = (data) => {
-    setClaimId(data.claimID); // Save Claim ID for updates
+    setClaimId(data.claimID);
     setClaimDetails(
       `Claim ID: ${data.claimID}\n` +
-      `First Name: ${data.firstname}\n` +
-      `Last Name: ${data.lastname}\n` +
+      `First Name: ${data.firstName}\n` +  // Fixed firstName
+      `Last Name: ${data.lastName}\n` +    // Fixed lastName
       `Claim Status: ${data.claimStatus}\n` +
       `Claim Outcome: ${data.claimOutcome}\n` +
       `Time as Customer: ${data.timeAsCustomer}\n` +
@@ -83,11 +80,15 @@ export default function Home() {
     setClaimNotes(data.claimNotes || 'No notes available');
   };
 
-  // Update the claim on close case
   const closeCase = async () => {
     if (!claimId) {
       alert('No claim selected to close');
       return;
+    }
+
+    let updatedClaimStatus = 'open';
+    if (claimOutcome === 'approved' || claimOutcome === 'denied') {
+      updatedClaimStatus = 'closed'; // Only close the case if approved or denied
     }
 
     try {
@@ -98,7 +99,7 @@ export default function Home() {
         },
         body: JSON.stringify({
           claimId,
-          claimStatus: 'closed',
+          claimStatus: updatedClaimStatus,
           claimOutcome,
           claimNotes,
           fraudChance: fraudScore,
@@ -118,7 +119,6 @@ export default function Home() {
     }
   };
 
-  // Escalate the claim
   const escalateClaim = async () => {
     if (!claimId) {
       alert('No claim selected to escalate');
@@ -153,7 +153,6 @@ export default function Home() {
     }
   };
 
-  // Clear all fields after processing
   const clearFields = () => {
     setClaimDetails('');
     setClaimOutcome('pending');
@@ -169,7 +168,6 @@ export default function Home() {
 
       {/* Claim Search and Fetch Section */}
       <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px" }}>
-        {/* Left side: Get First Open Claim Button */}
         <button
           type="button"
           onClick={getFirstOpenClaim}
@@ -184,7 +182,6 @@ export default function Home() {
           Get First Open Claim
         </button>
 
-        {/* Right side: Search by Claim Number */}
         <div style={{ display: "flex", gap: "10px" }}>
           <input
             type="text"
