@@ -5,50 +5,52 @@ import path from 'path';
 import csvParser from 'csv-parser';
 import { parse } from 'json2csv';
 
-// Function to update the claim in the CSV file
-async function updateCSV(claimId, newStatus, newOutcome) {
-  const filePath = path.resolve('./claims.csv');
-  const updatedRows = [];
-  let headers;
+export default async function handler(req, res) {
+  const { claimId, claimStatus, claimOutcome, claimNotes, fraudChance, fraudAnalysis } = req.body;
+  const csvFilePath = path.join(process.cwd(), 'claims.csv'); // Path to the CSV file
 
-  // Read the CSV file and update the relevant claim
-  return new Promise((resolve, reject) => {
-    fs.createReadStream(filePath)
+  const claims = [];
+
+  try {
+    // Read and parse the existing CSV data
+    fs.createReadStream(csvFilePath)
       .pipe(csvParser())
-      .on('headers', (headerArray) => {
-        headers = headerArray; // Store header row
-      })
       .on('data', (row) => {
-        if (row.claimID === claimId) {
-          // Update the claim's status and outcome
-          row.claimStatus = newStatus;
-          row.claimOutcome = newOutcome;
-        }
-        updatedRows.push(row);
+        claims.push(row);
       })
       .on('end', () => {
-        // Write the updated rows back to the CSV file
-        const csvData = parse(updatedRows, { fields: headers });
-        fs.writeFileSync(filePath, csvData);
-        resolve('Claim updated successfully');
-      })
-      .on('error', (error) => {
-        reject(error);
+        let updated = false;
+
+        // Update the claim with the matching claimId
+        const updatedClaims = claims.map((claim) => {
+          if (claim.claimID === claimId) {
+            updated = true;
+            return {
+              ...claim,
+              claimStatus: claimStatus || claim.claimStatus,
+              claimOutcome: claimOutcome || claim.claimOutcome,
+              claimNotes: claimNotes || claim.claimNotes,
+              fraudChance: fraudChance || claim.fraudChance,
+              fraudAnalysis: fraudAnalysis || claim.fraudAnalysis,
+            };
+          }
+          return claim;
+        });
+
+        if (!updated) {
+          return res.status(404).json({ message: 'Claim not found' });
+        }
+
+        // Convert updated claims data back to CSV format
+        const csv = parse(updatedClaims, { fields: Object.keys(updatedClaims[0]) });
+
+        // Write the updated CSV back to file
+        fs.writeFileSync(csvFilePath, csv);
+
+        res.status(200).json({ message: 'Claim updated successfully' });
       });
-  });
-}
-
-export default async function handler(req, res) {
-  if (req.method === 'POST') {
-    const { claimId, claimStatus, claimOutcome } = req.body;
-
-    try {
-      const message = await updateCSV(claimId, claimStatus, claimOutcome);
-      res.status(200).json({ message });
-    } catch (error) {
-      res.status(500).json({ message: 'Error updating claim', error: error.message });
-    }
-  } else {
-    res.status(405).json({ message: 'Method not allowed' });
+  } catch (error) {
+    console.error('Error updating the claim:', error);
+    res.status(500).json({ message: 'Error updating the claim' });
   }
 }

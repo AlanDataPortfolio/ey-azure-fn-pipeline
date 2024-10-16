@@ -5,15 +5,17 @@ import { useState } from 'react';
 export default function Home() {
   const [claimDetails, setClaimDetails] = useState('');
   const [fraudScore, setFraudScore] = useState('');
-  const [fraudEvaluation, setFraudEvaluation] = useState('');
+  const [fraudAnalysis, setFraudAnalysis] = useState('');
   const [claimOutcome, setClaimOutcome] = useState('');
+  const [claimNotes, setClaimNotes] = useState(''); // New field for claim notes
   const [claimDescription, setClaimDescription] = useState('');
-  const [claimId, setClaimId] = useState(null); // Store the current Claim ID
+  const [claimId, setClaimId] = useState(null); // Store the current Claim ID for saving
+  const [searchClaimId, setSearchClaimId] = useState(''); // New field for searching by claim ID
 
   // Function to fetch the first open and pending claim from the API
-  const getClaim = async () => {
+  const getClaim = async (claimNumber = null) => {
     try {
-      const response = await fetch('/api/getClaim');
+      const response = await fetch(`/api/getClaim${claimNumber ? '?claimId=' + claimNumber : ''}`);
       const data = await response.json();
       if (response.ok) {
         setClaimId(data.claimid); // Save Claim ID for updates
@@ -43,8 +45,9 @@ export default function Home() {
         );
         setClaimOutcome(data.claimoutcome || 'pending');
         setClaimDescription(data.claimdescription || 'No description provided');
-        setFraudScore('N/A');
-        setFraudEvaluation('N/A');
+        setFraudScore(data.fraudChance || 'N/A');
+        setFraudAnalysis(data.fraudAnalysis || 'N/A');
+        setClaimNotes(data.claimNotes || 'No notes available'); // Populate claim notes
         alert('Claim data fetched successfully');
       } else {
         alert(data.message);
@@ -55,7 +58,7 @@ export default function Home() {
     }
   };
 
-  // Function to update the claim outcome and status
+  // Function to update the claim outcome, status, and notes
   const updateClaim = async (newOutcome) => {
     if (!claimId) {
       alert('No claim selected to update');
@@ -77,6 +80,9 @@ export default function Home() {
           claimId,
           claimStatus: newStatus,
           claimOutcome: newOutcome,
+          claimNotes, // Include claimNotes in the update
+          fraudChance: fraudScore, // Include fraudChance
+          fraudAnalysis // Include fraudAnalysis
         }),
       });
 
@@ -99,7 +105,8 @@ export default function Home() {
     setClaimDetails('');
     setClaimDescription('');
     setFraudScore('');
-    setFraudEvaluation('');
+    setFraudAnalysis('');
+    setClaimNotes('');
     setClaimId(null);
     setClaimOutcome('pending');
   };
@@ -108,21 +115,30 @@ export default function Home() {
     <div style={{ padding: "20px", maxWidth: "800px", margin: "auto" }}>
       <h1>Insurance Claim Processing</h1>
       <form>
-        {/* Get Claim Button */}
+        {/* Claim Number Search */}
         <div style={{ marginBottom: "15px" }}>
+          <label htmlFor="searchClaimId">Claim Number:</label>
+          <input
+            type="text"
+            id="searchClaimId"
+            name="searchClaimId"
+            value={searchClaimId}
+            onChange={(e) => setSearchClaimId(e.target.value)}
+            placeholder="Enter claim number"
+            style={{ width: "200px", padding: "8px", marginRight: "10px" }}
+          />
           <button
             type="button"
-            onClick={getClaim}
+            onClick={() => getClaim(searchClaimId)}
             style={{
               padding: "10px 20px",
               backgroundColor: "#0070f3",
               color: "white",
               border: "none",
               cursor: "pointer",
-              marginBottom: "10px",
             }}
           >
-            Get Claim
+            Get Claim by Number
           </button>
         </div>
 
@@ -163,6 +179,19 @@ export default function Home() {
           />
         </div>
 
+        {/* Claim Processing Notes */}
+        <div style={{ marginBottom: "15px" }}>
+          <label htmlFor="claimNotes">Claim Processing Notes:</label>
+          <textarea
+            id="claimNotes"
+            name="claimNotes"
+            value={claimNotes}
+            onChange={(e) => setClaimNotes(e.target.value)}
+            placeholder="Add or update claim processing notes"
+            style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
+          />
+        </div>
+
         {/* Check Fraud Button */}
         <div style={{ marginBottom: "15px" }}>
           <button
@@ -195,11 +224,11 @@ export default function Home() {
 
         {/* Fraud Evaluation Summary */}
         <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="fraudEvaluation">Fraud Analysis Summary:</label>
+          <label htmlFor="fraudAnalysis">Fraud Analysis Summary:</label>
           <textarea
-            id="fraudEvaluation"
-            name="fraudEvaluation"
-            value={fraudEvaluation}
+            id="fraudAnalysis"
+            name="fraudAnalysis"
+            value={fraudAnalysis}
             placeholder="Auto-filled by AI"
             style={{ width: "100%", padding: "8px", marginTop: "5px", height: "80px" }}
             readOnly
@@ -207,20 +236,22 @@ export default function Home() {
         </div>
 
         {/* Claim Outcome */}
-        <div style={{ marginBottom: "15px" }}>
-          <label htmlFor="claimOutcome">Claim Outcome:</label>
-          <select
-            id="claimOutcome"
-            name="claimOutcome"
-            value={claimOutcome}
-            onChange={(e) => setClaimOutcome(e.target.value)}
-            style={{ width: "100%", padding: "8px", marginTop: "5px" }}
-          >
-            <option value="pending">Pending</option>
-            <option value="escalated">Escalated</option>
-            <option value="approved">Approved</option>
-            <option value="denied">Denied</option>
-          </select>
+        <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
+          <div style={{ flex: 1 }}>
+            <label htmlFor="claimOutcome">Claim Outcome:</label>
+            <select
+              id="claimOutcome"
+              name="claimOutcome"
+              value={claimOutcome}
+              onChange={(e) => setClaimOutcome(e.target.value)}
+              style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+            >
+              <option value="pending">Pending</option>
+              <option value="escalated">Escalated</option>
+              <option value="approved">Approved</option>
+              <option value="denied">Denied</option>
+            </select>
+          </div>
         </div>
 
         <div style={{ marginTop: "20px" }}>
@@ -229,7 +260,7 @@ export default function Home() {
             onClick={() => updateClaim(claimOutcome)}
             style={{
               padding: "10px 20px",
-              backgroundColor: "#28a745",
+              backgroundColor: "#0070f3",
               color: "white",
               border: "none",
               cursor: "pointer",
@@ -240,10 +271,10 @@ export default function Home() {
           </button>
           <button
             type="button"
-            onClick={() => updateClaim("escalated")}
+            onClick={() => updateClaim('escalated')}
             style={{
               padding: "10px 20px",
-              backgroundColor: "#0070f3",
+              backgroundColor: "#28a745",
               color: "white",
               border: "none",
               cursor: "pointer",

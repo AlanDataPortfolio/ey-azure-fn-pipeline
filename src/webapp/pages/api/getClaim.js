@@ -2,35 +2,42 @@
 
 import fs from 'fs';
 import path from 'path';
-import csv from 'csv-parser';
+import csvParser from 'csv-parser';
 
 export default async function handler(req, res) {
+  const { claimId } = req.query; // Get claimId from query params (if provided)
+  const csvFilePath = path.join(process.cwd(), 'claims.csv'); // Path to the CSV file
+
   const claims = [];
-  const filePath = path.join(process.cwd(), 'claims.csv');
 
-  // Read the CSV file
-  fs.createReadStream(filePath)
-    .pipe(csv({
-      mapHeaders: ({ header }) => header.trim().toLowerCase() // Normalize header names
-    }))
-    .on('data', (row) => {
-      claims.push(row);
-    })
-    .on('end', () => {
-      // Find the first claim with status "open" and outcome "pending"
-      const openClaim = claims.find(claim =>
-        claim.claimstatus && claim.claimstatus.toLowerCase() === 'open' &&
-        claim.claimoutcome && claim.claimoutcome.toLowerCase() === 'pending'
-      );
+  try {
+    // Read the CSV file and parse the claims data
+    fs.createReadStream(csvFilePath)
+      .pipe(csvParser())
+      .on('data', (row) => {
+        claims.push(row);
+      })
+      .on('end', () => {
+        let claim;
 
-      if (openClaim) {
-        res.status(200).json(openClaim);
-      } else {
-        res.status(404).json({ message: 'No open and pending claim found' });
-      }
-    })
-    .on('error', (error) => {
-      console.error('Error reading the CSV file:', error);
-      res.status(500).json({ message: 'Error reading the CSV file' });
-    });
+        // Check if a specific claimId is provided for fetching
+        if (claimId) {
+          claim = claims.find((row) => row.claimID === claimId);
+        } else {
+          // Find the first claim with "open" status and "pending" outcome
+          claim = claims.find(
+            (row) => row.claimStatus === 'open' && row.claimOutcome === 'pending'
+          );
+        }
+
+        if (claim) {
+          res.status(200).json(claim);
+        } else {
+          res.status(404).json({ message: 'No open/pending claim found' });
+        }
+      });
+  } catch (error) {
+    console.error('Error reading the CSV file:', error);
+    res.status(500).json({ message: 'Error reading the claims data' });
+  }
 }
