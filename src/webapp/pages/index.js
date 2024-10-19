@@ -248,11 +248,11 @@ export default function Home() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {/* Left Column */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-3 space-y-8">
             {/* Claim Information */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden max-h-80 overflow-y-auto">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Information
@@ -341,7 +341,7 @@ export default function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="space-y-8">
+          <div className="lg:col-span-2 space-y-8">
             {/* Claim Description */}
             <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
@@ -353,7 +353,7 @@ export default function Home() {
                 name="claimDescription"
                 value={claimDescription}
                 placeholder="Description of the claim"
-                className="input-field w-full h-32 p-3 border rounded-md relative z-10"
+                className="input-field w-full h-40 p-3 border rounded-md relative z-10"
                 readOnly
               />
             </div>
@@ -370,7 +370,7 @@ export default function Home() {
                 value={claimNotes}
                 onChange={(e) => setClaimNotes(e.target.value)}
                 placeholder="Add or update claim processing notes"
-                className="input-field w-full h-32 p-3 border rounded-md relative z-10"
+                className="input-field w-full h-40 p-3 border rounded-md relative z-10"
               />
             </div>
 
