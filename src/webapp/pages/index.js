@@ -67,26 +67,8 @@ export default function Home() {
       return;
     }
 
-    try {
-      const response = await fetch('/api/checkFraud', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ claimId }),
-      });
-      const data = await response.json();
-      if (response.ok) {
-        setFraudScore(data.fraudChance || 'N/A');
-        setFraudAnalysis(data.fraudAnalysis || 'N/A');
-        alert('Fraud analysis completed successfully');
-      } else {
-        alert(data.message);
-      }
-    } catch (error) {
-      console.error('Error performing fraud analysis:', error);
-      alert('An error occurred while performing fraud analysis');
-    }
+    // Placeholder for future implementation
+    alert('Fraud analysis initiated (functionality to be implemented)');
   };
 
   const populateClaimDetails = (data) => {
@@ -219,7 +201,7 @@ export default function Home() {
           </div>
           <button
             onClick={handleLogout}
-            className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
+            className="px-4 py-2 bg-red-500 text-white rounded-md shadow-lg hover:bg-red-600 transition"
           >
             Logout
           </button>
@@ -227,14 +209,14 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-8">
+      <main className="max-w-7xl mx-auto px-6 py-8 border-2 border-gray-200">
         {/* Claim Search Section */}
-        <div className="bg-white shadow-md rounded-lg p-6 mb-8">
+        <div className="bg-white shadow-xl rounded-lg p-6 mb-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <button
               type="button"
               onClick={getFirstOpenClaim}
-              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
             >
               Get First Open Claim
             </button>
@@ -252,7 +234,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={getClaimById}
-                className="px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+                className="px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
               >
                 Search
               </button>
@@ -265,33 +247,48 @@ export default function Home() {
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
             {/* Claim Information */}
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-xl rounded-lg p-6 max-h-80 overflow-y-auto">
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
                 Claim Information
               </h2>
-              <div className="grid grid-cols-2 gap-4 max-h-64 overflow-y-auto">
-                {claimDetails &&
-                  claimDetails.split('\n').map((line, index) => {
-                    const [key, value] = line.split(':');
-                    if (key && value) {
-                      return (
-                        <div key={index} className="flex">
-                          <span className="font-semibold">{key.trim()}:</span>&nbsp;
-                          <span>{value.trim()}</span>
-                        </div>
-                      );
-                    } else {
-                      return null;
-                    }
-                  })}
+              <div className="grid grid-cols-2 gap-4">
+                {claimDetails
+                  ? claimDetails.split('\n').map((line, index) => {
+                      const [key, value] = line.split(':');
+                      if (key && value) {
+                        return (
+                          <div key={index} className="flex">
+                            <span className="font-semibold">{key.trim()}:</span>&nbsp;
+                            <span>{value.trim()}</span>
+                          </div>
+                        );
+                      } else {
+                        return null;
+                      }
+                    })
+                  : (
+                    <p className="text-gray-500 col-span-2">
+                      No claim selected. Please select a claim to view details.
+                    </p>
+                  )}
               </div>
             </div>
 
             {/* Fraud Analysis */}
-            <div className="bg-white shadow-md rounded-lg p-6">
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
-                Fraud Analysis
-              </h2>
+            <div className="bg-white shadow-xl rounded-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-semibold text-nrmaBlue">
+                  Fraud Analysis
+                </h2>
+                <button
+                  type="button"
+                  onClick={checkFraud}
+                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-md shadow-lg hover:bg-purple-700 transition"
+                >
+                  Check Fraud
+                </button>
+              </div>
+              {/* Fraud Risk Score */}
               <div className="mb-4">
                 <label
                   htmlFor="fraudScore"
@@ -309,6 +306,7 @@ export default function Home() {
                   readOnly
                 />
               </div>
+              {/* Fraud Analysis Summary */}
               <div className="relative">
                 <label
                   htmlFor="fraudAnalysis"
@@ -326,26 +324,19 @@ export default function Home() {
                 />
                 <button
                   type="button"
-                  className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
+                  className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow-lg hover:bg-orange-600 transition"
                   onClick={() => alert('Detailed explanation coming soon!')}
                 >
                   Explain More
                 </button>
               </div>
-              <button
-                type="button"
-                onClick={checkFraud}
-                className="mt-4 w-full px-6 py-2 bg-purple-600 text-white font-semibold rounded-md shadow hover:bg-purple-700 transition"
-              >
-                Check Fraud
-              </button>
             </div>
           </div>
 
           {/* Right Column */}
           <div className="space-y-8">
             {/* Claim Description */}
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-xl rounded-lg p-6">
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
                 Claim Description
               </h2>
@@ -360,7 +351,7 @@ export default function Home() {
             </div>
 
             {/* Claim Notes */}
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-xl rounded-lg p-6">
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
                 Claim Processing Notes
               </h2>
@@ -375,7 +366,7 @@ export default function Home() {
             </div>
 
             {/* Claim Outcome */}
-            <div className="bg-white shadow-md rounded-lg p-6">
+            <div className="bg-white shadow-xl rounded-lg p-6">
               <label
                 htmlFor="claimOutcome"
                 className="block text-sm font-medium text-gray-700 mb-2"
@@ -401,14 +392,14 @@ export default function Home() {
               <button
                 type="button"
                 onClick={closeCase}
-                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition"
+                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
               >
                 Close Case
               </button>
               <button
                 type="button"
                 onClick={escalateClaim}
-                className="w-full px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600 transition"
+                className="w-full px-6 py-3 bg-red-500 text-white font-semibold rounded-md shadow-lg hover:bg-red-600 transition"
               >
                 Escalate to Manager
               </button>
