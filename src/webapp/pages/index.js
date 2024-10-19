@@ -22,7 +22,7 @@ export default function Home() {
   const handleLogout = () => {
     localStorage.removeItem('loggedIn'); // Remove login session
     router.push('/login'); // Redirect to login page
-  };  
+  };
 
   const getFirstOpenClaim = async () => {
     try {
@@ -177,43 +177,31 @@ export default function Home() {
   };
 
   return (
-    <div style={{ padding: "20px", maxWidth: "800px", margin: "auto", position: "relative" }}>
-      {/* Logout Button */}
-      <button
-        onClick={handleLogout}
-        style={{
-          position: "absolute",
-          top: "10px",
-          right: "10px",
-          padding: "10px 20px",
-          backgroundColor: "#ff6347",
-          color: "white",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        Logout
-      </button>
+    <div className="container">
+      {/* NRMA Header */}
+      <header className="nrma-header">
+        <img src="/nrma-logo.png" alt="NRMA Logo" className="nrma-logo" />
+        <button
+          onClick={handleLogout}
+          className="btn-secondary absolute top-2 right-2"
+        >
+          Logout
+        </button>
+      </header>
 
-      <h1>Insurance Claim Processing</h1>
+      <h1 className="text-2xl font-bold text-nrmaBlue my-4">Insurance Claim Processing</h1>
 
       {/* Claim Search and Fetch Section */}
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "15px" }}>
+      <div className="flex justify-between items-center mb-4">
         <button
           type="button"
           onClick={getFirstOpenClaim}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#0070f3",
-            color: "white",
-            border: "none",
-            cursor: "pointer",
-          }}
+          className="btn-primary"
         >
           Get First Open Claim
         </button>
 
-        <div style={{ display: "flex", gap: "10px" }}>
+        <div className="flex gap-4">
           <input
             type="text"
             id="searchClaimId"
@@ -221,18 +209,12 @@ export default function Home() {
             value={searchClaimId}
             onChange={(e) => setSearchClaimId(e.target.value)}
             placeholder="Enter claim number"
-            style={{ width: "200px", padding: "8px" }}
+            className="input-field"
           />
           <button
             type="button"
             onClick={getClaimById}
-            style={{
-              padding: "10px 20px",
-              backgroundColor: "#0070f3",
-              color: "white",
-              border: "none",
-              cursor: "pointer",
-            }}
+            className="btn-primary"
           >
             Get Claim
           </button>
@@ -240,22 +222,11 @@ export default function Home() {
       </div>
 
       {/* Claim Information */}
-      <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="claimDetails">Claim Information:</label>
+      <div className="mb-4">
+        <label htmlFor="claimDetails" className="font-bold text-nrmaBlue">Claim Information:</label>
         <div
           id="claimDetails"
-          style={{
-            border: "1px solid #ccc",
-            padding: "10px",
-            marginTop: "5px",
-            height: "200px",
-            overflowY: "auto",
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: "20px",
-            fontFamily: "monospace",
-            whiteSpace: "pre-wrap",
-          }}
+          className="border border-nrmaGrey p-4 mt-2 h-52 overflow-y-auto grid grid-cols-2 gap-4"
         >
           {claimDetails.split('\n').map((line, index) => (
             <span key={index}>{line}</span>
@@ -264,83 +235,74 @@ export default function Home() {
       </div>
 
       {/* Claim Description */}
-      <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="claimDescription">Claim Description:</label>
+      <div className="mb-4">
+        <label htmlFor="claimDescription" className="font-bold text-nrmaBlue">Claim Description:</label>
         <textarea
           id="claimDescription"
           name="claimDescription"
           value={claimDescription}
           placeholder="Description of the claim"
-          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
+          className="input-field h-24"
           readOnly
         />
       </div>
 
       {/* Claim Processing Notes */}
-      <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="claimNotes">Claim Processing Notes:</label>
+      <div className="mb-4">
+        <label htmlFor="claimNotes" className="font-bold text-nrmaBlue">Claim Processing Notes:</label>
         <textarea
           id="claimNotes"
           name="claimNotes"
           value={claimNotes}
           onChange={(e) => setClaimNotes(e.target.value)}
           placeholder="Add or update claim processing notes"
-          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "60px" }}
+          className="input-field h-24"
         />
       </div>
 
       {/* Fraud Probability */}
-      <div style={{ marginBottom: "15px" }}>
-        <label htmlFor="fraudScore">Fraud Risk Score (%):</label>
+      <div className="mb-4">
+        <label htmlFor="fraudScore" className="font-bold text-nrmaBlue">Fraud Risk Score (%):</label>
         <input
           type="text"
           id="fraudScore"
           name="fraudScore"
           value={fraudScore}
           placeholder="Auto-filled by AI"
-          style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+          className="input-field"
           readOnly
         />
       </div>
 
       {/* Fraud Analysis Summary with "Explain More" Button */}
-      <div style={{ marginBottom: "15px", position: "relative" }}>
-        <label htmlFor="fraudAnalysis">Fraud Analysis Summary:</label>
+      <div className="mb-4 relative">
+        <label htmlFor="fraudAnalysis" className="font-bold text-nrmaBlue">Fraud Analysis Summary:</label>
         <textarea
           id="fraudAnalysis"
           name="fraudAnalysis"
           value={fraudAnalysis}
           placeholder="Auto-filled by AI"
-          style={{ width: "100%", padding: "8px", marginTop: "5px", height: "80px" }}
+          className="input-field h-32"
           readOnly
         />
         <button
           type="button"
-          style={{
-            position: "absolute",
-            right: "10px",
-            bottom: "10px",
-            padding: "5px 10px",
-            backgroundColor: "#ff6347",
-            color: "white",
-            border: "none",
-            cursor: "pointer",
-          }}
+          className="btn-secondary absolute right-2 bottom-2"
         >
           Explain More
         </button>
       </div>
 
       {/* Claim Outcome */}
-      <div style={{ display: "flex", gap: "10px", marginBottom: "15px" }}>
-        <div style={{ flex: 1 }}>
-          <label htmlFor="claimOutcome">Claim Outcome:</label>
+      <div className="flex gap-4 mb-4">
+        <div className="w-1/2">
+          <label htmlFor="claimOutcome" className="font-bold text-nrmaBlue">Claim Outcome:</label>
           <select
             id="claimOutcome"
             name="claimOutcome"
             value={claimOutcome}
             onChange={(e) => setClaimOutcome(e.target.value)}
-            style={{ width: "100%", padding: "8px", marginTop: "5px" }}
+            className="input-field"
           >
             <option value="pending">Pending</option>
             <option value="escalated">Escalated</option>
@@ -351,35 +313,28 @@ export default function Home() {
       </div>
 
       {/* Action Buttons */}
-      <div style={{ marginTop: "20px" }}>
+      <div className="mt-4 flex gap-4">
         <button
           type="button"
           onClick={closeCase}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#0070f3",
-            color: "white",
-            border: "none",
-            cursor: "pointer",
-            marginRight: "10px",
-          }}
+          className="btn-primary"
         >
           Close Case
         </button>
         <button
           type="button"
           onClick={escalateClaim}
-          style={{
-            padding: "10px 20px",
-            backgroundColor: "#28a745",
-            color: "white",
-            border: "none",
-            cursor: "pointer",
-          }}
+          className="btn-secondary"
         >
           Escalate to Manager
         </button>
       </div>
+
+      {/* Footer */}
+      <footer className="mt-8 text-center text-sm text-gray-600">
+        Developed by Macquarie University's Team 14 Data Team for EY & NRMA.
+        Chief Developer: Noorullah Khan
+      </footer>
     </div>
   );
 }
