@@ -177,163 +177,198 @@ export default function Home() {
   };
 
   return (
-    <div className="container">
-      {/* NRMA Header */}
-      <header className="nrma-header">
-        <img src="/nrma-logo.png" alt="NRMA Logo" className="nrma-logo" />
-        <button
-          onClick={handleLogout}
-          className="btn-secondary absolute top-2 right-2"
-        >
-          Logout
-        </button>
-      </header>
-
-      <h1 className="text-2xl font-bold text-nrmaBlue my-4">Insurance Claim Processing</h1>
-
-      {/* Claim Search and Fetch Section */}
-      <div className="flex justify-between items-center mb-4">
-        <button
-          type="button"
-          onClick={getFirstOpenClaim}
-          className="btn-primary"
-        >
-          Get First Open Claim
-        </button>
-
-        <div className="flex gap-4">
-          <input
-            type="text"
-            id="searchClaimId"
-            name="searchClaimId"
-            value={searchClaimId}
-            onChange={(e) => setSearchClaimId(e.target.value)}
-            placeholder="Enter claim number"
-            className="input-field"
-          />
+    <div className="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 min-h-screen">
+      {/* Header */}
+      <header className="bg-white shadow-md">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          <div className="flex items-center">
+            <img src="/nrma-logo.png" alt="NRMA Logo" className="h-10 w-auto" />
+            <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
+              Insurance Claim Processing
+            </h1>
+          </div>
           <button
-            type="button"
-            onClick={getClaimById}
-            className="btn-primary"
+            onClick={handleLogout}
+            className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 transition"
           >
-            Get Claim
+            Logout
           </button>
         </div>
-      </div>
+      </header>
 
-      {/* Claim Information */}
-      <div className="mb-4">
-        <label htmlFor="claimDetails" className="font-bold text-nrmaBlue">Claim Information:</label>
-        <div
-          id="claimDetails"
-          className="border border-nrmaGrey p-4 mt-2 h-52 overflow-y-auto grid grid-cols-2 gap-4"
-        >
-          {claimDetails.split('\n').map((line, index) => (
-            <span key={index}>{line}</span>
-          ))}
+      {/* Main Content */}
+      <main className="max-w-7xl mx-auto px-6 py-8">
+        {/* Claim Search Section */}
+        <div className="bg-white shadow-md rounded-lg p-6 mb-8">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <button
+              type="button"
+              onClick={getFirstOpenClaim}
+              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+            >
+              Get First Open Claim
+            </button>
+
+            <div className="flex w-full md:w-auto items-center space-x-2">
+              <input
+                type="text"
+                id="searchClaimId"
+                name="searchClaimId"
+                value={searchClaimId}
+                onChange={(e) => setSearchClaimId(e.target.value)}
+                placeholder="Enter Claim ID"
+                className="input-field p-2 border rounded-md w-full md:w-64"
+              />
+              <button
+                type="button"
+                onClick={getClaimById}
+                className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+              >
+                Search
+              </button>
+            </div>
+          </div>
         </div>
-      </div>
 
-      {/* Claim Description */}
-      <div className="mb-4">
-        <label htmlFor="claimDescription" className="font-bold text-nrmaBlue">Claim Description:</label>
-        <textarea
-          id="claimDescription"
-          name="claimDescription"
-          value={claimDescription}
-          placeholder="Description of the claim"
-          className="input-field h-24"
-          readOnly
-        />
-      </div>
-
-      {/* Claim Processing Notes */}
-      <div className="mb-4">
-        <label htmlFor="claimNotes" className="font-bold text-nrmaBlue">Claim Processing Notes:</label>
-        <textarea
-          id="claimNotes"
-          name="claimNotes"
-          value={claimNotes}
-          onChange={(e) => setClaimNotes(e.target.value)}
-          placeholder="Add or update claim processing notes"
-          className="input-field h-24"
-        />
-      </div>
-
-      {/* Fraud Probability */}
-      <div className="mb-4">
-        <label htmlFor="fraudScore" className="font-bold text-nrmaBlue">Fraud Risk Score (%):</label>
-        <input
-          type="text"
-          id="fraudScore"
-          name="fraudScore"
-          value={fraudScore}
-          placeholder="Auto-filled by AI"
-          className="input-field"
-          readOnly
-        />
-      </div>
-
-      {/* Fraud Analysis Summary with "Explain More" Button */}
-      <div className="mb-4 relative">
-        <label htmlFor="fraudAnalysis" className="font-bold text-nrmaBlue">Fraud Analysis Summary:</label>
-        <textarea
-          id="fraudAnalysis"
-          name="fraudAnalysis"
-          value={fraudAnalysis}
-          placeholder="Auto-filled by AI"
-          className="input-field h-32"
-          readOnly
-        />
-        <button
-          type="button"
-          className="btn-secondary absolute right-2 bottom-2"
-        >
-          Explain More
-        </button>
-      </div>
-
-      {/* Claim Outcome */}
-      <div className="flex gap-4 mb-4">
-        <div className="w-1/2">
-          <label htmlFor="claimOutcome" className="font-bold text-nrmaBlue">Claim Outcome:</label>
-          <select
-            id="claimOutcome"
-            name="claimOutcome"
-            value={claimOutcome}
-            onChange={(e) => setClaimOutcome(e.target.value)}
-            className="input-field"
-          >
-            <option value="pending">Pending</option>
-            <option value="escalated">Escalated</option>
-            <option value="approved">Approved</option>
-            <option value="denied">Denied</option>
-          </select>
+        {/* Claim Information */}
+        <div className="bg-white shadow-md rounded-lg p-6 mb-8">
+          <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Information</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {claimDetails.split('\n').map((line, index) => {
+              const [key, value] = line.split(':');
+              return (
+                <div key={index} className="bg-gray-50 p-4 rounded-md">
+                  <span className="font-semibold">{key}:</span> {value}
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
 
-      {/* Action Buttons */}
-      <div className="mt-4 flex gap-4">
-        <button
-          type="button"
-          onClick={closeCase}
-          className="btn-primary"
-        >
-          Close Case
-        </button>
-        <button
-          type="button"
-          onClick={escalateClaim}
-          className="btn-secondary"
-        >
-          Escalate to Manager
-        </button>
-      </div>
+        {/* Claim Description and Notes */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          {/* Claim Description */}
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Description</h2>
+            <textarea
+              id="claimDescription"
+              name="claimDescription"
+              value={claimDescription}
+              placeholder="Description of the claim"
+              className="input-field w-full h-32 p-3 border rounded-md"
+              readOnly
+            />
+          </div>
+
+          {/* Claim Notes */}
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Processing Notes</h2>
+            <textarea
+              id="claimNotes"
+              name="claimNotes"
+              value={claimNotes}
+              onChange={(e) => setClaimNotes(e.target.value)}
+              placeholder="Add or update claim processing notes"
+              className="input-field w-full h-32 p-3 border rounded-md"
+            />
+          </div>
+        </div>
+
+        {/* Fraud Analysis */}
+        <div className="bg-white shadow-md rounded-lg p-6 mt-8">
+          <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Fraud Analysis</h2>
+          <div className="mb-4">
+            <label
+              htmlFor="fraudScore"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Fraud Risk Score (%)
+            </label>
+            <input
+              type="text"
+              id="fraudScore"
+              name="fraudScore"
+              value={fraudScore}
+              placeholder="Auto-filled by AI"
+              className="input-field w-full p-3 border rounded-md"
+              readOnly
+            />
+          </div>
+          <div className="relative">
+            <label
+              htmlFor="fraudAnalysis"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Fraud Analysis Summary
+            </label>
+            <textarea
+              id="fraudAnalysis"
+              name="fraudAnalysis"
+              value={fraudAnalysis}
+              placeholder="Auto-filled by AI"
+              className="input-field w-full h-32 p-3 border rounded-md"
+              readOnly
+            />
+            <button
+              type="button"
+              className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
+            >
+              Explain More
+            </button>
+          </div>
+        </div>
+
+        {/* Claim Outcome and Actions */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+          {/* Claim Outcome */}
+          <div className="bg-white shadow-md rounded-lg p-6">
+            <label
+              htmlFor="claimOutcome"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Claim Outcome
+            </label>
+            <select
+              id="claimOutcome"
+              name="claimOutcome"
+              value={claimOutcome}
+              onChange={(e) => setClaimOutcome(e.target.value)}
+              className="input-field w-full p-3 border rounded-md"
+            >
+              <option value="pending">Pending</option>
+              <option value="escalated">Escalated</option>
+              <option value="approved">Approved</option>
+              <option value="denied">Denied</option>
+            </select>
+          </div>
+
+          {/* Action Buttons */}
+          <div className="flex flex-col justify-center space-y-4">
+            <button
+              type="button"
+              onClick={closeCase}
+              className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition"
+            >
+              Close Case
+            </button>
+            <button
+              type="button"
+              onClick={escalateClaim}
+              className="w-full px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600 transition"
+            >
+              Escalate to Manager
+            </button>
+          </div>
+        </div>
+      </main>
 
       {/* Footer */}
-      <footer className="mt-8 text-center text-sm text-gray-600">
-        Developed by Macquarie University's Team 14 Data Team for EY & NRMA.
-        Chief Developer: Noorullah Khan
+      <footer className="bg-white shadow-inner mt-12">
+        <div className="max-w-7xl mx-auto px-6 py-4">
+          <p className="text-center text-sm text-gray-500">
+            Developed by Macquarie University's Team 14 Data Team for EY & NRMA. Chief Developer: Noorullah Khan
+          </p>
+        </div>
       </footer>
     </div>
   );
