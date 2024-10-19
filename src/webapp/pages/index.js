@@ -420,10 +420,13 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white shadow-inner w-full">
-        <div className="max-w-7xl mx-auto px-6 py-4">
-          <p className="text-center text-sm text-gray-500">
-            Developed by Macquarie University's Team 14 Data Team for EY & NRMA. Chief Developer:
-            Noorullah Khan
+        <div className="max-w-7xl mx-auto px-4 py-2">
+          <p className="text-center text-sm text-gray-500 leading-tight">
+            © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
+            Developed by <a href="https://www.linkedin.com/in/noorullah-khan" className="text-nrmaBlue hover:underline" target="_blank" rel="noopener noreferrer">Noorullah Khan</a> for EY & NRMA.
+          </p>
+          <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
+            The content and functionality of this site are confidential and proprietary to EY & NRMA.
           </p>
         </div>
       </footer>
