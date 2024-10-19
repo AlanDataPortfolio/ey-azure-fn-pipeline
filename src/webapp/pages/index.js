@@ -5,7 +5,7 @@ export default function Home() {
   const [claimDetails, setClaimDetails] = useState('');
   const [fraudScore, setFraudScore] = useState('');
   const [fraudAnalysis, setFraudAnalysis] = useState('');
-  const [claimOutcome, setClaimOutcome] = useState('');
+  const [claimOutcome, setClaimOutcome] = useState('pending');
   const [claimNotes, setClaimNotes] = useState('');
   const [claimDescription, setClaimDescription] = useState('');
   const [claimId, setClaimId] = useState(null);
@@ -63,30 +63,7 @@ export default function Home() {
 
   const populateClaimDetails = (data) => {
     setClaimId(data.claimID);
-    setClaimDetails(
-      `Claim ID: ${data.claimID}\n` +
-      `First Name: ${data.firstName}\n` +
-      `Last Name: ${data.lastName}\n` +
-      `Claim Status: ${data.claimStatus}\n` +
-      `Claim Outcome: ${data.claimOutcome}\n` +
-      `Time as Customer: ${data.timeAsCustomer}\n` +
-      `Driver Age: ${data.driverAge}\n` +
-      `Insurance Access: ${data.insuranceAccess}\n` +
-      `Insurance Premium: ${data.insurancePremium}\n` +
-      `Driver Gender: ${data.driverGender}\n` +
-      `Education Level: ${data.educationLevel}\n` +
-      `Accident Type: ${data.accidentType}\n` +
-      `Incident Severity: ${data.incidentSeverity}\n` +
-      `Authorities Involved: ${data.authoritiesInvolved}\n` +
-      `Incident Time: ${data.incidentTime}\n` +
-      `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
-      `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
-      `Police Report: ${data.policeReportBool}\n` +
-      `Total Claim Amount: ${data.totalClaimAmount}\n` +
-      `Vehicle Age: ${data.vehicleAge}\n` +
-      `Driver Experience: ${data.driverExperience}\n` +
-      `License Type: ${data.licenseType}\n`
-    );
+    setClaimDetails(data);
     setClaimOutcome(data.claimOutcome || 'pending');
     setClaimDescription(data.claimDescription || 'No description provided');
     setFraudScore(data.fraudChance || 'N/A');
@@ -177,12 +154,12 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 via-blue-100 to-blue-200 min-h-screen">
+    <div className="bg-nrmaBlue min-h-screen">
       {/* Header */}
       <header className="bg-white shadow-md">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/nrma-logo.png" alt="NRMA Logo" className="h-10 w-auto" />
+            <img src="/nrma-logo.png" alt="NRMA Logo" className="h-12 w-auto" />
             <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
               Insurance Claim Processing
             </h1>
@@ -204,7 +181,7 @@ export default function Home() {
             <button
               type="button"
               onClick={getFirstOpenClaim}
-              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
             >
               Get First Open Claim
             </button>
@@ -222,7 +199,7 @@ export default function Home() {
               <button
                 type="button"
                 onClick={getClaimById}
-                className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
+                className="px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow hover:bg-blue-700 transition"
               >
                 Search
               </button>
@@ -230,134 +207,150 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Claim Information */}
-        <div className="bg-white shadow-md rounded-lg p-6 mb-8">
-          <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Information</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {claimDetails.split('\n').map((line, index) => {
-              const [key, value] = line.split(':');
-              return (
-                <div key={index} className="bg-gray-50 p-4 rounded-md">
-                  <span className="font-semibold">{key}:</span> {value}
-                </div>
-              );
-            })}
-          </div>
-        </div>
+        {/* Main Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Left Column */}
+          <div className="lg:col-span-2 space-y-8">
+            {/* Claim Information */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+                Claim Information
+              </h2>
+              <div className="max-h-96 overflow-y-auto">
+                <table className="min-w-full divide-y divide-gray-200">
+                  <tbody className="divide-y divide-gray-200">
+                    {claimDetails &&
+                      Object.entries(claimDetails).map(([key, value], index) => (
+                        <tr key={index}>
+                          <td className="px-4 py-2 font-medium text-gray-700 capitalize">
+                            {key.replace(/([A-Z])/g, ' $1')}
+                          </td>
+                          <td className="px-4 py-2 text-gray-600">{value}</td>
+                        </tr>
+                      ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
 
-        {/* Claim Description and Notes */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Claim Description */}
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Description</h2>
-            <textarea
-              id="claimDescription"
-              name="claimDescription"
-              value={claimDescription}
-              placeholder="Description of the claim"
-              className="input-field w-full h-32 p-3 border rounded-md"
-              readOnly
-            />
-          </div>
-
-          {/* Claim Notes */}
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Claim Processing Notes</h2>
-            <textarea
-              id="claimNotes"
-              name="claimNotes"
-              value={claimNotes}
-              onChange={(e) => setClaimNotes(e.target.value)}
-              placeholder="Add or update claim processing notes"
-              className="input-field w-full h-32 p-3 border rounded-md"
-            />
-          </div>
-        </div>
-
-        {/* Fraud Analysis */}
-        <div className="bg-white shadow-md rounded-lg p-6 mt-8">
-          <h2 className="text-xl font-semibold text-nrmaBlue mb-4">Fraud Analysis</h2>
-          <div className="mb-4">
-            <label
-              htmlFor="fraudScore"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Fraud Risk Score (%)
-            </label>
-            <input
-              type="text"
-              id="fraudScore"
-              name="fraudScore"
-              value={fraudScore}
-              placeholder="Auto-filled by AI"
-              className="input-field w-full p-3 border rounded-md"
-              readOnly
-            />
-          </div>
-          <div className="relative">
-            <label
-              htmlFor="fraudAnalysis"
-              className="block text-sm font-medium text-gray-700 mb-1"
-            >
-              Fraud Analysis Summary
-            </label>
-            <textarea
-              id="fraudAnalysis"
-              name="fraudAnalysis"
-              value={fraudAnalysis}
-              placeholder="Auto-filled by AI"
-              className="input-field w-full h-32 p-3 border rounded-md"
-              readOnly
-            />
-            <button
-              type="button"
-              className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
-            >
-              Explain More
-            </button>
-          </div>
-        </div>
-
-        {/* Claim Outcome and Actions */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
-          {/* Claim Outcome */}
-          <div className="bg-white shadow-md rounded-lg p-6">
-            <label
-              htmlFor="claimOutcome"
-              className="block text-sm font-medium text-gray-700 mb-2"
-            >
-              Claim Outcome
-            </label>
-            <select
-              id="claimOutcome"
-              name="claimOutcome"
-              value={claimOutcome}
-              onChange={(e) => setClaimOutcome(e.target.value)}
-              className="input-field w-full p-3 border rounded-md"
-            >
-              <option value="pending">Pending</option>
-              <option value="escalated">Escalated</option>
-              <option value="approved">Approved</option>
-              <option value="denied">Denied</option>
-            </select>
+            {/* Fraud Analysis */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+                Fraud Analysis
+              </h2>
+              <div className="mb-4">
+                <label
+                  htmlFor="fraudScore"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Fraud Risk Score (%)
+                </label>
+                <input
+                  type="text"
+                  id="fraudScore"
+                  name="fraudScore"
+                  value={fraudScore}
+                  placeholder="Auto-filled by AI"
+                  className="input-field w-full p-3 border rounded-md"
+                  readOnly
+                />
+              </div>
+              <div className="relative">
+                <label
+                  htmlFor="fraudAnalysis"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
+                  Fraud Analysis Summary
+                </label>
+                <textarea
+                  id="fraudAnalysis"
+                  name="fraudAnalysis"
+                  value={fraudAnalysis}
+                  placeholder="Auto-filled by AI"
+                  className="input-field w-full h-32 p-3 border rounded-md"
+                  readOnly
+                />
+                <button
+                  type="button"
+                  className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
+                >
+                  Explain More
+                </button>
+              </div>
+            </div>
           </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col justify-center space-y-4">
-            <button
-              type="button"
-              onClick={closeCase}
-              className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition"
-            >
-              Close Case
-            </button>
-            <button
-              type="button"
-              onClick={escalateClaim}
-              className="w-full px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600 transition"
-            >
-              Escalate to Manager
-            </button>
+          {/* Right Column */}
+          <div className="space-y-8">
+            {/* Claim Description */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+                Claim Description
+              </h2>
+              <textarea
+                id="claimDescription"
+                name="claimDescription"
+                value={claimDescription}
+                placeholder="Description of the claim"
+                className="input-field w-full h-32 p-3 border rounded-md"
+                readOnly
+              />
+            </div>
+
+            {/* Claim Notes */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+                Claim Processing Notes
+              </h2>
+              <textarea
+                id="claimNotes"
+                name="claimNotes"
+                value={claimNotes}
+                onChange={(e) => setClaimNotes(e.target.value)}
+                placeholder="Add or update claim processing notes"
+                className="input-field w-full h-32 p-3 border rounded-md"
+              />
+            </div>
+
+            {/* Claim Outcome */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <label
+                htmlFor="claimOutcome"
+                className="block text-sm font-medium text-gray-700 mb-2"
+              >
+                Claim Outcome
+              </label>
+              <select
+                id="claimOutcome"
+                name="claimOutcome"
+                value={claimOutcome}
+                onChange={(e) => setClaimOutcome(e.target.value)}
+                className="input-field w-full p-3 border rounded-md"
+              >
+                <option value="pending">Pending</option>
+                <option value="escalated">Escalated</option>
+                <option value="approved">Approved</option>
+                <option value="denied">Denied</option>
+              </select>
+            </div>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col space-y-4">
+              <button
+                type="button"
+                onClick={closeCase}
+                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow hover:bg-green-700 transition"
+              >
+                Close Case
+              </button>
+              <button
+                type="button"
+                onClick={escalateClaim}
+                className="w-full px-6 py-3 bg-yellow-500 text-white font-semibold rounded-md shadow hover:bg-yellow-600 transition"
+              >
+                Escalate to Manager
+              </button>
+            </div>
           </div>
         </div>
       </main>
