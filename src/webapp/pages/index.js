@@ -189,12 +189,16 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-nrmaBlue min-h-screen">
+    <div className="bg-nrmaBlue min-h-screen flex flex-col items-center">
       {/* Header */}
-      <header className="bg-white shadow-md">
+      <header className="bg-white shadow-md w-full">
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <img src="/nrma-logo.png" alt="NRMA Logo" className="h-12 w-auto" />
+            <img
+              src="/NRMA_logo.png"
+              alt="NRMA Logo"
+              className="h-12 w-auto"
+            />
             <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
               Insurance Claim Processing
             </h1>
@@ -209,14 +213,15 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-8 border-2 border-gray-200">
+      <main className="max-w-7xl mx-auto px-6 py-8 flex-1">
         {/* Claim Search Section */}
-        <div className="bg-white shadow-xl rounded-lg p-6 mb-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="bg-white rounded-2xl shadow-2xl p-8 mb-8 relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-30 pointer-events-none"></div>
+          <div className="flex flex-col md:flex-row justify-between items-center relative z-10">
             <button
               type="button"
               onClick={getFirstOpenClaim}
-              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
+              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
             >
               Get First Open Claim
             </button>
@@ -229,12 +234,12 @@ export default function Home() {
                 value={searchClaimId}
                 onChange={(e) => setSearchClaimId(e.target.value)}
                 placeholder="Enter Claim ID"
-                className="input-field p-2 border rounded-md w-full md:w-64"
+                className="input-field p-2 border rounded-full w-full md:w-64"
               />
               <button
                 type="button"
                 onClick={getClaimById}
-                className="px-6 py-2 bg-nrmaBlue text-white font-semibold rounded-md shadow-lg hover:bg-blue-700 transition"
+                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
               >
                 Search
               </button>
@@ -247,11 +252,12 @@ export default function Home() {
           {/* Left Column */}
           <div className="lg:col-span-2 space-y-8">
             {/* Claim Information */}
-            <div className="bg-white shadow-xl rounded-lg p-6 max-h-80 overflow-y-auto">
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Information
               </h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 gap-4 relative z-10">
                 {claimDetails
                   ? claimDetails.split('\n').map((line, index) => {
                       const [key, value] = line.split(':');
@@ -275,21 +281,22 @@ export default function Home() {
             </div>
 
             {/* Fraud Analysis */}
-            <div className="bg-white shadow-xl rounded-lg p-6">
-              <div className="flex items-center justify-between mb-4">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
+              <div className="flex items-center justify-between mb-4 relative z-10">
                 <h2 className="text-xl font-semibold text-nrmaBlue">
                   Fraud Analysis
                 </h2>
                 <button
                   type="button"
                   onClick={checkFraud}
-                  className="px-4 py-2 bg-purple-600 text-white font-semibold rounded-md shadow-lg hover:bg-purple-700 transition"
+                  className="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
                 >
                   Check Fraud
                 </button>
               </div>
               {/* Fraud Risk Score */}
-              <div className="mb-4">
+              <div className="mb-4 relative z-10">
                 <label
                   htmlFor="fraudScore"
                   className="block text-sm font-medium text-gray-700 mb-1"
@@ -307,7 +314,7 @@ export default function Home() {
                 />
               </div>
               {/* Fraud Analysis Summary */}
-              <div className="relative">
+              <div className="relative z-10">
                 <label
                   htmlFor="fraudAnalysis"
                   className="block text-sm font-medium text-gray-700 mb-1"
@@ -324,7 +331,7 @@ export default function Home() {
                 />
                 <button
                   type="button"
-                  className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow-lg hover:bg-orange-600 transition"
+                  className="absolute right-4 bottom-4 px-3 py-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
                   onClick={() => alert('Detailed explanation coming soon!')}
                 >
                   Explain More
@@ -336,8 +343,9 @@ export default function Home() {
           {/* Right Column */}
           <div className="space-y-8">
             {/* Claim Description */}
-            <div className="bg-white shadow-xl rounded-lg p-6">
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Description
               </h2>
               <textarea
@@ -345,14 +353,15 @@ export default function Home() {
                 name="claimDescription"
                 value={claimDescription}
                 placeholder="Description of the claim"
-                className="input-field w-full h-32 p-3 border rounded-md"
+                className="input-field w-full h-32 p-3 border rounded-md relative z-10"
                 readOnly
               />
             </div>
 
             {/* Claim Notes */}
-            <div className="bg-white shadow-xl rounded-lg p-6">
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
+              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Processing Notes
               </h2>
               <textarea
@@ -361,15 +370,16 @@ export default function Home() {
                 value={claimNotes}
                 onChange={(e) => setClaimNotes(e.target.value)}
                 placeholder="Add or update claim processing notes"
-                className="input-field w-full h-32 p-3 border rounded-md"
+                className="input-field w-full h-32 p-3 border rounded-md relative z-10"
               />
             </div>
 
             {/* Claim Outcome */}
-            <div className="bg-white shadow-xl rounded-lg p-6">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <label
                 htmlFor="claimOutcome"
-                className="block text-sm font-medium text-gray-700 mb-2"
+                className="block text-sm font-medium text-gray-700 mb-2 relative z-10"
               >
                 Claim Outcome
               </label>
@@ -378,7 +388,7 @@ export default function Home() {
                 name="claimOutcome"
                 value={claimOutcome}
                 onChange={(e) => setClaimOutcome(e.target.value)}
-                className="input-field w-full p-3 border rounded-md"
+                className="input-field w-full p-3 border rounded-md relative z-10"
               >
                 <option value="pending">Pending</option>
                 <option value="escalated">Escalated</option>
@@ -392,14 +402,14 @@ export default function Home() {
               <button
                 type="button"
                 onClick={closeCase}
-                className="w-full px-6 py-3 bg-green-600 text-white font-semibold rounded-md shadow-lg hover:bg-green-700 transition"
+                className="w-full px-6 py-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
               >
                 Close Case
               </button>
               <button
                 type="button"
                 onClick={escalateClaim}
-                className="w-full px-6 py-3 bg-red-500 text-white font-semibold rounded-md shadow-lg hover:bg-red-600 transition"
+                className="w-full px-6 py-3 bg-gradient-to-r from-red-400 to-red-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
               >
                 Escalate to Manager
               </button>
@@ -409,7 +419,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white shadow-inner mt-12">
+      <footer className="bg-white shadow-inner w-full">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <p className="text-center text-sm text-gray-500">
             Developed by Macquarie University's Team 14 Data Team for EY & NRMA. Chief Developer:
