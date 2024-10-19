@@ -61,9 +61,60 @@ export default function Home() {
     }
   };
 
+  const checkFraud = async () => {
+    if (!claimId) {
+      alert('No claim selected to analyze for fraud');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/checkFraud', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ claimId }),
+      });
+      const data = await response.json();
+      if (response.ok) {
+        setFraudScore(data.fraudChance || 'N/A');
+        setFraudAnalysis(data.fraudAnalysis || 'N/A');
+        alert('Fraud analysis completed successfully');
+      } else {
+        alert(data.message);
+      }
+    } catch (error) {
+      console.error('Error performing fraud analysis:', error);
+      alert('An error occurred while performing fraud analysis');
+    }
+  };
+
   const populateClaimDetails = (data) => {
     setClaimId(data.claimID);
-    setClaimDetails(data);
+    setClaimDetails(
+      `Claim ID: ${data.claimID}\n` +
+        `First Name: ${data.firstName}\n` +
+        `Last Name: ${data.lastName}\n` +
+        `Claim Status: ${data.claimStatus}\n` +
+        `Claim Outcome: ${data.claimOutcome}\n` +
+        `Time as Customer: ${data.timeAsCustomer}\n` +
+        `Driver Age: ${data.driverAge}\n` +
+        `Insurance Access: ${data.insuranceAccess}\n` +
+        `Insurance Premium: ${data.insurancePremium}\n` +
+        `Driver Gender: ${data.driverGender}\n` +
+        `Education Level: ${data.educationLevel}\n` +
+        `Accident Type: ${data.accidentType}\n` +
+        `Incident Severity: ${data.incidentSeverity}\n` +
+        `Authorities Involved: ${data.authoritiesInvolved}\n` +
+        `Incident Time: ${data.incidentTime}\n` +
+        `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
+        `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
+        `Police Report: ${data.policeReportBool}\n` +
+        `Total Claim Amount: ${data.totalClaimAmount}\n` +
+        `Vehicle Age: ${data.vehicleAge}\n` +
+        `Driver Experience: ${data.driverExperience}\n` +
+        `License Type: ${data.licenseType}\n`
+    );
     setClaimOutcome(data.claimOutcome || 'pending');
     setClaimDescription(data.claimDescription || 'No description provided');
     setFraudScore(data.fraudChance || 'N/A');
@@ -151,6 +202,8 @@ export default function Home() {
     setFraudScore('');
     setFraudAnalysis('');
     setClaimDescription('');
+    setClaimId(null);
+    setSearchClaimId('');
   };
 
   return (
@@ -216,20 +269,21 @@ export default function Home() {
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4">
                 Claim Information
               </h2>
-              <div className="max-h-96 overflow-y-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <tbody className="divide-y divide-gray-200">
-                    {claimDetails &&
-                      Object.entries(claimDetails).map(([key, value], index) => (
-                        <tr key={index}>
-                          <td className="px-4 py-2 font-medium text-gray-700 capitalize">
-                            {key.replace(/([A-Z])/g, ' $1')}
-                          </td>
-                          <td className="px-4 py-2 text-gray-600">{value}</td>
-                        </tr>
-                      ))}
-                  </tbody>
-                </table>
+              <div className="grid grid-cols-2 gap-4 max-h-64 overflow-y-auto">
+                {claimDetails &&
+                  claimDetails.split('\n').map((line, index) => {
+                    const [key, value] = line.split(':');
+                    if (key && value) {
+                      return (
+                        <div key={index} className="flex">
+                          <span className="font-semibold">{key.trim()}:</span>&nbsp;
+                          <span>{value.trim()}</span>
+                        </div>
+                      );
+                    } else {
+                      return null;
+                    }
+                  })}
               </div>
             </div>
 
@@ -273,10 +327,18 @@ export default function Home() {
                 <button
                   type="button"
                   className="absolute right-4 bottom-4 px-3 py-2 bg-orange-500 text-white rounded-md shadow hover:bg-orange-600 transition"
+                  onClick={() => alert('Detailed explanation coming soon!')}
                 >
                   Explain More
                 </button>
               </div>
+              <button
+                type="button"
+                onClick={checkFraud}
+                className="mt-4 w-full px-6 py-2 bg-purple-600 text-white font-semibold rounded-md shadow hover:bg-purple-700 transition"
+              >
+                Check Fraud
+              </button>
             </div>
           </div>
 
@@ -359,7 +421,8 @@ export default function Home() {
       <footer className="bg-white shadow-inner mt-12">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <p className="text-center text-sm text-gray-500">
-            Developed by Macquarie University's Team 14 Data Team for EY & NRMA. Chief Developer: Noorullah Khan
+            Developed by Macquarie University's Team 14 Data Team for EY & NRMA. Chief Developer:
+            Noorullah Khan
           </p>
         </div>
       </footer>
