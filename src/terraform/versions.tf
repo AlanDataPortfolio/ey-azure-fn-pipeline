@@ -7,7 +7,7 @@ terraform {
   }
   backend "azurerm" {
     resource_group_name  = "mq-pace-2024-s2-group-data"
-    storage_account_name = "sttfstate2000" # remove test
+    storage_account_name = "sttfstate2000"
     container_name       = "tfstate2000"
     key                  = "terraform.tfstate"
     use_azuread_auth     = true
