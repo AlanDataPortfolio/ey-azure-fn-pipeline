@@ -213,7 +213,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-8 flex-1">
+      <main className="w-full max-w-7xl mx-auto px-6 py-8 flex-1">
         {/* Claim Search Section */}
         <div className="bg-white rounded-2xl shadow-2xl p-8 mb-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-30 pointer-events-none"></div>
@@ -248,40 +248,40 @@ export default function Home() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 w-full">
           {/* Left Column */}
-          <div className="lg:col-span-3 space-y-8">
+          <div className="lg:col-span-3 space-y-8 flex flex-col min-w-0 w-full">
             {/* Claim Information */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden max-h-80 overflow-y-auto">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden max-h-80 overflow-y-auto w-full">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Information
               </h2>
-              <div className="grid grid-cols-2 gap-4 relative z-10">
-                {claimDetails
-                  ? claimDetails.split('\n').map((line, index) => {
-                      const [key, value] = line.split(':');
-                      if (key && value) {
-                        return (
-                          <div key={index} className="flex">
-                            <span className="font-semibold">{key.trim()}:</span>&nbsp;
-                            <span>{value.trim()}</span>
-                          </div>
-                        );
-                      } else {
-                        return null;
-                      }
-                    })
-                  : (
-                    <p className="text-gray-500 col-span-2">
-                      No claim selected. Please select a claim to view details.
-                    </p>
-                  )}
+              <div className="grid grid-cols-2 gap-4 relative z-10 w-full">
+                {claimDetails ? (
+                  claimDetails.split('\n').map((line, index) => {
+                    const [key, value] = line.split(':');
+                    if (key && value) {
+                      return (
+                        <div key={index} className="flex">
+                          <span className="font-semibold">{key.trim()}:</span>&nbsp;
+                          <span>{value.trim()}</span>
+                        </div>
+                      );
+                    } else {
+                      return null;
+                    }
+                  })
+                ) : (
+                  <p className="text-gray-500 col-span-2 w-full">
+                    No claim selected. Please select a claim to view details.
+                  </p>
+                )}
               </div>
             </div>
 
             {/* Fraud Analysis */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <div className="flex items-center justify-between mb-4 relative z-10">
                 <h2 className="text-xl font-semibold text-nrmaBlue">
@@ -341,9 +341,9 @@ export default function Home() {
           </div>
 
           {/* Right Column */}
-          <div className="lg:col-span-2 space-y-8">
+          <div className="lg:col-span-2 space-y-8 flex flex-col min-w-0 w-full">
             {/* Claim Description */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Description
@@ -359,7 +359,7 @@ export default function Home() {
             </div>
 
             {/* Claim Notes */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
                 Claim Processing Notes
@@ -375,7 +375,7 @@ export default function Home() {
             </div>
 
             {/* Claim Outcome */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden">
+            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
               <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
               <label
                 htmlFor="claimOutcome"
@@ -398,7 +398,7 @@ export default function Home() {
             </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col space-y-4">
+            <div className="flex flex-col space-y-4 w-full">
               <button
                 type="button"
                 onClick={closeCase}
@@ -423,7 +423,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 py-2">
           <p className="text-center text-sm text-gray-500 leading-tight">
             © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
-            Developed by <a href="https://www.linkedin.com/in/noorullah-khan" className="text-nrmaBlue hover:underline" target="_blank" rel="noopener noreferrer">Noorullah Khan</a> for EY & NRMA.
+            Developed by{' '}
+            <a
+              href="https://www.linkedin.com/in/noorullah-khan"
+              className="text-nrmaBlue hover:underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Noorullah Khan
+            </a>{' '}
+            for EY & NRMA.
           </p>
           <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
             The content and functionality of this site are confidential and proprietary to EY & NRMA.
