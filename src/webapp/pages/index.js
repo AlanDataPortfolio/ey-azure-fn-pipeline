@@ -67,7 +67,6 @@ export default function Home() {
       return;
     }
 
-    // Placeholder for future implementation
     alert('Fraud analysis initiated (functionality to be implemented)');
   };
 
@@ -203,6 +202,45 @@ export default function Home() {
               Insurance Claim Processing
             </h1>
           </div>
+
+          {/* Navigation Menu */}
+          <nav className="flex space-x-8">
+            <div className="relative">
+              <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
+                Claims
+              </button>
+              <div className="absolute top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+                <a href="/landingPage" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Landing Page
+                </a>
+                <a href="/historyPage" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  History Page
+                </a>
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Claim Reports
+                </a>
+              </div>
+            </div>
+
+            <div className="relative">
+              <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
+                Insights
+              </button>
+              <div className="absolute top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Fraud Analysis
+                </a>
+                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                  Risk Dashboard
+                </a>
+              </div>
+            </div>
+
+            <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
+              Contact Support
+            </button>
+          </nav>
+
           <button
             onClick={handleLogout}
             className="px-4 py-2 bg-red-500 text-white rounded-md shadow-lg hover:bg-red-600 transition"
