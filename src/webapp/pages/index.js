@@ -191,64 +191,91 @@ export default function Home() {
     <div className="bg-nrmaBlue min-h-screen flex flex-col items-center">
       {/* Header */}
       <header className="bg-white shadow-md w-full">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-          <div className="flex items-center">
-            <img
-              src="/NRMA_logo.png"
-              alt="NRMA Logo"
-              className="h-12 w-auto"
-            />
-            <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
-              Insurance Claim Processing
-            </h1>
-          </div>
-
-          {/* Navigation Menu */}
-          <nav className="flex space-x-8">
-            <div className="relative">
-              <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
-                Claims
-              </button>
-              <div className="absolute top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
-                <a href="/landingPage" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Landing Page
-                </a>
-                <a href="/historyPage" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  History Page
-                </a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Claim Reports
-                </a>
-              </div>
-            </div>
-
-            <div className="relative">
-              <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
-                Insights
-              </button>
-              <div className="absolute top-full mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Fraud Analysis
-                </a>
-                <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                  Risk Dashboard
-                </a>
-              </div>
-            </div>
-
-            <button className="px-4 py-2 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
-              Contact Support
-            </button>
-          </nav>
-
-          <button
-            onClick={handleLogout}
-            className="px-4 py-2 bg-red-500 text-white rounded-md shadow-lg hover:bg-red-600 transition"
-          >
-            Logout
-          </button>
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
+          <img
+            src="/NRMA_logo2.png"
+            alt="NRMA Logo"
+            className="h-12 w-auto"
+          />
+          <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
+            Insurance Claim Processing
+          </h1>
         </div>
       </header>
+
+      {/* Navigation Bar */}
+      <nav className="bg-white shadow-md w-full">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex justify-between items-center">
+            {/* Navigation Items */}
+            <div className="flex space-x-8">
+              {/* Claims Dropdown */}
+              <div className="relative group">
+                <button className="px-4 py-4 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
+                  Claims
+                </button>
+                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-1">
+                  <a
+                    href="/landingPage"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Landing Page
+                  </a>
+                  <a
+                    href="/historyPage"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    History Page
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Claim Reports
+                  </a>
+                </div>
+              </div>
+
+              {/* Insights Dropdown */}
+              <div className="relative group">
+                <button className="px-4 py-4 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
+                  Insights
+                </button>
+                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-1">
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Fraud Analysis
+                  </a>
+                  <a
+                    href="#"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                  >
+                    Risk Dashboard
+                  </a>
+                </div>
+              </div>
+
+              {/* Contact Support */}
+              <a
+                href="#"
+                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+              >
+                Contact Support
+              </a>
+            </div>
+
+            {/* Logout Button */}
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 bg-red-500 text-white rounded-md shadow-lg hover:bg-red-600 transition"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </nav>
 
       {/* Main Content */}
       <main className="w-full max-w-7xl mx-auto px-6 py-8 flex-1">
@@ -458,23 +485,30 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white shadow-inner w-full">
-        <div className="max-w-7xl mx-auto px-4 py-2">
-          <p className="text-center text-sm text-gray-500 leading-tight">
-            © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
-            Developed by{' '}
-            <a
-              href="https://www.linkedin.com/in/noorullah-khan"
-              className="text-nrmaBlue hover:underline"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Noorullah Khan
-            </a>{' '}
-            for EY & NRMA.
-          </p>
-          <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
-            The content and functionality of this site are confidential and proprietary to EY & NRMA.
-          </p>
+        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+          <div>
+            <p className="text-center text-sm text-gray-500 leading-tight">
+              © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
+              Developed by{' '}
+              <a
+                href="https://www.linkedin.com/in/noorullah-khan"
+                className="text-nrmaBlue hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Noorullah Khan
+              </a>{' '}
+              for EY & NRMA.
+            </p>
+            <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
+              The content and functionality of this site are confidential and proprietary to EY & NRMA.
+            </p>
+          </div>
+          <img
+            src="/NRMA_logo.png"
+            alt="NRMA Logo"
+            className="h-8 w-auto"
+          />
         </div>
       </footer>
     </div>
