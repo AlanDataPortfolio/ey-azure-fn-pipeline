@@ -13,7 +13,7 @@ export default function Login() {
     // Simple authentication simulation
     if (email === 'noor@ey.com' && password === '123') {
       localStorage.setItem('loggedIn', true); // Store login state
-      router.push('/'); // Redirect to the home page after login
+      router.push('/landingPage'); // Redirect to the landing page after login
     } else {
       alert('Invalid login credentials.');
     }

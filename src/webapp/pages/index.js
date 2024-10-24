@@ -209,53 +209,21 @@ export default function Home() {
           <div className="flex justify-between items-center">
             {/* Navigation Items */}
             <div className="flex space-x-8">
-              {/* Claims Dropdown */}
-              <div className="relative group">
-                <button className="px-4 py-4 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
-                  Claims
-                </button>
-                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-1">
-                  <a
-                    href="/landingPage"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Landing Page
-                  </a>
-                  <a
-                    href="/historyPage"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    History Page
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Claim Reports
-                  </a>
-                </div>
-              </div>
+              {/* Home Link */}
+              <a
+                href="/landingPage"
+                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+              >
+                Home
+              </a>
 
-              {/* Insights Dropdown */}
-              <div className="relative group">
-                <button className="px-4 py-4 text-gray-700 hover:text-nrmaBlue focus:outline-none focus:text-nrmaBlue">
-                  Insights
-                </button>
-                <div className="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-1">
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Fraud Analysis
-                  </a>
-                  <a
-                    href="#"
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                  >
-                    Risk Dashboard
-                  </a>
-                </div>
-              </div>
+              {/* Insights Link */}
+              <a
+                href="/historyPage"
+                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+              >
+                Insights
+              </a>
 
               {/* Contact Support */}
               <a
