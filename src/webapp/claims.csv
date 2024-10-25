@@ -16,7 +16,39 @@
 
 Based on these factors, the likelihood of fraud in this claim is estimated at **70%**. The significant discrepancy between the nature of the incident and the claim amount raises substantial concerns.","ai indicated that claim amount is very high for the type of crash.
 fraud chance is 70%. needs to be escalated."
-"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","15","1","1","1","6000","7","24","Full","Daniel","Harris","open","pending","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","","",""
+"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","15","1","1","1","6000","7","24","Full","Daniel","Harris","closed","approved","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","25","### Fraud Assessment Summary
+
+**Claim Details:**
+- **Claim ID:** 5
+- **Claim Amount:** $6,000
+- **Incident Type:** Single Vehicle Collision
+- **Incident Severity:** Major Loss
+- **Time as Customer:** 23 years
+- **Driver Age:** 40
+- **Bodily Injuries:** 1
+- **Authorities Involved:** Ambulance
+- **Police Report:** Yes
+
+**Key Indicators:**
+1. **Claim Amount vs. Incident Severity:**
+   - A major loss in a single vehicle collision with a $6,000 claim amount is relatively low for significant damage, raising concerns about the legitimacy of the described losses.
+
+2. **Customer History:**
+   - Long-term customer (23 years), which generally reduces fraud risk, but does not eliminate it.
+
+3. **Consistency in Description:**
+   - Claimant's description of losing control aligns with the collision type, but the degree of damage versus claim amount seems inconsistent.
+
+4. **Incident Details:**
+   - An ambulance was called, indicating potential seriousness of injuries; however, only one bodily injury reported raises questions when matched with ""major"" incident severity.
+
+### Fraud Likelihood Estimate: 
+**Estimated Fraud Likelihood: 25%**
+
+**Reasoning:**
+While there are factors such as long customer history that suggest low fraud risk, the inconsistency between reported damages and claim amount along with potentially inflated descriptions of severity raise suspicion. However, the existence of police involvement and only minor injuries diminishes the likelihood significantly.","AI suggested 25% chance of fraud.
+Given the score is low, I am approving this case. 
+Supervised by Ali Muhammad Khan"
 "6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","12","2","0","0","45000","16","36","Full","Sophia","Roberts","open","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
 "7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","17","3","0","0","52270","2","24","Full","David","Edwards","open","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
 "8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","16","1","1","1","10400","4","33","Full","Isabella","Stewart","open","pending","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.","","",""

@@ -24,7 +24,7 @@ export default async function fraudCheck(req, res) {
   `;
 
   const endpoint = 'https://openaicalls.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-08-01-preview';
-  const apiKey = '51d905fd22794937a2faf5e87c51f72e';  // Your actual API key here
+  const apiKey = '51d905fd22794937a2faf5e87c51f72e'; 
 
   try {
     const response = await axios.post(
@@ -35,7 +35,7 @@ export default async function fraudCheck(req, res) {
       {
         headers: {
           'Content-Type': 'application/json',
-          'api-key': apiKey  // Use 'api-key' here instead of 'Authorization'
+          'api-key': apiKey 
         }
       }
     );
