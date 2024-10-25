@@ -2,7 +2,20 @@
 "1","50","35","1000","900","0","Bachelor","Collision","Minor Damage","None","13","1","0","0","1200","8","17","Full","James","Anderson","closed","approved","The car was involved in a minor collision. There was some damage to the vehicle but no injuries or need for emergency services.","N/A","N/A","Adding first note to claim ID 1. Writing this with Josh during EY Standup Meeting"
 "2","111","47","1000","1322","1","PhD","Single Vehicle Collision","Total Loss","Yes","14","1","1","1","6000","14","31","Full","Emily","Thompson","open","escalated","While walking the dog, a car lost control and crashed into the house, resulting in a total loss of the vehicle and some property damage.","N/A","N/A","High Fraud %. Escalating with Josh."
 "3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","10","2","1","1","5000","7","26","Full","Michael","Johnson","closed","approved","The vehicle was involved in a significant collision, resulting in major damage. The accident was serious enough to report, but no immediate emergency services were needed.","N/A","N/A","I'm reviewing this claim with Mr. El Chami"
-"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","5","3","1","1","20000","2","6","Full","Olivia","Martinez","open","pending","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.","","",""
+"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","5","3","1","1","20000","2","6","Full","Olivia","Martinez","open","escalated","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.","70","Based on the provided claim details, here are the key indicators that suggest a potential risk of fraud:
+
+1. **Claim Amount**: The total claim amount of $20,000 for a minor damage incident involving three vehicles and only one reported minor bodily injury appears disproportionately high.
+
+2. **Incident Severity vs. Claim Amount**: The incident is classified as a multi-vehicle collision with minor damage but involves a significant claim amount, which raises suspicion.
+
+3. **Customer History**: The claimant has been a customer for 74 months, but there is no additional detail on prior claims, which could provide context for their reliability.
+
+4. **Involvement of Emergency Services**: An ambulance was called for what is described as minor injuries. This could indicate potential exaggeration or an attempt to increase the claim amount.
+
+5. **Number of Vehicles Involved vs. Nature of Damage**: Multi-vehicle collisions often result in higher damage claims. Still, the description provided suggests minor impacts, which may not justify such a high claim.
+
+Based on these factors, the likelihood of fraud in this claim is estimated at **70%**. The significant discrepancy between the nature of the incident and the claim amount raises substantial concerns.","ai indicated that claim amount is very high for the type of crash.
+fraud chance is 70%. needs to be escalated."
 "5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","15","1","1","1","6000","7","24","Full","Daniel","Harris","open","pending","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","","",""
 "6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","12","2","0","0","45000","16","36","Full","Sophia","Roberts","open","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
 "7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","17","3","0","0","52270","2","24","Full","David","Edwards","open","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
