@@ -61,13 +61,65 @@ export default function Home() {
     }
   };
 
+  // Function to check fraud
   const checkFraud = async () => {
     if (!claimId) {
       alert('No claim selected to analyze for fraud');
       return;
     }
 
-    alert('Fraud analysis initiated (functionality to be implemented)');
+    try {
+      const response = await fetch('/api/fraudCheck', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          claimDetails,
+          claimDescription,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setFraudScore(data.fraudScore); // Populate Fraud Risk Score
+        setFraudAnalysis(data.fraudAnalysis); // Populate Fraud Analysis Summary
+        alert('Fraud analysis completed successfully.');
+      } else {
+        alert('Failed to perform fraud analysis.');
+      }
+    } catch (error) {
+      console.error('Error performing fraud analysis:', error);
+      alert('An error occurred while analyzing fraud.');
+    }
+  };
+
+  // Function to handle "Explain More"
+  const explainMore = async () => {
+    try {
+      const response = await fetch('/api/explainMoreFraud', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          claimDetails,
+          claimDescription,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        alert(`Explanation: ${data.explanation}`);
+      } else {
+        alert('Failed to retrieve detailed explanation.');
+      }
+    } catch (error) {
+      console.error('Error retrieving explanation:', error);
+      alert('An error occurred while retrieving explanation.');
+    }
   };
 
   const populateClaimDetails = (data) => {
@@ -359,13 +411,13 @@ export default function Home() {
                   name="fraudAnalysis"
                   value={fraudAnalysis}
                   placeholder="Auto-filled by AI"
-                  className="input-field w-full h-32 p-3 border rounded-md"
+                  className="input-field w-full h-64 p-3 border rounded-md"  // Adjust the height here to double the size
                   readOnly
                 />
                 <button
                   type="button"
                   className="absolute right-4 bottom-4 px-3 py-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
-                  onClick={() => alert('Detailed explanation coming soon!')}
+                  onClick={explainMore}
                 >
                   Explain More
                 </button>
