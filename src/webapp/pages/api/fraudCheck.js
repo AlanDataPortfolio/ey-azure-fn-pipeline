@@ -1,55 +1,50 @@
-const axios = require('axios');
+// pages/api/fraudCheck.js
 
-export default async function fraudCheck(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
+import axios from 'axios';
 
-  const { claimDetails, claimDescription } = req.body;
+const endpoint = 'https://openaicalls.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-08-01-preview';
+const apiKey = '51d905fd22794937a2faf5e87c51f72e'; // Replace with your actual API key
 
-  if (!claimDetails || !claimDescription) {
-    return res.status(400).json({ error: 'Missing claim details or description' });
-  }
+export default async function handler(req, res) {
+  if (req.method === 'POST') {
+    const { claimDetails, claimDescription } = req.body;
 
-  const prompt = `
-  Based on the following claim details, assess whether this claim is potentially fraudulent. Focus on key indicators such as claim amount, incident type, customer history, and consistency with the claim description. Keep your response brief, highlight only relevant details, and provide a percentage estimate of fraud likelihood.
+    try {
+      const systemPrompt = `
+You are a fraud detection assistant who assists claim agents with processing car insurance claims. Your task is to assess the likelihood of fraud based on the provided claim details and by comparing them to the claim description. Return a percentage indicating the fraud likelihood and provide a concise but accurate reasoning to justify this percentage. Reference only the most relevant claim details.
+      `;
 
-  Claim Details:
-  ${claimDetails}
+      const userPrompt = `
+Claim Details:
+${claimDetails}
 
-  Claimant's Description:
-  ${claimDescription}
+Claim Description:
+${claimDescription}
+      `;
 
-  Provide a percentage likelihood of fraud and the reasoning.
-  `;
+      const response = await axios.post(
+        endpoint,
+        {
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt },
+          ],
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': apiKey,
+        },
+      });
 
-  const endpoint = 'https://openaicalls.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-08-01-preview';
-  const apiKey = '51d905fd22794937a2faf5e87c51f72e'; 
+      const aiResponse = response.data.choices[0].message.content;
 
-  try {
-    const response = await axios.post(
-      endpoint,
-      {
-        messages: [{ role: 'user', content: prompt }]
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'api-key': apiKey 
-        }
-      }
-    );
-
-    const aiResponse = response.data.choices[0].message.content;
-    const fraudScoreMatch = aiResponse.match(/(\d+)%/);
-    const fraudScore = fraudScoreMatch ? fraudScoreMatch[1] : 'N/A';
-
-    return res.status(200).json({
-      fraudScore,
-      fraudAnalysis: aiResponse
-    });
-  } catch (error) {
-    console.error('Error with OpenAI call:', error.response?.data || error.message);
-    return res.status(500).json({ error: 'Failed to perform fraud analysis' });
+      res.status(200).json({ aiResponse });
+    } catch (error) {
+      console.error('Error calling Azure OpenAI:', error.response ? error.response.data : error.message);
+      res.status(500).json({ error: 'Failed to retrieve fraud analysis.' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
   }
 }

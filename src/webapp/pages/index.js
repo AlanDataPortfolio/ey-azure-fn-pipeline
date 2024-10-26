@@ -83,9 +83,22 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok) {
-        setFraudScore(data.fraudScore); // Populate Fraud Risk Score
-        setFraudAnalysis(data.fraudAnalysis); // Populate Fraud Analysis Summary
-        alert('Fraud analysis completed successfully.');
+        const aiResponse = data.aiResponse;
+
+        // Parse the AI response
+        const fraudLikelihoodMatch = aiResponse.match(/Fraud Likelihood:\s*(\d+)%?/i);
+        const reasoningMatch = aiResponse.match(/Reasoning:\s*([\s\S]*)/i);
+
+        if (fraudLikelihoodMatch && reasoningMatch) {
+          const fraudLikelihood = fraudLikelihoodMatch[1];
+          const reasoning = reasoningMatch[1];
+
+          setFraudScore(fraudLikelihood); // Populate Fraud Risk Score
+          setFraudAnalysis(reasoning); // Populate Fraud Analysis Reasoning
+          alert('Fraud analysis completed successfully.');
+        } else {
+          alert('Failed to parse fraud analysis response.');
+        }
       } else {
         alert('Failed to perform fraud analysis.');
       }
@@ -97,6 +110,11 @@ export default function Home() {
 
   // Function to handle "Explain More"
   const explainMore = async () => {
+    if (!claimId) {
+      alert('No claim selected to explain further');
+      return;
+    }
+
     try {
       const response = await fetch('/api/explainMoreFraud', {
         method: 'POST',
@@ -106,13 +124,15 @@ export default function Home() {
         body: JSON.stringify({
           claimDetails,
           claimDescription,
+          fraudScore,
+          fraudAnalysis,
         }),
       });
 
       const data = await response.json();
 
       if (response.ok) {
-        alert(`Explanation: ${data.explanation}`);
+        alert(`Detailed Explanation:\n\n${data.explanation}`);
       } else {
         alert('Failed to retrieve detailed explanation.');
       }
@@ -244,11 +264,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-white shadow-md w-full">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
-          <img
-            src="/NRMA_logo2.png"
-            alt="NRMA Logo"
-            className="h-12 w-auto"
-          />
+          <img src="/NRMA_logo2.png" alt="NRMA Logo" className="h-12 w-auto" />
           <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
             Insurance Claim Processing
           </h1>
@@ -349,7 +365,10 @@ export default function Home() {
                     if (key && value) {
                       return (
                         <div key={index} className="flex">
-                          <span className="font-semibold">{key.trim()}:</span>&nbsp;
+                          <span className="font-semibold">
+                            {key.trim()}:
+                          </span>
+                          &nbsp;
                           <span>{value.trim()}</span>
                         </div>
                       );
@@ -398,20 +417,20 @@ export default function Home() {
                   readOnly
                 />
               </div>
-              {/* Fraud Analysis Summary */}
+              {/* Fraud Analysis Reasoning */}
               <div className="relative z-10">
                 <label
                   htmlFor="fraudAnalysis"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
-                  Fraud Analysis Summary
+                  Fraud Analysis Reasoning
                 </label>
                 <textarea
                   id="fraudAnalysis"
                   name="fraudAnalysis"
                   value={fraudAnalysis}
                   placeholder="Auto-filled by AI"
-                  className="input-field w-full h-64 p-3 border rounded-md"  // Adjust the height here to double the size
+                  className="input-field w-full h-32 p-3 border rounded-md"
                   readOnly
                 />
                 <button
@@ -521,7 +540,8 @@ export default function Home() {
               for EY & NRMA.
             </p>
             <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
-              The content and functionality of this site are confidential and proprietary to EY & NRMA.
+              The content and functionality of this site are confidential and
+              proprietary to EY & NRMA.
             </p>
           </div>
           <img

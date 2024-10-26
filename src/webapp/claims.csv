@@ -49,8 +49,32 @@ fraud chance is 70%. needs to be escalated."
 While there are factors such as long customer history that suggest low fraud risk, the inconsistency between reported damages and claim amount along with potentially inflated descriptions of severity raise suspicion. However, the existence of police involvement and only minor injuries diminishes the likelihood significantly.","AI suggested 25% chance of fraud.
 Given the score is low, I am approving this case. 
 Supervised by Ali Muhammad Khan"
-"6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","12","2","0","0","45000","16","36","Full","Sophia","Roberts","open","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
-"7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","17","3","0","0","52270","2","24","Full","David","Edwards","open","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
+"6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","12","2","0","0","45000","16","36","Full","Sophia","Roberts","open","escalated","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","70","**Fraud Assessment: Claim ID 6**
+
+**Key Indicators:**
+- **Claim Amount:** $45,000 for minor damage is unusually high. Typically, minor collisions result in much lower claims.
+- **Incident Type:** Multi-vehicle collision; while not inherently suspicious, the high claim amount raises flags.
+- **Customer History:** The claimant has been a customer for 91 months, indicating a longstanding relationship, but this does not negate the high claim amount.
+- **Consistency with Description:** Although the description mentions minor damage and police involvement, the lack of a police report and the significant claim amount create inconsistency. 
+
+**Conclusion:**
+The combination of a high claim amount for minor damage and the absence of a police report raises substantial concerns. 
+
+**Estimated Fraud Likelihood: 70%** 
+
+This percentage reflects the discrepancies and unusual nature of the claim compared to typical outcomes in similar incidents.","After looking at claim analysis summary, it is a very high fraud risk score 70%.
+I am thus escalating claim ID 6."
+"7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","17","3","0","0","52270","2","24","Full","David","Edwards","open","escalated","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","65","Based on the provided claim details, the following key indicators suggest potential fraud risk:
+
+1. **Claim Amount**: The total claim amount of $52,270 for a multi-vehicle collision with total loss is significantly high, particularly considering that there are no reported bodily injuries. This raises questions about the validity of the damages claimed.
+
+2. **Incident Severity & Police Report**: The incident is classified as a total loss with significant response involvement from the fire department, yet there is no police report. The absence of a police report in such severe incidents is unusual and could indicate potential misrepresentation of the event.
+
+3. **Customer History**: While the customer has a long tenure (316 days) and appears to be responsible (no vehicle age or driver experience concerns), the other indicators may outweigh this positive history.
+
+4. **Consistency with Description**: The claim description mentions a fire hazard leading to a total loss, which aligns with fire department involvement. However, the lack of reported injuries and police documentation creates a discrepancy.
+
+Given these factors, especially the high claim amount, absence of a police report, and inconsistency in incident details, the likelihood of fraud is assessed at **65%**. This suggests a significant risk that the claim may not be entirely legitimate.","Escalate because high fraud risk"
 "8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","16","1","1","1","10400","4","33","Full","Isabella","Stewart","open","pending","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.","","",""
 "9","68","59","1000","1700","0","Bachelor","Collision","Minor Damage","None","11","1","0","0","1010","11","41","Full","Benjamin","Wright","open","pending","The car experienced a minor collision with no major injuries or need for emergency services.","","",""
 "10","73","45","2000","1029","1","High School","Single Vehicle Collision","Total Loss","Ambulance","4","1","1","1","90000","15","24","Full","Chloe","Parker","open","pending","The vehicle suffered a total loss in a single-car crash, prompting an ambulance response for potential injuries.","","",""

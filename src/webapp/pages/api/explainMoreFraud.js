@@ -1,48 +1,56 @@
+// pages/api/explainMoreFraud.js
+
 import axios from 'axios';
 
 const endpoint = 'https://openaicalls.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2024-08-01-preview';
-const apiKey = '51d905fd22794937a2faf5e87c51f72e'; // Use your actual API key here
+const apiKey = '51d905fd22794937a2faf5e87c51f72e'; // Replace with your actual API key
 
 export default async function handler(req, res) {
-  if (req.method !== 'POST') {
-    return res.status(405).json({ error: 'Method Not Allowed' });
-  }
+  if (req.method === 'POST') {
+    const { claimDetails, claimDescription, fraudScore, fraudAnalysis } = req.body;
 
-  const { claimDetails, claimDescription } = req.body;
+    try {
+      const systemPrompt = `
+You are a fraud detection assistant who provides detailed explanations for fraud assessments in car insurance claims. Your task is to elaborate on the fraud likelihood and reasoning provided earlier, offering more in-depth analysis while referencing specific claim details.
+      `;
 
-  if (!claimDetails || !claimDescription) {
-    return res.status(400).json({ error: 'Missing claim details or description' });
-  }
+      const userPrompt = `
+Claim Details:
+${claimDetails}
 
-  // Secondary prompt for more detailed explanation
-  const secondaryPrompt = `
-    Please provide a more detailed explanation for your fraud assessment.
-    Given the following case details and the applicant's claim description, 
-    explain in more depth why this claim is or isn't considered fraudulent:
+Claim Description:
+${claimDescription}
 
-    Case details: ${claimDetails}
-    Applicant's claim description: ${claimDescription}
-  `;
+Previously Provided Fraud Likelihood: ${fraudScore}%
 
-  try {
-    const response = await axios.post(
-      endpoint,
-      {
-        messages: [{ role: "user", content: secondaryPrompt }],
-      },
-      {
-        headers: {
-          'Content-Type': 'application/json',
-          'api-key': apiKey,  // Correct header for API key
+Previously Provided Reasoning:
+${fraudAnalysis}
+      `;
+
+      const response = await axios.post(
+        endpoint,
+        {
+          messages: [
+            { role: 'system', content: systemPrompt },
+            { role: 'user', content: userPrompt },
+          ],
         },
-      }
-    );
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'api-key': apiKey,
+          },
+        }
+      );
 
-    const openAIResponse = response.data.choices[0].message.content;
+      const explanation = response.data.choices[0].message.content;
 
-    res.status(200).json({ explanation: openAIResponse });
-  } catch (error) {
-    console.error("Error calling Azure OpenAI:", error.response?.data || error.message);
-    res.status(500).json({ error: "Failed to retrieve detailed explanation." });
+      res.status(200).json({ explanation });
+    } catch (error) {
+      console.error('Error calling Azure OpenAI:', error.response ? error.response.data : error.message);
+      res.status(500).json({ error: 'Failed to retrieve detailed explanation.' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
   }
 }
