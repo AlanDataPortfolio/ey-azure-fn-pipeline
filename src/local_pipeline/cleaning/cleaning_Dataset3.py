@@ -11,14 +11,10 @@ from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import StandardScaler, OneHotEncoder
 from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import KNNImputer
-from sklearn.neighbors import KNeighborsRegressor
 from sklearn.compose import ColumnTransformer
-from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import GridSearchCV
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, RandomizedSearchCV
-from sklearn.feature_selection import SelectFromModel
+
 
 # CLEAN DATASET
 
