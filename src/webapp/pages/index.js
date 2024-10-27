@@ -1,8 +1,12 @@
+// pages/index.js
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import ReactMarkdown from 'react-markdown';
+import remarkBreaks from 'remark-breaks';
 
 export default function Home() {
-  const [claimDetails, setClaimDetails] = useState('');
+  const [claimDetails, setClaimDetails] = useState({});
   const [fraudScore, setFraudScore] = useState('');
   const [fraudAnalysis, setFraudAnalysis] = useState('');
   const [claimOutcome, setClaimOutcome] = useState('pending');
@@ -10,6 +14,8 @@ export default function Home() {
   const [claimDescription, setClaimDescription] = useState('');
   const [claimId, setClaimId] = useState(null);
   const [searchClaimId, setSearchClaimId] = useState('');
+  const [customQuestion, setCustomQuestion] = useState('');
+  const [customResponse, setCustomResponse] = useState('');
   const router = useRouter();
 
   useEffect(() => {
@@ -22,6 +28,10 @@ export default function Home() {
   const handleLogout = () => {
     localStorage.removeItem('loggedIn'); // Remove login session
     router.push('/login'); // Redirect to login page
+  };
+
+  const handleAccount = () => {
+    alert('Account page coming soon!');
   };
 
   const getFirstOpenClaim = async () => {
@@ -75,7 +85,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          claimDetails,
+          claimDetails: formatClaimDetailsForAI(claimDetails),
           claimDescription,
         }),
       });
@@ -87,14 +97,14 @@ export default function Home() {
 
         // Parse the AI response
         const fraudLikelihoodMatch = aiResponse.match(/Fraud Likelihood:\s*(\d+)%?/i);
-        const reasoningMatch = aiResponse.match(/Reasoning:\s*([\s\S]*)/i);
+        const reasoningMatch = aiResponse.match(/\*\*Reasoning:\*\*\s*([\s\S]*)/i);
 
         if (fraudLikelihoodMatch && reasoningMatch) {
-          const fraudLikelihood = fraudLikelihoodMatch[1];
+          const fraudLikelihood = parseInt(fraudLikelihoodMatch[1]);
           const reasoning = reasoningMatch[1];
 
           setFraudScore(fraudLikelihood); // Populate Fraud Risk Score
-          setFraudAnalysis(reasoning); // Populate Fraud Analysis Reasoning
+          setFraudAnalysis(`**Reasoning:**\n\n${reasoning.trim()}`); // Include "Reasoning:" with double newline
           alert('Fraud analysis completed successfully.');
         } else {
           alert('Failed to parse fraud analysis response.');
@@ -122,7 +132,7 @@ export default function Home() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          claimDetails,
+          claimDetails: formatClaimDetailsForAI(claimDetails),
           claimDescription,
           fraudScore,
           fraudAnalysis,
@@ -132,7 +142,9 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok) {
-        alert(`Detailed Explanation:\n\n${data.explanation}`);
+        setFraudAnalysis(
+          (prev) => `${prev}\n\n**Further Reasoning:**\n\n${data.explanation}`
+        );
       } else {
         alert('Failed to retrieve detailed explanation.');
       }
@@ -144,35 +156,43 @@ export default function Home() {
 
   const populateClaimDetails = (data) => {
     setClaimId(data.claimID);
-    setClaimDetails(
-      `Claim ID: ${data.claimID}\n` +
-        `First Name: ${data.firstName}\n` +
-        `Last Name: ${data.lastName}\n` +
-        `Claim Status: ${data.claimStatus}\n` +
-        `Claim Outcome: ${data.claimOutcome}\n` +
-        `Time as Customer: ${data.timeAsCustomer}\n` +
-        `Driver Age: ${data.driverAge}\n` +
-        `Insurance Access: ${data.insuranceAccess}\n` +
-        `Insurance Premium: ${data.insurancePremium}\n` +
-        `Driver Gender: ${data.driverGender}\n` +
-        `Education Level: ${data.educationLevel}\n` +
-        `Accident Type: ${data.accidentType}\n` +
-        `Incident Severity: ${data.incidentSeverity}\n` +
-        `Authorities Involved: ${data.authoritiesInvolved}\n` +
-        `Incident Time: ${data.incidentTime}\n` +
-        `Num Vehicles Involved: ${data.numVehiclesInvolved}\n` +
-        `Num Bodily Injuries: ${data.numBodilyInjuries}\n` +
-        `Police Report: ${data.policeReportBool}\n` +
-        `Total Claim Amount: ${data.totalClaimAmount}\n` +
-        `Vehicle Age: ${data.vehicleAge}\n` +
-        `Driver Experience: ${data.driverExperience}\n` +
-        `License Type: ${data.licenseType}\n`
-    );
+    setClaimDetails({
+      claimID: data.claimID,
+      firstName: data.firstName,
+      lastName: data.lastName,
+      claimStatus: data.claimStatus,
+      claimOutcome: data.claimOutcome || 'pending',
+      timeAsCustomer: data.timeAsCustomer,
+      driverAge: data.driverAge,
+      insuranceAccess: data.insuranceAccess,
+      insurancePremium: data.insurancePremium,
+      driverGender: data.driverGender,
+      educationLevel: data.educationLevel,
+      accidentType: data.accidentType,
+      incidentSeverity: data.incidentSeverity,
+      authoritiesInvolved: data.authoritiesInvolved,
+      incidentTime: data.incidentTime,
+      numVehiclesInvolved: data.numVehiclesInvolved,
+      numBodilyInjuries: data.numBodilyInjuries,
+      policeReportBool: data.policeReportBool,
+      totalClaimAmount: data.totalClaimAmount,
+      vehicleAge: data.vehicleAge,
+      driverExperience: data.driverExperience,
+      licenseType: data.licenseType,
+    });
     setClaimOutcome(data.claimOutcome || 'pending');
     setClaimDescription(data.claimDescription || 'No description provided');
     setFraudScore(data.fraudChance || 'N/A');
     setFraudAnalysis(data.fraudAnalysis || 'N/A');
     setClaimNotes(data.claimNotes || 'No notes available');
+    setCustomQuestion('');
+    setCustomResponse('');
+  };
+
+  const formatClaimDetailsForAI = (details) => {
+    return Object.entries(details)
+      .map(([key, value]) => `${key}: ${value}`)
+      .join('\n');
   };
 
   const closeCase = async () => {
@@ -249,7 +269,7 @@ export default function Home() {
   };
 
   const clearFields = () => {
-    setClaimDetails('');
+    setClaimDetails({});
     setClaimOutcome('pending');
     setClaimNotes('');
     setFraudScore('');
@@ -257,150 +277,274 @@ export default function Home() {
     setClaimDescription('');
     setClaimId(null);
     setSearchClaimId('');
+    setCustomQuestion('');
+    setCustomResponse('');
+  };
+
+  const getFraudScoreColor = (score) => {
+    if (score === '' || score === 'N/A' || isNaN(score)) {
+      return '';
+    }
+    const numericScore = parseInt(score);
+    if (numericScore >= 70) {
+      return 'bg-red-500 text-white';
+    } else if (numericScore >= 40) {
+      return 'bg-yellow-500 text-white';
+    } else {
+      return 'bg-green-500 text-white';
+    }
+  };
+
+  const askCustomQuestion = async () => {
+    if (!claimId) {
+      alert('No claim selected to analyze');
+      return;
+    }
+
+    if (!customQuestion) {
+      alert('Please enter a question');
+      return;
+    }
+
+    try {
+      const response = await fetch('/api/askQuestion', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          claimDetails: formatClaimDetailsForAI(claimDetails),
+          claimDescription,
+          question: customQuestion,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setCustomResponse(data.answer);
+      } else {
+        alert('Failed to get answer from AI.');
+      }
+    } catch (error) {
+      console.error('Error getting AI response:', error);
+      alert('An error occurred while getting AI response.');
+    }
   };
 
   return (
-    <div className="bg-nrmaBlue min-h-screen flex flex-col items-center">
+    <div className="bg-gray-100 min-h-screen">
       {/* Header */}
-      <header className="bg-white shadow-md w-full">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center">
-          <img src="/NRMA_logo2.png" alt="NRMA Logo" className="h-12 w-auto" />
-          <h1 className="text-2xl font-bold text-nrmaBlue ml-4">
-            Insurance Claim Processing
-          </h1>
-        </div>
-      </header>
-
-      {/* Navigation Bar */}
-      <nav className="bg-white shadow-md w-full">
-        <div className="max-w-7xl mx-auto px-6">
+      <header className="bg-white shadow-md">
+        <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
-            {/* Navigation Items */}
-            <div className="flex space-x-8">
-              {/* Home Link */}
+            {/* Logo */}
+            <div className="flex items-center">
+              <button onClick={() => router.push('/landingPage')}>
+                <img src="/NRMA_logo2.png" alt="NRMA Logo" className="h-16 w-auto" />
+              </button>
+            </div>
+
+            {/* Search Box */}
+            <div className="flex items-center flex-1 justify-center">
+              <div className="relative w-full max-w-md">
+                <input
+                  type="text"
+                  placeholder="Search NRMA..."
+                  className="p-2 border rounded-full w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2">
+                  <img src="/search_icon.png" alt="Search" className="h-5 w-5" />
+                </button>
+              </div>
+            </div>
+
+            {/* Profile and Account */}
+            <div className="flex items-center space-x-4">
+              <button
+                className="flex items-center focus:outline-none"
+                onClick={handleLogout}
+              >
+                <img src="/profile_icon.png" alt="Profile" className="h-8 w-8 rounded-full" />
+              </button>
+              <button
+                className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
+                onClick={handleAccount}
+              >
+                Account
+              </button>
+            </div>
+          </div>
+
+          {/* Navigation Bar */}
+          <nav className="mt-4">
+            <div className="flex justify-center space-x-8">
               <a
                 href="/landingPage"
-                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+                className="text-gray-700 hover:text-blue-600 font-medium"
               >
                 Home
               </a>
-
-              {/* Insights Link */}
               <a
                 href="/historyPage"
-                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+                className="text-gray-700 hover:text-blue-600 font-medium"
               >
                 Insights
               </a>
-
-              {/* Contact Support */}
               <a
                 href="#"
-                className="px-4 py-4 text-gray-700 hover:text-nrmaBlue"
+                className="text-gray-700 hover:text-blue-600 font-medium"
               >
-                Contact Support
+                Support
               </a>
             </div>
-
-            {/* Logout Button */}
-            <button
-              onClick={handleLogout}
-              className="px-4 py-2 bg-red-500 text-white rounded-md shadow-lg hover:bg-red-600 transition"
-            >
-              Logout
-            </button>
-          </div>
+          </nav>
         </div>
-      </nav>
+      </header>
 
       {/* Main Content */}
-      <main className="w-full max-w-7xl mx-auto px-6 py-8 flex-1">
+      <main className="max-w-7xl mx-auto px-6 py-4">
         {/* Claim Search Section */}
-        <div className="bg-white rounded-2xl shadow-2xl p-8 mb-8 relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-30 pointer-events-none"></div>
-          <div className="flex flex-col md:flex-row justify-between items-center relative z-10">
+        <div className="bg-white rounded-full shadow-md px-6 py-4 mb-6 flex justify-between items-center">
+          <button
+            type="button"
+            onClick={getFirstOpenClaim}
+            className="w-full md:w-auto mb-2 md:mb-0 px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
+          >
+            Get First Open Claim
+          </button>
+
+          <div className="flex w-full md:w-auto items-center space-x-2">
+            <input
+              type="text"
+              id="searchClaimId"
+              name="searchClaimId"
+              value={searchClaimId}
+              onChange={(e) => setSearchClaimId(e.target.value)}
+              placeholder="Enter Claim ID"
+              className="p-2 border rounded-full w-full md:w-64 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
             <button
               type="button"
-              onClick={getFirstOpenClaim}
-              className="w-full md:w-auto mb-4 md:mb-0 px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
+              onClick={getClaimById}
+              className="px-6 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
             >
-              Get First Open Claim
+              Search
             </button>
-
-            <div className="flex w-full md:w-auto items-center space-x-2">
-              <input
-                type="text"
-                id="searchClaimId"
-                name="searchClaimId"
-                value={searchClaimId}
-                onChange={(e) => setSearchClaimId(e.target.value)}
-                placeholder="Enter Claim ID"
-                className="input-field p-2 border rounded-full w-full md:w-64"
-              />
-              <button
-                type="button"
-                onClick={getClaimById}
-                className="px-6 py-2 bg-gradient-to-r from-blue-500 to-blue-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
-              >
-                Search
-              </button>
-            </div>
           </div>
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Left Column */}
-          <div className="lg:col-span-3 space-y-8 flex flex-col min-w-0 w-full">
+          <div className="lg:col-span-3 space-y-6">
             {/* Claim Information */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden max-h-80 overflow-y-auto w-full">
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
-                Claim Information
-              </h2>
-              <div className="grid grid-cols-2 gap-4 relative z-10 w-full">
-                {claimDetails ? (
-                  claimDetails.split('\n').map((line, index) => {
-                    const [key, value] = line.split(':');
-                    if (key && value) {
-                      return (
-                        <div key={index} className="flex">
-                          <span className="font-semibold">
-                            {key.trim()}:
-                          </span>
-                          &nbsp;
-                          <span>{value.trim()}</span>
+            <div className="bg-white shadow-md rounded-lg p-6">
+              {claimId ? (
+                <>
+                  <h2 className="text-xl font-bold text-nrmaBlue mb-4">
+                    Claim Information - ID: {claimId}
+                  </h2>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {/* Driver Details */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                        Driver Details
+                      </h3>
+                      <div className="space-y-1">
+                        <div>
+                          <span className="font-semibold">First Name:</span>{' '}
+                          {claimDetails.firstName}
                         </div>
-                      );
-                    } else {
-                      return null;
-                    }
-                  })
-                ) : (
-                  <p className="text-gray-500 col-span-2 w-full">
-                    No claim selected. Please select a claim to view details.
-                  </p>
-                )}
-              </div>
+                        <div>
+                          <span className="font-semibold">Last Name:</span>{' '}
+                          {claimDetails.lastName}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Driver Age:</span>{' '}
+                          {claimDetails.driverAge}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Driver Gender:</span>{' '}
+                          {claimDetails.driverGender}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Education Level:</span>{' '}
+                          {claimDetails.educationLevel}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Driver Experience:</span>{' '}
+                          {claimDetails.driverExperience}
+                        </div>
+                        <div>
+                          <span className="font-semibold">License Type:</span>{' '}
+                          {claimDetails.licenseType}
+                        </div>
+                      </div>
+                    </div>
+                    {/* Incident Details */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                        Incident Details
+                      </h3>
+                      <div className="space-y-1">
+                        <div>
+                          <span className="font-semibold">Accident Type:</span>{' '}
+                          {claimDetails.accidentType}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Incident Severity:</span>{' '}
+                          {claimDetails.incidentSeverity}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Authorities Involved:</span>{' '}
+                          {claimDetails.authoritiesInvolved}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Incident Time:</span>{' '}
+                          {claimDetails.incidentTime}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Number of Vehicles Involved:</span>{' '}
+                          {claimDetails.numVehiclesInvolved}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Number of Bodily Injuries:</span>{' '}
+                          {claimDetails.numBodilyInjuries}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Police Report:</span>{' '}
+                          {claimDetails.policeReportBool}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Total Claim Amount:</span>{' '}
+                          {claimDetails.totalClaimAmount}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <p className="text-gray-500">
+                  No claim selected. Please select a claim to view details.
+                </p>
+              )}
             </div>
 
             {/* Fraud Analysis */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
-              <div className="flex items-center justify-between mb-4 relative z-10">
-                <h2 className="text-xl font-semibold text-nrmaBlue">
-                  Fraud Analysis
-                </h2>
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="text-xl font-bold text-nrmaBlue">Fraud Analysis</h2>
                 <button
                   type="button"
                   onClick={checkFraud}
-                  className="px-4 py-2 bg-gradient-to-r from-purple-500 to-purple-700 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
+                  className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
                 >
                   Check Fraud
                 </button>
               </div>
               {/* Fraud Risk Score */}
-              <div className="mb-4 relative z-10">
+              <div className="mb-4">
                 <label
                   htmlFor="fraudScore"
                   className="block text-sm font-medium text-gray-700 mb-1"
@@ -413,86 +557,53 @@ export default function Home() {
                   name="fraudScore"
                   value={fraudScore}
                   placeholder="Auto-filled by AI"
-                  className="input-field w-full p-3 border rounded-md"
+                  className={`w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${getFraudScoreColor(
+                    fraudScore
+                  )}`}
                   readOnly
                 />
               </div>
               {/* Fraud Analysis Reasoning */}
-              <div className="relative z-10">
+              <div className="relative">
                 <label
                   htmlFor="fraudAnalysis"
                   className="block text-sm font-medium text-gray-700 mb-1"
                 >
                   Fraud Analysis Reasoning
                 </label>
-                <textarea
+                <div
                   id="fraudAnalysis"
-                  name="fraudAnalysis"
-                  value={fraudAnalysis}
-                  placeholder="Auto-filled by AI"
-                  className="input-field w-full h-32 p-3 border rounded-md"
-                  readOnly
-                />
+                  className="w-full h-64 p-3 border rounded-md overflow-y-auto bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <ReactMarkdown remarkPlugins={[remarkBreaks]}>
+                    {fraudAnalysis}
+                  </ReactMarkdown>
+                </div>
                 <button
                   type="button"
-                  className="absolute right-4 bottom-4 px-3 py-2 bg-gradient-to-r from-orange-400 to-orange-600 text-white rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
+                  className="absolute right-4 bottom-4 px-3 py-2 bg-blue-600 text-white rounded-full shadow-md hover:bg-blue-700 transition"
                   onClick={explainMore}
                 >
                   Explain More
                 </button>
               </div>
             </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="lg:col-span-2 space-y-8 flex flex-col min-w-0 w-full">
-            {/* Claim Description */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
-                Claim Description
-              </h2>
-              <textarea
-                id="claimDescription"
-                name="claimDescription"
-                value={claimDescription}
-                placeholder="Description of the claim"
-                className="input-field w-full h-40 p-3 border rounded-md relative z-10"
-                readOnly
-              />
-            </div>
-
-            {/* Claim Notes */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
-              <h2 className="text-xl font-semibold text-nrmaBlue mb-4 relative z-10">
-                Claim Processing Notes
-              </h2>
-              <textarea
-                id="claimNotes"
-                name="claimNotes"
-                value={claimNotes}
-                onChange={(e) => setClaimNotes(e.target.value)}
-                placeholder="Add or update claim processing notes"
-                className="input-field w-full h-40 p-3 border rounded-md relative z-10"
-              />
-            </div>
 
             {/* Claim Outcome */}
-            <div className="bg-white shadow-2xl rounded-2xl p-6 relative overflow-hidden w-full">
-              <div className="absolute inset-0 bg-gradient-to-b from-white via-transparent to-transparent opacity-20 pointer-events-none"></div>
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-bold text-nrmaBlue mb-4">Claim Outcome</h2>
               <label
                 htmlFor="claimOutcome"
-                className="block text-sm font-medium text-gray-700 mb-2 relative z-10"
+                className="block text-sm font-medium text-gray-700 mb-2"
               >
-                Claim Outcome
+                Select Outcome
               </label>
               <select
                 id="claimOutcome"
                 name="claimOutcome"
                 value={claimOutcome}
                 onChange={(e) => setClaimOutcome(e.target.value)}
-                className="input-field w-full p-3 border rounded-md relative z-10"
+                className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               >
                 <option value="pending">Pending</option>
                 <option value="escalated">Escalated</option>
@@ -500,20 +611,81 @@ export default function Home() {
                 <option value="denied">Denied</option>
               </select>
             </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="lg:col-span-2 space-y-6">
+            {/* Claimant's Incident Description */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-bold text-nrmaBlue mb-4">
+                Claimant's Incident Description
+              </h2>
+              <textarea
+                id="claimDescription"
+                name="claimDescription"
+                value={claimDescription}
+                placeholder="Description of the claim"
+                className="w-full h-40 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                readOnly
+              />
+            </div>
+
+            {/* Ask a Question */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-bold text-nrmaBlue mb-4">Ask a Question</h2>
+              <textarea
+                id="customQuestion"
+                name="customQuestion"
+                value={customQuestion}
+                onChange={(e) => setCustomQuestion(e.target.value)}
+                placeholder="Enter your question about this claim"
+                className="w-full h-24 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+              <button
+                type="button"
+                onClick={askCustomQuestion}
+                className="mt-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
+              >
+                Ask AI
+              </button>
+              {customResponse && (
+                <div className="mt-4">
+                  <h3 className="text-lg font-semibold text-gray-700 mb-2">AI Response:</h3>
+                  <div className="p-3 border rounded-md bg-gray-50 overflow-y-auto">
+                    <ReactMarkdown remarkPlugins={[remarkBreaks]}>
+                      {customResponse}
+                    </ReactMarkdown>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Claim Processing Notes */}
+            <div className="bg-white shadow-md rounded-lg p-6">
+              <h2 className="text-xl font-bold text-nrmaBlue mb-4">Claim Processing Notes</h2>
+              <textarea
+                id="claimNotes"
+                name="claimNotes"
+                value={claimNotes}
+                onChange={(e) => setClaimNotes(e.target.value)}
+                placeholder="Add or update claim processing notes"
+                className="w-full h-40 p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
 
             {/* Action Buttons */}
-            <div className="flex flex-col space-y-4 w-full">
+            <div className="flex flex-col space-y-4">
               <button
                 type="button"
                 onClick={closeCase}
-                className="w-full px-6 py-3 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
+                className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
               >
                 Close Case
               </button>
               <button
                 type="button"
                 onClick={escalateClaim}
-                className="w-full px-6 py-3 bg-gradient-to-r from-red-400 to-red-600 text-white font-semibold rounded-full shadow-xl hover:shadow-2xl transition transform hover:-translate-y-1"
+                className="w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-full shadow-md hover:bg-blue-700 transition"
               >
                 Escalate to Manager
               </button>
@@ -523,10 +695,11 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-white shadow-inner w-full">
-        <div className="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
-          <div>
-            <p className="text-center text-sm text-gray-500 leading-tight">
+      <footer className="bg-white shadow-inner">
+        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-center">
+          <img src="/NRMA_logo.png" alt="NRMA Logo" className="h-8 w-auto mr-4" />
+          <div className="text-center">
+            <p className="text-sm text-gray-500 leading-tight">
               © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
               Developed by{' '}
               <a
@@ -539,16 +712,12 @@ export default function Home() {
               </a>{' '}
               for EY & NRMA.
             </p>
-            <p className="text-center text-xs text-gray-400 mt-1 leading-tight">
-              The content and functionality of this site are confidential and
-              proprietary to EY & NRMA.
+            <p className="text-xs text-gray-400 mt-1 leading-tight">
+              The content and functionality of this site are confidential and proprietary to EY &
+              NRMA.
             </p>
           </div>
-          <img
-            src="/NRMA_logo.png"
-            alt="NRMA Logo"
-            className="h-8 w-auto"
-          />
+          <img src="/NRMA_logo.png" alt="NRMA Logo" className="h-8 w-auto ml-4" />
         </div>
       </footer>
     </div>

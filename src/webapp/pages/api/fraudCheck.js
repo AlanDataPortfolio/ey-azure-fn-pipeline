@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     try {
       const systemPrompt = `
-You are a fraud detection assistant who assists claim agents with processing car insurance claims. Your task is to assess the likelihood of fraud based on the provided claim details and by comparing them to the claim description. Return a percentage indicating the fraud likelihood and provide a concise but accurate reasoning to justify this percentage. Reference only the most relevant claim details.
+You are a fraud detection assistant who assists claim agents with processing car insurance claims. Your task is to assess the likelihood of fraud based on the provided claim details and by comparing them to the claim description. Return a percentage indicating the fraud likelihood and provide a concise but accurate reasoning to justify this percentage. Reference only the most relevant claim details. Format your response in markdown, starting with 'Fraud Likelihood: X%', and then '**Reasoning:**' followed by your reasoning.
       `;
 
       const userPrompt = `
@@ -34,8 +34,9 @@ ${claimDescription}
           headers: {
             'Content-Type': 'application/json',
             'api-key': apiKey,
-        },
-      });
+          },
+        }
+      );
 
       const aiResponse = response.data.choices[0].message.content;
 

@@ -11,10 +11,13 @@
   "dependencies": {
     "axios": "^1.7.7",
     "csv-parser": "^3.0.0",
+    "csvtojson": "^2.0.10",
     "json2csv": "^6.0.0-alpha.2",
     "next": "14.2.14",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-markdown": "^9.0.1",
+    "remark-breaks": "^4.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
