@@ -21,13 +21,19 @@ export default function Home() {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('loggedIn');
     if (!isLoggedIn) {
-      router.push('/login'); // Redirect to login page if not logged in
+      router.push('/login');
+    } else {
+      const { claimId } = router.query;
+      if (claimId) {
+        // Fetch the claim by ID from query parameter
+        fetchClaimById(claimId);
+      }
     }
-  }, []);
+  }, [router.query]);
 
   const handleLogout = () => {
-    localStorage.removeItem('loggedIn'); // Remove login session
-    router.push('/login'); // Redirect to login page
+    localStorage.removeItem('loggedIn');
+    router.push('/login');
   };
 
   const handleAccount = () => {
@@ -55,13 +61,16 @@ export default function Home() {
       alert('Please enter a Claim ID');
       return;
     }
+    fetchClaimById(searchClaimId);
+  };
 
+  const fetchClaimById = async (id) => {
     try {
-      const response = await fetch(`/api/getClaim?claimId=${searchClaimId}`);
+      const response = await fetch(`/api/getClaim?claimId=${id}`);
       const data = await response.json();
       if (response.ok) {
         populateClaimDetails(data);
-        alert(`Claim ${searchClaimId} fetched successfully`);
+        alert(`Claim ${id} fetched successfully`);
       } else {
         alert(data.message);
       }
@@ -142,9 +151,21 @@ export default function Home() {
       const data = await response.json();
 
       if (response.ok) {
-        setFraudAnalysis(
-          (prev) => `${prev}\n\n**Further Reasoning:**\n\n${data.explanation}`
-        );
+        const furtherReasoningHeader = '\n\n**Further Reasoning:**\n\n';
+        const explanationContent = data.explanation.trim();
+
+        // Check if "Further Reasoning:" already exists
+        if (fraudAnalysis.includes('**Further Reasoning:**')) {
+          // Append only the new explanation
+          setFraudAnalysis(
+            (prev) => `${prev}\n\n${explanationContent}`
+          );
+        } else {
+          // Append the header and the explanation
+          setFraudAnalysis(
+            (prev) => `${prev}${furtherReasoningHeader}${explanationContent}`
+          );
+        }
       } else {
         alert('Failed to retrieve detailed explanation.');
       }
@@ -162,6 +183,8 @@ export default function Home() {
       lastName: data.lastName,
       claimStatus: data.claimStatus,
       claimOutcome: data.claimOutcome || 'pending',
+      applicationDate: data.applicationDate,
+      outcomeDate: data.outcomeDate,
       timeAsCustomer: data.timeAsCustomer,
       driverAge: data.driverAge,
       insuranceAccess: data.insuranceAccess,
@@ -172,6 +195,7 @@ export default function Home() {
       incidentSeverity: data.incidentSeverity,
       authoritiesInvolved: data.authoritiesInvolved,
       incidentTime: data.incidentTime,
+      incidentDate: data.incidentDate,
       numVehiclesInvolved: data.numVehiclesInvolved,
       numBodilyInjuries: data.numBodilyInjuries,
       policeReportBool: data.policeReportBool,
@@ -445,7 +469,7 @@ export default function Home() {
                   <h2 className="text-xl font-bold text-nrmaBlue mb-4">
                     Claim Information - ID: {claimId}
                   </h2>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Driver Details */}
                     <div>
                       <h3 className="text-lg font-semibold text-gray-700 mb-2">
@@ -489,6 +513,10 @@ export default function Home() {
                       </h3>
                       <div className="space-y-1">
                         <div>
+                          <span className="font-semibold">Incident Date:</span>{' '}
+                          {claimDetails.incidentDate}
+                        </div>
+                        <div>
                           <span className="font-semibold">Accident Type:</span>{' '}
                           {claimDetails.accidentType}
                         </div>
@@ -516,9 +544,33 @@ export default function Home() {
                           <span className="font-semibold">Police Report:</span>{' '}
                           {claimDetails.policeReportBool}
                         </div>
+                      </div>
+                    </div>
+                    {/* Claim Details */}
+                    <div>
+                      <h3 className="text-lg font-semibold text-gray-700 mb-2">
+                        Claim Details
+                      </h3>
+                      <div className="space-y-1">
+                        <div>
+                          <span className="font-semibold">Application Date:</span>{' '}
+                          {claimDetails.applicationDate}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Claim Status:</span>{' '}
+                          {claimDetails.claimStatus}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Claim Outcome:</span>{' '}
+                          {claimDetails.claimOutcome}
+                        </div>
                         <div>
                           <span className="font-semibold">Total Claim Amount:</span>{' '}
                           {claimDetails.totalClaimAmount}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Outcome Date:</span>{' '}
+                          {claimDetails.outcomeDate || 'N/A'}
                         </div>
                       </div>
                     </div>

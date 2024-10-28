@@ -10,15 +10,15 @@ export default function HistoryPage() {
   useEffect(() => {
     const isLoggedIn = localStorage.getItem('loggedIn');
     if (!isLoggedIn) {
-      router.push('/login'); // Redirect to login page if not logged in
+      router.push('/login');
     } else {
       fetchClaims();
     }
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('loggedIn'); // Remove login session
-    router.push('/login'); // Redirect to login page
+    localStorage.removeItem('loggedIn');
+    router.push('/login');
   };
 
   const handleAccount = () => {
@@ -27,7 +27,7 @@ export default function HistoryPage() {
 
   const fetchClaims = async () => {
     try {
-      const response = await fetch('/api/getHistoryClaims'); // Updated endpoint
+      const response = await fetch('/api/getHistoryClaims');
       const data = await response.json();
       if (response.ok) {
         setClaims(data.claims);
@@ -38,6 +38,10 @@ export default function HistoryPage() {
       console.error('Error fetching claims:', error);
       alert('An error occurred while fetching claims.');
     }
+  };
+
+  const handleClaimClick = (claimID) => {
+    router.push(`/?claimId=${claimID}`);
   };
 
   return (
@@ -148,8 +152,11 @@ export default function HistoryPage() {
             <tbody className="bg-white divide-y divide-gray-200">
               {claims.length > 0 ? (
                 claims.map((claim) => (
-                  <tr key={claim.claimID}>
-                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
+                  <tr key={claim.claimID} className="hover:bg-gray-50 cursor-pointer">
+                    <td
+                      className="px-6 py-4 whitespace-nowrap text-sm text-blue-600 underline"
+                      onClick={() => handleClaimClick(claim.claimID)}
+                    >
                       {claim.claimID}
                     </td>
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">

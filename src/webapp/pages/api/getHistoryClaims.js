@@ -23,6 +23,7 @@ export default async function handler(req, res) {
           (claim.claimStatus === 'open' && claim.claimOutcome === 'escalated')
       );
 
+      // Include incidentDate, applicationDate, and outcomeDate in the response
       res.status(200).json({ claims: filteredClaims });
     } catch (error) {
       console.error('Error reading claims:', error);
