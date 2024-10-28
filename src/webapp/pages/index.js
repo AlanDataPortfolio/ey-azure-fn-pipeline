@@ -157,9 +157,7 @@ export default function Home() {
         // Check if "Further Reasoning:" already exists
         if (fraudAnalysis.includes('**Further Reasoning:**')) {
           // Append only the new explanation
-          setFraudAnalysis(
-            (prev) => `${prev}\n\n${explanationContent}`
-          );
+          setFraudAnalysis((prev) => `${prev}\n\n${explanationContent}`);
         } else {
           // Append the header and the explanation
           setFraudAnalysis(
@@ -360,7 +358,7 @@ export default function Home() {
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
       <header className="bg-white shadow-md">
-        <div className="max-w-7xl mx-auto px-6 py-4">
+      <div className="max-w-screen-3xl mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             {/* Logo */}
             <div className="flex items-center">
@@ -427,7 +425,7 @@ export default function Home() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-6 py-4">
+      <main className="max-w-screen-xl mx-auto px-6 py-4">
         {/* Claim Search Section */}
         <div className="bg-white rounded-full shadow-md px-6 py-4 mb-6 flex justify-between items-center">
           <button
@@ -459,7 +457,7 @@ export default function Home() {
         </div>
 
         {/* Main Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
           {/* Left Column */}
           <div className="lg:col-span-3 space-y-6">
             {/* Claim Information */}
@@ -748,7 +746,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-white shadow-inner">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-center">
+        <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-center">
           <img src="/NRMA_logo.png" alt="NRMA Logo" className="h-8 w-auto mr-4" />
           <div className="text-center">
             <p className="text-sm text-gray-500 leading-tight">
