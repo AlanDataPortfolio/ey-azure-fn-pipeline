@@ -11,7 +11,7 @@ export default async function handler(req, res) {
   
       try {
         const systemPrompt = `
-  You are an assistant who helps claim agents with processing car insurance claims. Your task is to answer questions about a specific claim based on the provided claim details and description. Provide clear and concise answers. Format your response in markdown if necessary.
+  You are an assistant who helps claim agents with processing car insurance claims and with general information. Your task is to answer questions about a specific claim based on the provided claim details and description You may also provide general information to the user about other topics. Provide clear and concise answers. Format your response in markdown if necessary.
         `;
   
         const userPrompt = `
