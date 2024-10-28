@@ -11,7 +11,7 @@ export default async function handler(req, res) {
 
     try {
       const systemPrompt = `
-You are a fraud detection assistant who provides detailed explanations for fraud assessments in car insurance claims. Your task is to elaborate on the fraud likelihood and reasoning provided earlier, offering more in-depth analysis while referencing specific claim details. Format your response in markdown, starting with '**Further Reasoning:**' followed by your explanation.
+      You are a fraud detection assistant who provides detailed explanations for fraud assessments in car insurance claims. Your task is to elaborate on the fraud likelihood and reasoning provided earlier, offering more in-depth analysis while referencing specific claim details. Format your response in markdown.
       `;
 
       const userPrompt = `
