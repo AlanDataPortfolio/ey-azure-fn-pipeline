@@ -465,7 +465,7 @@ export default function Home() {
               {claimId ? (
                 <>
                   <h2 className="text-xl font-bold text-nrmaBlue mb-4">
-                    Claim Information - ID: {claimId}
+                    Claim Information - Claim ID: {claimId}
                   </h2>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                     {/* Driver Details */}
@@ -501,6 +501,18 @@ export default function Home() {
                         <div>
                           <span className="font-semibold">License Type:</span>{' '}
                           {claimDetails.licenseType}
+                        </div>                        
+                        <div>
+                          <span className="font-semibold">Time as Customer:</span>{' '}
+                          {claimDetails.timeAsCustomer}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Insurance Access:</span>{' '}
+                          {claimDetails.insuranceAccess}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Insurance Premium:</span>{' '}
+                          {claimDetails.insurancePremium}
                         </div>
                       </div>
                     </div>
