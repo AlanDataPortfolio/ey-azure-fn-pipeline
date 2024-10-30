@@ -6,10 +6,69 @@ The claim aligns with the description of a minor collision without any reported 
 
 The claim details indicate a single vehicle collision resulting in a total loss while the claim description suggests an out-of-control vehicle crashing into a house. This discrepancy raises questions about the incident's narrative, particularly the lack of mention of any damage to the property in the claim details, which could suggest an embellishment or fabrication. Additionally, the total claim amount of $6000 seems inflated given the circumstances described, further increasing the likelihood of fraud.","High Fraud chance. Escalating. 75% fraud reasoning.
 Very large claim amount."
-"3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","1/10/2024","10","2","1","1","5000","7","26","Full","Michael","Johnson","12/10/2024","closed","2024-10-28","approved","The vehicle was involved in a significant collision, resulting in major damage. The accident was serious enough to report, but no immediate emergency services were needed.",25,"**Reasoning:**
+"3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","1/10/2024","10","2","1","1","5000","7","26","Full","Michael","Johnson","12/10/2024","closed","2024-10-28","approved","The vehicle was involved in a significant collision, resulting in major damage. The accident was serious enough to report, but no immediate emergency services were needed.","25","**Reasoning:**
 
 The details show a serious collision with major loss and involvement of authorities, which aligns with the claim description. The claim amount of $5000 appears reasonable considering the vehicle age (7 years) and the described circumstances. There are no immediate red flags such as discrepancies in reporting or the claimant's behavior. The combination of these factors leads to a low likelihood of fraud, although the amount claimed does warrant some scrutiny given the accident severity.","Low fraud score of 25% and I am satisfied with the explanation given by the AI. I am approving and closing this case as it seems to genuine."
-"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","2/10/2024","5","3","1","1","20000","2","6","Full","Olivia","Martinez","13/10/2024","open","","pending","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.","","",""
+"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","2/10/2024","5","3","1","1","20000","2","6","Full","Olivia","Martinez","13/10/2024","closed","2024-10-28","approved","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.",30,"**Reasoning:**
+
+The claim has aspects that raise flags, particularly regarding the total claim amount of $20,000 for a multi-vehicle collision described as causing minor damage. This amount appears disproportionate to the described severity of the incident. Additionally, while there is one bodily injury reported, the presence of an ambulance might suggest a more serious incident. However, the driver’s age, experience, and the overall claim details do not strongly suggest intent to commit fraud. Hence, while there are concerns, the evidence is not compelling enough to classify it as high fraud risk.
+
+**Further Reasoning:**
+
+## In-Depth Fraud Assessment for Claim ID: 4
+
+### Claim Overview
+
+- **Claim ID:** 4
+- **Claimant:** Olivia Martinez
+- **Claim Status:** Open
+- **Application Date:** 13/10/2024
+- **Incident Date:** 2/10/2024
+- **Claim Amount:** $20,000
+- **Accident Type:** Multi-vehicle Collision
+- **Incident Severity:** Minor Damage
+- **Authorities Involved:** Ambulance
+- **Number of Vehicles Involved:** 3
+- **Number of Bodily Injuries:** 1
+- **Time as Customer:** 74 months
+- **Driver Age:** 25
+- **Driver Experience:** 6 years
+- **License Type:** Full
+- **Insurance Premium:** $1,300
+- **Insurance Access:** $1,000
+- **Education Level:** Bachelor
+- **Driver Gender:** Female
+
+### Fraud Likelihood Analysis
+
+**Fraud Likelihood:** **30%**
+
+### Detailed Reasoning
+
+1. **Claim Amount vs. Incident Severity:**
+    - The total claim amount of **$20,000** is a significant **disparity** given that the incident is classified as causing only **minor damage** to multiple vehicles. In assessing the validity of a claim, we typically expect costs related to minor damage to be considerably lower. The possibility of inflated damages or unnecessary repairs could be inferred here, raising concerns about the legitimacy of the claim.
+
+2. **Nature of the Accident:**
+    - The involvement of **three vehicles** in a collision, coupled with **one minor injury**, usually suggests a more complex scenario. While it is standard for minor accidents to involve multiple vehicles, the **presence of an ambulance** might indicate a higher level of injury. However, the fact that injuries were described as not severe seems contradictory, warranting further scrutiny.
+
+3. **Claims History and Customer Profile:**
+    - Olivia has been a customer for **74 months**, which adds some reliability to her claim. With a full license and **six years** of driving experience, she appears to be a **responsible driver**. The educational background (Bachelor's degree) also reflects positively on her profile, suggesting awareness and understanding of the insurance process.
+
+4. **Driver's Age and Experience:**
+    - At **age 25**, Olivia is in a demographic often viewed with caution due to statistical tendencies of younger drivers being more prone to incidents. However, her **six years of experience** and full license mitigate this concern, suggesting potential maturity in driving behavior.
+
+5. **Counter-indicators:**
+    - There are elements that lessen suspicion:
+        - The claim does involve a **police report**, which typically adds credibility.
+        - The presence of official authorities, like an ambulance, indicates that there was a recognized need for assistance, further legitimizing the report of injury.
+        - The claim being **open and pending** implies ongoing investigations or consideration of the claims process, where fraudulent actions may be addressed.
+
+6. **Final Evaluation:**
+    - While the **30% fraud likelihood** indicates there are red flags, the overall assessment does not strongly suggest intent to defraud. The claimant’s background and the scenario's specifics do not point definitively to conscious manipulation. It is prudent to monitor the progress of the claim and consider further verification regarding the repair costs and the specifics of the injury involved.
+
+### Conclusion
+
+In conclusion, while there are notable concerns about the excessive claim amount for minor damages, the claim is bolstered by a reasonable customer history and the presence of authorities at the scene. Continued vigilance and further investigation may be warranted to ensure the integrity of the claim process. Regular assessments of evolving details will be crucial in making a more definitive fraud classification as additional information becomes available.","I am approving because low fraud score"
 "5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","3/10/2024","15","1","1","1","6000","7","24","Full","Daniel","Harris","14/10/2024","open","","pending","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","","",""
 "6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","4/10/2024","12","2","0","0","45000","16","36","Full","Sophia","Roberts","15/10/2024","open","","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
 "7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","5/10/2024","17","3","0","0","52270","2","24","Full","David","Edwards","16/10/2024","open","","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
