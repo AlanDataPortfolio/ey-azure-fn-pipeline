@@ -1,0 +1,2575 @@
+IncidentID,accidentType,incidentSeverity,incidentTime,numVehiclesInvolved,numBodilyInjuries
+I001,Single Vehicle Collision,Major Damage,5.0,1.0,1.0
+I002,Vehicle Theft,Minor Damage,8.0,1.0,0.0
+I003,Multi-vehicle Collision,Minor Damage,7.0,3.0,2.0
+I004,Single Vehicle Collision,Major Damage,5.0,1.0,1.0
+I005,Vehicle Theft,Minor Damage,20.0,1.0,0.0
+I006,Multi-vehicle Collision,Major Damage,19.0,3.0,0.0
+I007,Multi-vehicle Collision,Minor Damage,0.0,3.0,0.0
+I008,Multi-vehicle Collision,Total Loss,23.0,3.0,2.0
+I009,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I010,Single Vehicle Collision,Total Loss,14.0,1.0,2.0
+I011,Single Vehicle Collision,Total Loss,22.0,1.0,2.0
+I012,Multi-vehicle Collision,Major Damage,21.0,3.0,1.0
+I013,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I014,Parked Car,Minor Damage,5.0,1.0,1.0
+I015,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I016,Multi-vehicle Collision,Major Damage,12.0,4.0,0.0
+I017,Multi-vehicle Collision,Major Damage,0.0,3.0,1.0
+I018,Single Vehicle Collision,Total Loss,9.0,1.0,0.0
+I019,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I020,Multi-vehicle Collision,Major Damage,8.0,3.0,2.0
+I021,Multi-vehicle Collision,Minor Damage,20.0,3.0,1.0
+I022,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I023,Multi-vehicle Collision,Major Damage,20.0,3.0,0.0
+I024,Single Vehicle Collision,Total Loss,15.0,1.0,2.0
+I025,Single Vehicle Collision,Minor Damage,6.0,1.0,1.0
+I026,Multi-vehicle Collision,Major Damage,16.0,3.0,1.0
+I027,Parked Car,Minor Damage,4.0,1.0,1.0
+I028,Vehicle Theft,Minor Damage,5.0,1.0,2.0
+I029,Single Vehicle Collision,Minor Damage,21.0,1.0,1.0
+I030,Single Vehicle Collision,Minor Damage,5.0,1.0,2.0
+I031,Multi-vehicle Collision,Major Damage,22.0,4.0,0.0
+I032,Multi-vehicle Collision,Major Damage,10.0,3.0,2.0
+I033,Multi-vehicle Collision,Total Loss,16.0,3.0,2.0
+I034,Multi-vehicle Collision,Major Damage,1.0,3.0,1.0
+I035,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I036,Single Vehicle Collision,Major Damage,15.0,1.0,2.0
+I037,Single Vehicle Collision,Total Loss,3.0,1.0,1.0
+I038,Parked Car,Minor Damage,16.0,1.0,1.0
+I039,Multi-vehicle Collision,Major Damage,4.0,3.0,2.0
+I040,Single Vehicle Collision,Major Damage,4.0,1.0,0.0
+I041,Single Vehicle Collision,Minor Damage,19.0,1.0,2.0
+I042,Single Vehicle Collision,Major Damage,1.0,1.0,1.0
+I043,Multi-vehicle Collision,Minor Damage,17.0,3.0,1.0
+I044,Single Vehicle Collision,Total Loss,23.0,1.0,2.0
+I045,Single Vehicle Collision,Minor Damage,14.0,1.0,0.0
+I046,Multi-vehicle Collision,Total Loss,17.0,3.0,2.0
+I047,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I048,Multi-vehicle Collision,Major Damage,19.0,3.0,2.0
+I049,Vehicle Theft,Trivial Damage,5.0,1.0,2.0
+I050,Single Vehicle Collision,Total Loss,19.0,1.0,0.0
+I051,Multi-vehicle Collision,Minor Damage,19.0,3.0,0.0
+I052,Vehicle Theft,Trivial Damage,4.0,1.0,1.0
+I053,Vehicle Theft,Minor Damage,8.0,1.0,2.0
+I054,Multi-vehicle Collision,Major Damage,7.0,3.0,1.0
+I055,Parked Car,Minor Damage,5.0,1.0,0.0
+I056,Single Vehicle Collision,Minor Damage,3.0,1.0,1.0
+I057,Multi-vehicle Collision,Major Damage,12.0,3.0,2.0
+I058,Parked Car,Minor Damage,19.0,1.0,1.0
+I059,Single Vehicle Collision,Total Loss,22.0,1.0,0.0
+I060,Multi-vehicle Collision,Minor Damage,12.0,3.0,1.0
+I061,Multi-vehicle Collision,Major Damage,15.0,3.0,2.0
+I062,Multi-vehicle Collision,Total Loss,23.0,3.0,0.0
+I063,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I064,Multi-vehicle Collision,Major Damage,20.0,3.0,2.0
+I065,Multi-vehicle Collision,Total Loss,16.0,3.0,0.0
+I066,Multi-vehicle Collision,Minor Damage,6.0,3.0,2.0
+I067,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I068,Multi-vehicle Collision,Minor Damage,17.0,3.0,1.0
+I069,Single Vehicle Collision,Major Damage,8.0,1.0,0.0
+I070,Parked Car,Minor Damage,13.0,1.0,0.0
+I071,Multi-vehicle Collision,Major Damage,12.0,2.0,2.0
+I072,Single Vehicle Collision,Total Loss,7.0,1.0,0.0
+I073,Single Vehicle Collision,Minor Damage,10.0,1.0,1.0
+I074,Multi-vehicle Collision,Minor Damage,7.0,3.0,2.0
+I075,Multi-vehicle Collision,Minor Damage,18.0,3.0,1.0
+I076,Multi-vehicle Collision,Total Loss,22.0,3.0,2.0
+I077,Multi-vehicle Collision,Minor Damage,18.0,3.0,1.0
+I078,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I079,Vehicle Theft,Minor Damage,15.0,1.0,2.0
+I080,Single Vehicle Collision,Major Damage,16.0,1.0,1.0
+I081,Multi-vehicle Collision,Minor Damage,6.0,3.0,1.0
+I082,Vehicle Theft,Trivial Damage,10.0,1.0,2.0
+I083,Vehicle Theft,Minor Damage,3.0,1.0,2.0
+I084,Vehicle Theft,Trivial Damage,13.0,1.0,0.0
+I085,Multi-vehicle Collision,Major Damage,16.0,2.0,2.0
+I086,Multi-vehicle Collision,Major Damage,13.0,3.0,0.0
+I087,Multi-vehicle Collision,Minor Damage,9.0,3.0,2.0
+I088,Single Vehicle Collision,Total Loss,2.0,1.0,2.0
+I089,Parked Car,Trivial Damage,9.0,1.0,0.0
+I090,Multi-vehicle Collision,Major Damage,12.0,3.0,2.0
+I091,Multi-vehicle Collision,Total Loss,12.0,2.0,1.0
+I092,Single Vehicle Collision,Major Damage,14.0,1.0,0.0
+I093,Parked Car,Trivial Damage,9.0,1.0,0.0
+I094,Multi-vehicle Collision,Major Damage,3.0,3.0,1.0
+I095,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I096,Vehicle Theft,Minor Damage,5.0,1.0,2.0
+I097,Single Vehicle Collision,Major Damage,11.0,1.0,0.0
+I098,Multi-vehicle Collision,Minor Damage,4.0,4.0,1.0
+I099,Parked Car,Trivial Damage,6.0,1.0,1.0
+I100,Vehicle Theft,Trivial Damage,10.0,1.0,0.0
+I101,Single Vehicle Collision,Minor Damage,23.0,1.0,0.0
+I102,Single Vehicle Collision,Major Damage,13.0,1.0,1.0
+I103,Multi-vehicle Collision,Minor Damage,16.0,3.0,2.0
+I104,Parked Car,Minor Damage,3.0,1.0,1.0
+I105,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I106,Vehicle Theft,Minor Damage,4.0,1.0,1.0
+I107,Multi-vehicle Collision,Major Damage,6.0,3.0,0.0
+I108,Multi-vehicle Collision,Major Damage,22.0,2.0,1.0
+I109,Single Vehicle Collision,Major Damage,1.0,1.0,0.0
+I110,Multi-vehicle Collision,Major Damage,16.0,3.0,0.0
+I111,Single Vehicle Collision,Minor Damage,18.0,1.0,1.0
+I112,Single Vehicle Collision,Major Damage,0.0,1.0,0.0
+I113,Multi-vehicle Collision,Total Loss,12.0,3.0,2.0
+I114,Multi-vehicle Collision,Major Damage,13.0,2.0,1.0
+I115,Vehicle Theft,Minor Damage,9.0,1.0,1.0
+I116,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I117,Single Vehicle Collision,Minor Damage,16.0,1.0,0.0
+I118,Multi-vehicle Collision,Major Damage,20.0,3.0,2.0
+I119,Single Vehicle Collision,Minor Damage,4.0,1.0,1.0
+I120,Multi-vehicle Collision,Minor Damage,7.0,3.0,0.0
+I121,Single Vehicle Collision,Minor Damage,22.0,1.0,2.0
+I122,Single Vehicle Collision,Major Damage,11.0,1.0,2.0
+I123,Single Vehicle Collision,Major Damage,7.0,1.0,0.0
+I124,Multi-vehicle Collision,Total Loss,0.0,4.0,1.0
+I125,Single Vehicle Collision,Total Loss,1.0,1.0,1.0
+I126,Multi-vehicle Collision,Total Loss,12.0,3.0,2.0
+I127,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I128,Parked Car,Minor Damage,9.0,1.0,2.0
+I129,Single Vehicle Collision,Major Damage,22.0,1.0,0.0
+I130,Multi-vehicle Collision,Major Damage,0.0,3.0,1.0
+I131,Multi-vehicle Collision,Minor Damage,0.0,3.0,1.0
+I132,Multi-vehicle Collision,Major Damage,3.0,3.0,2.0
+I133,Multi-vehicle Collision,Major Damage,21.0,3.0,0.0
+I134,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I135,Single Vehicle Collision,Minor Damage,16.0,1.0,1.0
+I136,Single Vehicle Collision,Major Damage,14.0,1.0,1.0
+I137,Vehicle Theft,Minor Damage,9.0,1.0,0.0
+I138,Multi-vehicle Collision,Minor Damage,9.0,3.0,0.0
+I139,Multi-vehicle Collision,Minor Damage,21.0,3.0,1.0
+I140,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I141,Single Vehicle Collision,Total Loss,2.0,1.0,0.0
+I142,Vehicle Theft,Trivial Damage,9.0,1.0,2.0
+I143,Parked Car,Minor Damage,5.0,1.0,2.0
+I144,Single Vehicle Collision,Major Damage,14.0,1.0,2.0
+I145,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I146,Single Vehicle Collision,Major Damage,18.0,1.0,2.0
+I147,Multi-vehicle Collision,Major Damage,13.0,3.0,2.0
+I148,Single Vehicle Collision,Minor Damage,21.0,1.0,1.0
+I149,Single Vehicle Collision,Major Damage,14.0,1.0,2.0
+I150,Single Vehicle Collision,Major Damage,1.0,1.0,1.0
+I151,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I152,Multi-vehicle Collision,Major Damage,4.0,3.0,2.0
+I153,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I154,Multi-vehicle Collision,Total Loss,13.0,3.0,2.0
+I155,Multi-vehicle Collision,Minor Damage,20.0,3.0,1.0
+I156,Single Vehicle Collision,Major Damage,16.0,1.0,2.0
+I157,Multi-vehicle Collision,Minor Damage,10.0,3.0,2.0
+I158,Parked Car,Minor Damage,8.0,1.0,2.0
+I159,Multi-vehicle Collision,Total Loss,17.0,3.0,2.0
+I160,Vehicle Theft,Minor Damage,9.0,1.0,2.0
+I161,Parked Car,Minor Damage,0.0,1.0,2.0
+I162,Single Vehicle Collision,Total Loss,12.0,1.0,2.0
+I163,Multi-vehicle Collision,Total Loss,20.0,2.0,2.0
+I164,Single Vehicle Collision,Major Damage,3.0,1.0,2.0
+I165,Multi-vehicle Collision,Total Loss,18.0,3.0,2.0
+I166,Multi-vehicle Collision,Minor Damage,4.0,3.0,2.0
+I167,Single Vehicle Collision,Major Damage,18.0,1.0,2.0
+I168,Multi-vehicle Collision,Minor Damage,18.0,3.0,0.0
+I169,Parked Car,Trivial Damage,7.0,1.0,0.0
+I170,Parked Car,Minor Damage,18.0,1.0,1.0
+I171,Multi-vehicle Collision,Minor Damage,23.0,3.0,0.0
+I172,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I173,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I174,Multi-vehicle Collision,Major Damage,2.0,3.0,0.0
+I175,Vehicle Theft,Trivial Damage,3.0,1.0,0.0
+I176,Single Vehicle Collision,Minor Damage,13.0,1.0,1.0
+I177,Single Vehicle Collision,Minor Damage,1.0,1.0,1.0
+I178,Single Vehicle Collision,Minor Damage,16.0,1.0,0.0
+I179,Single Vehicle Collision,Total Loss,0.0,1.0,0.0
+I180,Vehicle Theft,Trivial Damage,1.0,1.0,2.0
+I181,Multi-vehicle Collision,Major Damage,17.0,3.0,2.0
+I182,Single Vehicle Collision,Minor Damage,13.0,1.0,2.0
+I183,Single Vehicle Collision,Total Loss,12.0,1.0,2.0
+I184,Single Vehicle Collision,Minor Damage,11.0,1.0,1.0
+I185,Single Vehicle Collision,Major Damage,18.0,1.0,0.0
+I186,Single Vehicle Collision,Total Loss,17.0,1.0,2.0
+I187,Multi-vehicle Collision,Total Loss,22.0,3.0,1.0
+I188,Vehicle Theft,Minor Damage,9.0,1.0,1.0
+I189,Multi-vehicle Collision,Major Damage,11.0,3.0,1.0
+I190,Single Vehicle Collision,Total Loss,11.0,1.0,0.0
+I191,Parked Car,Minor Damage,8.0,1.0,0.0
+I192,Single Vehicle Collision,Minor Damage,18.0,1.0,1.0
+I193,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I194,Vehicle Theft,Minor Damage,8.0,1.0,1.0
+I195,Multi-vehicle Collision,Total Loss,9.0,3.0,0.0
+I196,Multi-vehicle Collision,Total Loss,17.0,2.0,2.0
+I197,Vehicle Theft,Trivial Damage,3.0,1.0,1.0
+I198,Parked Car,Trivial Damage,6.0,1.0,0.0
+I199,Single Vehicle Collision,Major Damage,17.0,1.0,2.0
+I200,Vehicle Theft,Minor Damage,7.0,1.0,1.0
+I201,Vehicle Theft,Trivial Damage,9.0,1.0,2.0
+I202,Single Vehicle Collision,Minor Damage,3.0,1.0,2.0
+I203,Parked Car,Trivial Damage,6.0,1.0,0.0
+I204,Multi-vehicle Collision,Major Damage,7.0,3.0,0.0
+I205,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I206,Single Vehicle Collision,Minor Damage,14.0,1.0,2.0
+I207,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I208,Multi-vehicle Collision,Major Damage,14.0,3.0,0.0
+I209,Multi-vehicle Collision,Total Loss,13.0,4.0,2.0
+I210,Parked Car,Trivial Damage,8.0,1.0,0.0
+I211,Vehicle Theft,Minor Damage,7.0,1.0,2.0
+I212,Vehicle Theft,Trivial Damage,9.0,1.0,1.0
+I213,Multi-vehicle Collision,Minor Damage,12.0,3.0,2.0
+I214,Multi-vehicle Collision,Major Damage,6.0,3.0,1.0
+I215,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I216,Multi-vehicle Collision,Minor Damage,5.0,3.0,1.0
+I217,Single Vehicle Collision,Minor Damage,14.0,1.0,2.0
+I218,Vehicle Theft,Trivial Damage,17.0,1.0,2.0
+I219,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I220,Multi-vehicle Collision,Minor Damage,21.0,3.0,1.0
+I221,Single Vehicle Collision,Major Damage,18.0,1.0,1.0
+I222,Single Vehicle Collision,Minor Damage,17.0,1.0,2.0
+I223,Single Vehicle Collision,Total Loss,19.0,1.0,0.0
+I224,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I225,Multi-vehicle Collision,Major Damage,23.0,3.0,0.0
+I226,Single Vehicle Collision,Total Loss,4.0,1.0,0.0
+I227,Multi-vehicle Collision,Minor Damage,2.0,2.0,2.0
+I228,Single Vehicle Collision,Major Damage,2.0,1.0,0.0
+I229,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I230,Single Vehicle Collision,Minor Damage,2.0,1.0,0.0
+I231,Single Vehicle Collision,Total Loss,18.0,1.0,0.0
+I232,Single Vehicle Collision,Minor Damage,18.0,1.0,2.0
+I233,Multi-vehicle Collision,Total Loss,7.0,4.0,2.0
+I234,Multi-vehicle Collision,Major Damage,19.0,3.0,2.0
+I235,Multi-vehicle Collision,Major Damage,10.0,3.0,0.0
+I236,Multi-vehicle Collision,Minor Damage,16.0,3.0,1.0
+I237,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I238,Multi-vehicle Collision,Total Loss,2.0,3.0,2.0
+I239,Single Vehicle Collision,Major Damage,19.0,1.0,1.0
+I240,Single Vehicle Collision,Minor Damage,0.0,1.0,1.0
+I241,Single Vehicle Collision,Major Damage,16.0,1.0,0.0
+I242,Single Vehicle Collision,Major Damage,20.0,1.0,2.0
+I243,Parked Car,Trivial Damage,10.0,1.0,2.0
+I244,Multi-vehicle Collision,Total Loss,21.0,3.0,2.0
+I245,Vehicle Theft,Trivial Damage,3.0,1.0,1.0
+I246,Single Vehicle Collision,Major Damage,7.0,1.0,0.0
+I247,Single Vehicle Collision,Minor Damage,19.0,1.0,0.0
+I248,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I249,Parked Car,Minor Damage,7.0,1.0,0.0
+I250,Single Vehicle Collision,Major Damage,19.0,1.0,1.0
+I251,Multi-vehicle Collision,Total Loss,13.0,2.0,0.0
+I252,Multi-vehicle Collision,Major Damage,2.0,3.0,1.0
+I253,Vehicle Theft,Trivial Damage,5.0,1.0,1.0
+I254,Single Vehicle Collision,Major Damage,21.0,1.0,2.0
+I255,Multi-vehicle Collision,Major Damage,21.0,3.0,2.0
+I256,Multi-vehicle Collision,Major Damage,7.0,3.0,0.0
+I257,Multi-vehicle Collision,Total Loss,16.0,3.0,1.0
+I258,Single Vehicle Collision,Major Damage,13.0,1.0,0.0
+I259,Vehicle Theft,Trivial Damage,2.0,1.0,1.0
+I260,Multi-vehicle Collision,Major Damage,19.0,3.0,0.0
+I261,Parked Car,Trivial Damage,17.0,1.0,0.0
+I262,Single Vehicle Collision,Major Damage,3.0,1.0,2.0
+I263,Multi-vehicle Collision,Major Damage,17.0,3.0,0.0
+I264,Multi-vehicle Collision,Minor Damage,5.0,3.0,1.0
+I265,Single Vehicle Collision,Minor Damage,9.0,1.0,1.0
+I266,Vehicle Theft,Trivial Damage,9.0,1.0,1.0
+I267,Multi-vehicle Collision,Major Damage,9.0,3.0,2.0
+I268,Multi-vehicle Collision,Minor Damage,22.0,3.0,0.0
+I269,Multi-vehicle Collision,Major Damage,15.0,3.0,0.0
+I270,Multi-vehicle Collision,Total Loss,14.0,3.0,2.0
+I271,Multi-vehicle Collision,Minor Damage,6.0,3.0,2.0
+I272,Parked Car,Minor Damage,6.0,1.0,0.0
+I273,Multi-vehicle Collision,Major Damage,22.0,4.0,2.0
+I274,Multi-vehicle Collision,Minor Damage,14.0,3.0,1.0
+I275,Multi-vehicle Collision,Minor Damage,16.0,3.0,0.0
+I276,Multi-vehicle Collision,Major Damage,10.0,3.0,0.0
+I277,Multi-vehicle Collision,Total Loss,9.0,3.0,1.0
+I278,Single Vehicle Collision,Minor Damage,4.0,1.0,1.0
+I279,Multi-vehicle Collision,Major Damage,6.0,3.0,0.0
+I280,Multi-vehicle Collision,Minor Damage,15.0,3.0,2.0
+I281,Multi-vehicle Collision,Minor Damage,12.0,3.0,1.0
+I282,Vehicle Theft,Trivial Damage,3.0,1.0,2.0
+I283,Vehicle Theft,Minor Damage,14.0,1.0,0.0
+I284,Single Vehicle Collision,Major Damage,10.0,1.0,0.0
+I285,Multi-vehicle Collision,Major Damage,17.0,3.0,1.0
+I286,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I287,Multi-vehicle Collision,Total Loss,14.0,3.0,2.0
+I288,Vehicle Theft,Trivial Damage,6.0,1.0,1.0
+I289,Single Vehicle Collision,Major Damage,6.0,1.0,1.0
+I290,Parked Car,Minor Damage,8.0,1.0,0.0
+I291,Single Vehicle Collision,Major Damage,13.0,1.0,0.0
+I292,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I293,Multi-vehicle Collision,Major Damage,14.0,3.0,1.0
+I294,Single Vehicle Collision,Minor Damage,13.0,1.0,2.0
+I295,Multi-vehicle Collision,Minor Damage,16.0,4.0,1.0
+I296,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I297,Multi-vehicle Collision,Minor Damage,15.0,3.0,2.0
+I298,Parked Car,Trivial Damage,3.0,1.0,2.0
+I299,Parked Car,Minor Damage,7.0,1.0,1.0
+I300,Multi-vehicle Collision,Major Damage,16.0,2.0,1.0
+I301,Vehicle Theft,Trivial Damage,15.0,1.0,1.0
+I302,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I303,Multi-vehicle Collision,Major Damage,23.0,3.0,0.0
+I304,Parked Car,Trivial Damage,5.0,1.0,0.0
+I305,Multi-vehicle Collision,Minor Damage,15.0,3.0,0.0
+I306,Single Vehicle Collision,Major Damage,14.0,1.0,2.0
+I307,Single Vehicle Collision,Major Damage,1.0,1.0,1.0
+I308,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I309,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I310,Multi-vehicle Collision,Total Loss,20.0,3.0,2.0
+I311,Multi-vehicle Collision,Major Damage,10.0,3.0,2.0
+I312,Multi-vehicle Collision,Major Damage,3.0,3.0,0.0
+I313,Single Vehicle Collision,Total Loss,0.0,1.0,0.0
+I314,Multi-vehicle Collision,Total Loss,10.0,3.0,2.0
+I315,Multi-vehicle Collision,Minor Damage,13.0,3.0,2.0
+I316,Single Vehicle Collision,Minor Damage,14.0,1.0,2.0
+I317,Multi-vehicle Collision,Total Loss,22.0,3.0,1.0
+I318,Multi-vehicle Collision,Total Loss,8.0,3.0,1.0
+I319,Multi-vehicle Collision,Minor Damage,1.0,3.0,1.0
+I320,Single Vehicle Collision,Major Damage,19.0,1.0,0.0
+I321,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I322,Multi-vehicle Collision,Major Damage,13.0,3.0,0.0
+I323,Single Vehicle Collision,Total Loss,4.0,1.0,1.0
+I324,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I325,Multi-vehicle Collision,Major Damage,4.0,2.0,2.0
+I326,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I327,Multi-vehicle Collision,Total Loss,21.0,3.0,0.0
+I328,Multi-vehicle Collision,Minor Damage,23.0,3.0,0.0
+I329,Multi-vehicle Collision,Major Damage,6.0,3.0,0.0
+I330,Single Vehicle Collision,Major Damage,21.0,1.0,1.0
+I331,Single Vehicle Collision,Major Damage,23.0,1.0,2.0
+I332,Multi-vehicle Collision,Major Damage,3.0,3.0,1.0
+I333,Parked Car,Trivial Damage,8.0,1.0,2.0
+I334,Parked Car,Trivial Damage,4.0,1.0,2.0
+I335,Single Vehicle Collision,Total Loss,22.0,1.0,0.0
+I336,Single Vehicle Collision,Minor Damage,16.0,1.0,0.0
+I337,Multi-vehicle Collision,Minor Damage,14.0,3.0,2.0
+I338,Single Vehicle Collision,Total Loss,13.0,1.0,2.0
+I339,Single Vehicle Collision,Minor Damage,20.0,1.0,1.0
+I340,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I341,Multi-vehicle Collision,Total Loss,23.0,3.0,2.0
+I342,Single Vehicle Collision,Minor Damage,13.0,1.0,1.0
+I343,Single Vehicle Collision,Major Damage,8.0,1.0,2.0
+I344,Vehicle Theft,Minor Damage,3.0,1.0,0.0
+I345,Single Vehicle Collision,Total Loss,16.0,1.0,2.0
+I346,Single Vehicle Collision,Minor Damage,19.0,1.0,0.0
+I347,Single Vehicle Collision,Minor Damage,0.0,1.0,2.0
+I348,Single Vehicle Collision,Total Loss,12.0,1.0,2.0
+I349,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I350,Single Vehicle Collision,Major Damage,0.0,1.0,1.0
+I351,Single Vehicle Collision,Minor Damage,22.0,1.0,1.0
+I352,Multi-vehicle Collision,Major Damage,20.0,3.0,1.0
+I353,Single Vehicle Collision,Minor Damage,0.0,1.0,1.0
+I354,Single Vehicle Collision,Minor Damage,20.0,1.0,0.0
+I355,Multi-vehicle Collision,Minor Damage,1.0,3.0,0.0
+I356,Single Vehicle Collision,Total Loss,11.0,1.0,0.0
+I357,Multi-vehicle Collision,Major Damage,14.0,3.0,1.0
+I358,Multi-vehicle Collision,Minor Damage,20.0,3.0,0.0
+I359,Single Vehicle Collision,Major Damage,22.0,1.0,1.0
+I360,Single Vehicle Collision,Total Loss,12.0,1.0,1.0
+I361,Multi-vehicle Collision,Major Damage,3.0,3.0,2.0
+I362,Multi-vehicle Collision,Major Damage,15.0,3.0,2.0
+I363,Parked Car,Trivial Damage,8.0,1.0,0.0
+I364,Multi-vehicle Collision,Major Damage,13.0,3.0,0.0
+I365,Parked Car,Minor Damage,8.0,1.0,2.0
+I366,Parked Car,Minor Damage,7.0,1.0,0.0
+I367,Vehicle Theft,Trivial Damage,9.0,1.0,2.0
+I368,Single Vehicle Collision,Minor Damage,15.0,1.0,1.0
+I369,Single Vehicle Collision,Minor Damage,5.0,1.0,0.0
+I370,Multi-vehicle Collision,Major Damage,15.0,4.0,0.0
+I371,Multi-vehicle Collision,Major Damage,22.0,3.0,2.0
+I372,Multi-vehicle Collision,Total Loss,16.0,2.0,1.0
+I373,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I374,Parked Car,Minor Damage,2.0,1.0,1.0
+I375,Multi-vehicle Collision,Minor Damage,17.0,4.0,0.0
+I376,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I377,Single Vehicle Collision,Major Damage,9.0,1.0,1.0
+I378,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I379,Multi-vehicle Collision,Minor Damage,19.0,3.0,2.0
+I380,Multi-vehicle Collision,Major Damage,14.0,3.0,1.0
+I381,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I382,Single Vehicle Collision,Minor Damage,23.0,1.0,1.0
+I383,Multi-vehicle Collision,Minor Damage,15.0,3.0,0.0
+I384,Single Vehicle Collision,Minor Damage,18.0,1.0,0.0
+I385,Single Vehicle Collision,Minor Damage,16.0,1.0,2.0
+I386,Multi-vehicle Collision,Minor Damage,12.0,3.0,1.0
+I387,Single Vehicle Collision,Major Damage,16.0,1.0,0.0
+I388,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I389,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I390,Single Vehicle Collision,Major Damage,21.0,1.0,1.0
+I391,Single Vehicle Collision,Major Damage,1.0,1.0,0.0
+I392,Multi-vehicle Collision,Total Loss,17.0,3.0,0.0
+I393,Multi-vehicle Collision,Total Loss,5.0,3.0,2.0
+I394,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I395,Multi-vehicle Collision,Major Damage,2.0,4.0,2.0
+I396,Vehicle Theft,Minor Damage,3.0,1.0,2.0
+I397,Single Vehicle Collision,Major Damage,19.0,1.0,1.0
+I398,Single Vehicle Collision,Minor Damage,17.0,1.0,0.0
+I399,Vehicle Theft,Trivial Damage,7.0,1.0,0.0
+I400,Single Vehicle Collision,Minor Damage,21.0,1.0,1.0
+I401,Multi-vehicle Collision,Total Loss,10.0,2.0,1.0
+I402,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I403,Multi-vehicle Collision,Major Damage,23.0,3.0,2.0
+I404,Single Vehicle Collision,Minor Damage,14.0,1.0,0.0
+I405,Single Vehicle Collision,Minor Damage,10.0,1.0,1.0
+I406,Multi-vehicle Collision,Total Loss,6.0,3.0,2.0
+I407,Multi-vehicle Collision,Minor Damage,10.0,3.0,0.0
+I408,Multi-vehicle Collision,Total Loss,5.0,3.0,0.0
+I409,Single Vehicle Collision,Minor Damage,17.0,1.0,1.0
+I410,Vehicle Theft,Trivial Damage,3.0,1.0,2.0
+I411,Parked Car,Minor Damage,9.0,1.0,0.0
+I412,Parked Car,Trivial Damage,6.0,1.0,2.0
+I413,Multi-vehicle Collision,Minor Damage,22.0,3.0,2.0
+I414,Multi-vehicle Collision,Major Damage,10.0,3.0,1.0
+I415,Vehicle Theft,Minor Damage,4.0,1.0,1.0
+I416,Single Vehicle Collision,Total Loss,23.0,1.0,1.0
+I417,Single Vehicle Collision,Total Loss,19.0,1.0,0.0
+I418,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I419,Vehicle Theft,Trivial Damage,6.0,1.0,1.0
+I420,Single Vehicle Collision,Minor Damage,6.0,1.0,2.0
+I421,Single Vehicle Collision,Major Damage,18.0,1.0,2.0
+I422,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I423,Single Vehicle Collision,Major Damage,21.0,1.0,0.0
+I424,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I425,Multi-vehicle Collision,Major Damage,6.0,3.0,0.0
+I426,Multi-vehicle Collision,Major Damage,0.0,4.0,0.0
+I427,Single Vehicle Collision,Total Loss,11.0,1.0,0.0
+I428,Single Vehicle Collision,Minor Damage,19.0,1.0,1.0
+I429,Multi-vehicle Collision,Major Damage,22.0,3.0,0.0
+I430,Single Vehicle Collision,Total Loss,2.0,1.0,2.0
+I431,Multi-vehicle Collision,Total Loss,16.0,4.0,1.0
+I432,Multi-vehicle Collision,Total Loss,23.0,3.0,0.0
+I433,Single Vehicle Collision,Major Damage,21.0,1.0,1.0
+I434,Single Vehicle Collision,Minor Damage,10.0,1.0,2.0
+I435,Single Vehicle Collision,Major Damage,12.0,1.0,0.0
+I436,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I437,Single Vehicle Collision,Major Damage,6.0,1.0,1.0
+I438,Parked Car,Trivial Damage,7.0,1.0,2.0
+I439,Vehicle Theft,Trivial Damage,3.0,1.0,1.0
+I440,Parked Car,Trivial Damage,10.0,1.0,2.0
+I441,Single Vehicle Collision,Total Loss,14.0,1.0,0.0
+I442,Multi-vehicle Collision,Total Loss,17.0,3.0,0.0
+I443,Single Vehicle Collision,Major Damage,16.0,1.0,0.0
+I444,Parked Car,Minor Damage,3.0,1.0,2.0
+I445,Parked Car,Minor Damage,7.0,1.0,0.0
+I446,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I447,Single Vehicle Collision,Total Loss,20.0,1.0,2.0
+I448,Single Vehicle Collision,Minor Damage,23.0,1.0,2.0
+I449,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I450,Multi-vehicle Collision,Major Damage,0.0,4.0,0.0
+I451,Single Vehicle Collision,Minor Damage,2.0,1.0,0.0
+I452,Single Vehicle Collision,Total Loss,3.0,1.0,2.0
+I453,Parked Car,Trivial Damage,3.0,1.0,1.0
+I454,Multi-vehicle Collision,Total Loss,15.0,3.0,2.0
+I455,Single Vehicle Collision,Minor Damage,23.0,1.0,2.0
+I456,Multi-vehicle Collision,Minor Damage,9.0,3.0,2.0
+I457,Vehicle Theft,Minor Damage,20.0,1.0,0.0
+I458,Single Vehicle Collision,Major Damage,5.0,1.0,2.0
+I459,Single Vehicle Collision,Total Loss,15.0,1.0,0.0
+I460,Single Vehicle Collision,Minor Damage,13.0,1.0,2.0
+I461,Single Vehicle Collision,Minor Damage,16.0,1.0,2.0
+I462,Single Vehicle Collision,Minor Damage,0.0,1.0,0.0
+I463,Multi-vehicle Collision,Major Damage,10.0,3.0,2.0
+I464,Multi-vehicle Collision,Total Loss,14.0,3.0,2.0
+I465,Multi-vehicle Collision,Total Loss,1.0,3.0,2.0
+I466,Single Vehicle Collision,Major Damage,16.0,1.0,2.0
+I467,Multi-vehicle Collision,Major Damage,2.0,3.0,0.0
+I468,Multi-vehicle Collision,Major Damage,23.0,3.0,0.0
+I469,Multi-vehicle Collision,Minor Damage,19.0,3.0,2.0
+I470,Multi-vehicle Collision,Minor Damage,23.0,3.0,2.0
+I471,Single Vehicle Collision,Major Damage,10.0,1.0,2.0
+I472,Multi-vehicle Collision,Minor Damage,12.0,3.0,1.0
+I473,Multi-vehicle Collision,Total Loss,15.0,3.0,2.0
+I474,Vehicle Theft,Trivial Damage,3.0,1.0,1.0
+I475,Parked Car,Minor Damage,19.0,1.0,2.0
+I476,Multi-vehicle Collision,Total Loss,16.0,3.0,1.0
+I477,Single Vehicle Collision,Major Damage,16.0,1.0,0.0
+I478,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I479,Vehicle Theft,Minor Damage,6.0,1.0,1.0
+I480,Single Vehicle Collision,Major Damage,18.0,1.0,2.0
+I481,Multi-vehicle Collision,Major Damage,20.0,3.0,0.0
+I482,Single Vehicle Collision,Minor Damage,14.0,1.0,0.0
+I483,Multi-vehicle Collision,Major Damage,8.0,3.0,0.0
+I484,Multi-vehicle Collision,Minor Damage,17.0,2.0,2.0
+I485,Single Vehicle Collision,Minor Damage,9.0,1.0,2.0
+I486,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I487,Single Vehicle Collision,Total Loss,2.0,1.0,0.0
+I488,Multi-vehicle Collision,Minor Damage,23.0,3.0,0.0
+I489,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I490,Multi-vehicle Collision,Total Loss,6.0,3.0,0.0
+I491,Vehicle Theft,Minor Damage,3.0,1.0,1.0
+I492,Multi-vehicle Collision,Minor Damage,14.0,3.0,1.0
+I493,Multi-vehicle Collision,Major Damage,16.0,3.0,0.0
+I494,Single Vehicle Collision,Minor Damage,12.0,1.0,1.0
+I495,Multi-vehicle Collision,Major Damage,1.0,3.0,2.0
+I496,Single Vehicle Collision,Minor Damage,19.0,1.0,0.0
+I497,Vehicle Theft,Trivial Damage,7.0,1.0,1.0
+I498,Multi-vehicle Collision,Minor Damage,6.0,4.0,1.0
+I499,Single Vehicle Collision,Major Damage,11.0,1.0,0.0
+I500,Single Vehicle Collision,Minor Damage,2.0,1.0,1.0
+I501,Single Vehicle Collision,Minor Damage,15.0,1.0,2.0
+I502,Single Vehicle Collision,Major Damage,0.0,1.0,0.0
+I503,Single Vehicle Collision,Major Damage,12.0,1.0,1.0
+I504,Single Vehicle Collision,Total Loss,1.0,1.0,1.0
+I505,Multi-vehicle Collision,Major Damage,16.0,2.0,1.0
+I506,Single Vehicle Collision,Minor Damage,2.0,1.0,2.0
+I507,Multi-vehicle Collision,Minor Damage,13.0,3.0,2.0
+I508,Single Vehicle Collision,Minor Damage,0.0,1.0,2.0
+I509,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I510,Multi-vehicle Collision,Total Loss,16.0,3.0,2.0
+I511,Single Vehicle Collision,Total Loss,8.0,1.0,2.0
+I512,Parked Car,Trivial Damage,9.0,1.0,2.0
+I513,Single Vehicle Collision,Total Loss,11.0,1.0,2.0
+I514,Multi-vehicle Collision,Minor Damage,6.0,3.0,0.0
+I515,Single Vehicle Collision,Total Loss,18.0,1.0,0.0
+I516,Single Vehicle Collision,Total Loss,11.0,1.0,0.0
+I517,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I518,Multi-vehicle Collision,Major Damage,21.0,3.0,1.0
+I519,Multi-vehicle Collision,Minor Damage,0.0,3.0,1.0
+I520,Vehicle Theft,Trivial Damage,9.0,1.0,0.0
+I521,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I522,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I523,Multi-vehicle Collision,Minor Damage,20.0,4.0,0.0
+I524,Multi-vehicle Collision,Total Loss,9.0,3.0,2.0
+I525,Parked Car,Minor Damage,5.0,1.0,1.0
+I526,Vehicle Theft,Trivial Damage,12.0,1.0,1.0
+I527,Multi-vehicle Collision,Major Damage,6.0,3.0,2.0
+I528,Vehicle Theft,Trivial Damage,8.0,1.0,1.0
+I529,Single Vehicle Collision,Total Loss,14.0,1.0,0.0
+I530,Single Vehicle Collision,Major Damage,10.0,1.0,1.0
+I531,Single Vehicle Collision,Minor Damage,12.0,1.0,2.0
+I532,Single Vehicle Collision,Major Damage,12.0,1.0,0.0
+I533,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I534,Vehicle Theft,Minor Damage,13.0,1.0,0.0
+I535,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I536,Single Vehicle Collision,Major Damage,14.0,1.0,1.0
+I537,Multi-vehicle Collision,Major Damage,3.0,3.0,1.0
+I538,Multi-vehicle Collision,Minor Damage,18.0,3.0,2.0
+I539,Parked Car,Minor Damage,5.0,1.0,1.0
+I540,Single Vehicle Collision,Total Loss,19.0,1.0,0.0
+I541,Single Vehicle Collision,Major Damage,0.0,1.0,2.0
+I542,Parked Car,Trivial Damage,22.0,1.0,0.0
+I543,Multi-vehicle Collision,Major Damage,21.0,3.0,1.0
+I544,Multi-vehicle Collision,Minor Damage,4.0,3.0,0.0
+I545,Single Vehicle Collision,Minor Damage,10.0,1.0,0.0
+I546,Single Vehicle Collision,Major Damage,5.0,1.0,1.0
+I547,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I548,Multi-vehicle Collision,Major Damage,18.0,3.0,2.0
+I549,Vehicle Theft,Minor Damage,6.0,1.0,1.0
+I550,Multi-vehicle Collision,Minor Damage,0.0,3.0,2.0
+I551,Multi-vehicle Collision,Total Loss,5.0,3.0,0.0
+I552,Single Vehicle Collision,Minor Damage,8.0,1.0,0.0
+I553,Vehicle Theft,Minor Damage,5.0,1.0,2.0
+I554,Parked Car,Trivial Damage,9.0,1.0,2.0
+I555,Multi-vehicle Collision,Minor Damage,10.0,3.0,1.0
+I556,Single Vehicle Collision,Major Damage,16.0,1.0,2.0
+I557,Vehicle Theft,Trivial Damage,8.0,1.0,2.0
+I558,Vehicle Theft,Minor Damage,5.0,1.0,0.0
+I559,Multi-vehicle Collision,Total Loss,11.0,3.0,2.0
+I560,Multi-vehicle Collision,Minor Damage,15.0,3.0,1.0
+I561,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I562,Single Vehicle Collision,Minor Damage,23.0,1.0,0.0
+I563,Single Vehicle Collision,Total Loss,23.0,1.0,1.0
+I564,Single Vehicle Collision,Minor Damage,10.0,1.0,0.0
+I565,Multi-vehicle Collision,Minor Damage,12.0,4.0,2.0
+I566,Single Vehicle Collision,Minor Damage,4.0,1.0,2.0
+I567,Single Vehicle Collision,Minor Damage,16.0,1.0,2.0
+I568,Multi-vehicle Collision,Major Damage,18.0,3.0,1.0
+I569,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I570,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I571,Multi-vehicle Collision,Total Loss,4.0,3.0,0.0
+I572,Multi-vehicle Collision,Minor Damage,20.0,3.0,0.0
+I573,Multi-vehicle Collision,Major Damage,1.0,3.0,2.0
+I574,Single Vehicle Collision,Major Damage,19.0,1.0,0.0
+I575,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I576,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I577,Single Vehicle Collision,Minor Damage,2.0,1.0,2.0
+I578,Multi-vehicle Collision,Major Damage,9.0,3.0,2.0
+I579,Multi-vehicle Collision,Total Loss,15.0,2.0,1.0
+I580,Single Vehicle Collision,Major Damage,23.0,1.0,2.0
+I581,Single Vehicle Collision,Total Loss,16.0,1.0,2.0
+I582,Multi-vehicle Collision,Major Damage,21.0,4.0,2.0
+I583,Multi-vehicle Collision,Minor Damage,21.0,2.0,2.0
+I584,Multi-vehicle Collision,Minor Damage,3.0,3.0,0.0
+I585,Parked Car,Trivial Damage,4.0,1.0,1.0
+I586,Vehicle Theft,Minor Damage,17.0,1.0,1.0
+I587,Vehicle Theft,Trivial Damage,7.0,1.0,1.0
+I588,Multi-vehicle Collision,Major Damage,14.0,2.0,1.0
+I589,Single Vehicle Collision,Major Damage,13.0,1.0,2.0
+I590,Multi-vehicle Collision,Total Loss,23.0,2.0,2.0
+I591,Multi-vehicle Collision,Total Loss,23.0,3.0,2.0
+I592,Single Vehicle Collision,Major Damage,16.0,1.0,2.0
+I593,Single Vehicle Collision,Total Loss,17.0,1.0,2.0
+I594,Single Vehicle Collision,Major Damage,9.0,1.0,1.0
+I595,Multi-vehicle Collision,Major Damage,13.0,3.0,2.0
+I596,Single Vehicle Collision,Major Damage,13.0,1.0,1.0
+I597,Parked Car,Trivial Damage,3.0,1.0,2.0
+I598,Parked Car,Trivial Damage,3.0,1.0,2.0
+I599,Multi-vehicle Collision,Major Damage,16.0,3.0,1.0
+I600,Multi-vehicle Collision,Major Damage,12.0,3.0,1.0
+I601,Single Vehicle Collision,Minor Damage,4.0,1.0,1.0
+I602,Single Vehicle Collision,Minor Damage,3.0,1.0,2.0
+I603,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I604,Vehicle Theft,Trivial Damage,19.0,1.0,2.0
+I605,Multi-vehicle Collision,Minor Damage,15.0,2.0,0.0
+I606,Single Vehicle Collision,Minor Damage,6.0,1.0,1.0
+I607,Single Vehicle Collision,Total Loss,3.0,1.0,0.0
+I608,Parked Car,Minor Damage,17.0,1.0,0.0
+I609,Multi-vehicle Collision,Total Loss,4.0,4.0,2.0
+I610,Single Vehicle Collision,Minor Damage,14.0,1.0,2.0
+I611,Multi-vehicle Collision,Minor Damage,3.0,3.0,1.0
+I612,Multi-vehicle Collision,Minor Damage,4.0,3.0,2.0
+I613,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I614,Multi-vehicle Collision,Minor Damage,23.0,3.0,0.0
+I615,Parked Car,Minor Damage,3.0,1.0,0.0
+I616,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I617,Multi-vehicle Collision,Major Damage,14.0,2.0,2.0
+I618,Multi-vehicle Collision,Minor Damage,14.0,2.0,2.0
+I619,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I620,Multi-vehicle Collision,Minor Damage,17.0,3.0,0.0
+I621,Single Vehicle Collision,Minor Damage,14.0,1.0,0.0
+I622,Single Vehicle Collision,Minor Damage,2.0,1.0,2.0
+I623,Parked Car,Trivial Damage,4.0,1.0,2.0
+I624,Single Vehicle Collision,Major Damage,2.0,1.0,1.0
+I625,Parked Car,Minor Damage,10.0,1.0,1.0
+I626,Single Vehicle Collision,Major Damage,11.0,1.0,1.0
+I627,Multi-vehicle Collision,Major Damage,1.0,4.0,1.0
+I628,Parked Car,Trivial Damage,20.0,1.0,0.0
+I629,Single Vehicle Collision,Major Damage,10.0,1.0,2.0
+I630,Multi-vehicle Collision,Total Loss,20.0,2.0,0.0
+I631,Multi-vehicle Collision,Minor Damage,10.0,3.0,2.0
+I632,Multi-vehicle Collision,Total Loss,2.0,2.0,1.0
+I633,Single Vehicle Collision,Minor Damage,19.0,1.0,0.0
+I634,Single Vehicle Collision,Major Damage,10.0,1.0,1.0
+I635,Single Vehicle Collision,Major Damage,14.0,1.0,0.0
+I636,Parked Car,Trivial Damage,5.0,1.0,0.0
+I637,Vehicle Theft,Minor Damage,8.0,1.0,2.0
+I638,Vehicle Theft,Trivial Damage,4.0,1.0,0.0
+I639,Multi-vehicle Collision,Major Damage,4.0,3.0,1.0
+I640,Multi-vehicle Collision,Minor Damage,20.0,2.0,1.0
+I641,Single Vehicle Collision,Total Loss,18.0,1.0,2.0
+I642,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I643,Single Vehicle Collision,Major Damage,1.0,1.0,2.0
+I644,Single Vehicle Collision,Major Damage,17.0,1.0,0.0
+I645,Single Vehicle Collision,Minor Damage,23.0,1.0,2.0
+I646,Multi-vehicle Collision,Total Loss,4.0,3.0,2.0
+I647,Multi-vehicle Collision,Total Loss,0.0,3.0,2.0
+I648,Single Vehicle Collision,Minor Damage,11.0,1.0,1.0
+I649,Parked Car,Trivial Damage,4.0,1.0,0.0
+I650,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I651,Multi-vehicle Collision,Major Damage,2.0,3.0,0.0
+I652,Multi-vehicle Collision,Minor Damage,11.0,3.0,1.0
+I653,Multi-vehicle Collision,Major Damage,23.0,3.0,2.0
+I654,Multi-vehicle Collision,Minor Damage,17.0,3.0,1.0
+I655,Single Vehicle Collision,Minor Damage,22.0,1.0,1.0
+I656,Single Vehicle Collision,Major Damage,18.0,1.0,1.0
+I657,Vehicle Theft,Trivial Damage,8.0,1.0,1.0
+I658,Multi-vehicle Collision,Minor Damage,15.0,3.0,0.0
+I659,Single Vehicle Collision,Minor Damage,20.0,1.0,2.0
+I660,Single Vehicle Collision,Minor Damage,4.0,1.0,0.0
+I661,Multi-vehicle Collision,Total Loss,10.0,3.0,0.0
+I662,Single Vehicle Collision,Major Damage,10.0,1.0,1.0
+I663,Multi-vehicle Collision,Total Loss,22.0,3.0,1.0
+I664,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I665,Single Vehicle Collision,Minor Damage,13.0,1.0,0.0
+I666,Single Vehicle Collision,Total Loss,23.0,1.0,2.0
+I667,Multi-vehicle Collision,Major Damage,18.0,3.0,2.0
+I668,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I669,Single Vehicle Collision,Major Damage,21.0,1.0,2.0
+I670,Multi-vehicle Collision,Major Damage,15.0,3.0,1.0
+I671,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I672,Single Vehicle Collision,Minor Damage,2.0,1.0,0.0
+I673,Multi-vehicle Collision,Minor Damage,1.0,3.0,1.0
+I674,Single Vehicle Collision,Major Damage,3.0,1.0,0.0
+I675,Vehicle Theft,Trivial Damage,0.0,1.0,1.0
+I676,Vehicle Theft,Trivial Damage,4.0,1.0,0.0
+I677,Multi-vehicle Collision,Minor Damage,11.0,3.0,2.0
+I678,Parked Car,Trivial Damage,4.0,1.0,1.0
+I679,Multi-vehicle Collision,Minor Damage,11.0,3.0,0.0
+I680,Multi-vehicle Collision,Minor Damage,4.0,3.0,2.0
+I681,Single Vehicle Collision,Total Loss,20.0,1.0,2.0
+I682,Parked Car,Trivial Damage,22.0,1.0,0.0
+I683,Parked Car,Trivial Damage,4.0,1.0,0.0
+I684,Multi-vehicle Collision,Total Loss,21.0,4.0,0.0
+I685,Single Vehicle Collision,Major Damage,20.0,1.0,1.0
+I686,Single Vehicle Collision,Major Damage,7.0,1.0,2.0
+I687,Parked Car,Trivial Damage,4.0,1.0,0.0
+I688,Multi-vehicle Collision,Minor Damage,17.0,3.0,0.0
+I689,Multi-vehicle Collision,Minor Damage,20.0,3.0,1.0
+I690,Single Vehicle Collision,Major Damage,10.0,1.0,2.0
+I691,Single Vehicle Collision,Minor Damage,8.0,1.0,2.0
+I692,Single Vehicle Collision,Major Damage,6.0,1.0,0.0
+I693,Parked Car,Minor Damage,4.0,1.0,1.0
+I694,Multi-vehicle Collision,Minor Damage,17.0,3.0,2.0
+I695,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I696,Vehicle Theft,Trivial Damage,9.0,1.0,2.0
+I697,Single Vehicle Collision,Total Loss,17.0,1.0,2.0
+I698,Single Vehicle Collision,Major Damage,13.0,1.0,2.0
+I699,Vehicle Theft,Trivial Damage,5.0,1.0,1.0
+I700,Multi-vehicle Collision,Total Loss,23.0,3.0,2.0
+I701,Multi-vehicle Collision,Major Damage,1.0,2.0,2.0
+I702,Multi-vehicle Collision,Major Damage,17.0,4.0,2.0
+I703,Parked Car,Minor Damage,3.0,1.0,1.0
+I704,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I705,Multi-vehicle Collision,Major Damage,23.0,3.0,1.0
+I706,Single Vehicle Collision,Minor Damage,13.0,1.0,0.0
+I707,Single Vehicle Collision,Minor Damage,17.0,1.0,2.0
+I708,Single Vehicle Collision,Minor Damage,2.0,1.0,0.0
+I709,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I710,Single Vehicle Collision,Minor Damage,17.0,1.0,1.0
+I711,Single Vehicle Collision,Major Damage,3.0,1.0,1.0
+I712,Parked Car,Minor Damage,16.0,1.0,2.0
+I713,Multi-vehicle Collision,Major Damage,13.0,3.0,1.0
+I714,Single Vehicle Collision,Major Damage,8.0,1.0,2.0
+I715,Single Vehicle Collision,Major Damage,23.0,1.0,0.0
+I716,Multi-vehicle Collision,Major Damage,15.0,3.0,2.0
+I717,Single Vehicle Collision,Total Loss,3.0,1.0,2.0
+I718,Multi-vehicle Collision,Minor Damage,4.0,3.0,0.0
+I719,Single Vehicle Collision,Minor Damage,8.0,1.0,0.0
+I720,Vehicle Theft,Trivial Damage,21.0,1.0,1.0
+I721,Single Vehicle Collision,Total Loss,23.0,1.0,0.0
+I722,Parked Car,Trivial Damage,8.0,1.0,1.0
+I723,Single Vehicle Collision,Major Damage,21.0,1.0,2.0
+I724,Parked Car,Minor Damage,5.0,1.0,2.0
+I725,Multi-vehicle Collision,Total Loss,12.0,3.0,0.0
+I726,Multi-vehicle Collision,Minor Damage,7.0,3.0,2.0
+I727,Parked Car,Minor Damage,0.0,1.0,1.0
+I728,Single Vehicle Collision,Major Damage,14.0,1.0,0.0
+I729,Single Vehicle Collision,Major Damage,13.0,1.0,2.0
+I730,Single Vehicle Collision,Major Damage,1.0,1.0,1.0
+I731,Single Vehicle Collision,Major Damage,23.0,1.0,0.0
+I732,Single Vehicle Collision,Major Damage,1.0,1.0,2.0
+I733,Single Vehicle Collision,Total Loss,9.0,1.0,2.0
+I734,Single Vehicle Collision,Total Loss,3.0,1.0,0.0
+I735,Single Vehicle Collision,Minor Damage,0.0,1.0,2.0
+I736,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I737,Multi-vehicle Collision,Total Loss,18.0,3.0,2.0
+I738,Multi-vehicle Collision,Total Loss,17.0,3.0,2.0
+I739,Single Vehicle Collision,Minor Damage,11.0,1.0,0.0
+I740,Vehicle Theft,Minor Damage,0.0,1.0,0.0
+I741,Multi-vehicle Collision,Minor Damage,14.0,3.0,1.0
+I742,Single Vehicle Collision,Minor Damage,4.0,1.0,1.0
+I743,Multi-vehicle Collision,Major Damage,2.0,3.0,2.0
+I744,Multi-vehicle Collision,Major Damage,9.0,3.0,2.0
+I745,Multi-vehicle Collision,Major Damage,21.0,4.0,0.0
+I746,Multi-vehicle Collision,Major Damage,0.0,3.0,2.0
+I747,Multi-vehicle Collision,Total Loss,17.0,3.0,0.0
+I748,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I749,Multi-vehicle Collision,Major Damage,20.0,3.0,0.0
+I750,Single Vehicle Collision,Total Loss,5.0,1.0,0.0
+I751,Vehicle Theft,Minor Damage,7.0,1.0,2.0
+I752,Single Vehicle Collision,Minor Damage,6.0,1.0,0.0
+I753,Multi-vehicle Collision,Minor Damage,2.0,4.0,0.0
+I754,Multi-vehicle Collision,Total Loss,19.0,3.0,1.0
+I755,Multi-vehicle Collision,Minor Damage,21.0,3.0,2.0
+I756,Multi-vehicle Collision,Major Damage,3.0,3.0,0.0
+I757,Single Vehicle Collision,Total Loss,22.0,1.0,2.0
+I758,Single Vehicle Collision,Total Loss,22.0,1.0,2.0
+I759,Single Vehicle Collision,Minor Damage,16.0,1.0,0.0
+I760,Single Vehicle Collision,Minor Damage,0.0,1.0,0.0
+I761,Multi-vehicle Collision,Minor Damage,1.0,3.0,2.0
+I762,Multi-vehicle Collision,Major Damage,19.0,3.0,0.0
+I763,Multi-vehicle Collision,Major Damage,0.0,3.0,2.0
+I764,Multi-vehicle Collision,Major Damage,2.0,3.0,0.0
+I765,Multi-vehicle Collision,Minor Damage,5.0,3.0,1.0
+I766,Single Vehicle Collision,Total Loss,6.0,1.0,2.0
+I767,Multi-vehicle Collision,Total Loss,21.0,3.0,2.0
+I768,Multi-vehicle Collision,Major Damage,11.0,3.0,0.0
+I769,Single Vehicle Collision,Minor Damage,3.0,1.0,2.0
+I770,Multi-vehicle Collision,Total Loss,4.0,3.0,2.0
+I771,Multi-vehicle Collision,Minor Damage,2.0,3.0,1.0
+I772,Single Vehicle Collision,Minor Damage,22.0,1.0,1.0
+I773,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I774,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I775,Multi-vehicle Collision,Minor Damage,14.0,4.0,1.0
+I776,Parked Car,Trivial Damage,5.0,1.0,1.0
+I777,Single Vehicle Collision,Minor Damage,18.0,1.0,2.0
+I778,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I779,Multi-vehicle Collision,Total Loss,0.0,3.0,2.0
+I780,Multi-vehicle Collision,Minor Damage,1.0,3.0,2.0
+I781,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I782,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I783,Vehicle Theft,Minor Damage,6.0,1.0,0.0
+I784,Parked Car,Trivial Damage,1.0,1.0,0.0
+I785,Multi-vehicle Collision,Total Loss,21.0,3.0,0.0
+I786,Multi-vehicle Collision,Major Damage,3.0,3.0,2.0
+I787,Multi-vehicle Collision,Minor Damage,14.0,4.0,0.0
+I788,Multi-vehicle Collision,Minor Damage,19.0,3.0,1.0
+I789,Single Vehicle Collision,Major Damage,7.0,1.0,2.0
+I790,Single Vehicle Collision,Minor Damage,0.0,1.0,0.0
+I791,Parked Car,Trivial Damage,6.0,1.0,2.0
+I792,Single Vehicle Collision,Total Loss,0.0,1.0,0.0
+I793,Multi-vehicle Collision,Total Loss,9.0,3.0,0.0
+I794,Single Vehicle Collision,Total Loss,23.0,1.0,0.0
+I795,Multi-vehicle Collision,Minor Damage,13.0,3.0,2.0
+I796,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I797,Single Vehicle Collision,Major Damage,7.0,1.0,2.0
+I798,Single Vehicle Collision,Minor Damage,23.0,1.0,0.0
+I799,Single Vehicle Collision,Major Damage,7.0,1.0,2.0
+I800,Parked Car,Trivial Damage,20.0,1.0,0.0
+I801,Single Vehicle Collision,Minor Damage,22.0,1.0,0.0
+I802,Multi-vehicle Collision,Minor Damage,10.0,3.0,2.0
+I803,Single Vehicle Collision,Total Loss,10.0,1.0,2.0
+I804,Single Vehicle Collision,Minor Damage,17.0,1.0,1.0
+I805,Parked Car,Trivial Damage,3.0,1.0,2.0
+I806,Single Vehicle Collision,Minor Damage,10.0,1.0,0.0
+I807,Single Vehicle Collision,Major Damage,1.0,1.0,0.0
+I808,Multi-vehicle Collision,Minor Damage,1.0,3.0,2.0
+I809,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I810,Single Vehicle Collision,Major Damage,19.0,1.0,2.0
+I811,Multi-vehicle Collision,Total Loss,3.0,3.0,0.0
+I812,Vehicle Theft,Minor Damage,3.0,1.0,0.0
+I813,Single Vehicle Collision,Minor Damage,23.0,1.0,2.0
+I814,Vehicle Theft,Minor Damage,7.0,1.0,1.0
+I815,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I816,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I817,Multi-vehicle Collision,Minor Damage,4.0,4.0,0.0
+I818,Single Vehicle Collision,Major Damage,16.0,1.0,1.0
+I819,Vehicle Theft,Trivial Damage,3.0,1.0,2.0
+I820,Single Vehicle Collision,Minor Damage,5.0,1.0,0.0
+I821,Vehicle Theft,Trivial Damage,14.0,1.0,0.0
+I822,Multi-vehicle Collision,Minor Damage,7.0,3.0,0.0
+I823,Single Vehicle Collision,Minor Damage,16.0,1.0,2.0
+I824,Single Vehicle Collision,Major Damage,6.0,1.0,2.0
+I825,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I826,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I827,Single Vehicle Collision,Minor Damage,10.0,1.0,0.0
+I828,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I829,Multi-vehicle Collision,Major Damage,12.0,3.0,2.0
+I830,Multi-vehicle Collision,Total Loss,10.0,3.0,2.0
+I831,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I832,Multi-vehicle Collision,Major Damage,12.0,3.0,2.0
+I833,Vehicle Theft,Minor Damage,10.0,1.0,1.0
+I834,Multi-vehicle Collision,Total Loss,3.0,4.0,0.0
+I835,Vehicle Theft,Minor Damage,21.0,1.0,1.0
+I836,Vehicle Theft,Minor Damage,6.0,1.0,0.0
+I837,Single Vehicle Collision,Total Loss,0.0,1.0,0.0
+I838,Vehicle Theft,Trivial Damage,6.0,1.0,0.0
+I839,Multi-vehicle Collision,Major Damage,20.0,3.0,1.0
+I840,Single Vehicle Collision,Major Damage,4.0,1.0,2.0
+I841,Parked Car,Trivial Damage,9.0,1.0,0.0
+I842,Multi-vehicle Collision,Minor Damage,20.0,3.0,1.0
+I843,Vehicle Theft,Minor Damage,7.0,1.0,2.0
+I844,Multi-vehicle Collision,Major Damage,18.0,3.0,0.0
+I845,Multi-vehicle Collision,Minor Damage,0.0,3.0,1.0
+I846,Multi-vehicle Collision,Major Damage,11.0,3.0,0.0
+I847,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I848,Multi-vehicle Collision,Minor Damage,19.0,3.0,1.0
+I849,Single Vehicle Collision,Major Damage,23.0,1.0,1.0
+I850,Parked Car,Trivial Damage,23.0,1.0,0.0
+I851,Multi-vehicle Collision,Total Loss,19.0,3.0,2.0
+I852,Single Vehicle Collision,Major Damage,19.0,1.0,1.0
+I853,Multi-vehicle Collision,Total Loss,17.0,3.0,2.0
+I854,Single Vehicle Collision,Minor Damage,18.0,1.0,1.0
+I855,Multi-vehicle Collision,Total Loss,17.0,3.0,2.0
+I856,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I857,Multi-vehicle Collision,Minor Damage,22.0,3.0,0.0
+I858,Single Vehicle Collision,Minor Damage,7.0,1.0,0.0
+I859,Multi-vehicle Collision,Minor Damage,17.0,3.0,2.0
+I860,Multi-vehicle Collision,Total Loss,16.0,3.0,2.0
+I861,Multi-vehicle Collision,Minor Damage,13.0,3.0,1.0
+I862,Multi-vehicle Collision,Minor Damage,17.0,3.0,0.0
+I863,Single Vehicle Collision,Minor Damage,3.0,1.0,2.0
+I864,Multi-vehicle Collision,Minor Damage,15.0,3.0,0.0
+I865,Single Vehicle Collision,Total Loss,16.0,1.0,2.0
+I866,Single Vehicle Collision,Major Damage,18.0,1.0,1.0
+I867,Single Vehicle Collision,Minor Damage,18.0,1.0,1.0
+I868,Multi-vehicle Collision,Total Loss,22.0,2.0,0.0
+I869,Multi-vehicle Collision,Minor Damage,15.0,3.0,1.0
+I870,Multi-vehicle Collision,Major Damage,16.0,3.0,1.0
+I871,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I872,Parked Car,Minor Damage,8.0,1.0,2.0
+I873,Multi-vehicle Collision,Major Damage,23.0,3.0,0.0
+I874,Single Vehicle Collision,Major Damage,18.0,1.0,0.0
+I875,Single Vehicle Collision,Minor Damage,10.0,1.0,1.0
+I876,Single Vehicle Collision,Major Damage,12.0,1.0,0.0
+I877,Vehicle Theft,Trivial Damage,5.0,1.0,1.0
+I878,Multi-vehicle Collision,Total Loss,21.0,3.0,2.0
+I879,Multi-vehicle Collision,Major Damage,17.0,3.0,1.0
+I880,Single Vehicle Collision,Total Loss,4.0,1.0,2.0
+I881,Single Vehicle Collision,Major Damage,11.0,1.0,1.0
+I882,Single Vehicle Collision,Major Damage,18.0,1.0,1.0
+I883,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I884,Multi-vehicle Collision,Major Damage,18.0,3.0,0.0
+I885,Single Vehicle Collision,Minor Damage,16.0,1.0,2.0
+I886,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I887,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I888,Parked Car,Minor Damage,4.0,1.0,0.0
+I889,Single Vehicle Collision,Major Damage,8.0,1.0,1.0
+I890,Multi-vehicle Collision,Major Damage,19.0,3.0,2.0
+I891,Single Vehicle Collision,Total Loss,18.0,1.0,2.0
+I892,Multi-vehicle Collision,Total Loss,9.0,2.0,0.0
+I893,Vehicle Theft,Trivial Damage,6.0,1.0,2.0
+I894,Vehicle Theft,Minor Damage,8.0,1.0,0.0
+I895,Parked Car,Minor Damage,6.0,1.0,1.0
+I896,Multi-vehicle Collision,Major Damage,23.0,3.0,0.0
+I897,Parked Car,Trivial Damage,13.0,1.0,0.0
+I898,Multi-vehicle Collision,Minor Damage,3.0,3.0,2.0
+I899,Single Vehicle Collision,Major Damage,23.0,1.0,0.0
+I900,Vehicle Theft,Minor Damage,8.0,1.0,1.0
+I901,Single Vehicle Collision,Total Loss,23.0,1.0,0.0
+I902,Single Vehicle Collision,Total Loss,23.0,1.0,0.0
+I903,Multi-vehicle Collision,Minor Damage,9.0,3.0,2.0
+I904,Single Vehicle Collision,Minor Damage,22.0,1.0,2.0
+I905,Multi-vehicle Collision,Total Loss,22.0,3.0,2.0
+I906,Multi-vehicle Collision,Major Damage,15.0,3.0,1.0
+I907,Multi-vehicle Collision,Major Damage,16.0,3.0,2.0
+I908,Multi-vehicle Collision,Minor Damage,17.0,3.0,1.0
+I909,Vehicle Theft,Minor Damage,3.0,1.0,1.0
+I910,Multi-vehicle Collision,Total Loss,10.0,3.0,0.0
+I911,Single Vehicle Collision,Minor Damage,9.0,1.0,1.0
+I912,Multi-vehicle Collision,Total Loss,13.0,2.0,0.0
+I913,Multi-vehicle Collision,Major Damage,15.0,3.0,2.0
+I914,Single Vehicle Collision,Minor Damage,23.0,1.0,1.0
+I915,Multi-vehicle Collision,Major Damage,2.0,4.0,0.0
+I916,Single Vehicle Collision,Major Damage,14.0,1.0,2.0
+I917,Vehicle Theft,Trivial Damage,7.0,1.0,1.0
+I918,Single Vehicle Collision,Major Damage,23.0,1.0,1.0
+I919,Multi-vehicle Collision,Minor Damage,7.0,3.0,2.0
+I920,Multi-vehicle Collision,Minor Damage,8.0,3.0,1.0
+I921,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I922,Multi-vehicle Collision,Minor Damage,10.0,3.0,0.0
+I923,Vehicle Theft,Minor Damage,9.0,1.0,0.0
+I924,Single Vehicle Collision,Total Loss,2.0,1.0,1.0
+I925,Multi-vehicle Collision,Minor Damage,18.0,3.0,0.0
+I926,Vehicle Theft,Minor Damage,4.0,1.0,2.0
+I927,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I928,Single Vehicle Collision,Major Damage,15.0,1.0,1.0
+I929,Vehicle Theft,Trivial Damage,9.0,1.0,1.0
+I930,Single Vehicle Collision,Major Damage,6.0,1.0,0.0
+I931,Multi-vehicle Collision,Major Damage,11.0,4.0,0.0
+I932,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I933,Multi-vehicle Collision,Minor Damage,4.0,3.0,2.0
+I934,Multi-vehicle Collision,Minor Damage,20.0,3.0,1.0
+I935,Multi-vehicle Collision,Major Damage,0.0,3.0,1.0
+I936,Multi-vehicle Collision,Total Loss,18.0,4.0,2.0
+I937,Single Vehicle Collision,Minor Damage,6.0,1.0,1.0
+I938,Single Vehicle Collision,Total Loss,23.0,1.0,2.0
+I939,Single Vehicle Collision,Major Damage,4.0,1.0,0.0
+I940,Multi-vehicle Collision,Major Damage,21.0,3.0,1.0
+I941,Parked Car,Minor Damage,7.0,1.0,1.0
+I942,Multi-vehicle Collision,Major Damage,19.0,3.0,0.0
+I943,Parked Car,Minor Damage,5.0,1.0,1.0
+I944,Multi-vehicle Collision,Minor Damage,22.0,3.0,0.0
+I945,Single Vehicle Collision,Total Loss,12.0,1.0,1.0
+I946,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I947,Single Vehicle Collision,Major Damage,10.0,1.0,2.0
+I948,Single Vehicle Collision,Minor Damage,7.0,1.0,0.0
+I949,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I950,Multi-vehicle Collision,Total Loss,0.0,3.0,2.0
+I951,Parked Car,Minor Damage,9.0,1.0,1.0
+I952,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I953,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I954,Vehicle Theft,Minor Damage,3.0,1.0,1.0
+I955,Single Vehicle Collision,Minor Damage,16.0,1.0,0.0
+I956,Single Vehicle Collision,Total Loss,14.0,1.0,0.0
+I957,Multi-vehicle Collision,Total Loss,21.0,3.0,0.0
+I958,Single Vehicle Collision,Minor Damage,19.0,1.0,2.0
+I959,Multi-vehicle Collision,Major Damage,13.0,3.0,1.0
+I960,Vehicle Theft,Minor Damage,21.0,1.0,0.0
+I961,Multi-vehicle Collision,Minor Damage,11.0,3.0,1.0
+I962,Vehicle Theft,Trivial Damage,16.0,1.0,2.0
+I963,Single Vehicle Collision,Total Loss,9.0,1.0,0.0
+I964,Vehicle Theft,Minor Damage,8.0,1.0,0.0
+I965,Vehicle Theft,Minor Damage,7.0,1.0,2.0
+I966,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I967,Multi-vehicle Collision,Minor Damage,21.0,3.0,0.0
+I968,Single Vehicle Collision,Major Damage,4.0,1.0,1.0
+I969,Multi-vehicle Collision,Major Damage,18.0,3.0,2.0
+I970,Vehicle Theft,Trivial Damage,7.0,1.0,2.0
+I971,Single Vehicle Collision,Total Loss,13.0,1.0,2.0
+I972,Single Vehicle Collision,Total Loss,0.0,1.0,2.0
+I973,Single Vehicle Collision,Major Damage,22.0,1.0,1.0
+I974,Single Vehicle Collision,Major Damage,15.0,1.0,2.0
+I975,Multi-vehicle Collision,Major Damage,3.0,3.0,2.0
+I976,Multi-vehicle Collision,Total Loss,18.0,2.0,0.0
+I977,Multi-vehicle Collision,Major Damage,17.0,3.0,2.0
+I978,Multi-vehicle Collision,Major Damage,18.0,3.0,1.0
+I979,Single Vehicle Collision,Total Loss,11.0,1.0,2.0
+I980,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I981,Single Vehicle Collision,Minor Damage,12.0,1.0,0.0
+I982,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I983,Multi-vehicle Collision,Minor Damage,0.0,3.0,0.0
+I984,Parked Car,Trivial Damage,9.0,1.0,2.0
+I985,Single Vehicle Collision,Total Loss,1.0,1.0,2.0
+I986,Single Vehicle Collision,Major Damage,22.0,1.0,0.0
+I987,Single Vehicle Collision,Minor Damage,11.0,1.0,2.0
+I988,Single Vehicle Collision,Major Damage,10.0,1.0,0.0
+I989,Single Vehicle Collision,Minor Damage,5.0,1.0,1.0
+I990,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I991,Single Vehicle Collision,Minor Damage,18.0,1.0,2.0
+I992,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I993,Multi-vehicle Collision,Major Damage,6.0,3.0,1.0
+I994,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I995,Parked Car,Minor Damage,6.0,1.0,1.0
+I996,Single Vehicle Collision,Minor Damage,20.0,1.0,0.0
+I997,Single Vehicle Collision,Major Damage,23.0,1.0,2.0
+I998,Multi-vehicle Collision,Minor Damage,4.0,3.0,2.0
+I999,Single Vehicle Collision,Major Damage,2.0,1.0,0.0
+I1000,Parked Car,Minor Damage,6.0,1.0,0.0
+I1001,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I1002,Single Vehicle Collision,Major Loss,22.0,1.0,0.0
+I1003,Single Vehicle Collision,Major Loss,3.0,1.0,1.0
+I1004,Single Vehicle Collision,Minor Loss,22.0,1.0,0.0
+I1005,Single Vehicle Collision,Total Loss,20.0,1.0,0.0
+I1006,Single Vehicle Collision,Minor Loss,14.0,1.0,0.0
+I1007,Single Vehicle Collision,Major Loss,0.0,1.0,0.0
+I1008,Vehicle Theft,Minor Loss,13.0,1.0,0.0
+I1009,Parked Car,Major Loss,21.0,1.0,0.0
+I1010,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I1011,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I1012,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I1013,Single Vehicle Collision,Major Loss,9.0,1.0,0.0
+I1014,Parked Car,Minor Loss,4.0,1.0,0.0
+I1015,Multi-vehicle Collision,Total Loss,13.0,3.0,0.0
+I1016,Multi-vehicle Collision,Total Loss,23.0,3.0,0.0
+I1017,Multi-vehicle Collision,Total Loss,8.0,3.0,1.0
+I1018,Vehicle Theft,Major Loss,0.0,1.0,1.0
+I1019,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I1020,Vehicle Theft,Minor Loss,23.0,1.0,0.0
+I1021,Parked Car,Minor Loss,9.0,1.0,1.0
+I1022,Single Vehicle Collision,Minor Loss,5.0,1.0,1.0
+I1023,Single Vehicle Collision,Minor Loss,16.0,1.0,0.0
+I1024,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I1025,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I1026,Single Vehicle Collision,Minor Loss,6.0,1.0,1.0
+I1027,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I1028,Parked Car,Major Loss,11.0,1.0,0.0
+I1029,Single Vehicle Collision,Major Loss,7.0,1.0,1.0
+I1030,Multi-vehicle Collision,Major Loss,15.0,3.0,0.0
+I1031,Multi-vehicle Collision,Total Loss,7.0,3.0,0.0
+I1032,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I1033,Single Vehicle Collision,Minor Loss,2.0,1.0,0.0
+I1034,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I1035,Multi-vehicle Collision,Minor Loss,23.0,3.0,1.0
+I1036,Single Vehicle Collision,Major Loss,18.0,1.0,1.0
+I1037,Single Vehicle Collision,Major Loss,6.0,1.0,0.0
+I1038,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1039,Parked Car,Total Loss,1.0,1.0,1.0
+I1040,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I1041,Multi-vehicle Collision,Total Loss,5.0,3.0,1.0
+I1042,Single Vehicle Collision,Minor Loss,0.0,1.0,0.0
+I1043,Single Vehicle Collision,Total Loss,22.0,1.0,0.0
+I1044,Multi-vehicle Collision,Minor Loss,3.0,3.0,0.0
+I1045,Single Vehicle Collision,Minor Loss,12.0,1.0,1.0
+I1046,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I1047,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I1048,Multi-vehicle Collision,Total Loss,20.0,3.0,1.0
+I1049,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I1050,Multi-vehicle Collision,Major Loss,12.0,3.0,0.0
+I1051,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I1052,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1053,Parked Car,Major Loss,11.0,1.0,1.0
+I1054,Multi-vehicle Collision,Total Loss,12.0,3.0,0.0
+I1055,Multi-vehicle Collision,Minor Loss,6.0,4.0,0.0
+I1056,Multi-vehicle Collision,Minor Loss,21.0,3.0,1.0
+I1057,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1058,Multi-vehicle Collision,Minor Loss,5.0,3.0,1.0
+I1059,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1060,Multi-vehicle Collision,Total Loss,9.0,3.0,1.0
+I1061,Multi-vehicle Collision,Minor Loss,6.0,3.0,0.0
+I1062,Multi-vehicle Collision,Minor Loss,1.0,3.0,1.0
+I1063,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I1064,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I1065,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I1066,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I1067,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1068,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I1069,Vehicle Theft,Major Loss,19.0,1.0,1.0
+I1070,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1071,Parked Car,Minor Loss,9.0,1.0,1.0
+I1072,Single Vehicle Collision,Total Loss,5.0,1.0,0.0
+I1073,Parked Car,Total Loss,20.0,1.0,1.0
+I1074,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1075,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I1076,Multi-vehicle Collision,Minor Loss,12.0,4.0,1.0
+I1077,Multi-vehicle Collision,Total Loss,14.0,2.0,1.0
+I1078,Multi-vehicle Collision,Minor Loss,2.0,2.0,1.0
+I1079,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I1080,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I1081,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I1082,Multi-vehicle Collision,Total Loss,4.0,3.0,0.0
+I1083,Multi-vehicle Collision,Major Loss,5.0,4.0,0.0
+I1084,Single Vehicle Collision,Major Loss,23.0,1.0,0.0
+I1085,Single Vehicle Collision,Minor Loss,14.0,1.0,1.0
+I1086,Multi-vehicle Collision,Minor Loss,7.0,3.0,1.0
+I1087,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1088,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1089,Single Vehicle Collision,Total Loss,3.0,1.0,1.0
+I1090,Parked Car,Major Loss,18.0,1.0,1.0
+I1091,Multi-vehicle Collision,Minor Loss,2.0,3.0,1.0
+I1092,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1093,Multi-vehicle Collision,Major Loss,10.0,3.0,0.0
+I1094,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I1095,Multi-vehicle Collision,Major Loss,3.0,3.0,1.0
+I1096,Multi-vehicle Collision,Minor Loss,1.0,3.0,0.0
+I1097,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1098,Multi-vehicle Collision,Minor Loss,23.0,3.0,1.0
+I1099,Vehicle Theft,Minor Loss,17.0,1.0,1.0
+I1100,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1101,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I1102,Multi-vehicle Collision,Minor Loss,1.0,2.0,1.0
+I1103,Single Vehicle Collision,Minor Loss,19.0,1.0,0.0
+I1104,Parked Car,Total Loss,17.0,1.0,1.0
+I1105,Multi-vehicle Collision,Major Loss,9.0,3.0,1.0
+I1106,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I1107,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I1108,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1109,Multi-vehicle Collision,Major Loss,18.0,3.0,1.0
+I1110,Parked Car,Minor Loss,6.0,1.0,1.0
+I1111,Single Vehicle Collision,Total Loss,23.0,1.0,1.0
+I1112,Vehicle Theft,Major Loss,20.0,1.0,1.0
+I1113,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I1114,Multi-vehicle Collision,Minor Loss,1.0,3.0,0.0
+I1115,Single Vehicle Collision,Major Loss,10.0,1.0,0.0
+I1116,Multi-vehicle Collision,Major Loss,11.0,3.0,1.0
+I1117,Vehicle Theft,Total Loss,22.0,1.0,1.0
+I1118,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1119,Vehicle Theft,Major Loss,20.0,1.0,1.0
+I1120,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I1121,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1122,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I1123,Parked Car,Major Loss,4.0,1.0,1.0
+I1124,Single Vehicle Collision,Major Loss,3.0,1.0,1.0
+I1125,Single Vehicle Collision,Total Loss,15.0,1.0,0.0
+I1126,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1127,Multi-vehicle Collision,Total Loss,8.0,3.0,1.0
+I1128,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I1129,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I1130,Multi-vehicle Collision,Minor Loss,12.0,2.0,1.0
+I1131,Single Vehicle Collision,Minor Loss,5.0,1.0,0.0
+I1132,Single Vehicle Collision,Major Loss,12.0,1.0,1.0
+I1133,Multi-vehicle Collision,Total Loss,7.0,3.0,0.0
+I1134,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I1135,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I1136,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I1137,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I1138,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1139,Single Vehicle Collision,Minor Loss,5.0,1.0,0.0
+I1140,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1141,Vehicle Theft,Minor Loss,23.0,1.0,1.0
+I1142,Multi-vehicle Collision,Major Loss,19.0,3.0,0.0
+I1143,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1144,Vehicle Theft,Major Loss,15.0,1.0,1.0
+I1145,Single Vehicle Collision,Minor Loss,12.0,1.0,1.0
+I1146,Single Vehicle Collision,Minor Loss,16.0,1.0,0.0
+I1147,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I1148,Parked Car,Total Loss,14.0,1.0,0.0
+I1149,Single Vehicle Collision,Minor Loss,5.0,1.0,1.0
+I1150,Parked Car,Minor Loss,9.0,1.0,1.0
+I1151,Multi-vehicle Collision,Minor Loss,1.0,2.0,0.0
+I1152,Vehicle Theft,Minor Loss,22.0,1.0,1.0
+I1153,Multi-vehicle Collision,Major Loss,23.0,3.0,1.0
+I1154,Single Vehicle Collision,Minor Loss,9.0,1.0,1.0
+I1155,Multi-vehicle Collision,Total Loss,23.0,4.0,1.0
+I1156,Vehicle Theft,Minor Loss,1.0,1.0,1.0
+I1157,Single Vehicle Collision,Major Loss,18.0,1.0,1.0
+I1158,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I1159,Multi-vehicle Collision,Major Loss,20.0,3.0,0.0
+I1160,Multi-vehicle Collision,Total Loss,12.0,3.0,0.0
+I1161,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1162,Single Vehicle Collision,Minor Loss,16.0,1.0,0.0
+I1163,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I1164,Vehicle Theft,Total Loss,23.0,1.0,1.0
+I1165,Parked Car,Total Loss,10.0,1.0,0.0
+I1166,Vehicle Theft,Total Loss,18.0,1.0,1.0
+I1167,Multi-vehicle Collision,Major Loss,3.0,2.0,1.0
+I1168,Multi-vehicle Collision,Minor Loss,18.0,4.0,1.0
+I1169,Single Vehicle Collision,Major Loss,13.0,1.0,1.0
+I1170,Multi-vehicle Collision,Major Loss,5.0,2.0,0.0
+I1171,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1172,Multi-vehicle Collision,Minor Loss,6.0,4.0,1.0
+I1173,Multi-vehicle Collision,Major Loss,20.0,2.0,0.0
+I1174,Multi-vehicle Collision,Total Loss,23.0,4.0,1.0
+I1175,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I1176,Multi-vehicle Collision,Minor Loss,23.0,4.0,0.0
+I1177,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I1178,Parked Car,Minor Loss,6.0,1.0,1.0
+I1179,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1180,Multi-vehicle Collision,Minor Loss,4.0,3.0,0.0
+I1181,Multi-vehicle Collision,Major Loss,13.0,3.0,1.0
+I1182,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I1183,Single Vehicle Collision,Total Loss,9.0,1.0,0.0
+I1184,Multi-vehicle Collision,Minor Loss,9.0,3.0,1.0
+I1185,Parked Car,Total Loss,9.0,1.0,1.0
+I1186,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I1187,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I1188,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I1189,Single Vehicle Collision,Major Loss,8.0,1.0,1.0
+I1190,Multi-vehicle Collision,Minor Loss,5.0,2.0,1.0
+I1191,Multi-vehicle Collision,Major Loss,19.0,2.0,1.0
+I1192,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1193,Multi-vehicle Collision,Minor Loss,4.0,3.0,0.0
+I1194,Parked Car,Major Loss,18.0,1.0,0.0
+I1195,Single Vehicle Collision,Major Loss,18.0,1.0,1.0
+I1196,Single Vehicle Collision,Major Loss,18.0,1.0,0.0
+I1197,Multi-vehicle Collision,Minor Loss,16.0,3.0,0.0
+I1198,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I1199,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I1200,Single Vehicle Collision,Minor Loss,22.0,1.0,0.0
+I1201,Multi-vehicle Collision,Minor Loss,21.0,3.0,0.0
+I1202,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1203,Multi-vehicle Collision,Major Loss,2.0,3.0,0.0
+I1204,Multi-vehicle Collision,Total Loss,17.0,3.0,0.0
+I1205,Multi-vehicle Collision,Major Loss,9.0,3.0,1.0
+I1206,Multi-vehicle Collision,Major Loss,5.0,3.0,1.0
+I1207,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I1208,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I1209,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I1210,Vehicle Theft,Major Loss,8.0,1.0,1.0
+I1211,Parked Car,Minor Loss,6.0,1.0,1.0
+I1212,Multi-vehicle Collision,Minor Loss,22.0,4.0,1.0
+I1213,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I1214,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I1215,Multi-vehicle Collision,Minor Loss,12.0,3.0,1.0
+I1216,Single Vehicle Collision,Minor Loss,2.0,1.0,1.0
+I1217,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I1218,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I1219,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I1220,Vehicle Theft,Total Loss,19.0,1.0,1.0
+I1221,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I1222,Vehicle Theft,Major Loss,14.0,1.0,1.0
+I1223,Multi-vehicle Collision,Major Loss,15.0,4.0,1.0
+I1224,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I1225,Multi-vehicle Collision,Total Loss,9.0,3.0,1.0
+I1226,Parked Car,Minor Loss,14.0,1.0,1.0
+I1227,Single Vehicle Collision,Major Loss,4.0,1.0,1.0
+I1228,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I1229,Parked Car,Total Loss,22.0,1.0,0.0
+I1230,Single Vehicle Collision,Minor Loss,23.0,1.0,1.0
+I1231,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I1232,Multi-vehicle Collision,Major Loss,4.0,3.0,1.0
+I1233,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I1234,Multi-vehicle Collision,Minor Loss,6.0,2.0,1.0
+I1235,Multi-vehicle Collision,Major Loss,13.0,2.0,0.0
+I1236,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I1237,Multi-vehicle Collision,Minor Loss,18.0,3.0,0.0
+I1238,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1239,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I1240,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1241,Vehicle Theft,Major Loss,15.0,1.0,0.0
+I1242,Multi-vehicle Collision,Total Loss,22.0,3.0,1.0
+I1243,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I1244,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I1245,Single Vehicle Collision,Major Loss,23.0,1.0,0.0
+I1246,Multi-vehicle Collision,Minor Loss,10.0,2.0,0.0
+I1247,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1248,Multi-vehicle Collision,Total Loss,2.0,3.0,0.0
+I1249,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I1250,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1251,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I1252,Parked Car,Major Loss,20.0,1.0,1.0
+I1253,Single Vehicle Collision,Total Loss,5.0,1.0,0.0
+I1254,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I1255,Vehicle Theft,Minor Loss,20.0,1.0,0.0
+I1256,Multi-vehicle Collision,Major Loss,18.0,3.0,1.0
+I1257,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I1258,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I1259,Parked Car,Minor Loss,7.0,1.0,1.0
+I1260,Multi-vehicle Collision,Major Loss,2.0,3.0,1.0
+I1261,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1262,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I1263,Multi-vehicle Collision,Minor Loss,7.0,3.0,1.0
+I1264,Parked Car,Major Loss,19.0,1.0,1.0
+I1265,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I1266,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I1267,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1268,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I1269,Multi-vehicle Collision,Total Loss,16.0,3.0,0.0
+I1270,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I1271,Parked Car,Total Loss,19.0,1.0,1.0
+I1272,Vehicle Theft,Major Loss,11.0,1.0,1.0
+I1273,Multi-vehicle Collision,Minor Loss,18.0,3.0,0.0
+I1274,Parked Car,Minor Loss,17.0,1.0,1.0
+I1275,Multi-vehicle Collision,Total Loss,19.0,3.0,1.0
+I1276,Parked Car,Minor Loss,6.0,1.0,0.0
+I1277,Parked Car,Major Loss,2.0,1.0,1.0
+I1278,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1279,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1280,Vehicle Theft,Total Loss,13.0,1.0,0.0
+I1281,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1282,Vehicle Theft,Minor Loss,12.0,1.0,1.0
+I1283,Single Vehicle Collision,Minor Loss,18.0,1.0,0.0
+I1284,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1285,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I1286,Multi-vehicle Collision,Major Loss,9.0,3.0,0.0
+I1287,Parked Car,Major Loss,14.0,1.0,1.0
+I1288,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I1289,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I1290,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1291,Multi-vehicle Collision,Total Loss,6.0,3.0,0.0
+I1292,Multi-vehicle Collision,Major Loss,2.0,3.0,1.0
+I1293,Vehicle Theft,Major Loss,15.0,1.0,1.0
+I1294,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1295,Single Vehicle Collision,Major Loss,2.0,1.0,0.0
+I1296,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I1297,Multi-vehicle Collision,Minor Loss,4.0,3.0,1.0
+I1298,Vehicle Theft,Total Loss,11.0,1.0,1.0
+I1299,Parked Car,Major Loss,11.0,1.0,1.0
+I1300,Parked Car,Minor Loss,2.0,1.0,1.0
+I1301,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I1302,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1303,Multi-vehicle Collision,Minor Loss,5.0,3.0,0.0
+I1304,Multi-vehicle Collision,Major Loss,0.0,3.0,1.0
+I1305,Multi-vehicle Collision,Minor Loss,3.0,3.0,1.0
+I1306,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I1307,Multi-vehicle Collision,Total Loss,8.0,3.0,0.0
+I1308,Multi-vehicle Collision,Major Loss,4.0,3.0,1.0
+I1309,Single Vehicle Collision,Major Loss,10.0,1.0,0.0
+I1310,Multi-vehicle Collision,Total Loss,21.0,3.0,0.0
+I1311,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I1312,Multi-vehicle Collision,Major Loss,12.0,3.0,0.0
+I1313,Multi-vehicle Collision,Total Loss,16.0,3.0,1.0
+I1314,Multi-vehicle Collision,Major Loss,15.0,2.0,1.0
+I1315,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1316,Multi-vehicle Collision,Total Loss,14.0,4.0,1.0
+I1317,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I1318,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I1319,Vehicle Theft,Major Loss,0.0,1.0,0.0
+I1320,Single Vehicle Collision,Major Loss,0.0,1.0,0.0
+I1321,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1322,Multi-vehicle Collision,Minor Loss,17.0,4.0,0.0
+I1323,Multi-vehicle Collision,Minor Loss,22.0,3.0,0.0
+I1324,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1325,Multi-vehicle Collision,Total Loss,4.0,3.0,0.0
+I1326,Single Vehicle Collision,Minor Loss,5.0,1.0,0.0
+I1327,Single Vehicle Collision,Major Loss,11.0,1.0,0.0
+I1328,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I1329,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I1330,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I1331,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I1332,Single Vehicle Collision,Major Loss,16.0,1.0,0.0
+I1333,Multi-vehicle Collision,Total Loss,3.0,3.0,0.0
+I1334,Single Vehicle Collision,Major Loss,2.0,1.0,0.0
+I1335,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1336,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I1337,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1338,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1339,Single Vehicle Collision,Major Loss,21.0,1.0,0.0
+I1340,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I1341,Multi-vehicle Collision,Minor Loss,19.0,3.0,1.0
+I1342,Multi-vehicle Collision,Major Loss,3.0,4.0,1.0
+I1343,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1344,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I1345,Single Vehicle Collision,Major Loss,18.0,1.0,1.0
+I1346,Multi-vehicle Collision,Minor Loss,2.0,4.0,1.0
+I1347,Single Vehicle Collision,Minor Loss,11.0,1.0,0.0
+I1348,Multi-vehicle Collision,Total Loss,17.0,4.0,1.0
+I1349,Single Vehicle Collision,Minor Loss,4.0,1.0,1.0
+I1350,Parked Car,Total Loss,18.0,1.0,1.0
+I1351,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1352,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1353,Single Vehicle Collision,Minor Loss,4.0,1.0,1.0
+I1354,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I1355,Single Vehicle Collision,Major Loss,12.0,1.0,0.0
+I1356,Single Vehicle Collision,Minor Loss,7.0,1.0,0.0
+I1357,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I1358,Multi-vehicle Collision,Minor Loss,3.0,3.0,0.0
+I1359,Multi-vehicle Collision,Minor Loss,5.0,2.0,1.0
+I1360,Parked Car,Major Loss,8.0,1.0,1.0
+I1361,Multi-vehicle Collision,Minor Loss,15.0,3.0,1.0
+I1362,Vehicle Theft,Total Loss,21.0,1.0,1.0
+I1363,Single Vehicle Collision,Total Loss,19.0,1.0,0.0
+I1364,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I1365,Vehicle Theft,Minor Loss,17.0,1.0,0.0
+I1366,Single Vehicle Collision,Major Loss,11.0,1.0,0.0
+I1367,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I1368,Multi-vehicle Collision,Minor Loss,11.0,3.0,1.0
+I1369,Vehicle Theft,Total Loss,11.0,1.0,0.0
+I1370,Single Vehicle Collision,Total Loss,15.0,1.0,0.0
+I1371,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1372,Multi-vehicle Collision,Major Loss,19.0,4.0,1.0
+I1373,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I1374,Single Vehicle Collision,Minor Loss,5.0,1.0,1.0
+I1375,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1376,Multi-vehicle Collision,Total Loss,12.0,3.0,0.0
+I1377,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I1378,Parked Car,Minor Loss,19.0,1.0,1.0
+I1379,Single Vehicle Collision,Major Loss,4.0,1.0,1.0
+I1380,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1381,Vehicle Theft,Total Loss,20.0,1.0,1.0
+I1382,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1383,Parked Car,Total Loss,14.0,1.0,1.0
+I1384,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1385,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I1386,Vehicle Theft,Minor Loss,15.0,1.0,0.0
+I1387,Single Vehicle Collision,Total Loss,3.0,1.0,0.0
+I1388,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1389,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I1390,Multi-vehicle Collision,Major Loss,16.0,3.0,1.0
+I1391,Multi-vehicle Collision,Total Loss,23.0,3.0,1.0
+I1392,Single Vehicle Collision,Major Loss,7.0,1.0,1.0
+I1393,Multi-vehicle Collision,Minor Loss,14.0,3.0,1.0
+I1394,Vehicle Theft,Minor Loss,1.0,1.0,1.0
+I1395,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1396,Parked Car,Major Loss,9.0,1.0,0.0
+I1397,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1398,Multi-vehicle Collision,Major Loss,13.0,3.0,1.0
+I1399,Multi-vehicle Collision,Major Loss,20.0,3.0,0.0
+I1400,Multi-vehicle Collision,Minor Loss,6.0,3.0,0.0
+I1401,Multi-vehicle Collision,Major Loss,22.0,4.0,0.0
+I1402,Parked Car,Minor Loss,6.0,1.0,1.0
+I1403,Multi-vehicle Collision,Total Loss,20.0,3.0,1.0
+I1404,Parked Car,Total Loss,21.0,1.0,1.0
+I1405,Vehicle Theft,Total Loss,19.0,1.0,1.0
+I1406,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1407,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I1408,Multi-vehicle Collision,Major Loss,12.0,2.0,1.0
+I1409,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I1410,Multi-vehicle Collision,Major Loss,7.0,3.0,0.0
+I1411,Multi-vehicle Collision,Minor Loss,4.0,3.0,1.0
+I1412,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1413,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I1414,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I1415,Multi-vehicle Collision,Minor Loss,5.0,3.0,0.0
+I1416,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I1417,Multi-vehicle Collision,Major Loss,2.0,4.0,1.0
+I1418,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I1419,Multi-vehicle Collision,Minor Loss,16.0,3.0,1.0
+I1420,Single Vehicle Collision,Total Loss,14.0,1.0,1.0
+I1421,Parked Car,Total Loss,1.0,1.0,1.0
+I1422,Parked Car,Major Loss,2.0,1.0,1.0
+I1423,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I1424,Multi-vehicle Collision,Major Loss,4.0,3.0,1.0
+I1425,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I1426,Single Vehicle Collision,Major Loss,20.0,1.0,0.0
+I1427,Parked Car,Major Loss,14.0,1.0,1.0
+I1428,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1429,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1430,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I1431,Multi-vehicle Collision,Minor Loss,15.0,3.0,0.0
+I1432,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1433,Multi-vehicle Collision,Major Loss,21.0,3.0,1.0
+I1434,Single Vehicle Collision,Total Loss,2.0,1.0,0.0
+I1435,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I1436,Single Vehicle Collision,Total Loss,7.0,1.0,0.0
+I1437,Single Vehicle Collision,Minor Loss,8.0,1.0,0.0
+I1438,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I1439,Single Vehicle Collision,Total Loss,6.0,1.0,0.0
+I1440,Multi-vehicle Collision,Total Loss,21.0,3.0,0.0
+I1441,Multi-vehicle Collision,Total Loss,3.0,3.0,0.0
+I1442,Vehicle Theft,Minor Loss,6.0,1.0,0.0
+I1443,Parked Car,Minor Loss,9.0,1.0,1.0
+I1444,Multi-vehicle Collision,Major Loss,9.0,3.0,1.0
+I1445,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1446,Multi-vehicle Collision,Minor Loss,13.0,2.0,1.0
+I1447,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1448,Parked Car,Minor Loss,3.0,1.0,1.0
+I1449,Parked Car,Major Loss,0.0,1.0,1.0
+I1450,Vehicle Theft,Total Loss,4.0,1.0,0.0
+I1451,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I1452,Parked Car,Major Loss,6.0,1.0,0.0
+I1453,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I1454,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1455,Parked Car,Major Loss,6.0,1.0,0.0
+I1456,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I1457,Single Vehicle Collision,Total Loss,16.0,1.0,0.0
+I1458,Multi-vehicle Collision,Total Loss,19.0,2.0,1.0
+I1459,Single Vehicle Collision,Major Loss,22.0,1.0,1.0
+I1460,Vehicle Theft,Major Loss,6.0,1.0,1.0
+I1461,Multi-vehicle Collision,Minor Loss,1.0,4.0,0.0
+I1462,Multi-vehicle Collision,Total Loss,8.0,3.0,1.0
+I1463,Multi-vehicle Collision,Major Loss,1.0,3.0,1.0
+I1464,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1465,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I1466,Multi-vehicle Collision,Minor Loss,6.0,3.0,1.0
+I1467,Single Vehicle Collision,Major Loss,6.0,1.0,0.0
+I1468,Multi-vehicle Collision,Total Loss,9.0,4.0,1.0
+I1469,Vehicle Theft,Major Loss,18.0,1.0,1.0
+I1470,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I1471,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1472,Parked Car,Total Loss,3.0,1.0,1.0
+I1473,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1474,Vehicle Theft,Major Loss,11.0,1.0,1.0
+I1475,Parked Car,Major Loss,23.0,1.0,1.0
+I1476,Single Vehicle Collision,Major Loss,20.0,1.0,0.0
+I1477,Single Vehicle Collision,Major Loss,9.0,1.0,0.0
+I1478,Parked Car,Minor Loss,23.0,1.0,1.0
+I1479,Parked Car,Major Loss,17.0,1.0,1.0
+I1480,Single Vehicle Collision,Major Loss,12.0,1.0,1.0
+I1481,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1482,Multi-vehicle Collision,Major Loss,7.0,2.0,1.0
+I1483,Multi-vehicle Collision,Minor Loss,19.0,3.0,1.0
+I1484,Multi-vehicle Collision,Minor Loss,6.0,3.0,1.0
+I1485,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1486,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1487,Multi-vehicle Collision,Major Loss,21.0,2.0,1.0
+I1488,Vehicle Theft,Minor Loss,4.0,1.0,1.0
+I1489,Parked Car,Major Loss,15.0,1.0,0.0
+I1490,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I1491,Multi-vehicle Collision,Minor Loss,3.0,4.0,0.0
+I1492,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I1493,Vehicle Theft,Major Loss,18.0,1.0,1.0
+I1494,Multi-vehicle Collision,Major Loss,10.0,2.0,0.0
+I1495,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I1496,Multi-vehicle Collision,Minor Loss,14.0,2.0,1.0
+I1497,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1498,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I1499,Multi-vehicle Collision,Minor Loss,11.0,3.0,1.0
+I1500,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I1501,Multi-vehicle Collision,Major Loss,13.0,3.0,1.0
+I1502,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I1503,Single Vehicle Collision,Minor Loss,22.0,1.0,1.0
+I1504,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1505,Multi-vehicle Collision,Major Loss,9.0,3.0,1.0
+I1506,Parked Car,Major Loss,4.0,1.0,1.0
+I1507,Vehicle Theft,Total Loss,11.0,1.0,1.0
+I1508,Multi-vehicle Collision,Total Loss,20.0,3.0,1.0
+I1509,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I1510,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I1511,Multi-vehicle Collision,Total Loss,19.0,3.0,1.0
+I1512,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1513,Single Vehicle Collision,Total Loss,16.0,1.0,0.0
+I1514,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I1515,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I1516,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I1517,Multi-vehicle Collision,Major Loss,23.0,3.0,0.0
+I1518,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I1519,Single Vehicle Collision,Minor Loss,22.0,1.0,1.0
+I1520,Vehicle Theft,Minor Loss,3.0,1.0,1.0
+I1521,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I1522,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I1523,Multi-vehicle Collision,Minor Loss,4.0,2.0,1.0
+I1524,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I1525,Multi-vehicle Collision,Total Loss,11.0,2.0,1.0
+I1526,Multi-vehicle Collision,Minor Loss,22.0,3.0,1.0
+I1527,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I1528,Parked Car,Total Loss,7.0,1.0,0.0
+I1529,Multi-vehicle Collision,Minor Loss,3.0,3.0,1.0
+I1530,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1531,Multi-vehicle Collision,Major Loss,23.0,3.0,1.0
+I1532,Multi-vehicle Collision,Major Loss,7.0,3.0,0.0
+I1533,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I1534,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I1535,Multi-vehicle Collision,Minor Loss,17.0,3.0,0.0
+I1536,Multi-vehicle Collision,Total Loss,13.0,3.0,0.0
+I1537,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I1538,Single Vehicle Collision,Minor Loss,23.0,1.0,1.0
+I1539,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1540,Parked Car,Total Loss,5.0,1.0,1.0
+I1541,Multi-vehicle Collision,Major Loss,16.0,3.0,1.0
+I1542,Single Vehicle Collision,Major Loss,12.0,1.0,0.0
+I1543,Single Vehicle Collision,Minor Loss,22.0,1.0,0.0
+I1544,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1545,Parked Car,Major Loss,19.0,1.0,1.0
+I1546,Multi-vehicle Collision,Total Loss,18.0,3.0,0.0
+I1547,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I1548,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I1549,Single Vehicle Collision,Total Loss,12.0,1.0,1.0
+I1550,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I1551,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1552,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1553,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I1554,Single Vehicle Collision,Minor Loss,2.0,1.0,0.0
+I1555,Single Vehicle Collision,Major Loss,5.0,1.0,0.0
+I1556,Multi-vehicle Collision,Minor Loss,3.0,3.0,1.0
+I1557,Multi-vehicle Collision,Total Loss,3.0,2.0,1.0
+I1558,Multi-vehicle Collision,Major Loss,18.0,3.0,0.0
+I1559,Single Vehicle Collision,Minor Loss,18.0,1.0,0.0
+I1560,Vehicle Theft,Major Loss,13.0,1.0,0.0
+I1561,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I1562,Multi-vehicle Collision,Major Loss,8.0,4.0,1.0
+I1563,Parked Car,Minor Loss,12.0,1.0,0.0
+I1564,Vehicle Theft,Major Loss,20.0,1.0,1.0
+I1565,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I1566,Parked Car,Total Loss,22.0,1.0,1.0
+I1567,Single Vehicle Collision,Minor Loss,12.0,1.0,1.0
+I1568,Parked Car,Minor Loss,9.0,1.0,1.0
+I1569,Vehicle Theft,Total Loss,11.0,1.0,1.0
+I1570,Parked Car,Major Loss,23.0,1.0,0.0
+I1571,Parked Car,Total Loss,4.0,1.0,1.0
+I1572,Multi-vehicle Collision,Major Loss,18.0,3.0,1.0
+I1573,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I1574,Multi-vehicle Collision,Minor Loss,23.0,3.0,1.0
+I1575,Parked Car,Major Loss,19.0,1.0,1.0
+I1576,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1577,Multi-vehicle Collision,Total Loss,19.0,3.0,0.0
+I1578,Vehicle Theft,Major Loss,19.0,1.0,1.0
+I1579,Single Vehicle Collision,Minor Loss,8.0,1.0,1.0
+I1580,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I1581,Multi-vehicle Collision,Major Loss,9.0,3.0,1.0
+I1582,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1583,Single Vehicle Collision,Major Loss,13.0,1.0,1.0
+I1584,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1585,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I1586,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1587,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I1588,Multi-vehicle Collision,Total Loss,21.0,2.0,1.0
+I1589,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I1590,Vehicle Theft,Minor Loss,7.0,1.0,1.0
+I1591,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I1592,Vehicle Theft,Major Loss,22.0,1.0,1.0
+I1593,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I1594,Single Vehicle Collision,Major Loss,1.0,1.0,0.0
+I1595,Multi-vehicle Collision,Minor Loss,21.0,4.0,1.0
+I1596,Parked Car,Major Loss,13.0,1.0,1.0
+I1597,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1598,Single Vehicle Collision,Major Loss,0.0,1.0,0.0
+I1599,Multi-vehicle Collision,Total Loss,19.0,3.0,1.0
+I1600,Parked Car,Total Loss,0.0,1.0,0.0
+I1601,Multi-vehicle Collision,Major Loss,12.0,3.0,1.0
+I1602,Multi-vehicle Collision,Minor Loss,18.0,3.0,1.0
+I1603,Single Vehicle Collision,Major Loss,17.0,1.0,0.0
+I1604,Multi-vehicle Collision,Major Loss,15.0,3.0,0.0
+I1605,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1606,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1607,Multi-vehicle Collision,Total Loss,8.0,3.0,0.0
+I1608,Multi-vehicle Collision,Total Loss,10.0,3.0,0.0
+I1609,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1610,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I1611,Single Vehicle Collision,Major Loss,2.0,1.0,0.0
+I1612,Multi-vehicle Collision,Minor Loss,11.0,3.0,1.0
+I1613,Parked Car,Total Loss,10.0,1.0,1.0
+I1614,Multi-vehicle Collision,Minor Loss,17.0,3.0,0.0
+I1615,Multi-vehicle Collision,Minor Loss,12.0,3.0,0.0
+I1616,Multi-vehicle Collision,Major Loss,3.0,3.0,0.0
+I1617,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I1618,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1619,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1620,Parked Car,Major Loss,0.0,1.0,0.0
+I1621,Multi-vehicle Collision,Minor Loss,16.0,3.0,0.0
+I1622,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1623,Single Vehicle Collision,Major Loss,13.0,1.0,1.0
+I1624,Single Vehicle Collision,Minor Loss,4.0,1.0,1.0
+I1625,Parked Car,Minor Loss,11.0,1.0,1.0
+I1626,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I1627,Single Vehicle Collision,Total Loss,20.0,1.0,1.0
+I1628,Single Vehicle Collision,Total Loss,2.0,1.0,1.0
+I1629,Multi-vehicle Collision,Minor Loss,22.0,3.0,1.0
+I1630,Multi-vehicle Collision,Major Loss,6.0,3.0,0.0
+I1631,Multi-vehicle Collision,Major Loss,13.0,3.0,0.0
+I1632,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1633,Single Vehicle Collision,Minor Loss,22.0,1.0,1.0
+I1634,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1635,Single Vehicle Collision,Major Loss,19.0,1.0,0.0
+I1636,Parked Car,Total Loss,15.0,1.0,1.0
+I1637,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I1638,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I1639,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I1640,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1641,Vehicle Theft,Total Loss,7.0,1.0,0.0
+I1642,Parked Car,Major Loss,23.0,1.0,1.0
+I1643,Parked Car,Minor Loss,9.0,1.0,1.0
+I1644,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1645,Multi-vehicle Collision,Major Loss,2.0,3.0,1.0
+I1646,Multi-vehicle Collision,Major Loss,0.0,3.0,0.0
+I1647,Single Vehicle Collision,Minor Loss,9.0,1.0,1.0
+I1648,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1649,Vehicle Theft,Total Loss,12.0,1.0,0.0
+I1650,Multi-vehicle Collision,Minor Loss,9.0,3.0,1.0
+I1651,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I1652,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1653,Multi-vehicle Collision,Minor Loss,10.0,3.0,1.0
+I1654,Multi-vehicle Collision,Major Loss,1.0,4.0,1.0
+I1655,Vehicle Theft,Major Loss,19.0,1.0,1.0
+I1656,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I1657,Single Vehicle Collision,Minor Loss,0.0,1.0,0.0
+I1658,Multi-vehicle Collision,Minor Loss,14.0,4.0,1.0
+I1659,Single Vehicle Collision,Minor Loss,13.0,1.0,0.0
+I1660,Parked Car,Total Loss,10.0,1.0,1.0
+I1661,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I1662,Vehicle Theft,Major Loss,21.0,1.0,0.0
+I1663,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1664,Multi-vehicle Collision,Minor Loss,14.0,3.0,0.0
+I1665,Multi-vehicle Collision,Minor Loss,12.0,3.0,1.0
+I1666,Multi-vehicle Collision,Major Loss,18.0,3.0,1.0
+I1667,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I1668,Multi-vehicle Collision,Minor Loss,21.0,3.0,1.0
+I1669,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1670,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I1671,Multi-vehicle Collision,Total Loss,15.0,2.0,1.0
+I1672,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1673,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I1674,Multi-vehicle Collision,Major Loss,9.0,4.0,0.0
+I1675,Vehicle Theft,Total Loss,20.0,1.0,1.0
+I1676,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I1677,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I1678,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I1679,Multi-vehicle Collision,Major Loss,15.0,3.0,0.0
+I1680,Multi-vehicle Collision,Major Loss,5.0,3.0,1.0
+I1681,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1682,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I1683,Multi-vehicle Collision,Minor Loss,21.0,3.0,0.0
+I1684,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1685,Multi-vehicle Collision,Minor Loss,9.0,3.0,0.0
+I1686,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I1687,Single Vehicle Collision,Minor Loss,7.0,1.0,1.0
+I1688,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I1689,Parked Car,Major Loss,10.0,1.0,1.0
+I1690,Multi-vehicle Collision,Major Loss,16.0,3.0,1.0
+I1691,Vehicle Theft,Total Loss,0.0,1.0,1.0
+I1692,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I1693,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1694,Multi-vehicle Collision,Minor Loss,15.0,3.0,1.0
+I1695,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I1696,Multi-vehicle Collision,Major Loss,21.0,3.0,1.0
+I1697,Multi-vehicle Collision,Minor Loss,5.0,3.0,1.0
+I1698,Multi-vehicle Collision,Total Loss,17.0,3.0,0.0
+I1699,Single Vehicle Collision,Minor Loss,22.0,1.0,1.0
+I1700,Vehicle Theft,Total Loss,17.0,1.0,1.0
+I1701,Multi-vehicle Collision,Major Loss,16.0,3.0,0.0
+I1702,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I1703,Multi-vehicle Collision,Minor Loss,6.0,3.0,0.0
+I1704,Multi-vehicle Collision,Minor Loss,19.0,3.0,1.0
+I1705,Multi-vehicle Collision,Major Loss,10.0,2.0,1.0
+I1706,Multi-vehicle Collision,Minor Loss,10.0,3.0,1.0
+I1707,Multi-vehicle Collision,Minor Loss,10.0,3.0,0.0
+I1708,Multi-vehicle Collision,Minor Loss,10.0,3.0,1.0
+I1709,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I1710,Vehicle Theft,Major Loss,17.0,1.0,1.0
+I1711,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I1712,Single Vehicle Collision,Major Loss,21.0,1.0,0.0
+I1713,Single Vehicle Collision,Total Loss,2.0,1.0,1.0
+I1714,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1715,Multi-vehicle Collision,Minor Loss,15.0,3.0,1.0
+I1716,Multi-vehicle Collision,Major Loss,0.0,3.0,0.0
+I1717,Single Vehicle Collision,Major Loss,2.0,1.0,1.0
+I1718,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I1719,Multi-vehicle Collision,Minor Loss,6.0,4.0,1.0
+I1720,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I1721,Single Vehicle Collision,Total Loss,23.0,1.0,1.0
+I1722,Parked Car,Minor Loss,9.0,1.0,1.0
+I1723,Multi-vehicle Collision,Major Loss,8.0,3.0,1.0
+I1724,Vehicle Theft,Major Loss,20.0,1.0,1.0
+I1725,Multi-vehicle Collision,Major Loss,21.0,3.0,1.0
+I1726,Vehicle Theft,Major Loss,9.0,1.0,0.0
+I1727,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I1728,Parked Car,Minor Loss,18.0,1.0,1.0
+I1729,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1730,Multi-vehicle Collision,Total Loss,2.0,4.0,0.0
+I1731,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I1732,Multi-vehicle Collision,Total Loss,19.0,3.0,1.0
+I1733,Multi-vehicle Collision,Minor Loss,6.0,4.0,1.0
+I1734,Multi-vehicle Collision,Major Loss,13.0,3.0,1.0
+I1735,Single Vehicle Collision,Total Loss,3.0,1.0,1.0
+I1736,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1737,Multi-vehicle Collision,Major Loss,15.0,4.0,1.0
+I1738,Single Vehicle Collision,Minor Loss,17.0,1.0,0.0
+I1739,Multi-vehicle Collision,Minor Loss,1.0,2.0,1.0
+I1740,Multi-vehicle Collision,Minor Loss,18.0,3.0,0.0
+I1741,Multi-vehicle Collision,Major Loss,13.0,2.0,1.0
+I1742,Parked Car,Total Loss,12.0,1.0,0.0
+I1743,Multi-vehicle Collision,Major Loss,18.0,3.0,1.0
+I1744,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I1745,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I1746,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I1747,Vehicle Theft,Major Loss,6.0,1.0,1.0
+I1748,Single Vehicle Collision,Major Loss,18.0,1.0,1.0
+I1749,Parked Car,Major Loss,9.0,1.0,1.0
+I1750,Single Vehicle Collision,Total Loss,11.0,1.0,0.0
+I1751,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I1752,Single Vehicle Collision,Minor Loss,6.0,1.0,1.0
+I1753,Parked Car,Minor Loss,4.0,1.0,1.0
+I1754,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I1755,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1756,Vehicle Theft,Minor Loss,18.0,1.0,1.0
+I1757,Multi-vehicle Collision,Minor Loss,5.0,2.0,1.0
+I1758,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I1759,Multi-vehicle Collision,Major Loss,10.0,4.0,1.0
+I1760,Multi-vehicle Collision,Minor Loss,12.0,3.0,1.0
+I1761,Vehicle Theft,Minor Loss,2.0,1.0,1.0
+I1762,Single Vehicle Collision,Major Loss,7.0,1.0,0.0
+I1763,Single Vehicle Collision,Minor Loss,5.0,1.0,0.0
+I1764,Multi-vehicle Collision,Major Loss,11.0,3.0,0.0
+I1765,Vehicle Theft,Minor Loss,5.0,1.0,1.0
+I1766,Parked Car,Total Loss,23.0,1.0,1.0
+I1767,Parked Car,Total Loss,11.0,1.0,1.0
+I1768,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1769,Parked Car,Minor Loss,11.0,1.0,1.0
+I1770,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I1771,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I1772,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I1773,Multi-vehicle Collision,Major Loss,10.0,2.0,1.0
+I1774,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1775,Parked Car,Major Loss,15.0,1.0,1.0
+I1776,Multi-vehicle Collision,Minor Loss,0.0,3.0,0.0
+I1777,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I1778,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I1779,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I1780,Vehicle Theft,Total Loss,11.0,1.0,1.0
+I1781,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I1782,Single Vehicle Collision,Minor Loss,21.0,1.0,0.0
+I1783,Vehicle Theft,Total Loss,3.0,1.0,1.0
+I1784,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I1785,Multi-vehicle Collision,Minor Loss,6.0,3.0,1.0
+I1786,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I1787,Multi-vehicle Collision,Major Loss,17.0,3.0,0.0
+I1788,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1789,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I1790,Multi-vehicle Collision,Major Loss,17.0,3.0,0.0
+I1791,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I1792,Multi-vehicle Collision,Total Loss,15.0,3.0,0.0
+I1793,Single Vehicle Collision,Total Loss,20.0,1.0,0.0
+I1794,Multi-vehicle Collision,Major Loss,12.0,3.0,1.0
+I1795,Parked Car,Minor Loss,23.0,1.0,1.0
+I1796,Parked Car,Major Loss,7.0,1.0,1.0
+I1797,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I1798,Multi-vehicle Collision,Minor Loss,3.0,4.0,0.0
+I1799,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I1800,Single Vehicle Collision,Major Loss,19.0,1.0,0.0
+I1801,Multi-vehicle Collision,Minor Loss,9.0,3.0,1.0
+I1802,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I1803,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I1804,Multi-vehicle Collision,Total Loss,23.0,3.0,0.0
+I1805,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I1806,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1807,Parked Car,Minor Loss,5.0,1.0,1.0
+I1808,Multi-vehicle Collision,Total Loss,15.0,4.0,1.0
+I1809,Vehicle Theft,Major Loss,15.0,1.0,1.0
+I1810,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I1811,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I1812,Single Vehicle Collision,Total Loss,14.0,1.0,1.0
+I1813,Multi-vehicle Collision,Minor Loss,23.0,3.0,0.0
+I1814,Vehicle Theft,Total Loss,21.0,1.0,1.0
+I1815,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I1816,Multi-vehicle Collision,Minor Loss,12.0,3.0,0.0
+I1817,Multi-vehicle Collision,Total Loss,3.0,3.0,0.0
+I1818,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I1819,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I1820,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I1821,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I1822,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1823,Single Vehicle Collision,Minor Loss,17.0,1.0,0.0
+I1824,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I1825,Multi-vehicle Collision,Total Loss,5.0,3.0,0.0
+I1826,Parked Car,Major Loss,4.0,1.0,1.0
+I1827,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1828,Vehicle Theft,Major Loss,10.0,1.0,1.0
+I1829,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I1830,Multi-vehicle Collision,Major Loss,5.0,3.0,1.0
+I1831,Single Vehicle Collision,Major Loss,8.0,1.0,1.0
+I1832,Multi-vehicle Collision,Minor Loss,4.0,2.0,1.0
+I1833,Single Vehicle Collision,Minor Loss,7.0,1.0,1.0
+I1834,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I1835,Single Vehicle Collision,Total Loss,23.0,1.0,1.0
+I1836,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1837,Vehicle Theft,Major Loss,4.0,1.0,0.0
+I1838,Multi-vehicle Collision,Major Loss,7.0,2.0,1.0
+I1839,Multi-vehicle Collision,Minor Loss,18.0,4.0,1.0
+I1840,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1841,Multi-vehicle Collision,Minor Loss,9.0,3.0,0.0
+I1842,Multi-vehicle Collision,Minor Loss,4.0,3.0,0.0
+I1843,Multi-vehicle Collision,Total Loss,22.0,3.0,0.0
+I1844,Single Vehicle Collision,Minor Loss,6.0,1.0,1.0
+I1845,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I1846,Vehicle Theft,Minor Loss,1.0,1.0,0.0
+I1847,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I1848,Multi-vehicle Collision,Major Loss,9.0,3.0,0.0
+I1849,Multi-vehicle Collision,Minor Loss,11.0,3.0,1.0
+I1850,Single Vehicle Collision,Total Loss,2.0,1.0,0.0
+I1851,Vehicle Theft,Total Loss,19.0,1.0,1.0
+I1852,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I1853,Multi-vehicle Collision,Minor Loss,1.0,3.0,1.0
+I1854,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1855,Parked Car,Total Loss,23.0,1.0,1.0
+I1856,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1857,Multi-vehicle Collision,Minor Loss,13.0,3.0,1.0
+I1858,Single Vehicle Collision,Minor Loss,9.0,1.0,0.0
+I1859,Multi-vehicle Collision,Major Loss,19.0,3.0,0.0
+I1860,Multi-vehicle Collision,Total Loss,13.0,2.0,1.0
+I1861,Parked Car,Major Loss,2.0,1.0,0.0
+I1862,Parked Car,Total Loss,23.0,1.0,1.0
+I1863,Multi-vehicle Collision,Minor Loss,13.0,3.0,0.0
+I1864,Multi-vehicle Collision,Total Loss,2.0,3.0,0.0
+I1865,Single Vehicle Collision,Total Loss,20.0,1.0,0.0
+I1866,Parked Car,Total Loss,19.0,1.0,1.0
+I1867,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I1868,Multi-vehicle Collision,Minor Loss,14.0,4.0,1.0
+I1869,Vehicle Theft,Major Loss,3.0,1.0,1.0
+I1870,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I1871,Vehicle Theft,Total Loss,17.0,1.0,0.0
+I1872,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I1873,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I1874,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I1875,Multi-vehicle Collision,Minor Loss,18.0,3.0,1.0
+I1876,Single Vehicle Collision,Major Loss,18.0,1.0,0.0
+I1877,Single Vehicle Collision,Minor Loss,18.0,1.0,0.0
+I1878,Multi-vehicle Collision,Minor Loss,14.0,3.0,1.0
+I1879,Vehicle Theft,Total Loss,10.0,1.0,1.0
+I1880,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I1881,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1882,Multi-vehicle Collision,Minor Loss,5.0,3.0,0.0
+I1883,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I1884,Single Vehicle Collision,Minor Loss,8.0,1.0,1.0
+I1885,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I1886,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I1887,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I1888,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I1889,Multi-vehicle Collision,Minor Loss,10.0,3.0,1.0
+I1890,Vehicle Theft,Total Loss,23.0,1.0,1.0
+I1891,Single Vehicle Collision,Major Loss,1.0,1.0,0.0
+I1892,Single Vehicle Collision,Major Loss,8.0,1.0,1.0
+I1893,Single Vehicle Collision,Major Loss,1.0,1.0,0.0
+I1894,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I1895,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I1896,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I1897,Vehicle Theft,Minor Loss,14.0,1.0,1.0
+I1898,Single Vehicle Collision,Total Loss,6.0,1.0,0.0
+I1899,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I1900,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I1901,Single Vehicle Collision,Total Loss,14.0,1.0,1.0
+I1902,Multi-vehicle Collision,Total Loss,8.0,4.0,1.0
+I1903,Multi-vehicle Collision,Total Loss,21.0,2.0,1.0
+I1904,Multi-vehicle Collision,Minor Loss,12.0,3.0,0.0
+I1905,Vehicle Theft,Minor Loss,5.0,1.0,1.0
+I1906,Parked Car,Total Loss,1.0,1.0,0.0
+I1907,Multi-vehicle Collision,Major Loss,3.0,3.0,1.0
+I1908,Multi-vehicle Collision,Minor Loss,11.0,3.0,0.0
+I1909,Multi-vehicle Collision,Minor Loss,9.0,3.0,1.0
+I1910,Multi-vehicle Collision,Major Loss,16.0,3.0,1.0
+I1911,Vehicle Theft,Minor Loss,8.0,1.0,0.0
+I1912,Multi-vehicle Collision,Major Loss,9.0,2.0,1.0
+I1913,Parked Car,Total Loss,17.0,1.0,0.0
+I1914,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I1915,Vehicle Theft,Major Loss,6.0,1.0,1.0
+I1916,Single Vehicle Collision,Total Loss,23.0,1.0,0.0
+I1917,Multi-vehicle Collision,Total Loss,6.0,3.0,0.0
+I1918,Multi-vehicle Collision,Minor Loss,16.0,3.0,0.0
+I1919,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I1920,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I1921,Single Vehicle Collision,Major Loss,14.0,1.0,0.0
+I1922,Single Vehicle Collision,Minor Loss,19.0,1.0,1.0
+I1923,Single Vehicle Collision,Major Loss,6.0,1.0,0.0
+I1924,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I1925,Single Vehicle Collision,Total Loss,17.0,1.0,1.0
+I1926,Vehicle Theft,Minor Loss,6.0,1.0,0.0
+I1927,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I1928,Multi-vehicle Collision,Total Loss,17.0,2.0,1.0
+I1929,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I1930,Multi-vehicle Collision,Total Loss,2.0,3.0,0.0
+I1931,Vehicle Theft,Major Loss,4.0,1.0,0.0
+I1932,Multi-vehicle Collision,Major Loss,15.0,4.0,1.0
+I1933,Multi-vehicle Collision,Total Loss,23.0,2.0,1.0
+I1934,Multi-vehicle Collision,Minor Loss,4.0,3.0,1.0
+I1935,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1936,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I1937,Multi-vehicle Collision,Major Loss,2.0,3.0,1.0
+I1938,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I1939,Multi-vehicle Collision,Total Loss,22.0,3.0,1.0
+I1940,Single Vehicle Collision,Total Loss,4.0,1.0,0.0
+I1941,Multi-vehicle Collision,Minor Loss,10.0,4.0,0.0
+I1942,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1943,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I1944,Single Vehicle Collision,Total Loss,7.0,1.0,0.0
+I1945,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I1946,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I1947,Single Vehicle Collision,Total Loss,6.0,1.0,0.0
+I1948,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I1949,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I1950,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I1951,Multi-vehicle Collision,Minor Loss,2.0,4.0,1.0
+I1952,Parked Car,Minor Loss,15.0,1.0,0.0
+I1953,Multi-vehicle Collision,Major Loss,4.0,3.0,0.0
+I1954,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I1955,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I1956,Multi-vehicle Collision,Minor Loss,21.0,3.0,1.0
+I1957,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I1958,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I1959,Vehicle Theft,Minor Loss,1.0,1.0,1.0
+I1960,Vehicle Theft,Total Loss,15.0,1.0,0.0
+I1961,Multi-vehicle Collision,Major Loss,18.0,3.0,0.0
+I1962,Single Vehicle Collision,Minor Loss,12.0,1.0,0.0
+I1963,Multi-vehicle Collision,Major Loss,13.0,4.0,1.0
+I1964,Single Vehicle Collision,Minor Loss,16.0,1.0,1.0
+I1965,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1966,Multi-vehicle Collision,Minor Loss,17.0,3.0,0.0
+I1967,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I1968,Single Vehicle Collision,Total Loss,20.0,1.0,1.0
+I1969,Multi-vehicle Collision,Total Loss,8.0,3.0,0.0
+I1970,Vehicle Theft,Major Loss,3.0,1.0,1.0
+I1971,Single Vehicle Collision,Total Loss,4.0,1.0,1.0
+I1972,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I1973,Parked Car,Major Loss,22.0,1.0,1.0
+I1974,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I1975,Parked Car,Total Loss,15.0,1.0,0.0
+I1976,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I1977,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I1978,Multi-vehicle Collision,Minor Loss,3.0,3.0,0.0
+I1979,Multi-vehicle Collision,Minor Loss,18.0,3.0,1.0
+I1980,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I1981,Parked Car,Total Loss,7.0,1.0,0.0
+I1982,Single Vehicle Collision,Major Loss,11.0,1.0,0.0
+I1983,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I1984,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I1985,Parked Car,Total Loss,5.0,1.0,1.0
+I1986,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I1987,Vehicle Theft,Major Loss,3.0,1.0,1.0
+I1988,Vehicle Theft,Minor Loss,8.0,1.0,0.0
+I1989,Multi-vehicle Collision,Minor Loss,5.0,3.0,1.0
+I1990,Single Vehicle Collision,Minor Loss,7.0,1.0,0.0
+I1991,Multi-vehicle Collision,Major Loss,0.0,3.0,1.0
+I1992,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I1993,Multi-vehicle Collision,Major Loss,17.0,3.0,0.0
+I1994,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I1995,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I1996,Multi-vehicle Collision,Minor Loss,19.0,4.0,1.0
+I1997,Single Vehicle Collision,Minor Loss,1.0,1.0,1.0
+I1998,Parked Car,Total Loss,17.0,1.0,0.0
+I1999,Multi-vehicle Collision,Total Loss,5.0,3.0,1.0
+I2000,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2001,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I2002,Multi-vehicle Collision,Minor Loss,2.0,3.0,1.0
+I2003,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I2004,Single Vehicle Collision,Minor Loss,16.0,1.0,1.0
+I2005,Multi-vehicle Collision,Major Loss,2.0,3.0,0.0
+I2006,Vehicle Theft,Major Loss,1.0,1.0,1.0
+I2007,Single Vehicle Collision,Total Loss,15.0,1.0,0.0
+I2008,Multi-vehicle Collision,Total Loss,9.0,4.0,0.0
+I2009,Multi-vehicle Collision,Major Loss,9.0,2.0,1.0
+I2010,Parked Car,Total Loss,7.0,1.0,1.0
+I2011,Single Vehicle Collision,Major Loss,2.0,1.0,1.0
+I2012,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I2013,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I2014,Single Vehicle Collision,Minor Loss,16.0,1.0,1.0
+I2015,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I2016,Multi-vehicle Collision,Minor Loss,3.0,3.0,0.0
+I2017,Single Vehicle Collision,Minor Loss,16.0,1.0,0.0
+I2018,Multi-vehicle Collision,Minor Loss,13.0,3.0,1.0
+I2019,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I2020,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2021,Multi-vehicle Collision,Major Loss,10.0,2.0,1.0
+I2022,Single Vehicle Collision,Major Loss,4.0,1.0,0.0
+I2023,Single Vehicle Collision,Major Loss,14.0,1.0,0.0
+I2024,Parked Car,Major Loss,7.0,1.0,0.0
+I2025,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I2026,Vehicle Theft,Minor Loss,11.0,1.0,1.0
+I2027,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I2028,Multi-vehicle Collision,Minor Loss,8.0,3.0,0.0
+I2029,Parked Car,Minor Loss,5.0,1.0,1.0
+I2030,Multi-vehicle Collision,Minor Loss,19.0,3.0,1.0
+I2031,Single Vehicle Collision,Minor Loss,5.0,1.0,1.0
+I2032,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I2033,Parked Car,Total Loss,7.0,1.0,0.0
+I2034,Parked Car,Minor Loss,7.0,1.0,1.0
+I2035,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I2036,Multi-vehicle Collision,Minor Loss,0.0,3.0,0.0
+I2037,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I2038,Multi-vehicle Collision,Major Loss,18.0,4.0,1.0
+I2039,Multi-vehicle Collision,Total Loss,9.0,3.0,1.0
+I2040,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I2041,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I2042,Multi-vehicle Collision,Total Loss,16.0,3.0,0.0
+I2043,Single Vehicle Collision,Total Loss,14.0,1.0,1.0
+I2044,Single Vehicle Collision,Total Loss,12.0,1.0,1.0
+I2045,Multi-vehicle Collision,Major Loss,17.0,2.0,1.0
+I2046,Single Vehicle Collision,Minor Loss,21.0,1.0,0.0
+I2047,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I2048,Vehicle Theft,Total Loss,8.0,1.0,0.0
+I2049,Single Vehicle Collision,Minor Loss,11.0,1.0,1.0
+I2050,Parked Car,Total Loss,23.0,1.0,1.0
+I2051,Multi-vehicle Collision,Minor Loss,5.0,2.0,0.0
+I2052,Multi-vehicle Collision,Minor Loss,18.0,3.0,1.0
+I2053,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I2054,Multi-vehicle Collision,Total Loss,5.0,3.0,1.0
+I2055,Vehicle Theft,Total Loss,18.0,1.0,0.0
+I2056,Multi-vehicle Collision,Minor Loss,6.0,3.0,1.0
+I2057,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I2058,Single Vehicle Collision,Major Loss,4.0,1.0,0.0
+I2059,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I2060,Single Vehicle Collision,Minor Loss,17.0,1.0,0.0
+I2061,Single Vehicle Collision,Total Loss,18.0,1.0,0.0
+I2062,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I2063,Multi-vehicle Collision,Major Loss,12.0,3.0,1.0
+I2064,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I2065,Single Vehicle Collision,Total Loss,14.0,1.0,1.0
+I2066,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I2067,Multi-vehicle Collision,Major Loss,1.0,2.0,1.0
+I2068,Parked Car,Total Loss,4.0,1.0,1.0
+I2069,Vehicle Theft,Minor Loss,22.0,1.0,1.0
+I2070,Multi-vehicle Collision,Major Loss,16.0,3.0,1.0
+I2071,Multi-vehicle Collision,Major Loss,4.0,3.0,1.0
+I2072,Parked Car,Total Loss,5.0,1.0,1.0
+I2073,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I2074,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I2075,Single Vehicle Collision,Major Loss,1.0,1.0,1.0
+I2076,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I2077,Multi-vehicle Collision,Major Loss,10.0,4.0,1.0
+I2078,Parked Car,Major Loss,8.0,1.0,1.0
+I2079,Single Vehicle Collision,Major Loss,9.0,1.0,0.0
+I2080,Single Vehicle Collision,Minor Loss,22.0,1.0,0.0
+I2081,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I2082,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I2083,Multi-vehicle Collision,Major Loss,3.0,3.0,0.0
+I2084,Parked Car,Minor Loss,3.0,1.0,1.0
+I2085,Vehicle Theft,Minor Loss,20.0,1.0,1.0
+I2086,Single Vehicle Collision,Total Loss,22.0,1.0,0.0
+I2087,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I2088,Single Vehicle Collision,Major Loss,0.0,1.0,0.0
+I2089,Vehicle Theft,Total Loss,20.0,1.0,1.0
+I2090,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I2091,Multi-vehicle Collision,Minor Loss,1.0,3.0,1.0
+I2092,Multi-vehicle Collision,Total Loss,14.0,4.0,0.0
+I2093,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I2094,Vehicle Theft,Major Loss,19.0,1.0,1.0
+I2095,Multi-vehicle Collision,Minor Loss,12.0,3.0,1.0
+I2096,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I2097,Multi-vehicle Collision,Minor Loss,23.0,3.0,1.0
+I2098,Parked Car,Total Loss,4.0,1.0,1.0
+I2099,Single Vehicle Collision,Major Loss,22.0,1.0,1.0
+I2100,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I2101,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I2102,Parked Car,Total Loss,7.0,1.0,1.0
+I2103,Multi-vehicle Collision,Major Loss,3.0,3.0,0.0
+I2104,Vehicle Theft,Minor Loss,6.0,1.0,0.0
+I2105,Parked Car,Minor Loss,12.0,1.0,0.0
+I2106,Single Vehicle Collision,Minor Loss,0.0,1.0,0.0
+I2107,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I2108,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I2109,Single Vehicle Collision,Total Loss,3.0,1.0,1.0
+I2110,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I2111,Multi-vehicle Collision,Total Loss,0.0,2.0,1.0
+I2112,Single Vehicle Collision,Total Loss,20.0,1.0,0.0
+I2113,Multi-vehicle Collision,Major Loss,22.0,2.0,1.0
+I2114,Multi-vehicle Collision,Major Loss,2.0,4.0,0.0
+I2115,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2116,Multi-vehicle Collision,Major Loss,8.0,4.0,0.0
+I2117,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I2118,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I2119,Vehicle Theft,Major Loss,13.0,1.0,0.0
+I2120,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I2121,Single Vehicle Collision,Minor Loss,16.0,1.0,1.0
+I2122,Vehicle Theft,Major Loss,9.0,1.0,1.0
+I2123,Parked Car,Minor Loss,6.0,1.0,1.0
+I2124,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I2125,Single Vehicle Collision,Minor Loss,7.0,1.0,1.0
+I2126,Parked Car,Minor Loss,4.0,1.0,0.0
+I2127,Parked Car,Minor Loss,9.0,1.0,1.0
+I2128,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I2129,Multi-vehicle Collision,Major Loss,5.0,3.0,1.0
+I2130,Single Vehicle Collision,Minor Loss,2.0,1.0,0.0
+I2131,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I2132,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I2133,Parked Car,Minor Loss,23.0,1.0,1.0
+I2134,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I2135,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I2136,Multi-vehicle Collision,Total Loss,9.0,3.0,0.0
+I2137,Parked Car,Total Loss,9.0,1.0,1.0
+I2138,Single Vehicle Collision,Major Loss,4.0,1.0,0.0
+I2139,Multi-vehicle Collision,Minor Loss,7.0,2.0,1.0
+I2140,Single Vehicle Collision,Total Loss,4.0,1.0,1.0
+I2141,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I2142,Multi-vehicle Collision,Minor Loss,4.0,3.0,0.0
+I2143,Multi-vehicle Collision,Minor Loss,21.0,3.0,1.0
+I2144,Single Vehicle Collision,Total Loss,19.0,1.0,1.0
+I2145,Multi-vehicle Collision,Minor Loss,20.0,3.0,1.0
+I2146,Multi-vehicle Collision,Total Loss,2.0,4.0,1.0
+I2147,Multi-vehicle Collision,Minor Loss,7.0,3.0,0.0
+I2148,Single Vehicle Collision,Total Loss,3.0,1.0,0.0
+I2149,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I2150,Single Vehicle Collision,Total Loss,2.0,1.0,1.0
+I2151,Multi-vehicle Collision,Minor Loss,5.0,2.0,0.0
+I2152,Single Vehicle Collision,Minor Loss,16.0,1.0,1.0
+I2153,Multi-vehicle Collision,Total Loss,8.0,3.0,0.0
+I2154,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I2155,Single Vehicle Collision,Major Loss,22.0,1.0,1.0
+I2156,Parked Car,Major Loss,15.0,1.0,1.0
+I2157,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I2158,Vehicle Theft,Total Loss,4.0,1.0,1.0
+I2159,Multi-vehicle Collision,Minor Loss,19.0,3.0,1.0
+I2160,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I2161,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2162,Multi-vehicle Collision,Total Loss,4.0,3.0,1.0
+I2163,Single Vehicle Collision,Major Loss,14.0,1.0,0.0
+I2164,Vehicle Theft,Minor Loss,13.0,1.0,1.0
+I2165,Multi-vehicle Collision,Minor Loss,11.0,3.0,0.0
+I2166,Multi-vehicle Collision,Minor Loss,19.0,3.0,0.0
+I2167,Single Vehicle Collision,Total Loss,0.0,1.0,0.0
+I2168,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I2169,Single Vehicle Collision,Minor Loss,6.0,1.0,1.0
+I2170,Parked Car,Major Loss,12.0,1.0,1.0
+I2171,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2172,Multi-vehicle Collision,Minor Loss,7.0,3.0,0.0
+I2173,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I2174,Single Vehicle Collision,Major Loss,5.0,1.0,1.0
+I2175,Parked Car,Minor Loss,15.0,1.0,1.0
+I2176,Single Vehicle Collision,Minor Loss,2.0,1.0,1.0
+I2177,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I2178,Multi-vehicle Collision,Minor Loss,17.0,3.0,1.0
+I2179,Parked Car,Major Loss,8.0,1.0,1.0
+I2180,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I2181,Single Vehicle Collision,Minor Loss,8.0,1.0,1.0
+I2182,Parked Car,Total Loss,16.0,1.0,1.0
+I2183,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I2184,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I2185,Multi-vehicle Collision,Major Loss,13.0,2.0,1.0
+I2186,Multi-vehicle Collision,Major Loss,15.0,4.0,0.0
+I2187,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I2188,Single Vehicle Collision,Major Loss,19.0,1.0,1.0
+I2189,Parked Car,Total Loss,2.0,1.0,1.0
+I2190,Vehicle Theft,Total Loss,8.0,1.0,1.0
+I2191,Single Vehicle Collision,Minor Loss,1.0,1.0,0.0
+I2192,Vehicle Theft,Minor Loss,4.0,1.0,0.0
+I2193,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I2194,Multi-vehicle Collision,Minor Loss,14.0,3.0,1.0
+I2195,Multi-vehicle Collision,Minor Loss,5.0,3.0,1.0
+I2196,Single Vehicle Collision,Minor Loss,2.0,1.0,1.0
+I2197,Single Vehicle Collision,Minor Loss,7.0,1.0,1.0
+I2198,Multi-vehicle Collision,Minor Loss,16.0,3.0,1.0
+I2199,Multi-vehicle Collision,Major Loss,7.0,3.0,1.0
+I2200,Multi-vehicle Collision,Total Loss,5.0,3.0,1.0
+I2201,Multi-vehicle Collision,Major Loss,23.0,3.0,1.0
+I2202,Parked Car,Major Loss,18.0,1.0,1.0
+I2203,Vehicle Theft,Total Loss,11.0,1.0,1.0
+I2204,Vehicle Theft,Total Loss,3.0,1.0,0.0
+I2205,Single Vehicle Collision,Major Loss,2.0,1.0,1.0
+I2206,Multi-vehicle Collision,Minor Loss,15.0,3.0,0.0
+I2207,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I2208,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I2209,Multi-vehicle Collision,Major Loss,18.0,4.0,0.0
+I2210,Single Vehicle Collision,Total Loss,3.0,1.0,0.0
+I2211,Multi-vehicle Collision,Total Loss,3.0,4.0,0.0
+I2212,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I2213,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I2214,Multi-vehicle Collision,Minor Loss,5.0,4.0,0.0
+I2215,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I2216,Single Vehicle Collision,Major Loss,9.0,1.0,1.0
+I2217,Multi-vehicle Collision,Minor Loss,16.0,3.0,1.0
+I2218,Multi-vehicle Collision,Total Loss,22.0,4.0,1.0
+I2219,Single Vehicle Collision,Total Loss,22.0,1.0,1.0
+I2220,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2221,Parked Car,Major Loss,15.0,1.0,0.0
+I2222,Parked Car,Minor Loss,20.0,1.0,1.0
+I2223,Parked Car,Major Loss,6.0,1.0,1.0
+I2224,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I2225,Parked Car,Major Loss,20.0,1.0,1.0
+I2226,Multi-vehicle Collision,Minor Loss,2.0,3.0,1.0
+I2227,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2228,Single Vehicle Collision,Major Loss,1.0,1.0,0.0
+I2229,Multi-vehicle Collision,Minor Loss,19.0,3.0,0.0
+I2230,Single Vehicle Collision,Major Loss,22.0,1.0,1.0
+I2231,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I2232,Multi-vehicle Collision,Total Loss,21.0,3.0,1.0
+I2233,Multi-vehicle Collision,Minor Loss,13.0,3.0,0.0
+I2234,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I2235,Multi-vehicle Collision,Minor Loss,0.0,2.0,1.0
+I2236,Single Vehicle Collision,Minor Loss,21.0,1.0,0.0
+I2237,Single Vehicle Collision,Minor Loss,0.0,1.0,1.0
+I2238,Multi-vehicle Collision,Total Loss,16.0,3.0,1.0
+I2239,Multi-vehicle Collision,Major Loss,4.0,2.0,1.0
+I2240,Multi-vehicle Collision,Minor Loss,2.0,2.0,1.0
+I2241,Multi-vehicle Collision,Major Loss,10.0,2.0,1.0
+I2242,Multi-vehicle Collision,Total Loss,16.0,4.0,0.0
+I2243,Parked Car,Minor Loss,22.0,1.0,1.0
+I2244,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I2245,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I2246,Single Vehicle Collision,Total Loss,13.0,1.0,1.0
+I2247,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I2248,Single Vehicle Collision,Minor Loss,7.0,1.0,0.0
+I2249,Parked Car,Major Loss,9.0,1.0,0.0
+I2250,Multi-vehicle Collision,Major Loss,2.0,3.0,1.0
+I2251,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2252,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I2253,Multi-vehicle Collision,Total Loss,7.0,4.0,0.0
+I2254,Parked Car,Major Loss,19.0,1.0,1.0
+I2255,Single Vehicle Collision,Minor Loss,8.0,1.0,1.0
+I2256,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I2257,Multi-vehicle Collision,Minor Loss,20.0,2.0,1.0
+I2258,Single Vehicle Collision,Major Loss,21.0,1.0,1.0
+I2259,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I2260,Parked Car,Minor Loss,23.0,1.0,0.0
+I2261,Multi-vehicle Collision,Total Loss,16.0,3.0,1.0
+I2262,Single Vehicle Collision,Minor Loss,9.0,1.0,1.0
+I2263,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I2264,Single Vehicle Collision,Minor Loss,14.0,1.0,0.0
+I2265,Parked Car,Major Loss,1.0,1.0,0.0
+I2266,Parked Car,Minor Loss,11.0,1.0,1.0
+I2267,Vehicle Theft,Minor Loss,12.0,1.0,1.0
+I2268,Multi-vehicle Collision,Minor Loss,7.0,3.0,0.0
+I2269,Vehicle Theft,Minor Loss,15.0,1.0,1.0
+I2270,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I2271,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I2272,Multi-vehicle Collision,Minor Loss,1.0,3.0,1.0
+I2273,Single Vehicle Collision,Minor Loss,9.0,1.0,1.0
+I2274,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I2275,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I2276,Single Vehicle Collision,Major Loss,7.0,1.0,1.0
+I2277,Single Vehicle Collision,Total Loss,15.0,1.0,1.0
+I2278,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I2279,Single Vehicle Collision,Major Loss,22.0,1.0,1.0
+I2280,Single Vehicle Collision,Total Loss,1.0,1.0,1.0
+I2281,Single Vehicle Collision,Minor Loss,12.0,1.0,0.0
+I2282,Single Vehicle Collision,Major Loss,20.0,1.0,1.0
+I2283,Multi-vehicle Collision,Major Loss,7.0,3.0,1.0
+I2284,Multi-vehicle Collision,Major Loss,0.0,3.0,1.0
+I2285,Multi-vehicle Collision,Total Loss,3.0,3.0,0.0
+I2286,Parked Car,Minor Loss,20.0,1.0,1.0
+I2287,Multi-vehicle Collision,Total Loss,11.0,3.0,0.0
+I2288,Multi-vehicle Collision,Minor Loss,1.0,2.0,1.0
+I2289,Multi-vehicle Collision,Minor Loss,23.0,3.0,1.0
+I2290,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I2291,Multi-vehicle Collision,Major Loss,5.0,3.0,1.0
+I2292,Parked Car,Minor Loss,8.0,1.0,1.0
+I2293,Vehicle Theft,Minor Loss,22.0,1.0,1.0
+I2294,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I2295,Multi-vehicle Collision,Major Loss,10.0,3.0,1.0
+I2296,Vehicle Theft,Total Loss,21.0,1.0,1.0
+I2297,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2298,Multi-vehicle Collision,Major Loss,5.0,3.0,0.0
+I2299,Parked Car,Total Loss,8.0,1.0,0.0
+I2300,Multi-vehicle Collision,Total Loss,0.0,4.0,1.0
+I2301,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I2302,Multi-vehicle Collision,Total Loss,12.0,3.0,1.0
+I2303,Single Vehicle Collision,Total Loss,12.0,1.0,0.0
+I2304,Single Vehicle Collision,Major Loss,5.0,1.0,0.0
+I2305,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I2306,Parked Car,Total Loss,7.0,1.0,0.0
+I2307,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I2308,Multi-vehicle Collision,Major Loss,3.0,3.0,1.0
+I2309,Vehicle Theft,Major Loss,21.0,1.0,1.0
+I2310,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I2311,Single Vehicle Collision,Minor Loss,23.0,1.0,1.0
+I2312,Multi-vehicle Collision,Major Loss,3.0,3.0,1.0
+I2313,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2314,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I2315,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2316,Single Vehicle Collision,Major Loss,0.0,1.0,1.0
+I2317,Vehicle Theft,Major Loss,23.0,1.0,1.0
+I2318,Parked Car,Total Loss,18.0,1.0,1.0
+I2319,Single Vehicle Collision,Total Loss,2.0,1.0,1.0
+I2320,Parked Car,Total Loss,0.0,1.0,1.0
+I2321,Single Vehicle Collision,Major Loss,4.0,1.0,1.0
+I2322,Multi-vehicle Collision,Minor Loss,23.0,3.0,0.0
+I2323,Multi-vehicle Collision,Minor Loss,2.0,3.0,0.0
+I2324,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I2325,Vehicle Theft,Minor Loss,2.0,1.0,1.0
+I2326,Vehicle Theft,Minor Loss,5.0,1.0,0.0
+I2327,Parked Car,Minor Loss,21.0,1.0,1.0
+I2328,Multi-vehicle Collision,Minor Loss,22.0,3.0,0.0
+I2329,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I2330,Vehicle Theft,Major Loss,15.0,1.0,1.0
+I2331,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2332,Single Vehicle Collision,Minor Loss,15.0,1.0,0.0
+I2333,Parked Car,Total Loss,2.0,1.0,0.0
+I2334,Multi-vehicle Collision,Minor Loss,17.0,4.0,1.0
+I2335,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2336,Multi-vehicle Collision,Minor Loss,18.0,2.0,1.0
+I2337,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I2338,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2339,Multi-vehicle Collision,Minor Loss,18.0,3.0,1.0
+I2340,Multi-vehicle Collision,Major Loss,5.0,3.0,0.0
+I2341,Multi-vehicle Collision,Minor Loss,3.0,3.0,0.0
+I2342,Single Vehicle Collision,Total Loss,9.0,1.0,0.0
+I2343,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I2344,Parked Car,Major Loss,4.0,1.0,1.0
+I2345,Single Vehicle Collision,Total Loss,16.0,1.0,1.0
+I2346,Single Vehicle Collision,Minor Loss,13.0,1.0,1.0
+I2347,Multi-vehicle Collision,Minor Loss,13.0,2.0,0.0
+I2348,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I2349,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I2350,Single Vehicle Collision,Minor Loss,10.0,1.0,1.0
+I2351,Multi-vehicle Collision,Minor Loss,19.0,2.0,0.0
+I2352,Multi-vehicle Collision,Total Loss,13.0,3.0,1.0
+I2353,Multi-vehicle Collision,Major Loss,22.0,3.0,1.0
+I2354,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I2355,Single Vehicle Collision,Minor Loss,6.0,1.0,0.0
+I2356,Multi-vehicle Collision,Minor Loss,6.0,2.0,1.0
+I2357,Multi-vehicle Collision,Minor Loss,4.0,3.0,1.0
+I2358,Multi-vehicle Collision,Total Loss,10.0,3.0,0.0
+I2359,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I2360,Single Vehicle Collision,Major Loss,22.0,1.0,0.0
+I2361,Single Vehicle Collision,Major Loss,4.0,1.0,0.0
+I2362,Single Vehicle Collision,Minor Loss,14.0,1.0,0.0
+I2363,Multi-vehicle Collision,Minor Loss,21.0,3.0,0.0
+I2364,Single Vehicle Collision,Minor Loss,6.0,1.0,1.0
+I2365,Single Vehicle Collision,Total Loss,21.0,1.0,1.0
+I2366,Single Vehicle Collision,Minor Loss,8.0,1.0,0.0
+I2367,Parked Car,Total Loss,18.0,1.0,1.0
+I2368,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I2369,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I2370,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I2371,Single Vehicle Collision,Major Loss,16.0,1.0,1.0
+I2372,Single Vehicle Collision,Minor Loss,23.0,1.0,0.0
+I2373,Parked Car,Minor Loss,18.0,1.0,1.0
+I2374,Multi-vehicle Collision,Minor Loss,0.0,3.0,0.0
+I2375,Multi-vehicle Collision,Total Loss,7.0,3.0,0.0
+I2376,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I2377,Multi-vehicle Collision,Total Loss,14.0,3.0,0.0
+I2378,Single Vehicle Collision,Major Loss,7.0,1.0,1.0
+I2379,Multi-vehicle Collision,Major Loss,14.0,3.0,0.0
+I2380,Multi-vehicle Collision,Total Loss,20.0,3.0,0.0
+I2381,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I2382,Multi-vehicle Collision,Major Loss,15.0,4.0,0.0
+I2383,Vehicle Theft,Minor Loss,5.0,1.0,1.0
+I2384,Single Vehicle Collision,Major Loss,21.0,1.0,0.0
+I2385,Single Vehicle Collision,Total Loss,7.0,1.0,1.0
+I2386,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2387,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I2388,Multi-vehicle Collision,Major Loss,14.0,4.0,0.0
+I2389,Multi-vehicle Collision,Total Loss,7.0,3.0,1.0
+I2390,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I2391,Multi-vehicle Collision,Major Loss,6.0,2.0,0.0
+I2392,Single Vehicle Collision,Major Loss,10.0,1.0,0.0
+I2393,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I2394,Parked Car,Minor Loss,0.0,1.0,1.0
+I2395,Parked Car,Major Loss,1.0,1.0,1.0
+I2396,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2397,Single Vehicle Collision,Minor Loss,2.0,1.0,1.0
+I2398,Parked Car,Major Loss,21.0,1.0,1.0
+I2399,Vehicle Theft,Minor Loss,2.0,1.0,1.0
+I2400,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I2401,Multi-vehicle Collision,Total Loss,1.0,3.0,0.0
+I2402,Multi-vehicle Collision,Major Loss,15.0,3.0,1.0
+I2403,Multi-vehicle Collision,Total Loss,7.0,2.0,1.0
+I2404,Single Vehicle Collision,Total Loss,8.0,1.0,1.0
+I2405,Parked Car,Major Loss,9.0,1.0,0.0
+I2406,Vehicle Theft,Total Loss,6.0,1.0,1.0
+I2407,Multi-vehicle Collision,Major Loss,8.0,3.0,0.0
+I2408,Multi-vehicle Collision,Minor Loss,15.0,3.0,1.0
+I2409,Vehicle Theft,Major Loss,21.0,1.0,1.0
+I2410,Single Vehicle Collision,Minor Loss,15.0,1.0,1.0
+I2411,Multi-vehicle Collision,Minor Loss,5.0,3.0,1.0
+I2412,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I2413,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I2414,Multi-vehicle Collision,Major Loss,0.0,3.0,1.0
+I2415,Multi-vehicle Collision,Major Loss,7.0,2.0,0.0
+I2416,Multi-vehicle Collision,Major Loss,9.0,4.0,1.0
+I2417,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I2418,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I2419,Multi-vehicle Collision,Total Loss,15.0,3.0,1.0
+I2420,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I2421,Multi-vehicle Collision,Major Loss,7.0,3.0,1.0
+I2422,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I2423,Multi-vehicle Collision,Minor Loss,6.0,3.0,1.0
+I2424,Multi-vehicle Collision,Major Loss,6.0,3.0,1.0
+I2425,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I2426,Multi-vehicle Collision,Major Loss,16.0,2.0,1.0
+I2427,Single Vehicle Collision,Major Loss,3.0,1.0,1.0
+I2428,Parked Car,Minor Loss,23.0,1.0,0.0
+I2429,Single Vehicle Collision,Minor Loss,22.0,1.0,1.0
+I2430,Parked Car,Major Loss,14.0,1.0,1.0
+I2431,Multi-vehicle Collision,Major Loss,1.0,3.0,1.0
+I2432,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2433,Multi-vehicle Collision,Minor Loss,23.0,4.0,0.0
+I2434,Multi-vehicle Collision,Minor Loss,4.0,3.0,0.0
+I2435,Single Vehicle Collision,Major Loss,1.0,1.0,1.0
+I2436,Single Vehicle Collision,Total Loss,9.0,1.0,1.0
+I2437,Single Vehicle Collision,Total Loss,3.0,1.0,1.0
+I2438,Parked Car,Minor Loss,11.0,1.0,1.0
+I2439,Vehicle Theft,Minor Loss,8.0,1.0,1.0
+I2440,Single Vehicle Collision,Minor Loss,7.0,1.0,1.0
+I2441,Single Vehicle Collision,Major Loss,10.0,1.0,1.0
+I2442,Multi-vehicle Collision,Major Loss,11.0,3.0,1.0
+I2443,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I2444,Single Vehicle Collision,Total Loss,20.0,1.0,1.0
+I2445,Multi-vehicle Collision,Minor Loss,22.0,3.0,1.0
+I2446,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2447,Vehicle Theft,Total Loss,20.0,1.0,1.0
+I2448,Single Vehicle Collision,Minor Loss,4.0,1.0,0.0
+I2449,Single Vehicle Collision,Total Loss,1.0,1.0,1.0
+I2450,Single Vehicle Collision,Total Loss,6.0,1.0,0.0
+I2451,Vehicle Theft,Minor Loss,0.0,1.0,1.0
+I2452,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I2453,Vehicle Theft,Minor Loss,2.0,1.0,1.0
+I2454,Parked Car,Major Loss,17.0,1.0,1.0
+I2455,Multi-vehicle Collision,Major Loss,7.0,3.0,1.0
+I2456,Single Vehicle Collision,Total Loss,5.0,1.0,0.0
+I2457,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I2458,Single Vehicle Collision,Major Loss,4.0,1.0,1.0
+I2459,Parked Car,Minor Loss,18.0,1.0,1.0
+I2460,Multi-vehicle Collision,Total Loss,17.0,3.0,1.0
+I2461,Parked Car,Total Loss,21.0,1.0,1.0
+I2462,Vehicle Theft,Minor Loss,19.0,1.0,1.0
+I2463,Single Vehicle Collision,Total Loss,10.0,1.0,0.0
+I2464,Single Vehicle Collision,Major Loss,6.0,1.0,1.0
+I2465,Single Vehicle Collision,Major Loss,23.0,1.0,1.0
+I2466,Single Vehicle Collision,Major Loss,5.0,1.0,0.0
+I2467,Multi-vehicle Collision,Minor Loss,17.0,3.0,0.0
+I2468,Multi-vehicle Collision,Major Loss,17.0,3.0,1.0
+I2469,Single Vehicle Collision,Minor Loss,12.0,1.0,1.0
+I2470,Vehicle Theft,Total Loss,14.0,1.0,1.0
+I2471,Multi-vehicle Collision,Major Loss,14.0,3.0,1.0
+I2472,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I2473,Single Vehicle Collision,Minor Loss,23.0,1.0,1.0
+I2474,Vehicle Theft,Total Loss,6.0,1.0,1.0
+I2475,Multi-vehicle Collision,Minor Loss,3.0,2.0,1.0
+I2476,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I2477,Single Vehicle Collision,Major Loss,17.0,1.0,1.0
+I2478,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I2479,Single Vehicle Collision,Major Loss,18.0,1.0,0.0
+I2480,Vehicle Theft,Minor Loss,6.0,1.0,0.0
+I2481,Multi-vehicle Collision,Minor Loss,12.0,3.0,0.0
+I2482,Multi-vehicle Collision,Minor Loss,4.0,3.0,1.0
+I2483,Multi-vehicle Collision,Minor Loss,13.0,3.0,0.0
+I2484,Parked Car,Major Loss,22.0,1.0,0.0
+I2485,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I2486,Parked Car,Total Loss,23.0,1.0,0.0
+I2487,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I2488,Single Vehicle Collision,Total Loss,18.0,1.0,1.0
+I2489,Multi-vehicle Collision,Minor Loss,18.0,2.0,1.0
+I2490,Multi-vehicle Collision,Total Loss,16.0,3.0,0.0
+I2491,Multi-vehicle Collision,Minor Loss,11.0,3.0,0.0
+I2492,Single Vehicle Collision,Major Loss,3.0,1.0,0.0
+I2493,Multi-vehicle Collision,Major Loss,21.0,2.0,0.0
+I2494,Vehicle Theft,Total Loss,20.0,1.0,0.0
+I2495,Parked Car,Minor Loss,20.0,1.0,1.0
+I2496,Multi-vehicle Collision,Minor Loss,8.0,3.0,1.0
+I2497,Multi-vehicle Collision,Major Loss,17.0,4.0,0.0
+I2498,Multi-vehicle Collision,Total Loss,10.0,3.0,1.0
+I2499,Multi-vehicle Collision,Total Loss,0.0,3.0,0.0
+I2500,Multi-vehicle Collision,Major Loss,23.0,3.0,0.0
+I2501,Single Vehicle Collision,Total Loss,17.0,1.0,0.0
+I2502,Vehicle Theft,Total Loss,2.0,1.0,0.0
+I2503,Multi-vehicle Collision,Total Loss,0.0,3.0,1.0
+I2504,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I2505,Parked Car,Minor Loss,4.0,1.0,1.0
+I2506,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2507,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2508,Single Vehicle Collision,Major Loss,11.0,1.0,1.0
+I2509,Parked Car,Major Loss,15.0,1.0,0.0
+I2510,Single Vehicle Collision,Total Loss,1.0,1.0,1.0
+I2511,Multi-vehicle Collision,Minor Loss,10.0,3.0,1.0
+I2512,Multi-vehicle Collision,Minor Loss,14.0,3.0,0.0
+I2513,Multi-vehicle Collision,Minor Loss,22.0,4.0,0.0
+I2514,Single Vehicle Collision,Total Loss,4.0,1.0,1.0
+I2515,Single Vehicle Collision,Minor Loss,18.0,1.0,1.0
+I2516,Multi-vehicle Collision,Total Loss,3.0,3.0,1.0
+I2517,Single Vehicle Collision,Total Loss,11.0,1.0,1.0
+I2518,Single Vehicle Collision,Major Loss,14.0,1.0,1.0
+I2519,Multi-vehicle Collision,Total Loss,18.0,3.0,1.0
+I2520,Parked Car,Minor Loss,1.0,1.0,1.0
+I2521,Single Vehicle Collision,Minor Loss,21.0,1.0,1.0
+I2522,Vehicle Theft,Total Loss,17.0,1.0,1.0
+I2523,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I2524,Single Vehicle Collision,Major Loss,8.0,1.0,0.0
+I2525,Single Vehicle Collision,Major Loss,3.0,1.0,1.0
+I2526,Vehicle Theft,Major Loss,2.0,1.0,0.0
+I2527,Multi-vehicle Collision,Major Loss,1.0,3.0,0.0
+I2528,Single Vehicle Collision,Total Loss,4.0,1.0,1.0
+I2529,Single Vehicle Collision,Total Loss,0.0,1.0,1.0
+I2530,Parked Car,Total Loss,14.0,1.0,0.0
+I2531,Multi-vehicle Collision,Total Loss,11.0,3.0,1.0
+I2532,Parked Car,Minor Loss,20.0,1.0,1.0
+I2533,Vehicle Theft,Major Loss,16.0,1.0,1.0
+I2534,Multi-vehicle Collision,Major Loss,0.0,3.0,0.0
+I2535,Single Vehicle Collision,Total Loss,8.0,1.0,0.0
+I2536,Single Vehicle Collision,Total Loss,6.0,1.0,1.0
+I2537,Single Vehicle Collision,Total Loss,21.0,1.0,0.0
+I2538,Vehicle Theft,Major Loss,18.0,1.0,0.0
+I2539,Single Vehicle Collision,Total Loss,13.0,1.0,0.0
+I2540,Multi-vehicle Collision,Major Loss,20.0,3.0,1.0
+I2541,Single Vehicle Collision,Major Loss,5.0,1.0,0.0
+I2542,Single Vehicle Collision,Minor Loss,22.0,1.0,0.0
+I2543,Multi-vehicle Collision,Total Loss,23.0,3.0,0.0
+I2544,Multi-vehicle Collision,Minor Loss,2.0,3.0,0.0
+I2545,Single Vehicle Collision,Total Loss,1.0,1.0,0.0
+I2546,Multi-vehicle Collision,Major Loss,12.0,3.0,1.0
+I2547,Vehicle Theft,Total Loss,23.0,1.0,1.0
+I2548,Single Vehicle Collision,Major Loss,4.0,1.0,1.0
+I2549,Multi-vehicle Collision,Minor Loss,16.0,3.0,0.0
+I2550,Vehicle Theft,Major Loss,13.0,1.0,0.0
+I2551,Single Vehicle Collision,Total Loss,10.0,1.0,1.0
+I2552,Parked Car,Total Loss,8.0,1.0,0.0
+I2553,Vehicle Theft,Minor Loss,5.0,1.0,0.0
+I2554,Multi-vehicle Collision,Major Loss,5.0,3.0,0.0
+I2555,Multi-vehicle Collision,Major Loss,19.0,3.0,1.0
+I2556,Vehicle Theft,Major Loss,14.0,1.0,1.0
+I2557,Multi-vehicle Collision,Major Loss,4.0,3.0,1.0
+I2558,Multi-vehicle Collision,Minor Loss,8.0,3.0,0.0
+I2559,Parked Car,Total Loss,22.0,1.0,1.0
+I2560,Parked Car,Major Loss,8.0,1.0,1.0
+I2561,Single Vehicle Collision,Minor Loss,10.0,1.0,0.0
+I2562,Single Vehicle Collision,Major Loss,15.0,1.0,1.0
+I2563,Multi-vehicle Collision,Total Loss,1.0,3.0,1.0
+I2564,Single Vehicle Collision,Major Loss,15.0,1.0,0.0
+I2565,Single Vehicle Collision,Minor Loss,3.0,1.0,1.0
+I2566,Multi-vehicle Collision,Total Loss,6.0,3.0,1.0
+I2567,Multi-vehicle Collision,Major Loss,10.0,2.0,1.0
+I2568,Multi-vehicle Collision,Total Loss,14.0,3.0,1.0
+I2569,Multi-vehicle Collision,Minor Loss,12.0,3.0,1.0
+I2570,Single Vehicle Collision,Total Loss,5.0,1.0,1.0
+I2571,Single Vehicle Collision,Minor Loss,20.0,1.0,1.0
+I2572,Single Vehicle Collision,Minor Loss,17.0,1.0,1.0
+I2573,Multi-vehicle Collision,Minor Loss,0.0,3.0,1.0
+I2574,Multi-vehicle Collision,Total Loss,6.0,3.0,0.0
