@@ -5,7 +5,6 @@
 azure-functions
 azure-storage-blob
 pandas
-numpy
 scipy
 scikit-learn
 sdv
