@@ -1,36 +1,44 @@
 // pages/api/getClaim.js
 
-import fs from 'fs';
+import csv from 'csvtojson';
 import path from 'path';
-import csv from 'csv-parser';
+import fs from 'fs';
 
 export default async function handler(req, res) {
-  const claims = [];
-  const filePath = path.join(process.cwd(), 'claims.csv');
+  if (req.method === 'GET') {
+    const { claimId } = req.query;
 
-  // Read the CSV file
-  fs.createReadStream(filePath)
-    .pipe(csv({
-      mapHeaders: ({ header }) => header.trim().toLowerCase() // Normalize header names
-    }))
-    .on('data', (row) => {
-      claims.push(row);
-    })
-    .on('end', () => {
-      // Find the first claim with status "open" and outcome "pending"
-      const openClaim = claims.find(claim =>
-        claim.claimstatus && claim.claimstatus.toLowerCase() === 'open' &&
-        claim.claimoutcome && claim.claimoutcome.toLowerCase() === 'pending'
-      );
+    try {
+      const csvFilePath = path.join(process.cwd(), 'claims.csv');
 
-      if (openClaim) {
-        res.status(200).json(openClaim);
-      } else {
-        res.status(404).json({ message: 'No open and pending claim found' });
+      if (!fs.existsSync(csvFilePath)) {
+        res.status(404).json({ error: 'Claims file not found.' });
+        return;
       }
-    })
-    .on('error', (error) => {
-      console.error('Error reading the CSV file:', error);
-      res.status(500).json({ message: 'Error reading the CSV file' });
-    });
+
+      const jsonArray = await csv().fromFile(csvFilePath);
+
+      let claim;
+      if (claimId) {
+        // Fetch claim by ID
+        claim = jsonArray.find((c) => c.claimID === claimId);
+      } else {
+        // Fetch the first open/pending claim
+        claim = jsonArray.find(
+          (c) => c.claimStatus === 'open' && c.claimOutcome === 'pending'
+        );
+      }
+
+      if (claim) {
+        res.status(200).json(claim);
+      } else {
+        res.status(404).json({ message: 'Claim not found' });
+      }
+    } catch (error) {
+      console.error('Error reading claims:', error);
+      res.status(500).json({ error: 'Failed to retrieve claim.' });
+    }
+  } else {
+    res.status(405).json({ error: 'Method not allowed' });
+  }
 }

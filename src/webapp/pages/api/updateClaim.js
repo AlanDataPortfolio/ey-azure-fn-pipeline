@@ -1,54 +1,64 @@
 // pages/api/updateClaim.js
 
-import fs from 'fs';
+import csv from 'csvtojson';
+import json2csv from 'json2csv';
 import path from 'path';
-import csvParser from 'csv-parser';
-import { parse } from 'json2csv';
-
-// Function to update the claim in the CSV file
-async function updateCSV(claimId, newStatus, newOutcome) {
-  const filePath = path.resolve('./claims.csv');
-  const updatedRows = [];
-  let headers;
-
-  // Read the CSV file and update the relevant claim
-  return new Promise((resolve, reject) => {
-    fs.createReadStream(filePath)
-      .pipe(csvParser())
-      .on('headers', (headerArray) => {
-        headers = headerArray; // Store header row
-      })
-      .on('data', (row) => {
-        if (row.claimID === claimId) {
-          // Update the claim's status and outcome
-          row.claimStatus = newStatus;
-          row.claimOutcome = newOutcome;
-        }
-        updatedRows.push(row);
-      })
-      .on('end', () => {
-        // Write the updated rows back to the CSV file
-        const csvData = parse(updatedRows, { fields: headers });
-        fs.writeFileSync(filePath, csvData);
-        resolve('Claim updated successfully');
-      })
-      .on('error', (error) => {
-        reject(error);
-      });
-  });
-}
+import fs from 'fs';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
-    const { claimId, claimStatus, claimOutcome } = req.body;
+    const {
+      claimId,
+      claimStatus,
+      claimOutcome,
+      claimNotes,
+      fraudChance,
+      fraudAnalysis,
+    } = req.body;
 
     try {
-      const message = await updateCSV(claimId, claimStatus, claimOutcome);
-      res.status(200).json({ message });
+      const csvFilePath = path.join(process.cwd(), 'claims.csv');
+
+      if (!fs.existsSync(csvFilePath)) {
+        res.status(404).json({ error: 'Claims file not found.' });
+        return;
+      }
+
+      let jsonArray = await csv().fromFile(csvFilePath);
+
+      const claimIndex = jsonArray.findIndex((c) => c.claimID === claimId);
+
+      if (claimIndex !== -1) {
+        // Update claim details
+        jsonArray[claimIndex].claimStatus = claimStatus;
+        jsonArray[claimIndex].claimOutcome = claimOutcome;
+        jsonArray[claimIndex].claimNotes = claimNotes;
+        jsonArray[claimIndex].fraudChance = fraudChance;
+        jsonArray[claimIndex].fraudAnalysis = fraudAnalysis;
+
+        // If the claim is being closed (status changes from pending)
+        if (claimStatus === 'closed' && claimOutcome !== 'pending') {
+          // Record the current date as outcomeDate
+          const currentDate = new Date().toISOString().split('T')[0];
+          jsonArray[claimIndex].outcomeDate = currentDate;
+        }
+
+        // Convert back to CSV
+        const csvData = json2csv.parse(jsonArray, { fields: Object.keys(jsonArray[0]) });
+
+        // Write to CSV file
+        fs.writeFileSync(csvFilePath, csvData);
+
+        res.status(200).json({ message: 'Claim updated successfully.' });
+      } else {
+        res.status(404).json({ message: 'Claim not found.' });
+      }
     } catch (error) {
-      res.status(500).json({ message: 'Error updating claim', error: error.message });
+      console.error('Error updating claim:', error);
+      res.status(500).json({ error: 'Failed to update claim.' });
     }
   } else {
-    res.status(405).json({ message: 'Method not allowed' });
+    res.status(405).json({ error: 'Method not allowed' });
   }
 }
+

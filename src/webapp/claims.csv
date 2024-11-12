@@ -1,11 +1,96 @@
-"claimID","timeAsCustomer","driverAge","insuranceAccess","insurancePremium","driverGender","educationLevel","accidentType","incidentSeverity","authoritiesInvolved","incidentTime","numVehiclesInvolved","numBodilyInjuries","policeReportBool","totalClaimAmount","vehicleAge","driverExperience","licenseType","firstName","lastName","claimStatus","claimOutcome","claimDescription"
-"1","50","35","1000","900","0","Bachelor","Collision","Minor Damage","None","13","1","0","0","1200","8","17","Full","James","Anderson","closed","approved","abcdefg"
-"2","111","47","1000","1322","1","PhD","Single Vehicle Collision","Total Loss","Yes","14","1","1","1","6000","14","31","Full","Emily","Thompson","open","escalated","I went to walk my dog and car crashed into my home"
-"3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","10","2","1","1","5000","7","26","Full","Michael","Johnson","open","pending","abcdefg"
-"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","5","3","1","1","20000","2","6","Full","Olivia","Martinez","open","pending","abcdefg"
-"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","15","1","1","1","6000","7","24","Full","Daniel","Harris","open","pending","abcdefg"
-"6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","12","2","0","0","45000","16","36","Full","Sophia","Roberts","open","pending","abcdefg"
-"7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","17","3","0","0","52270","2","24","Full","David","Edwards","open","pending","abcdefg"
-"8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","16","1","1","1","10400","4","33","Full","Isabella","Stewart","open","pending","abcdefg"
-"9","68","59","1000","1700","0","Bachelor","Collision","Minor Damage","None","11","1","0","0","1010","11","41","Full","Benjamin","Wright","open","pending","abcdefg"
-"10","73","45","2000","1029","1","High School","Single Vehicle Collision","Total Loss","Ambulance","4","1","1","1","90000","15","24","Full","Chloe","Parker","open","pending","abcdefg"
+"claimID","timeAsCustomer","driverAge","insuranceAccess","insurancePremium","driverGender","educationLevel","accidentType","incidentSeverity","authoritiesInvolved","incidentDate","incidentTime","numVehiclesInvolved","numBodilyInjuries","policeReportBool","totalClaimAmount","vehicleAge","driverExperience","licenseType","firstName","lastName","applicationDate","claimStatus","outcomeDate","claimOutcome","claimDescription","fraudChance","fraudAnalysis","claimNotes"
+"1","50","35","1000","900","0","Bachelor","Collision","Minor Damage","None","29/09/2024","13","1","0","0","1200","8","17","Full","James","Anderson","10/10/2024","closed","2024-10-28","approved","The car was involved in a minor collision. There was some damage to the vehicle but no injuries or need for emergency services.","15","**Reasoning:**
+
+The claim aligns with the description of a minor collision without any reported bodily injuries or police involvement, which is consistent with the details provided. The total claim amount is reasonable given the accident's nature, and the claimant has a significant amount of driving experience (17 years), which further supports credibility. While the lack of a police report raises a minor concern, it doesn't significantly increase the likelihood of fraud. Overall, the details provided suggest a low risk of fraudulent activity.","Low fraud risk score. Satisfied with AI's reasoning. Asked further question about claim amount. it seems ok. Approving this case because low fraud score and everything seems ok."
+"2","111","47","1000","1322","1","PhD","Single Vehicle Collision","Total Loss","Yes","30/09/2024","14","1","1","1","6000","14","31","Full","Emily","Thompson","11/10/2024","open","","escalated","While walking the dog, a car lost control and crashed into the house, resulting in a total loss of the vehicle and some property damage.","75","**Reasoning:**
+
+The claim details indicate a single vehicle collision resulting in a total loss while the claim description suggests an out-of-control vehicle crashing into a house. This discrepancy raises questions about the incident's narrative, particularly the lack of mention of any damage to the property in the claim details, which could suggest an embellishment or fabrication. Additionally, the total claim amount of $6000 seems inflated given the circumstances described, further increasing the likelihood of fraud.","High Fraud chance. Escalating. 75% fraud reasoning.
+Very large claim amount."
+"3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","1/10/2024","10","2","1","1","5000","7","26","Full","Michael","Johnson","12/10/2024","closed","2024-10-28","approved","The vehicle was involved in a significant collision, resulting in major damage. The accident was serious enough to report, but no immediate emergency services were needed.","25","**Reasoning:**
+
+The details show a serious collision with major loss and involvement of authorities, which aligns with the claim description. The claim amount of $5000 appears reasonable considering the vehicle age (7 years) and the described circumstances. There are no immediate red flags such as discrepancies in reporting or the claimant's behavior. The combination of these factors leads to a low likelihood of fraud, although the amount claimed does warrant some scrutiny given the accident severity.","Low fraud score of 25% and I am satisfied with the explanation given by the AI. I am approving and closing this case as it seems to genuine."
+"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","2/10/2024","5","3","1","1","20000","2","6","Full","Olivia","Martinez","13/10/2024","closed","2024-10-28","approved","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.",30,"**Reasoning:**
+
+The claim has aspects that raise flags, particularly regarding the total claim amount of $20,000 for a multi-vehicle collision described as causing minor damage. This amount appears disproportionate to the described severity of the incident. Additionally, while there is one bodily injury reported, the presence of an ambulance might suggest a more serious incident. However, the driver’s age, experience, and the overall claim details do not strongly suggest intent to commit fraud. Hence, while there are concerns, the evidence is not compelling enough to classify it as high fraud risk.
+
+**Further Reasoning:**
+
+## In-Depth Fraud Assessment for Claim ID: 4
+
+### Claim Overview
+
+- **Claim ID:** 4
+- **Claimant:** Olivia Martinez
+- **Claim Status:** Open
+- **Application Date:** 13/10/2024
+- **Incident Date:** 2/10/2024
+- **Claim Amount:** $20,000
+- **Accident Type:** Multi-vehicle Collision
+- **Incident Severity:** Minor Damage
+- **Authorities Involved:** Ambulance
+- **Number of Vehicles Involved:** 3
+- **Number of Bodily Injuries:** 1
+- **Time as Customer:** 74 months
+- **Driver Age:** 25
+- **Driver Experience:** 6 years
+- **License Type:** Full
+- **Insurance Premium:** $1,300
+- **Insurance Access:** $1,000
+- **Education Level:** Bachelor
+- **Driver Gender:** Female
+
+### Fraud Likelihood Analysis
+
+**Fraud Likelihood:** **30%**
+
+### Detailed Reasoning
+
+1. **Claim Amount vs. Incident Severity:**
+    - The total claim amount of **$20,000** is a significant **disparity** given that the incident is classified as causing only **minor damage** to multiple vehicles. In assessing the validity of a claim, we typically expect costs related to minor damage to be considerably lower. The possibility of inflated damages or unnecessary repairs could be inferred here, raising concerns about the legitimacy of the claim.
+
+2. **Nature of the Accident:**
+    - The involvement of **three vehicles** in a collision, coupled with **one minor injury**, usually suggests a more complex scenario. While it is standard for minor accidents to involve multiple vehicles, the **presence of an ambulance** might indicate a higher level of injury. However, the fact that injuries were described as not severe seems contradictory, warranting further scrutiny.
+
+3. **Claims History and Customer Profile:**
+    - Olivia has been a customer for **74 months**, which adds some reliability to her claim. With a full license and **six years** of driving experience, she appears to be a **responsible driver**. The educational background (Bachelor's degree) also reflects positively on her profile, suggesting awareness and understanding of the insurance process.
+
+4. **Driver's Age and Experience:**
+    - At **age 25**, Olivia is in a demographic often viewed with caution due to statistical tendencies of younger drivers being more prone to incidents. However, her **six years of experience** and full license mitigate this concern, suggesting potential maturity in driving behavior.
+
+5. **Counter-indicators:**
+    - There are elements that lessen suspicion:
+        - The claim does involve a **police report**, which typically adds credibility.
+        - The presence of official authorities, like an ambulance, indicates that there was a recognized need for assistance, further legitimizing the report of injury.
+        - The claim being **open and pending** implies ongoing investigations or consideration of the claims process, where fraudulent actions may be addressed.
+
+6. **Final Evaluation:**
+    - While the **30% fraud likelihood** indicates there are red flags, the overall assessment does not strongly suggest intent to defraud. The claimant’s background and the scenario's specifics do not point definitively to conscious manipulation. It is prudent to monitor the progress of the claim and consider further verification regarding the repair costs and the specifics of the injury involved.
+
+### Conclusion
+
+In conclusion, while there are notable concerns about the excessive claim amount for minor damages, the claim is bolstered by a reasonable customer history and the presence of authorities at the scene. Continued vigilance and further investigation may be warranted to ensure the integrity of the claim process. Regular assessments of evolving details will be crucial in making a more definitive fraud classification as additional information becomes available.","I am approving because low fraud score"
+"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","3/10/2024","15","1","1","1","6000","7","24","Full","Daniel","Harris","14/10/2024","open","","pending","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","","",""
+"6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","4/10/2024","12","2","0","0","45000","16","36","Full","Sophia","Roberts","15/10/2024","open","","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
+"7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","5/10/2024","17","3","0","0","52270","2","24","Full","David","Edwards","16/10/2024","open","","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
+"8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","6/10/2024","16","1","1","1","10400","4","33","Full","Isabella","Stewart","17/10/2024","open","","pending","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.","","",""
+"9","68","59","1000","1700","0","Bachelor","Collision","Minor Damage","None","7/10/2024","11","1","0","0","1010","11","41","Full","Benjamin","Wright","18/10/2024","open","","pending","The car experienced a minor collision with no major injuries or need for emergency services.","","",""
+"10","73","45","2000","1029","1","High School","Single Vehicle Collision","Total Loss","Ambulance","8/10/2024","4","1","1","1","90000","15","24","Full","Chloe","Parker","19/10/2024","open","","pending","The vehicle suffered a total loss in a single-car crash, prompting an ambulance response for potential injuries.","","",""
+"11","328","48","1000","1407","0","MD","Single Vehicle Collision","Major Damage","Police","9/10/2024","5","1","1","1","71610","11","28","Full","James","Roberts","20/10/2024","open","","pending","","","",""
+"12","57","25","2000","1143","1","Masters","Multi-vehicle Collision","Total Loss","Ambulance","10/10/2024","0","3","0","1","72900","5","9","Full","Emily","Anderson","20/10/2024","open","","pending","","","",""
+"13","215","38","500","1406","1","PhD","Single Vehicle Collision","Total Loss","Police","11/10/2024","10","1","0","0","70700","7","20","Full","Michael","Thompson","20/10/2024","open","","pending","","","",""
+"14","140","30","500","1354","1","College","Multi-vehicle Collision","Minor Damage","Other","12/10/2024","4","4","0","0","60170","9","11","Full","Olivia","Johnson","21/10/2024","open","","pending","","","",""
+"15","250","42","500","1056","0","High School","Single Vehicle Collision","Major Damage","Other","13/10/2024","16","1","1","0","74800","6","22","Full","Daniel","Martinez","22/10/2024","open","","pending","","","",""
+"16","286","41","1000","999","0","College","Vehicle Theft","Trivial Damage","Police","14/10/2024","3","1","2","0","4100","6","24","Full","Sophia","Harris","23/10/2024","open","","pending","","","",""
+"17","356","47","2000","1156","0","High School","Single Vehicle Collision","Minor Damage","Other","15/10/2024","5","1","0","0","61490","6","25","Full","David","Roberts","23/10/2024","open","","pending","","","",""
+"18","65","29","1000","1727","0","High School","Vehicle Theft","Trivial Damage","None","16/10/2024","14","1","0","0","7200","16","11","Full","Isabella","Anderson","23/10/2024","open","","pending","","","",""
+"19","187","34","500","1233","1","PhD","Multi-vehicle Collision","Minor Damage","Fire","17/10/2024","7","3","0","0","45100","4","15","Full","Benjamin","Thompson","23/10/2024","open","","pending","","","",""
+"20","386","53","500","1079","0","JD","Single Vehicle Collision","Minor Damage","Police","18/10/2024","16","1","2","1","66660","9","33","Full","Chloe","Johnson","23/10/2024","open","","pending","","","",""
+"21","197","41","1000","1325","1","PhD","Single Vehicle Collision","Major Damage","Police","19/10/2024","6","1","2","1","76400","18","24","Full","James","Martinez","24/10/2024","open","","pending","","","",""
+"22","166","37","500","1519","1","MD","Single Vehicle Collision","Total Loss","Ambulance","20/10/2024","10","1","1","0","58300","14","15","Full","Emily","Harris","24/10/2024","open","","pending","","","",""
+"23","293","49","2000","1239","1","JD","Single Vehicle Collision","Total Loss","Police","21/10/2024","19","1","1","0","57310","13","33","Full","Michael","Roberts","24/10/2024","open","","pending","","","",""
+"24","179","32","2000","1247","1","PhD","Single Vehicle Collision","Minor Damage","Fire","22/10/2024","10","1","0","0","53100","9","12","Full","Olivia","Anderson","24/10/2024","open","","pending","","","",""
+"25","76","24","1000","1623","1","MD","Multi-vehicle Collision","Total Loss","Ambulance","23/10/2024","6","3","1","0","74700","18","2","P1","Daniel","Thompson","25/10/2024","open","","pending","","","",""
+"26","105","28","500","1082","1","Associate","Multi-vehicle Collision","Major Damage","Fire","24/10/2024","12","3","2","0","60500","20","11","Full","Sophia","Johnson","26/10/2024","open","","pending","","","",""
+"27","97","26","1000","1271","0","Masters","Multi-vehicle Collision","Total Loss","Other","25/10/2024","10","3","2","0","84920","9","8","Full","David","Martinez","27/10/2024","open","","pending","","","",""
+"28","148","36","1000","1236","1","MD","Single Vehicle Collision","Total Loss","Police","26/10/2024","0","1","2","0","61050","6","16","Full","Isabella","Harris","27/10/2024","open","","pending","","","",""
+"29","77","26","2000","786","0","JD","Multi-vehicle Collision","Major Damage","Police","27/10/2024","12","3","2","0","69080","6","7","Full","Benjamin","Roberts","28/10/2024","open","","pending","","","",""
