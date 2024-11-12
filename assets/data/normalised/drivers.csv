@@ -1,0 +1,1001 @@
+DriverID,timeAsCustomer,driverAge,driverGender,educationLevel,driverExperience,licenceType
+D001,328.0,48,0.0,MD,28,Full
+D002,228.0,42,0.0,MD,21,Full
+D003,134.0,29,1.0,PhD,13,Full
+D004,256.0,41,1.0,PhD,22,Full
+D005,228.0,44,0.0,Associate,25,Full
+D006,256.0,39,1.0,PhD,20,Full
+D007,137.0,34,0.0,PhD,17,Full
+D008,165.0,37,0.0,Associate,18,Full
+D009,27.0,33,1.0,PhD,12,Full
+D010,212.0,42,0.0,PhD,24,Full
+D011,235.0,42,1.0,Masters,22,Full
+D012,447.0,61,1.0,High School,39,Full
+D013,60.0,23,0.0,MD,7,Full
+D014,121.0,34,1.0,MD,18,Full
+D015,180.0,38,1.0,College,18,Full
+D016,473.0,58,1.0,MD,40,Full
+D017,70.0,26,0.0,College,9,Full
+D018,140.0,31,0.0,High School,9,Full
+D019,160.0,37,1.0,MD,15,Full
+D020,196.0,39,1.0,High School,23,Full
+D021,460.0,62,0.0,JD,45,Full
+D022,217.0,41,1.0,Associate,20,Full
+D023,370.0,55,0.0,High School,38,Full
+D024,413.0,55,0.0,MD,34,Full
+D025,237.0,40,0.0,College,24,Full
+D026,8.0,35,0.0,Masters,18,Full
+D027,257.0,43,0.0,High School,23,Full
+D028,202.0,34,0.0,JD,15,Full
+D029,224.0,40,1.0,JD,24,Full
+D030,241.0,45,1.0,PhD,26,Full
+D031,64.0,25,0.0,Masters,4,P2
+D032,166.0,37,0.0,JD,15,Full
+D033,155.0,35,1.0,Associate,19,Full
+D034,114.0,30,0.0,High School,12,Full
+D035,149.0,37,0.0,PhD,18,Full
+D036,147.0,33,0.0,High School,17,Full
+D037,62.0,28,1.0,Masters,11,Full
+D038,289.0,49,1.0,JD,30,Full
+D039,431.0,54,1.0,MD,33,Full
+D040,199.0,37,0.0,JD,18,Full
+D041,79.0,26,0.0,Associate,7,Full
+D042,116.0,34,0.0,Associate,12,Full
+D043,37.0,23,1.0,College,7,Full
+D044,106.0,30,1.0,PhD,13,Full
+D045,269.0,44,0.0,JD,27,Full
+D046,265.0,40,1.0,MD,23,Full
+D047,163.0,33,1.0,Associate,17,Full
+D048,355.0,47,0.0,College,29,Full
+D049,175.0,34,1.0,PhD,14,Full
+D050,192.0,35,1.0,Masters,16,Full
+D051,430.0,59,0.0,MD,37,Full
+D052,91.0,27,1.0,JD,8,Full
+D053,217.0,39,0.0,College,21,Full
+D054,223.0,40,1.0,JD,20,Full
+D055,195.0,39,0.0,PhD,21,Full
+D056,22.0,26,0.0,PhD,10,Full
+D057,439.0,56,1.0,PhD,40,Full
+D058,94.0,32,1.0,Masters,12,Full
+D059,11.0,39,0.0,PhD,18,Full
+D060,151.0,36,1.0,MD,15,Full
+D061,154.0,34,0.0,PhD,12,Full
+D062,245.0,44,0.0,JD,28,Full
+D063,119.0,32,0.0,High School,12,Full
+D064,215.0,42,0.0,JD,25,Full
+D065,295.0,42,0.0,PhD,22,Full
+D066,254.0,39,1.0,MD,22,Full
+D067,107.0,31,1.0,High School,13,Full
+D068,478.0,64,1.0,Associate,46,Full
+D069,128.0,30,0.0,MD,14,Full
+D070,338.0,49,0.0,MD,32,Full
+D071,271.0,42,1.0,Associate,25,Full
+D072,222.0,41,1.0,MD,24,Full
+D073,199.0,41,1.0,Associate,24,Full
+D074,215.0,37,1.0,College,18,Full
+D075,192.0,40,1.0,Associate,18,Full
+D076,120.0,35,1.0,High School,16,Full
+D077,270.0,45,1.0,College,23,Full
+D078,319.0,47,0.0,College,29,Full
+D079,194.0,39,1.0,JD,20,Full
+D080,227.0,38,1.0,PhD,22,Full
+D081,137.0,31,0.0,High School,9,Full
+D082,244.0,40,1.0,Masters,21,Full
+D083,78.0,29,0.0,Masters,8,Full
+D084,200.0,35,0.0,High School,15,Full
+D085,284.0,48,0.0,Masters,31,Full
+D086,275.0,41,0.0,High School,23,Full
+D087,153.0,34,1.0,Associate,14,Full
+D088,134.0,32,1.0,MD,13,Full
+D089,31.0,36,1.0,College,16,Full
+D090,41.0,25,1.0,College,3,P2
+D091,127.0,29,1.0,High School,9,Full
+D092,61.0,23,1.0,Associate,3,P2
+D093,207.0,42,0.0,PhD,23,Full
+D094,219.0,43,1.0,MD,23,Full
+D095,271.0,42,1.0,High School,22,Full
+D096,80.0,25,1.0,PhD,5,Full
+D097,325.0,47,1.0,Associate,31,Full
+D098,29.0,25,0.0,Masters,3,P2
+D099,295.0,48,1.0,College,28,Full
+D100,239.0,42,0.0,College,23,Full
+D101,269.0,41,1.0,College,23,Full
+D102,80.0,27,1.0,College,6,Full
+D103,279.0,41,1.0,JD,20,Full
+D104,165.0,33,1.0,Associate,12,Full
+D105,350.0,54,0.0,College,38,Full
+D106,295.0,49,0.0,College,32,Full
+D107,464.0,61,1.0,Associate,40,Full
+D108,118.0,28,1.0,High School,11,Full
+D109,298.0,47,1.0,PhD,28,Full
+D110,87.0,31,1.0,Masters,15,Full
+D111,261.0,42,1.0,College,21,Full
+D112,453.0,60,0.0,PhD,38,Full
+D113,210.0,41,0.0,High School,25,Full
+D114,168.0,32,0.0,MD,15,Full
+D115,390.0,51,0.0,Associate,33,Full
+D116,258.0,46,0.0,MD,26,Full
+D117,107.0,31,1.0,PhD,13,Full
+D118,225.0,41,0.0,High School,25,Full
+D119,164.0,38,1.0,PhD,17,Full
+D120,245.0,39,1.0,Associate,20,Full
+D121,255.0,41,0.0,High School,23,Full
+D122,206.0,36,1.0,MD,18,Full
+D123,203.0,38,1.0,Masters,17,Full
+D124,22.0,25,1.0,College,9,Full
+D125,211.0,35,1.0,JD,14,Full
+D126,206.0,39,0.0,JD,22,Full
+D127,166.0,38,0.0,MD,22,Full
+D128,165.0,32,1.0,High School,14,Full
+D129,274.0,43,0.0,College,25,Full
+D130,81.0,28,1.0,Masters,9,Full
+D131,280.0,45,0.0,JD,27,Full
+D132,194.0,39,0.0,Masters,20,Full
+D133,112.0,27,1.0,Masters,9,Full
+D134,24.0,33,1.0,High School,16,Full
+D135,93.0,32,0.0,PhD,14,Full
+D136,171.0,34,1.0,College,12,Full
+D137,200.0,40,1.0,High School,21,Full
+D138,120.0,28,1.0,PhD,6,Full
+D139,325.0,46,1.0,High School,27,Full
+D140,124.0,32,1.0,MD,13,Full
+D141,211.0,35,0.0,Masters,17,Full
+D142,287.0,41,0.0,Masters,19,Full
+D143,122.0,34,0.0,PhD,15,Full
+D144,22.0,29,0.0,MD,9,Full
+D145,106.0,31,1.0,JD,14,Full
+D146,398.0,58,1.0,Associate,40,Full
+D147,214.0,41,0.0,Masters,22,Full
+D148,209.0,38,1.0,MD,16,Full
+D149,82.0,27,0.0,PhD,10,Full
+D150,193.0,41,1.0,JD,23,Full
+D151,134.0,32,1.0,PhD,15,Full
+D152,288.0,45,0.0,Masters,25,Full
+D153,104.0,32,0.0,High School,14,Full
+D154,431.0,54,1.0,Masters,32,Full
+D155,101.0,33,1.0,Masters,14,Full
+D156,375.0,50,0.0,Associate,34,Full
+D157,461.0,61,0.0,JD,42,Full
+D158,428.0,59,1.0,JD,41,Full
+D159,45.0,38,0.0,Masters,19,Full
+D160,136.0,29,1.0,JD,13,Full
+D161,216.0,36,1.0,Associate,20,Full
+D162,278.0,48,1.0,MD,26,Full
+D163,295.0,48,1.0,MD,32,Full
+D164,112.0,30,1.0,Masters,8,Full
+D165,122.0,34,1.0,Masters,15,Full
+D166,108.0,29,1.0,PhD,7,Full
+D167,14.0,28,1.0,Associate,10,Full
+D168,298.0,45,0.0,High School,26,Full
+D169,276.0,46,1.0,Masters,30,Full
+D170,47.0,37,0.0,High School,17,Full
+D171,222.0,42,0.0,Associate,26,Full
+D172,119.0,28,0.0,High School,7,Full
+D173,73.0,29,0.0,College,7,Full
+D174,8.0,31,1.0,MD,15,Full
+D175,294.0,44,1.0,PhD,23,Full
+D176,324.0,46,0.0,MD,28,Full
+D177,155.0,34,0.0,Masters,15,Full
+D178,261.0,45,1.0,PhD,23,Full
+D179,245.0,40,1.0,Masters,22,Full
+D180,235.0,39,0.0,MD,20,Full
+D181,53.0,36,0.0,Associate,15,Full
+D182,426.0,54,1.0,Masters,38,Full
+D183,111.0,27,1.0,Masters,11,Full
+D184,86.0,26,0.0,JD,10,Full
+D185,296.0,46,0.0,Masters,27,Full
+D186,125.0,35,0.0,JD,19,Full
+D187,177.0,34,1.0,JD,16,Full
+D188,238.0,39,1.0,JD,21,Full
+D189,81.0,25,1.0,High School,9,Full
+D190,128.0,28,1.0,High School,8,Full
+D191,449.0,57,0.0,Associate,38,Full
+D192,252.0,39,0.0,JD,19,Full
+D193,359.0,47,1.0,MD,26,Full
+D194,19.0,32,0.0,High School,10,Full
+D195,73.0,26,0.0,MD,10,Full
+D196,285.0,44,0.0,High School,24,Full
+D197,196.0,36,0.0,MD,17,Full
+D198,223.0,43,1.0,MD,22,Full
+D199,328.0,48,0.0,Masters,29,Full
+D200,285.0,43,1.0,College,23,Full
+D201,30.0,31,0.0,PhD,9,Full
+D202,342.0,49,0.0,PhD,28,Full
+D203,219.0,39,1.0,High School,22,Full
+D204,468.0,62,0.0,PhD,41,Full
+D205,241.0,39,0.0,JD,20,Full
+D206,223.0,43,1.0,Masters,27,Full
+D207,128.0,32,1.0,College,16,Full
+D208,124.0,29,0.0,Masters,13,Full
+D209,343.0,48,0.0,JD,27,Full
+D210,404.0,53,0.0,Associate,32,Full
+D211,63.0,24,1.0,High School,2,P1
+D212,210.0,37,0.0,High School,20,Full
+D213,335.0,50,0.0,High School,34,Full
+D214,11.0,40,1.0,MD,20,Full
+D215,142.0,33,1.0,JD,16,Full
+D216,272.0,43,0.0,PhD,21,Full
+D217,69.0,26,1.0,High School,5,Full
+D218,38.0,28,0.0,Masters,7,Full
+D219,328.0,46,1.0,MD,27,Full
+D220,281.0,43,0.0,College,26,Full
+D221,246.0,44,0.0,College,28,Full
+D222,298.0,49,1.0,College,33,Full
+D223,330.0,50,1.0,High School,30,Full
+D224,362.0,50,0.0,Associate,31,Full
+D225,241.0,38,1.0,Associate,19,Full
+D226,245.0,41,0.0,Masters,24,Full
+D227,371.0,52,1.0,High School,30,Full
+D228,343.0,52,1.0,Associate,31,Full
+D229,377.0,53,1.0,MD,32,Full
+D230,154.0,37,1.0,MD,21,Full
+D231,166.0,34,1.0,High School,18,Full
+D232,298.0,46,0.0,JD,29,Full
+D233,235.0,42,1.0,Masters,24,Full
+D234,172.0,35,0.0,MD,19,Full
+D235,27.0,28,0.0,JD,6,Full
+D236,428.0,54,0.0,Masters,35,Full
+D237,99.0,32,0.0,JD,10,Full
+D238,107.0,26,0.0,MD,5,Full
+D239,272.0,41,1.0,Associate,24,Full
+D240,151.0,37,1.0,Masters,20,Full
+D241,249.0,43,1.0,MD,21,Full
+D242,177.0,38,1.0,College,18,Full
+D243,190.0,40,1.0,JD,24,Full
+D244,174.0,36,1.0,College,15,Full
+D245,95.0,28,0.0,Associate,12,Full
+D246,371.0,51,1.0,Associate,32,Full
+D247,2.0,28,1.0,JD,10,Full
+D248,269.0,44,1.0,JD,25,Full
+D249,101.0,27,0.0,Masters,9,Full
+D250,94.0,30,1.0,High School,10,Full
+D251,117.0,28,1.0,Associate,6,Full
+D252,111.0,27,0.0,MD,8,Full
+D253,242.0,40,1.0,High School,18,Full
+D254,440.0,61,0.0,PhD,39,Full
+D255,20.0,23,1.0,JD,2,P1
+D256,461.0,57,1.0,High School,36,Full
+D257,208.0,36,0.0,Associate,17,Full
+D258,279.0,43,0.0,Associate,27,Full
+D259,244.0,40,1.0,MD,21,Full
+D260,134.0,30,1.0,PhD,14,Full
+D261,122.0,29,1.0,Masters,9,Full
+D262,156.0,31,0.0,PhD,13,Full
+D263,232.0,43,0.0,College,21,Full
+D264,244.0,40,0.0,Masters,21,Full
+D265,84.0,30,1.0,MD,9,Full
+D266,394.0,57,1.0,High School,36,Full
+D267,246.0,45,0.0,JD,25,Full
+D268,35.0,29,1.0,JD,13,Full
+D269,156.0,37,0.0,Associate,19,Full
+D270,195.0,36,1.0,Associate,17,Full
+D271,369.0,55,0.0,College,36,Full
+D272,271.0,40,1.0,Associate,23,Full
+D273,332.0,47,0.0,MD,26,Full
+D274,107.0,26,1.0,JD,7,Full
+D275,217.0,39,1.0,Masters,17,Full
+D276,243.0,43,1.0,Associate,23,Full
+D277,296.0,42,0.0,Associate,21,Full
+D278,264.0,41,0.0,PhD,20,Full
+D279,108.0,33,1.0,JD,14,Full
+D280,32.0,38,1.0,College,19,Full
+D281,259.0,39,1.0,JD,22,Full
+D282,186.0,33,1.0,Associate,16,Full
+D283,201.0,40,1.0,PhD,23,Full
+D284,436.0,58,0.0,PhD,39,Full
+D285,189.0,36,1.0,MD,14,Full
+D286,105.0,33,1.0,High School,15,Full
+D287,163.0,31,0.0,JD,13,Full
+D288,219.0,40,1.0,Associate,20,Full
+D289,88.0,25,1.0,JD,6,Full
+D290,40.0,39,1.0,College,22,Full
+D291,284.0,42,0.0,Associate,24,Full
+D292,59.0,40,0.0,College,21,Full
+D293,39.0,31,1.0,High School,10,Full
+D294,147.0,34,0.0,High School,13,Full
+D295,156.0,37,0.0,High School,16,Full
+D296,123.0,31,1.0,Associate,14,Full
+D297,231.0,43,0.0,College,23,Full
+D298,247.0,39,1.0,College,21,Full
+D299,194.0,35,1.0,MD,17,Full
+D300,119.0,27,0.0,High School,11,Full
+D301,259.0,43,1.0,Masters,26,Full
+D302,107.0,31,0.0,Associate,10,Full
+D303,48.0,44,0.0,College,28,Full
+D304,267.0,40,0.0,JD,20,Full
+D305,286.0,47,0.0,High School,31,Full
+D306,175.0,34,1.0,JD,15,Full
+D307,111.0,29,1.0,PhD,11,Full
+D308,151.0,37,1.0,Associate,16,Full
+D309,156.0,37,0.0,Associate,15,Full
+D310,165.0,36,0.0,Masters,15,Full
+D311,253.0,41,1.0,PhD,19,Full
+D312,10.0,26,0.0,MD,10,Full
+D313,158.0,33,1.0,Associate,11,Full
+D314,436.0,59,0.0,PhD,43,Full
+D315,91.0,30,1.0,Masters,9,Full
+D316,256.0,42,1.0,MD,25,Full
+D317,274.0,46,0.0,High School,29,Full
+D318,275.0,45,1.0,Associate,29,Full
+D319,1.0,33,1.0,High School,14,Full
+D320,85.0,30,0.0,Associate,14,Full
+D321,233.0,37,1.0,High School,18,Full
+D322,142.0,30,0.0,JD,14,Full
+D323,266.0,44,0.0,High School,24,Full
+D324,350.0,50,1.0,Masters,30,Full
+D325,97.0,26,0.0,College,10,Full
+D326,399.0,55,0.0,JD,38,Full
+D327,305.0,49,1.0,High School,30,Full
+D328,276.0,47,0.0,PhD,27,Full
+D329,257.0,40,0.0,MD,21,Full
+D330,78.0,31,0.0,PhD,13,Full
+D331,129.0,28,0.0,Masters,6,Full
+D332,283.0,46,1.0,PhD,25,Full
+D333,85.0,25,1.0,JD,8,Full
+D334,101.0,26,1.0,MD,9,Full
+D335,96.0,30,0.0,College,12,Full
+D336,121.0,31,1.0,JD,14,Full
+D337,176.0,39,0.0,College,18,Full
+D338,159.0,37,0.0,Associate,17,Full
+D339,120.0,30,1.0,Associate,9,Full
+D340,212.0,35,0.0,MD,17,Full
+D341,290.0,45,1.0,JD,24,Full
+D342,299.0,42,1.0,Associate,21,Full
+D343,66.0,26,0.0,College,6,Full
+D344,334.0,47,0.0,Masters,27,Full
+D345,216.0,38,1.0,Associate,17,Full
+D346,86.0,28,0.0,PhD,7,Full
+D347,429.0,56,0.0,Associate,38,Full
+D348,257.0,43,1.0,PhD,24,Full
+D349,15.0,34,0.0,JD,13,Full
+D350,230.0,39,1.0,MD,20,Full
+D351,250.0,43,1.0,JD,21,Full
+D352,270.0,44,1.0,Associate,22,Full
+D353,65.0,26,1.0,High School,9,Full
+D354,475.0,57,0.0,Masters,35,Full
+D355,77.0,27,1.0,High School,9,Full
+D356,256.0,43,1.0,MD,23,Full
+D357,229.0,37,1.0,MD,18,Full
+D358,110.0,28,0.0,College,9,Full
+D359,177.0,33,0.0,College,16,Full
+D360,292.0,44,0.0,PhD,27,Full
+D361,451.0,61,1.0,Associate,40,Full
+D362,61.0,24,1.0,College,2,P1
+D363,150.0,30,0.0,MD,9,Full
+D364,283.0,41,1.0,Associate,24,Full
+D365,291.0,46,1.0,High School,29,Full
+D366,162.0,31,1.0,Masters,13,Full
+D367,154.0,36,1.0,Masters,20,Full
+D368,289.0,47,1.0,Associate,28,Full
+D369,10.0,19,1.0,JD,2,P1
+D370,309.0,47,0.0,PhD,27,Full
+D371,396.0,57,0.0,High School,38,Full
+D372,273.0,41,1.0,PhD,24,Full
+D373,129.0,30,1.0,PhD,13,Full
+D374,140.0,31,1.0,JD,13,Full
+D375,419.0,53,0.0,College,37,Full
+D376,315.0,44,1.0,Masters,22,Full
+D377,72.0,29,1.0,Associate,13,Full
+D378,32.0,26,0.0,JD,8,Full
+D379,230.0,41,0.0,JD,21,Full
+D380,157.0,32,0.0,College,10,Full
+D381,265.0,41,1.0,Associate,25,Full
+D382,47.0,34,1.0,PhD,14,Full
+D383,113.0,29,0.0,PhD,10,Full
+D384,289.0,46,0.0,JD,27,Full
+D385,254.0,41,1.0,Masters,25,Full
+D386,115.0,30,0.0,High School,14,Full
+D387,236.0,38,1.0,College,19,Full
+D388,7.0,21,0.0,Associate,0,Ls
+D389,208.0,36,0.0,JD,17,Full
+D390,126.0,33,1.0,JD,11,Full
+D391,48.0,35,1.0,JD,19,Full
+D392,297.0,48,0.0,PhD,29,Full
+D393,160.0,36,1.0,High School,20,Full
+D394,406.0,58,0.0,MD,37,Full
+D395,157.0,31,0.0,High School,13,Full
+D396,146.0,31,1.0,PhD,14,Full
+D397,409.0,57,0.0,High School,41,Full
+D398,252.0,46,0.0,Masters,26,Full
+D399,6.0,27,1.0,High School,11,Full
+D400,103.0,33,0.0,MD,14,Full
+D401,369.0,53,1.0,Masters,33,Full
+D402,261.0,46,0.0,MD,26,Full
+D403,159.0,33,1.0,College,16,Full
+D404,344.0,51,0.0,Associate,35,Full
+D405,437.0,60,1.0,College,42,Full
+D406,65.0,30,1.0,College,8,Full
+D407,280.0,41,0.0,MD,19,Full
+D408,269.0,45,1.0,High School,25,Full
+D409,275.0,40,0.0,Masters,20,Full
+D410,265.0,45,1.0,College,27,Full
+D411,283.0,43,1.0,Associate,23,Full
+D412,84.0,29,1.0,High School,7,Full
+D413,247.0,44,1.0,College,25,Full
+D414,56.0,29,0.0,Masters,11,Full
+D415,210.0,39,0.0,Associate,20,Full
+D416,108.0,32,1.0,High School,16,Full
+D417,328.0,49,1.0,Masters,28,Full
+D418,186.0,37,1.0,JD,16,Full
+D419,277.0,44,0.0,High School,23,Full
+D420,138.0,33,1.0,JD,17,Full
+D421,208.0,41,1.0,College,25,Full
+D422,147.0,37,0.0,MD,16,Full
+D423,8.0,21,0.0,High School,2,P1
+D424,297.0,48,1.0,MD,28,Full
+D425,150.0,31,0.0,Masters,11,Full
+D426,4.0,34,1.0,College,13,Full
+D427,210.0,35,0.0,Masters,17,Full
+D428,91.0,31,1.0,High School,13,Full
+D429,167.0,36,1.0,Masters,16,Full
+D430,467.0,58,0.0,Masters,36,Full
+D431,264.0,47,1.0,JD,30,Full
+D432,270.0,45,1.0,PhD,26,Full
+D433,310.0,48,1.0,Masters,29,Full
+D434,143.0,34,0.0,College,15,Full
+D435,146.0,32,0.0,Associate,15,Full
+D436,102.0,28,0.0,MD,10,Full
+D437,61.0,23,0.0,JD,2,P1
+D438,255.0,44,1.0,PhD,26,Full
+D439,211.0,40,1.0,PhD,21,Full
+D440,61.0,29,0.0,JD,7,Full
+D441,108.0,31,0.0,Masters,10,Full
+D442,303.0,50,0.0,MD,32,Full
+D443,152.0,33,1.0,PhD,14,Full
+D444,120.0,34,1.0,JD,14,Full
+D445,144.0,36,1.0,Associate,16,Full
+D446,414.0,52,1.0,High School,34,Full
+D447,163.0,37,1.0,JD,16,Full
+D448,352.0,53,0.0,Associate,36,Full
+D449,27.0,32,1.0,PhD,10,Full
+D450,239.0,39,1.0,Masters,21,Full
+D451,33.0,32,1.0,PhD,11,Full
+D452,88.0,30,1.0,College,14,Full
+D453,101.0,33,1.0,College,11,Full
+D454,20.0,37,1.0,Associate,18,Full
+D455,126.0,30,1.0,Associate,14,Full
+D456,264.0,43,0.0,Associate,25,Full
+D457,78.0,24,0.0,Masters,4,P2
+D458,123.0,28,0.0,Masters,9,Full
+D459,347.0,51,1.0,MD,33,Full
+D460,163.0,38,1.0,PhD,21,Full
+D461,271.0,44,1.0,High School,26,Full
+D462,410.0,54,0.0,MD,37,Full
+D463,448.0,57,1.0,PhD,37,Full
+D464,218.0,41,0.0,JD,20,Full
+D465,43.0,38,0.0,PhD,21,Full
+D466,33.0,33,1.0,Associate,11,Full
+D467,126.0,34,1.0,Masters,12,Full
+D468,411.0,56,1.0,College,40,Full
+D469,225.0,37,1.0,High School,16,Full
+D470,35.0,35,1.0,PhD,19,Full
+D471,460.0,57,1.0,JD,41,Full
+D472,195.0,38,0.0,MD,22,Full
+D473,360.0,51,0.0,PhD,29,Full
+D474,300.0,49,1.0,PhD,33,Full
+D475,245.0,42,0.0,JD,25,Full
+D476,146.0,36,1.0,Masters,20,Full
+D477,67.0,29,0.0,High School,10,Full
+D478,380.0,56,0.0,MD,34,Full
+D479,389.0,53,0.0,Masters,36,Full
+D480,317.0,46,0.0,MD,26,Full
+D481,264.0,44,0.0,College,27,Full
+D482,20.0,21,1.0,Masters,3,P2
+D483,116.0,30,0.0,JD,10,Full
+D484,222.0,40,0.0,JD,24,Full
+D485,439.0,56,0.0,High School,40,Full
+D486,66.0,28,0.0,Associate,10,Full
+D487,128.0,29,0.0,High School,8,Full
+D488,69.0,24,1.0,High School,8,Full
+D489,294.0,46,0.0,College,26,Full
+D490,19.0,29,0.0,JD,9,Full
+D491,191.0,33,0.0,High School,13,Full
+D492,4.0,39,1.0,High School,22,Full
+D493,298.0,49,0.0,MD,27,Full
+D494,231.0,43,1.0,Masters,21,Full
+D495,338.0,47,1.0,Associate,30,Full
+D496,261.0,46,0.0,PhD,26,Full
+D497,321.0,44,0.0,Associate,27,Full
+D498,0.0,32,0.0,College,11,Full
+D499,405.0,58,0.0,MD,41,Full
+D500,304.0,49,1.0,PhD,30,Full
+D501,1.0,29,1.0,JD,8,Full
+D502,26.0,39,0.0,Masters,22,Full
+D503,202.0,38,1.0,Associate,19,Full
+D504,289.0,48,1.0,PhD,27,Full
+D505,61.0,26,1.0,JD,7,Full
+D506,334.0,46,0.0,MD,24,Full
+D507,12.0,24,1.0,PhD,2,P1
+D508,86.0,29,0.0,High School,12,Full
+D509,83.0,24,1.0,High School,7,Full
+D510,126.0,30,0.0,College,13,Full
+D511,209.0,38,0.0,High School,16,Full
+D512,283.0,48,1.0,JD,32,Full
+D513,194.0,34,0.0,JD,15,Full
+D514,184.0,38,1.0,College,22,Full
+D515,479.0,60,1.0,College,40,Full
+D516,284.0,48,1.0,JD,31,Full
+D517,65.0,27,1.0,College,7,Full
+D518,222.0,39,0.0,High School,18,Full
+D519,196.0,41,0.0,JD,25,Full
+D520,253.0,43,1.0,Associate,24,Full
+D521,280.0,43,0.0,JD,21,Full
+D522,5.0,26,1.0,PhD,8,Full
+D523,220.0,42,0.0,College,25,Full
+D524,85.0,30,1.0,MD,10,Full
+D525,266.0,46,1.0,Associate,26,Full
+D526,41.0,26,1.0,JD,6,Full
+D527,316.0,45,1.0,High School,29,Full
+D528,285.0,47,1.0,Masters,31,Full
+D529,379.0,54,1.0,Associate,36,Full
+D530,15.0,34,1.0,High School,13,Full
+D531,354.0,48,1.0,Masters,32,Full
+D532,342.0,53,1.0,College,31,Full
+D533,169.0,38,0.0,PhD,19,Full
+D534,339.0,49,0.0,JD,30,Full
+D535,259.0,42,1.0,PhD,22,Full
+D536,65.0,23,1.0,College,1,P1
+D537,254.0,46,0.0,MD,29,Full
+D538,440.0,55,1.0,Associate,35,Full
+D539,478.0,63,0.0,High School,44,Full
+D540,230.0,44,1.0,College,25,Full
+D541,138.0,30,1.0,PhD,11,Full
+D542,239.0,41,1.0,JD,21,Full
+D543,93.0,31,1.0,MD,13,Full
+D544,37.0,25,1.0,Masters,8,Full
+D545,254.0,40,0.0,MD,22,Full
+D546,131.0,29,1.0,Associate,11,Full
+D547,230.0,43,0.0,MD,26,Full
+D548,313.0,50,0.0,MD,31,Full
+D549,210.0,38,0.0,JD,19,Full
+D550,101.0,29,0.0,PhD,9,Full
+D551,153.0,37,0.0,High School,17,Full
+D552,337.0,53,0.0,Associate,35,Full
+D553,360.0,51,0.0,Masters,34,Full
+D554,428.0,53,1.0,High School,36,Full
+D555,204.0,40,1.0,JD,24,Full
+D556,364.0,51,0.0,Masters,35,Full
+D557,185.0,35,0.0,College,17,Full
+D558,63.0,26,0.0,PhD,6,Full
+D559,210.0,35,1.0,College,16,Full
+D560,194.0,38,1.0,PhD,17,Full
+D561,294.0,49,0.0,Masters,27,Full
+D562,272.0,41,0.0,MD,22,Full
+D563,27.0,27,1.0,College,9,Full
+D564,251.0,39,1.0,Associate,22,Full
+D565,180.0,33,1.0,JD,17,Full
+D566,392.0,50,1.0,PhD,30,Full
+D567,143.0,30,1.0,High School,13,Full
+D568,371.0,54,0.0,High School,34,Full
+D569,292.0,42,0.0,JD,22,Full
+D570,165.0,35,0.0,College,17,Full
+D571,158.0,33,0.0,JD,17,Full
+D572,241.0,39,1.0,JD,23,Full
+D573,103.0,33,1.0,Masters,12,Full
+D574,402.0,54,0.0,JD,35,Full
+D575,102.0,32,0.0,JD,15,Full
+D576,182.0,40,0.0,PhD,19,Full
+D577,282.0,46,0.0,MD,25,Full
+D578,222.0,39,0.0,High School,22,Full
+D579,415.0,52,0.0,PhD,31,Full
+D580,51.0,34,0.0,PhD,12,Full
+D581,255.0,45,0.0,High School,29,Full
+D582,143.0,31,0.0,Associate,9,Full
+D583,130.0,28,1.0,JD,8,Full
+D584,242.0,41,0.0,Masters,22,Full
+D585,96.0,27,1.0,High School,6,Full
+D586,180.0,35,0.0,MD,16,Full
+D587,150.0,30,0.0,College,10,Full
+D588,463.0,59,1.0,JD,40,Full
+D589,472.0,64,0.0,Masters,42,Full
+D590,75.0,25,1.0,Associate,5,Full
+D591,193.0,40,1.0,College,21,Full
+D592,43.0,43,1.0,Associate,27,Full
+D593,253.0,41,1.0,College,20,Full
+D594,152.0,30,1.0,JD,11,Full
+D595,160.0,38,0.0,High School,19,Full
+D596,56.0,36,0.0,JD,14,Full
+D597,286.0,41,1.0,College,24,Full
+D598,3.0,29,1.0,JD,10,Full
+D599,286.0,41,1.0,High School,20,Full
+D600,239.0,38,1.0,Masters,17,Full
+D601,64.0,29,0.0,High School,9,Full
+D602,98.0,31,0.0,Masters,15,Full
+D603,16.0,35,0.0,JD,16,Full
+D604,70.0,27,1.0,Masters,5,Full
+D605,75.0,27,0.0,JD,11,Full
+D606,246.0,44,0.0,High School,28,Full
+D607,110.0,27,1.0,Associate,8,Full
+D608,236.0,39,1.0,Masters,17,Full
+D609,267.0,46,1.0,MD,29,Full
+D610,463.0,57,0.0,Masters,39,Full
+D611,303.0,46,0.0,Masters,27,Full
+D612,137.0,30,0.0,MD,12,Full
+D613,56.0,42,1.0,Associate,23,Full
+D614,75.0,27,0.0,High School,11,Full
+D615,131.0,33,0.0,MD,14,Full
+D616,153.0,34,0.0,High School,16,Full
+D617,255.0,43,1.0,JD,21,Full
+D618,103.0,26,0.0,MD,10,Full
+D619,97.0,28,0.0,JD,9,Full
+D620,214.0,36,1.0,Associate,14,Full
+D621,438.0,57,1.0,MD,40,Full
+D622,87.0,27,1.0,Masters,7,Full
+D623,27.0,28,0.0,MD,9,Full
+D624,206.0,42,0.0,High School,25,Full
+D625,127.0,31,0.0,Associate,13,Full
+D626,422.0,60,1.0,MD,39,Full
+D627,303.0,50,0.0,Masters,33,Full
+D628,228.0,40,0.0,Associate,20,Full
+D629,239.0,39,1.0,JD,22,Full
+D630,330.0,47,1.0,High School,26,Full
+D631,128.0,35,1.0,MD,16,Full
+D632,147.0,37,1.0,Associate,20,Full
+D633,287.0,45,0.0,Masters,26,Full
+D634,142.0,29,1.0,MD,11,Full
+D635,162.0,35,1.0,Masters,15,Full
+D636,140.0,35,1.0,High School,14,Full
+D637,106.0,28,0.0,High School,11,Full
+D638,292.0,45,0.0,Masters,25,Full
+D639,34.0,34,1.0,PhD,17,Full
+D640,290.0,48,0.0,Associate,26,Full
+D641,182.0,38,1.0,Masters,18,Full
+D642,362.0,55,1.0,JD,38,Full
+D643,143.0,32,1.0,High School,14,Full
+D644,183.0,38,1.0,Masters,17,Full
+D645,254.0,40,0.0,College,18,Full
+D646,249.0,43,1.0,MD,22,Full
+D647,169.0,36,0.0,High School,18,Full
+D648,235.0,40,0.0,College,21,Full
+D649,112.0,32,0.0,Associate,15,Full
+D650,16.0,32,0.0,MD,14,Full
+D651,128.0,31,1.0,High School,13,Full
+D652,103.0,27,1.0,College,5,Full
+D653,356.0,54,0.0,College,32,Full
+D654,109.0,29,1.0,High School,9,Full
+D655,2.0,20,1.0,High School,2,P1
+D656,198.0,34,0.0,Associate,16,Full
+D657,107.0,32,0.0,Associate,13,Full
+D658,252.0,39,0.0,High School,17,Full
+D659,303.0,43,1.0,Associate,21,Full
+D660,101.0,32,0.0,JD,16,Full
+D661,446.0,57,0.0,College,36,Full
+D662,330.0,48,0.0,College,28,Full
+D663,211.0,37,1.0,PhD,19,Full
+D664,172.0,33,1.0,High School,17,Full
+D665,316.0,46,1.0,Masters,30,Full
+D666,435.0,60,0.0,Associate,42,Full
+D667,344.0,51,1.0,Masters,32,Full
+D668,204.0,40,0.0,JD,19,Full
+D669,278.0,47,0.0,Masters,25,Full
+D670,434.0,57,0.0,JD,35,Full
+D671,209.0,36,1.0,MD,15,Full
+D672,250.0,43,0.0,Masters,22,Full
+D673,61.0,25,1.0,Masters,3,P2
+D674,80.0,28,1.0,College,11,Full
+D675,25.0,38,0.0,College,16,Full
+D676,4.0,29,0.0,High School,8,Full
+D677,32.0,29,0.0,MD,10,Full
+D678,125.0,31,0.0,JD,13,Full
+D679,276.0,45,1.0,High School,25,Full
+D680,148.0,30,1.0,Masters,13,Full
+D681,222.0,38,0.0,MD,21,Full
+D682,32.0,38,0.0,Associate,20,Full
+D683,78.0,27,0.0,JD,9,Full
+D684,238.0,43,0.0,High School,23,Full
+D685,313.0,47,0.0,College,25,Full
+D686,334.0,50,0.0,Masters,29,Full
+D687,190.0,35,1.0,High School,16,Full
+D688,194.0,41,0.0,JD,19,Full
+D689,290.0,47,0.0,High School,27,Full
+D690,26.0,42,0.0,PhD,21,Full
+D691,254.0,41,1.0,PhD,23,Full
+D692,199.0,38,1.0,High School,18,Full
+D693,137.0,35,0.0,JD,13,Full
+D694,134.0,36,0.0,PhD,15,Full
+D695,73.0,30,1.0,High School,12,Full
+D696,289.0,45,1.0,Masters,28,Full
+D697,176.0,36,0.0,College,16,Full
+D698,145.0,37,1.0,Associate,21,Full
+D699,164.0,31,1.0,Associate,14,Full
+D700,186.0,38,1.0,Masters,22,Full
+D701,85.0,31,1.0,MD,13,Full
+D702,162.0,33,1.0,Associate,17,Full
+D703,396.0,57,0.0,High School,38,Full
+D704,270.0,41,0.0,High School,20,Full
+D705,168.0,39,1.0,Masters,21,Full
+D706,274.0,45,1.0,JD,29,Full
+D707,263.0,43,1.0,Masters,25,Full
+D708,152.0,33,1.0,High School,14,Full
+D709,46.0,41,1.0,MD,25,Full
+D710,276.0,46,0.0,College,30,Full
+D711,234.0,44,0.0,Associate,27,Full
+D712,64.0,30,0.0,JD,14,Full
+D713,456.0,62,1.0,MD,41,Full
+D714,58.0,23,0.0,High School,7,Full
+D715,475.0,61,1.0,Masters,43,Full
+D716,96.0,29,0.0,College,10,Full
+D717,99.0,28,0.0,MD,8,Full
+D718,38.0,28,0.0,Masters,6,Full
+D719,259.0,44,1.0,Masters,23,Full
+D720,241.0,43,0.0,Associate,24,Full
+D721,437.0,58,0.0,Associate,39,Full
+D722,130.0,34,0.0,Masters,18,Full
+D723,269.0,41,1.0,Associate,19,Full
+D724,103.0,29,0.0,Associate,9,Full
+D725,284.0,43,0.0,PhD,21,Full
+D726,189.0,39,1.0,College,19,Full
+D727,267.0,43,0.0,PhD,24,Full
+D728,39.0,22,0.0,JD,0,Ls
+D729,140.0,32,1.0,College,14,Full
+D730,243.0,41,1.0,College,21,Full
+D731,116.0,31,1.0,MD,11,Full
+D732,219.0,43,1.0,High School,21,Full
+D733,96.0,26,1.0,Associate,5,Full
+D734,149.0,34,1.0,PhD,15,Full
+D735,246.0,43,0.0,JD,22,Full
+D736,293.0,45,1.0,MD,24,Full
+D737,339.0,48,0.0,JD,31,Full
+D738,160.0,33,1.0,High School,13,Full
+D739,224.0,42,1.0,College,20,Full
+D740,194.0,34,0.0,Associate,13,Full
+D741,385.0,51,1.0,MD,30,Full
+D742,100.0,33,0.0,College,14,Full
+D743,371.0,50,0.0,PhD,33,Full
+D744,175.0,39,0.0,PhD,20,Full
+D745,373.0,55,0.0,MD,34,Full
+D746,258.0,41,0.0,Masters,22,Full
+D747,255.0,39,1.0,PhD,21,Full
+D748,37.0,31,1.0,MD,15,Full
+D749,322.0,44,1.0,College,22,Full
+D750,204.0,38,1.0,MD,21,Full
+D751,76.0,31,1.0,Associate,10,Full
+D752,193.0,40,1.0,PhD,19,Full
+D753,405.0,55,0.0,PhD,34,Full
+D754,435.0,58,0.0,JD,36,Full
+D755,54.0,35,1.0,MD,19,Full
+D756,144.0,35,0.0,High School,18,Full
+D757,92.0,32,0.0,Masters,10,Full
+D758,173.0,36,0.0,College,15,Full
+D759,436.0,60,0.0,High School,43,Full
+D760,155.0,35,1.0,Associate,14,Full
+D761,78.0,31,1.0,Masters,9,Full
+D762,440.0,57,0.0,College,37,Full
+D763,264.0,43,0.0,PhD,25,Full
+D764,66.0,30,1.0,College,12,Full
+D765,366.0,50,1.0,High School,31,Full
+D766,188.0,37,1.0,JD,15,Full
+D767,224.0,39,1.0,JD,17,Full
+D768,253.0,46,1.0,MD,24,Full
+D769,446.0,61,1.0,High School,45,Full
+D770,169.0,37,0.0,JD,16,Full
+D771,255.0,46,1.0,JD,25,Full
+D772,209.0,39,0.0,PhD,20,Full
+D773,210.0,37,1.0,MD,19,Full
+D774,174.0,33,1.0,College,14,Full
+D775,70.0,28,0.0,High School,10,Full
+D776,89.0,32,1.0,MD,14,Full
+D777,458.0,61,1.0,High School,44,Full
+D778,239.0,40,1.0,JD,21,Full
+D779,161.0,38,0.0,PhD,21,Full
+D780,446.0,61,1.0,High School,42,Full
+D781,476.0,61,1.0,Masters,40,Full
+D782,70.0,29,1.0,MD,7,Full
+D783,233.0,41,1.0,Associate,23,Full
+D784,122.0,33,0.0,PhD,12,Full
+D785,335.0,48,1.0,MD,30,Full
+D786,257.0,40,0.0,Associate,20,Full
+D787,85.0,27,0.0,College,10,Full
+D788,133.0,30,0.0,College,9,Full
+D789,119.0,34,1.0,College,12,Full
+D790,169.0,34,1.0,JD,18,Full
+D791,225.0,39,0.0,Masters,20,Full
+D792,84.0,32,1.0,Associate,11,Full
+D793,169.0,39,0.0,High School,23,Full
+D794,124.0,32,1.0,Masters,12,Full
+D795,320.0,48,0.0,College,30,Full
+D796,297.0,47,0.0,MD,30,Full
+D797,421.0,56,0.0,Masters,40,Full
+D798,136.0,33,1.0,PhD,16,Full
+D799,46.0,24,1.0,High School,6,Full
+D800,34.0,24,1.0,MD,7,Full
+D801,95.0,30,0.0,College,8,Full
+D802,140.0,36,1.0,JD,19,Full
+D803,200.0,34,1.0,College,13,Full
+D804,123.0,29,1.0,Masters,10,Full
+D805,267.0,46,0.0,MD,24,Full
+D806,290.0,42,0.0,Masters,26,Full
+D807,45.0,37,0.0,College,17,Full
+D808,186.0,38,1.0,JD,21,Full
+D809,135.0,34,1.0,JD,17,Full
+D810,110.0,33,0.0,Associate,12,Full
+D811,259.0,43,1.0,PhD,23,Full
+D812,114.0,30,1.0,Masters,8,Full
+D813,404.0,56,1.0,Masters,34,Full
+D814,282.0,48,1.0,MD,26,Full
+D815,57.0,25,1.0,Masters,9,Full
+D816,215.0,38,1.0,PhD,20,Full
+D817,140.0,30,1.0,College,11,Full
+D818,250.0,42,0.0,High School,22,Full
+D819,286.0,41,0.0,College,24,Full
+D820,356.0,47,0.0,High School,25,Full
+D821,65.0,29,0.0,High School,11,Full
+D822,187.0,34,1.0,PhD,15,Full
+D823,386.0,53,0.0,JD,33,Full
+D824,197.0,41,1.0,PhD,24,Full
+D825,166.0,37,1.0,MD,15,Full
+D826,293.0,49,1.0,JD,33,Full
+D827,179.0,32,1.0,PhD,12,Full
+D828,76.0,24,1.0,MD,2,P1
+D829,105.0,28,1.0,Associate,11,Full
+D830,97.0,26,0.0,Masters,8,Full
+D831,148.0,36,1.0,MD,16,Full
+D832,77.0,26,0.0,JD,7,Full
+D833,295.0,46,1.0,JD,30,Full
+D834,126.0,28,1.0,JD,8,Full
+D835,132.0,32,0.0,PhD,11,Full
+D836,370.0,55,0.0,JD,35,Full
+D837,257.0,43,1.0,JD,22,Full
+D838,9.0,24,1.0,PhD,8,Full
+D839,185.0,34,1.0,PhD,13,Full
+D840,234.0,43,0.0,Associate,25,Full
+D841,253.0,44,1.0,High School,25,Full
+D842,233.0,39,0.0,JD,22,Full
+D843,274.0,44,1.0,JD,26,Full
+D844,297.0,48,0.0,Masters,31,Full
+D845,273.0,47,1.0,Associate,25,Full
+D846,147.0,37,1.0,Masters,16,Full
+D847,285.0,42,0.0,Associate,23,Full
+D848,289.0,43,1.0,Associate,25,Full
+D849,427.0,60,0.0,MD,40,Full
+D850,380.0,53,0.0,Associate,35,Full
+D851,13.0,21,0.0,Associate,4,P2
+D852,282.0,43,0.0,MD,23,Full
+D853,312.0,47,1.0,MD,31,Full
+D854,266.0,46,0.0,Associate,28,Full
+D855,30.0,36,1.0,College,18,Full
+D856,198.0,36,0.0,High School,16,Full
+D857,290.0,45,0.0,Associate,27,Full
+D858,260.0,46,0.0,MD,26,Full
+D859,233.0,43,1.0,College,27,Full
+D860,130.0,30,0.0,PhD,12,Full
+D861,230.0,42,1.0,MD,20,Full
+D862,212.0,40,1.0,Masters,23,Full
+D863,299.0,44,1.0,College,26,Full
+D864,91.0,26,1.0,Associate,6,Full
+D865,398.0,53,1.0,Associate,33,Full
+D866,218.0,43,1.0,Associate,26,Full
+D867,152.0,33,1.0,JD,16,Full
+D868,212.0,39,1.0,JD,19,Full
+D869,242.0,44,1.0,College,23,Full
+D870,80.0,27,0.0,JD,7,Full
+D871,260.0,43,1.0,JD,25,Full
+D872,133.0,34,1.0,JD,14,Full
+D873,290.0,45,1.0,Associate,28,Full
+D874,322.0,49,1.0,PhD,31,Full
+D875,228.0,39,1.0,JD,19,Full
+D876,195.0,37,0.0,MD,21,Full
+D877,247.0,39,1.0,Masters,22,Full
+D878,405.0,57,0.0,MD,36,Full
+D879,144.0,37,1.0,PhD,21,Full
+D880,338.0,47,0.0,MD,29,Full
+D881,121.0,34,0.0,MD,17,Full
+D882,398.0,55,0.0,MD,37,Full
+D883,9.0,30,1.0,High School,11,Full
+D884,115.0,31,1.0,Associate,14,Full
+D885,280.0,48,0.0,JD,30,Full
+D886,254.0,45,0.0,JD,29,Full
+D887,141.0,30,1.0,High School,12,Full
+D888,441.0,55,0.0,College,35,Full
+D889,381.0,55,1.0,MD,33,Full
+D890,191.0,38,1.0,Masters,18,Full
+D891,145.0,34,1.0,JD,18,Full
+D892,479.0,60,1.0,MD,42,Full
+D893,215.0,35,0.0,Masters,18,Full
+D894,41.0,33,0.0,High School,17,Full
+D895,45.0,31,0.0,MD,13,Full
+D896,156.0,38,0.0,High School,19,Full
+D897,246.0,45,0.0,Associate,25,Full
+D898,178.0,39,1.0,JD,23,Full
+D899,237.0,43,1.0,PhD,25,Full
+D900,127.0,34,1.0,Associate,15,Full
+D901,1.0,33,0.0,Associate,13,Full
+D902,5.0,21,1.0,High School,2,P1
+D903,64.0,28,0.0,JD,7,Full
+D904,142.0,30,0.0,PhD,8,Full
+D905,97.0,27,1.0,High School,11,Full
+D906,121.0,31,0.0,Associate,13,Full
+D907,225.0,43,0.0,JD,24,Full
+D908,425.0,53,1.0,High School,31,Full
+D909,285.0,44,0.0,MD,25,Full
+D910,192.0,38,1.0,Masters,19,Full
+D911,285.0,48,1.0,College,31,Full
+D912,98.0,26,0.0,JD,4,P2
+D913,175.0,36,0.0,Masters,17,Full
+D914,259.0,45,0.0,MD,27,Full
+D915,140.0,36,1.0,JD,18,Full
+D916,231.0,37,1.0,High School,19,Full
+D917,186.0,38,0.0,High School,16,Full
+D918,229.0,41,0.0,PhD,21,Full
+D919,180.0,36,0.0,College,17,Full
+D920,188.0,33,0.0,High School,11,Full
+D921,214.0,40,0.0,JD,24,Full
+D922,178.0,38,1.0,College,18,Full
+D923,55.0,35,0.0,MD,14,Full
+D924,90.0,31,1.0,PhD,14,Full
+D925,135.0,30,1.0,MD,12,Full
+D926,277.0,46,1.0,Associate,29,Full
+D927,211.0,38,1.0,Masters,18,Full
+D928,156.0,32,0.0,Masters,10,Full
+D929,84.0,30,0.0,Associate,13,Full
+D930,136.0,32,1.0,JD,12,Full
+D931,310.0,48,1.0,JD,27,Full
+D932,123.0,34,1.0,College,12,Full
+D933,243.0,44,0.0,JD,27,Full
+D934,36.0,37,1.0,Masters,19,Full
+D935,146.0,31,1.0,College,9,Full
+D936,154.0,34,1.0,JD,13,Full
+D937,204.0,40,0.0,High School,18,Full
+D938,458.0,59,1.0,High School,37,Full
+D939,147.0,31,1.0,PhD,9,Full
+D940,279.0,45,1.0,MD,26,Full
+D941,308.0,47,1.0,Associate,29,Full
+D942,284.0,48,1.0,PhD,27,Full
+D943,108.0,31,1.0,PhD,9,Full
+D944,421.0,57,1.0,Associate,39,Full
+D945,266.0,42,0.0,Associate,24,Full
+D946,412.0,56,0.0,High School,37,Full
+D947,31.0,32,1.0,JD,14,Full
+D948,465.0,63,1.0,Masters,43,Full
+D949,126.0,31,0.0,Masters,10,Full
+D950,407.0,55,1.0,PhD,38,Full
+D951,101.0,27,1.0,College,8,Full
+D952,187.0,37,1.0,Masters,21,Full
+D953,252.0,46,1.0,JD,25,Full
+D954,229.0,43,0.0,High School,23,Full
+D955,246.0,39,1.0,JD,18,Full
+D956,190.0,38,0.0,JD,19,Full
+D957,95.0,32,0.0,Masters,15,Full
+D958,205.0,42,1.0,High School,23,Full
+D959,41.0,25,0.0,Masters,3,P2
+D960,137.0,35,1.0,High School,15,Full
+D961,194.0,34,1.0,JD,14,Full
+D962,128.0,35,1.0,Associate,14,Full
+D963,150.0,37,1.0,PhD,21,Full
+D964,104.0,30,1.0,MD,12,Full
+D965,163.0,37,1.0,High School,20,Full
+D966,80.0,26,0.0,Masters,5,Full
+D967,65.0,29,1.0,MD,7,Full
+D968,179.0,32,1.0,Associate,12,Full
+D969,372.0,50,1.0,MD,30,Full
+D970,398.0,55,0.0,High School,38,Full
+D971,213.0,35,0.0,MD,14,Full
+D972,79.0,25,1.0,Associate,3,P2
+D973,232.0,44,0.0,College,24,Full
+D974,230.0,37,0.0,PhD,21,Full
+D975,234.0,41,1.0,JD,25,Full
+D976,240.0,40,1.0,JD,22,Full
+D977,143.0,33,1.0,Associate,11,Full
+D978,266.0,42,0.0,Associate,21,Full
+D979,89.0,32,1.0,High School,11,Full
+D980,229.0,37,1.0,Masters,16,Full
+D981,245.0,40,0.0,PhD,21,Full
+D982,50.0,44,0.0,College,27,Full
+D983,230.0,43,0.0,High School,27,Full
+D984,17.0,39,1.0,JD,23,Full
+D985,163.0,36,0.0,MD,20,Full
+D986,29.0,32,0.0,High School,16,Full
+D987,232.0,42,0.0,College,20,Full
+D988,235.0,39,0.0,JD,21,Full
+D989,295.0,46,1.0,High School,26,Full
+D990,22.0,21,1.0,High School,0,Ls
+D991,286.0,43,1.0,MD,27,Full
+D992,257.0,44,0.0,MD,23,Full
+D993,94.0,26,0.0,MD,8,Full
+D994,124.0,28,0.0,MD,6,Full
+D995,141.0,30,0.0,High School,11,Full
+D996,3.0,38,1.0,Masters,17,Full
+D997,285.0,41,1.0,PhD,21,Full
+D998,130.0,34,1.0,Masters,15,Full
+D999,458.0,62,0.0,Associate,42,Full
+D1000,456.0,60,1.0,Associate,39,Full
