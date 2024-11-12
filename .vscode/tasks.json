@@ -8,7 +8,7 @@
 			"problemMatcher": "$func-python-watch",
 			"isBackground": true,
 			"options": {
-				"cwd": "${workspaceFolder}/src\\func_app"
+				"cwd": "${workspaceFolder}\\src\\func_app"
 			}
 		}
 	]
