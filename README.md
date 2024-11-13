@@ -1,4 +1,4 @@
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![License](https://img.shields.io/badge/license-GPLv3-blue.svg)
 
 ## Table of Contents
 - [Overview](#overview)
@@ -76,8 +76,10 @@ The project is organized into the following directories:
 The deployment is automated using GitHub Actions. Any changes pushed to the `main` branch will trigger the deployment workflow defined in `.github/workflows/infrastructure_deploy.yaml`.
 
 ## License
-This project is licensed under the MIT License - see the `LICENSE` file for details.
+This project is licensed under the GNU General Public License v3.0 - see the `LICENSE` file for details.
 
 ## Contact
 For support or questions, please contact alan.ng.work@gmail.com
+
+
 
