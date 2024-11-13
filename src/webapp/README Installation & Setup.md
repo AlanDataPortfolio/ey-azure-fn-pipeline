@@ -61,4 +61,17 @@ This link takes you directly to the login page of the web app.
 - **Ensure Node.js version compatibility**: Confirm that your Node.js version is compatible with the libraries being used.
 - **Check for import errors**: If the app fails to compile, make sure all libraries (such as `axios`, `react-markdown`, and `remark-breaks`) are correctly imported and installed.
 
+## Project Acknowledgment
+
+This project was conducted for EY by Team 14 of the Macquarie University PACE Program in Session 2, 2024. All rights belong to Team 14, EY, and Macquarie University.
+
+### Team 14 Members:
+- Noorullah Khan | 47197404 | Project Manager, Lead Data & Software Engineer
+- Ninuri Mahagoda | 46592156 | Business Analyst & Documentation
+- Tashiya Vilathgamuwa | 46992162 | Business Analyst & Documentation
+- Quoc Hung Nguyen | 47578130 | Cloud Solutions Architect & Infrastructure Lead
+- Aasnayem Chowdhury | 46325824 | Data Engineer & Data Modeller
+
 ---
+
+© 2024 Team 14 for Macquarie University S2 2024. All rights reserved.
