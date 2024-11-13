@@ -14,8 +14,8 @@ functions=(
     "enriching_dataset1"
     "enriching_dataset2"
     "merging_dataset_1_2"
-    synthesising_method_1
-    synthesising_method_2
+    "synthesising_method_1"
+    "synthesising_method_2"
     "enriching_dataset3"
     "merging_20000_rows"
     "normalise"
