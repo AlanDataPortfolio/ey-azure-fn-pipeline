@@ -9,7 +9,7 @@ Very large claim amount."
 "3","80","43","1000","1000","0","Bachelor","Collision","Major Loss","Yes","1/10/2024","10","2","1","1","5000","7","26","Full","Michael","Johnson","12/10/2024","closed","2024-10-28","approved","The vehicle was involved in a significant collision, resulting in major damage. The accident was serious enough to report, but no immediate emergency services were needed.","25","**Reasoning:**
 
 The details show a serious collision with major loss and involvement of authorities, which aligns with the claim description. The claim amount of $5000 appears reasonable considering the vehicle age (7 years) and the described circumstances. There are no immediate red flags such as discrepancies in reporting or the claimant's behavior. The combination of these factors leads to a low likelihood of fraud, although the amount claimed does warrant some scrutiny given the accident severity.","Low fraud score of 25% and I am satisfied with the explanation given by the AI. I am approving and closing this case as it seems to genuine."
-"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","2/10/2024","5","3","1","1","20000","2","6","Full","Olivia","Martinez","13/10/2024","closed","2024-10-28","approved","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.",30,"**Reasoning:**
+"4","74","25","1000","1300","1","Bachelor","Multi-vehicle Collision","Minor Damage","Ambulance","2/10/2024","5","3","1","1","20000","2","6","Full","Olivia","Martinez","13/10/2024","closed","2024-10-28","approved","A multi-vehicle accident occurred, causing minor damage to the car. An ambulance was called to the scene, but injuries were not severe.","30","**Reasoning:**
 
 The claim has aspects that raise flags, particularly regarding the total claim amount of $20,000 for a multi-vehicle collision described as causing minor damage. This amount appears disproportionate to the described severity of the incident. Additionally, while there is one bodily injury reported, the presence of an ambulance might suggest a more serious incident. However, the driver’s age, experience, and the overall claim details do not strongly suggest intent to commit fraud. Hence, while there are concerns, the evidence is not compelling enough to classify it as high fraud risk.
 
@@ -69,7 +69,53 @@ The claim has aspects that raise flags, particularly regarding the total claim a
 ### Conclusion
 
 In conclusion, while there are notable concerns about the excessive claim amount for minor damages, the claim is bolstered by a reasonable customer history and the presence of authorities at the scene. Continued vigilance and further investigation may be warranted to ensure the integrity of the claim process. Regular assessments of evolving details will be crucial in making a more definitive fraud classification as additional information becomes available.","I am approving because low fraud score"
-"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","3/10/2024","15","1","1","1","6000","7","24","Full","Daniel","Harris","14/10/2024","open","","pending","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.","","",""
+"5","23","40","500","1220","0","Masters","Single Vehicle Collision","Major Loss","Ambulance","3/10/2024","15","1","1","1","6000","7","24","Full","Daniel","Harris","14/10/2024","closed","2024-11-25","approved","The car lost control and crashed, leading to major damage. An ambulance was dispatched to the site as a precaution.",15,"**Reasoning:**
+
+The claim details present a coherent narrative that aligns with the claim description, indicating a single vehicle collision leading to major damage and involvement of emergency services. The driver's experience (24 years) and age (40 years) suggest a level of competence behind the wheel, which makes a sudden loss of control less suspect. Additionally, the involvement of police and the documented medical response lend credibility to the incident. However, the high total claim amount along with the major severity classification introduces slight caution. Overall, while there's a moderate risk, the evidence does not strongly suggest fraudulent behavior.
+
+**Further Reasoning:**
+
+# Fraud Assessment Analysis for Claim ID: 5
+
+## Claim Overview
+- **Claim ID:** 5
+- **Claimant Name:** Daniel Harris
+- **Claim Status:** Open
+- **Claim Outcome:** Pending
+- **Application Date:** 14/10/2024
+- **Incident Date:** 3/10/2024
+- **Total Claim Amount:** $6,000
+- **Insurance Premium:** $1,220
+- **Incident Severity:** Major Loss
+- **Accident Type:** Single Vehicle Collision
+- **Authorities Involved:** Ambulance
+
+## Fraud Likelihood: 15%
+
+### In-Depth Analysis
+
+**1. Consistency of the Claim Narrative:**
+   - The description provided aligns well with the details of the accident. A single vehicle collision resulting in major damage and medically attended injuries via ambulance establishes a clear and credible bridge between the claimant's account and the available evidence.
+   - The presence of a police report further supports the legitimacy of the incident, as it typically indicates an official investigation into the circumstances surrounding the crash.
+
+**2. Driver's Profile:**
+   - **Age (40 years) and Experience (24 years):** Both factors suggest that the driver possesses a reasonable level of maturity and experience on the road. It is generally expected that a driver with many years of experience would exhibit a higher degree of control and awareness in driving situations, reducing the likelihood of an unexpected loss of control.
+   - **Education Level (Masters):** While this does not directly affect driving skills, it may insinuate that the claimant has a level of responsibility and understanding of consequences, which could deter fraudulent behavior.
+
+**3. Severity of the Incident:**
+   - The classification of the incident as a ""Major Loss"" necessitates thorough investigation, particularly due to the high claim amount ($6,000). Major losses often involve complex repair costs or severe bodily injuries, which could be scrutinized for legitimacy.
+   - Notably, the involvement of medical services (ambulance) adds a layer of corroboration to the claim. Medical documentation usually includes records of injuries sustained, which are crucial in validating claims related to bodily harm.
+
+**4. Financial Considerations:**
+   - The **insurance access** of $500 against a claim amount of **$6,000** raises some flags regarding the economic impact on the claimant. As the claim approaches the value of what can typically be recovered, it's important to consider motivations for exaggerating claims. Nevertheless, this claim originates from a single incident with major repercussions, which could justify the elevated costs.
+
+**5. Risk Factors:**
+   - The relatively low fraud likelihood at 15% indicates that while the claim is flagged for moderate risk due to the total claim amount, the circumstances surrounding the incident, including driver profile and corroborative evidence, work in favor of the claimant.
+   - Future developments in the claims process may reveal additional factors (e.g., further medical documentation, repair estimates) that could substantiate or refute the claim. 
+
+### Conclusions
+
+In summary, the combination of coherent claims narrative, a competent driver profile, the involvement of authorities, and medical verification supports a relatively low likelihood of fraudulent behavior. However, the significant financial implications associated with the claim necessitate ongoing evaluation as further information becomes available. It is advisable to monitor the claim closely, particularly any documentation received in light of the pending status.","Approving because Low Fraud Risk"
 "6","91","52","2000","1500","1","Masters","Multi-vehicle Collision","Minor Damage","Police","4/10/2024","12","2","0","0","45000","16","36","Full","Sophia","Roberts","15/10/2024","open","","pending","The car was involved in a multi-vehicle collision with minor damage. Police were called to the scene for assistance.","","",""
 "7","316","43","2000","1508","0","PhD","Multi-vehicle Collision","Total Loss","Fire","5/10/2024","17","3","0","0","52270","2","24","Full","David","Edwards","16/10/2024","open","","pending","A multi-vehicle accident led to a total loss of the car. The fire department had to respond due to a fire hazard","","",""
 "8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","6/10/2024","16","1","1","1","10400","4","33","Full","Isabella","Stewart","17/10/2024","open","","pending","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.","","",""

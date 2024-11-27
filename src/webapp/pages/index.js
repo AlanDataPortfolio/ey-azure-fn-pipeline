@@ -354,6 +354,31 @@ export default function Home() {
     }
   };
 
+  // Helper function to convert driver gender
+  const getDriverGender = (genderValue) => {
+    if (genderValue === '0' || genderValue === 0) return 'Male';
+    if (genderValue === '1' || genderValue === 1) return 'Female';
+    return genderValue;
+  };
+
+  // Helper function to convert incident time
+  const getIncidentTime = (timeValue) => {
+    if (!timeValue) return 'N/A';
+    let hour = parseInt(timeValue);
+    if (isNaN(hour)) return timeValue;
+    const ampm = hour >= 12 ? 'PM' : 'AM';
+    hour = hour % 12;
+    hour = hour ? hour : 12; // the hour '0' should be '12'
+    return `${hour} ${ampm}`;
+  };
+
+  // Helper function to format boolean fields
+  const formatBoolean = (value) => {
+    if (value === '0' || value === 0) return 'No';
+    if (value === '1' || value === 1) return 'Yes';
+    return value;
+  };
+
   return (
     <div className="bg-gray-100 min-h-screen">
       {/* Header */}
@@ -488,30 +513,30 @@ export default function Home() {
                         </div>
                         <div>
                           <span className="font-semibold">Driver Gender:</span>{' '}
-                          {claimDetails.driverGender}
+                          {getDriverGender(claimDetails.driverGender)}
                         </div>
                         <div>
                           <span className="font-semibold">Education Level:</span>{' '}
                           {claimDetails.educationLevel}
                         </div>
                         <div>
-                          <span className="font-semibold">Driver Experience:</span>{' '}
+                          <span className="font-semibold">Driver Experience (Years):</span>{' '}
                           {claimDetails.driverExperience}
                         </div>
                         <div>
                           <span className="font-semibold">License Type:</span>{' '}
                           {claimDetails.licenseType}
-                        </div>                        
+                        </div>
                         <div>
-                          <span className="font-semibold">Time as Customer:</span>{' '}
+                          <span className="font-semibold">Time as Customer (Years):</span>{' '}
                           {claimDetails.timeAsCustomer}
                         </div>
                         <div>
-                          <span className="font-semibold">Insurance Access:</span>{' '}
+                          <span className="font-semibold">Insurance Access ($):</span>{' '}
                           {claimDetails.insuranceAccess}
                         </div>
                         <div>
-                          <span className="font-semibold">Insurance Premium:</span>{' '}
+                          <span className="font-semibold">Insurance Premium ($):</span>{' '}
                           {claimDetails.insurancePremium}
                         </div>
                       </div>
@@ -540,7 +565,7 @@ export default function Home() {
                         </div>
                         <div>
                           <span className="font-semibold">Incident Time:</span>{' '}
-                          {claimDetails.incidentTime}
+                          {getIncidentTime(claimDetails.incidentTime)}
                         </div>
                         <div>
                           <span className="font-semibold">Number of Vehicles Involved:</span>{' '}
@@ -552,7 +577,7 @@ export default function Home() {
                         </div>
                         <div>
                           <span className="font-semibold">Police Report:</span>{' '}
-                          {claimDetails.policeReportBool}
+                          {formatBoolean(claimDetails.policeReportBool)}
                         </div>
                       </div>
                     </div>
@@ -575,12 +600,16 @@ export default function Home() {
                           {claimDetails.claimOutcome}
                         </div>
                         <div>
-                          <span className="font-semibold">Total Claim Amount:</span>{' '}
+                          <span className="font-semibold">Total Claim Amount ($):</span>{' '}
                           {claimDetails.totalClaimAmount}
                         </div>
                         <div>
                           <span className="font-semibold">Outcome Date:</span>{' '}
                           {claimDetails.outcomeDate || 'N/A'}
+                        </div>
+                        <div>
+                          <span className="font-semibold">Vehicle Age (Years):</span>{' '}
+                          {claimDetails.vehicleAge}
                         </div>
                       </div>
                     </div>
