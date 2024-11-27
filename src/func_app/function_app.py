@@ -1036,3 +1036,64 @@ def synthesising_method_2(req: func.HttpRequest) -> func.HttpResponse:
     except Exception as e:
         logging.error(f"Error processing the dataset: {e}")
         return func.HttpResponse(f"Error processing the dataset: {e}", status_code=500)
+    
+@app.route(route="normalise", auth_level=func.AuthLevel.FUNCTION)
+def normalise(req: func.HttpRequest) -> func.HttpResponse:
+    logging.info('Python HTTP trigger function processed a request.')
+
+    # Step 1: Retrieve the Blob Storage connection string from environment variables
+    connection_string = os.getenv("AzureWebJobsStorage")
+    
+    # Define container and blob names
+    source_container_name = "gold"
+    source_blob_name = "unnormalised/20000_rows.csv"
+    destination_container_name = "gold"
+    destination_blob_name_1 = "normalised/claims.csv"
+    destination_blob_name_2 = "normalised/drivers.csv"
+    destination_blob_name_3 = "normalised/incidents.csv"
+    destination_blob_name_4 = "normalised/insurance.csv"
+    destination_blob_name_5 = "normalised/vehicles.csv"
+
+    try:
+        # Step 2: Initialize BlobServiceClient
+        blob_service_client = BlobServiceClient.from_connection_string(connection_string)
+
+        # Step 3: Download the CSV from the "merged" container
+        blob_client = blob_service_client.get_blob_client(container=source_container_name, blob=source_blob_name)
+        downloaded_blob = blob_client.download_blob()
+        blob_data = downloaded_blob.readall()
+
+        # Step 4: Load the dataset into a pandas DataFrame (in-memory)
+        df = pd.read_csv(io.BytesIO(blob_data), na_values=[], keep_default_na=False)
+
+        # Remove rows that contain null values in critical columns only
+        # Specify critical columns based on the table relationships
+        critical_columns = ['ClaimsID', 'DriverID', 'InsuranceID', 'IncidentID', 'VehicleID']
+        df.dropna(subset=critical_columns, inplace=True)
+
+        # Split the data into separate DataFrames based on table schema
+        claims_df = df[['ClaimsID', 'DriverID', 'InsuranceID', 'IncidentID', 'authoritiesInvolved', 'policeReportBool', 'totalClaimAmount', 'fraud', 'VehicleID']].dropna()
+        drivers_df = df[['DriverID', 'timeAsCustomer', 'driverAge', 'driverGender', 'educationLevel', 'driverExperience', 'licenceType']].dropna()
+        incidents_df = df[['IncidentID', 'accidentType', 'incidentSeverity', 'incidentTime', 'numVehiclesInvolved', 'numBodilyInjuries']].dropna()
+        insurance_df = df[['InsuranceID', 'insuranceAccess', 'insurancePremium']].dropna()
+        vehicles_df = df[['VehicleID', 'vehicleAge']].dropna()
+
+        # Save the synthetic dataset back to the blob storage
+        output_blob_client_1 = blob_service_client.get_blob_client(container=destination_container_name, blob=destination_blob_name_1)
+        output_blob_client_1.upload_blob(claims_df.to_csv(index=False), overwrite=True)
+        
+        output_blob_client_2 = blob_service_client.get_blob_client(container=destination_container_name, blob=destination_blob_name_2)
+        output_blob_client_2.upload_blob(drivers_df.to_csv(index=False), overwrite=True)
+        
+        output_blob_client_3 = blob_service_client.get_blob_client(container=destination_container_name, blob=destination_blob_name_3)
+        output_blob_client_3.upload_blob(incidents_df.to_csv(index=False), overwrite=True)
+        
+        output_blob_client_4 = blob_service_client.get_blob_client(container=destination_container_name, blob=destination_blob_name_4)
+        output_blob_client_4.upload_blob(insurance_df.to_csv(index=False), overwrite=True)
+        
+        output_blob_client_5 = blob_service_client.get_blob_client(container=destination_container_name, blob=destination_blob_name_5)
+        output_blob_client_5.upload_blob(vehicles_df.to_csv(index=False), overwrite=True)
+
+    except Exception as e:
+        logging.error(f"Error processing the dataset: {e}")
+        return func.HttpResponse(f"Error processing the dataset: {e}", status_code=500)

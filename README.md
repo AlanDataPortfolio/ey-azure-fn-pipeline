@@ -72,6 +72,10 @@ The project is organized into the following directories:
     ```sh
     func start
     ```
+
+### Running the Function App on Azure
+The intended audience for this part is internal personnel who have access to the Function app secret key which can only be retrieved on the Function app itself. In the root folder, run the `run_pipeline.sh` file and input the secret key, if the key is valid, the pipeline will be run sequentially to produce both the output for the web app as well as the normalised datasets for the AI team to fine tune the LLM.
+
 ## Deployment
 The deployment is automated using GitHub Actions. Any changes pushed to the `main` branch will trigger the deployment workflow defined in `.github/workflows/infrastructure_deploy.yaml`.
 
