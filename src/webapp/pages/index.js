@@ -528,7 +528,7 @@ export default function Home() {
                           {claimDetails.licenseType}
                         </div>
                         <div>
-                          <span className="font-semibold">Time as Customer (Years):</span>{' '}
+                          <span className="font-semibold">Time as Customer (Months):</span>{' '}
                           {claimDetails.timeAsCustomer}
                         </div>
                         <div>
