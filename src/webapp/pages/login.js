@@ -11,14 +11,14 @@ export default function Login() {
     e.preventDefault();
 
     // Simple authentication simulation
-    if (email === 'noor@ey.com' && password === '123') {
+    if (email === 'noor@ey.com' || email === 'noorullah.khan@au.ey.com' && password === '123' || password === '456') {
       localStorage.setItem('loggedIn', true); // Store login state
       router.push('/landingPage'); // Redirect to the landing page after login
     } else {
       alert('Invalid login credentials.');
     }
   };
-
+  
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-2xl max-w-md w-full relative">

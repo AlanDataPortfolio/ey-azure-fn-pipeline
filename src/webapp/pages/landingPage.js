@@ -1,3 +1,5 @@
+// pages/landingPage.js
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 
@@ -153,6 +155,33 @@ export default function LandingPage() {
           </div>
         </div>
       </main>
+
+      {/* Footer */}
+      <footer className="bg-white shadow-inner">
+        <div className="max-w-screen-2xl mx-auto px-4 py-4 flex items-center justify-center">
+          <img src="/NRMA_logo.png" alt="NRMA Logo" className="h-8 w-auto mr-4" />
+          <div className="text-center">
+            <p className="text-sm text-gray-500 leading-tight">
+              © {new Date().getFullYear()} EY & NRMA. All rights reserved. <br />
+              Developed by{' '}
+              <a
+                href="https://www.linkedin.com/in/noorullah-khan"
+                className="text-nrmaBlue hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Noorullah Khan
+              </a>{' '}
+              for EY & NRMA.
+            </p>
+            <p className="text-xs text-gray-400 mt-1 leading-tight">
+              The content and functionality of this site are confidential and proprietary to EY &
+              NRMA.
+            </p>
+          </div>
+          <img src="/NRMA_logo.png" alt="NRMA Logo" className="h-8 w-auto ml-4" />
+        </div>
+      </footer>
     </div>
   );
 }
