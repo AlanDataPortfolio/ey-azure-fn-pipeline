@@ -163,11 +163,112 @@ The claim involves a multi-vehicle collision resulting in a total loss, with a s
 
 ### Conclusion
 Overall, while David Edwards has a solid personal profile reducing the likelihood of fraud, the significant claim amount, absence of a police report, and lack of bodily injuries render this case suspicious. The observed risk factors lead to a moderate fraud likelihood assessment of **40%**, signifying that, while fraud cannot be ruled out, there are aspects (i.e., fire department involvement) that may also validate the claim. Ongoing investigation and clarified documentation will be essential in resolving the legitimacy of this claim.","We are escalating because 40% fraud risk. Needs further investigation."
-"8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","6/10/2024","16","1","1","1","10400","4","33","Full","Isabella","Stewart","17/10/2024","closed","2024-11-30","approved","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.",20,"**Reasoning:**
+"8","120","52","1000","1400","1","PhD","Single Vehicle Collision","Major Loss","Police","6/10/2024","16","1","1","1","10400","4","33","Full","Isabella","Stewart","17/10/2024","closed","2024-11-30","approved","The vehicle was involved in a serious single-car accident, resulting in significant damage. Police were involved in investigating the incident.","20","**Reasoning:**
 
 The claim involves a single vehicle collision with major loss, and there are authoritative verification steps (police involvement) confirming the crash details. The total claim amount is substantial but may fit the incident type and circumstances described. The driver's extensive experience (33 years) and education level (PhD) further indicate a responsible driver profile, making intentional fraud less likely. However, the high claim amount and the nature of the accident warrant some consideration for fraud, resulting in a moderate fraud likelihood assessment.","Approving as fraud risk is low."
-"9","68","59","1000","1700","0","Bachelor","Collision","Minor Damage","None","7/10/2024","11","1","0","0","1010","11","41","Full","Benjamin","Wright","18/10/2024","open","","pending","The car experienced a minor collision with no major injuries or need for emergency services.","","",""
-"10","73","45","2000","1029","1","High School","Single Vehicle Collision","Total Loss","Ambulance","8/10/2024","4","1","1","1","90000","15","24","Full","Chloe","Parker","19/10/2024","open","","pending","The vehicle suffered a total loss in a single-car crash, prompting an ambulance response for potential injuries.","","",""
+"9","68","59","1000","1700","0","Bachelor","Collision","Minor Damage","None","7/10/2024","11","1","0","0","1010","11","41","Full","Benjamin","Wright","18/10/2024","closed","2024-12-02","approved","The car experienced a minor collision with no major injuries or need for emergency services.","15","**Reasoning:**
+
+The claim appears genuine as it involves a minor collision with no injuries and no police report filed, which is consistent with typical claims for minor accidents. The claimant has a long history as a customer (68 months) and considerable driving experience (41 years), reducing the likelihood of fraud. The total claim amount of $1,010 aligns reasonably with minor damage, further indicating legitimacy. However, the absence of a police report could slightly raise suspicion, hence a low fraud risk percentage.
+
+**Further Reasoning:**
+
+# Detailed Fraud Assessment for Claim ID 9
+
+## Claim Overview
+- **Claim ID:** 9
+- **Claimant Name:** Benjamin Wright
+- **Claim Status:** Open
+- **Claim Outcome:** Pending
+- **Application Date:** 18/10/2024
+- **Incident Date:** 7/10/2024
+- **Incident Type:** Collision
+- **Incident Severity:** Minor Damage
+- **Claim Amount:** $1,010
+- **Driver Experience:** 41 years
+- **Time as Customer:** 68 months
+- **Vehicle Age:** 11 years
+
+## Fraud Likelihood Analysis
+### Fraud Likelihood: 15%
+
+### Reasoning Breakdown
+
+1. **Minor Collision with No Injuries:**
+   - The claim description states that the vehicle experienced a minor collision with no reported injuries and no need for emergency services. In general, claims for minor accidents that do not involve injuries are prevalent and often straightforward, which is a strong indicator of legitimacy. The likelihood of exaggeration in such a scenario is typically lower compared to more severe accidents.
+
+2. **Customer Tenure:**
+   - Benjamin Wright has been a customer for **68 months (approximately 5.7 years)**, a relatively long-standing relationship with the insurer. A sustained period as a customer often indicates a lower fraud risk, as established clients are less likely to engage in fraudulent claims for fear of losing their policy and benefits. Trust built from this duration can counterbalance some suspicion that arises from the specifics of the claim.
+
+3. **Driving Experience:**
+   - With **41 years of driving experience**, the claimant demonstrates significant familiarity with driving regulations and safety protocols. This experience generally correlates with responsible behavior on the road. An experienced driver is less likely to fabricate a claim or misrepresent the nature of an incident, further lowering the chances of fraudulent activity.
+
+4. **Total Claim Amount:**
+   - The total claimed amount of **$1,010** seems reasonable and closely aligns with the costs associated with minor vehicle repairs. The average cost of minor collision repairs can vary, but this figure is typically in line with what would be expected given the description of ""minor damage."" This consistency lends additional credibility to the claim.
+
+5. **Absence of Police Report:**
+   - One significant factor that raises scrutiny is the absence of a police report for the incident. While it’s common for minor accidents not to involve law enforcement, this lack of documentation can sometimes be a red flag. It could suggest either a lack of formality associated with the claim or an attempt to avoid accountability that might be expected in more serious situations. However, since the incident has no injuries and is categorized as minor damage, the absence of a police report alone does not constitute strong evidence of fraud but is noteworthy.
+
+6. **Circumstances of the Incident:**
+   - The specifics of the accident—occurring at 11 am with no other vehicles involved—suggest a straightforward incident without complicating factors. The straightforward nature of the explanation can reduce the complexity often associated with fraudulent claims, which tend to involve convoluted narratives or multiple parties.
+
+## Conclusion
+Taking all factors into account, the overall assessment supports the claim's legitimacy. The relatively low fraud likelihood of **15%** reflects a balance of contributing factors that point to authenticity (long customer history, extensive driving experience) versus one element that could signal caution (absence of a police report). The circumstances of the accident appear typical for minor claims, leading to the conclusion that while there is a slight possibility for fraud, it is outweighed by stronger indicators of honesty in this scenario. Further investigation may be prudent, particularly regarding the absence of a police record, but disregarding the claim based on this would not be justifiable.","We are approving this claim because Low Fraud Likelihood."
+"10","73","45","2000","1029","1","High School","Single Vehicle Collision","Total Loss","Ambulance","8/10/2024","4","1","1","1","90000","15","24","Full","Chloe","Parker","19/10/2024","closed","2024-12-02","approved","The vehicle suffered a total loss in a single-car crash, prompting an ambulance response for potential injuries.",35,"**Reasoning:**
+
+The claim shows some typical characteristics of potential fraud, such as a high total claim amount of $90,000 for a total loss in a single vehicle incident and the vehicle's age of 15 years, which might not typically correspond to a high payout. Moreover, although authorities were involved and there was a police report, the incident has no corroborative details indicating the circumstances of the crash, making verification complex. However, the driver's age, experience, and valid insurance suggest a lower risk than more overtly suspicious claims.
+
+**Further Reasoning:**
+
+# In-Depth Fraud Assessment for Claim ID: 10
+
+## Claim Overview 
+- **Claim ID:** 10
+- **Claimant Name:** Chloe Parker
+- **Claim Status:** Open
+- **Claim Outcome:** Pending
+- **Application Date:** 19/10/2024
+- **Incident Date:** 8/10/2024
+- **Total Claim Amount:** $90,000
+- **Incident Type:** Single Vehicle Collision
+- **Severity:** Total Loss
+- **Vehicle Age:** 15 years
+- **Driver Age:** 45
+- **Time As Customer:** 73 months
+- **Driver Experience:** 24 years
+- **Number of Bodily Injuries:** 1
+- **Police Report:** Yes
+- **Insurance Premium:** $1,029
+
+## Fraud Likelihood Assessment: 35%
+
+### Detailed Reasoning
+
+1. **High Claim Amount versus Vehicle Age:**
+   - The total claim amount of **$90,000** raises immediate questions. Given that the vehicle is **15 years old**, such a high payout seems inconsistent with typical market values for vehicles of that age, which generally depreciate significantly. This discrepancy may suggest a potential motive for exaggerated claims or fraud.
+
+2. **Single Vehicle Incident:**
+   - Involvement in a **single vehicle collision** presents a unique risk type since these incidents often lack witness corroboration. As a result, it's easier for claimants to manipulate details without an independent account of the crash's circumstances. 
+
+3. **Authorities Involved:**
+   - The involvement of an **ambulance** indicates there were potentially serious injuries, which can be a legitimate aspect of the claim. However, the absence of corroborative details regarding the incident itself may hinder clear verification of the events leading to injury.
+
+4. **Lack of Incident Details:**
+   - The absence of detailed descriptions or circumstances surrounding the accident raises issues. Clear, documented facts are crucial in verifying claims, particularly when a significant amount is involved.
+
+5. **Driver Profile:**
+   - While **Chloe Parker** is **45 years old** with **24 years** of driving experience, these factors generally contribute positively to assessing risk.
+   - The driver’s long-term insurance history (73 months) bodes well for credibility. However, a sound profile does not negate concerns if other elements of the claim seem suspicious.
+
+6. **Insurance Context:**
+   - An **insurance premium of $1,029** might be typical for someone with the claimant's profile, negating some concerns about malicious intent based on affordability. However, a considerable discrepancy exists between premium amounts and the claim sought.
+
+7. **Incident Analysis:**
+   - The crash occurred just recently, and with a **pending** status for the claim, more information may arise as the evaluation progresses. An open investigation often allows for collecting more evidence about the claim's legitimacy.
+
+### Conclusion
+The fraud likelihood remains moderate at **35%**, influenced by the substantial claim for a relatively older vehicle and ambiguous details regarding the incident’s circumstances. While Chloe Parker's profile as a mature, experienced driver mitigates some risk factors, the nature of the claim demands careful scrutiny. As the investigation unfolds, additional clarifications around the incident, insurance history, and potential recovery of the vehicle could lead to a clearer assessment. 
+
+**Next Steps:** Continuous monitoring of any updates regarding the claim details and implications of the police report should be prioritized. Investigative efforts could focus on gathering further evidence about the incident, including contacting the ambulance service to validate injury claims and exploring the vehicle's pre-incident condition through maintenance records or inspections.","Approving this claim was fraud risk seems quite low (35%)."
 "11","328","48","1000","1407","0","MD","Single Vehicle Collision","Major Damage","Police","9/10/2024","5","1","1","1","71610","11","28","Full","James","Roberts","20/10/2024","open","","pending","","","",""
 "12","57","25","2000","1143","1","Masters","Multi-vehicle Collision","Total Loss","Ambulance","10/10/2024","0","3","0","1","72900","5","9","Full","Emily","Anderson","20/10/2024","open","","pending","","","",""
 "13","215","38","500","1406","1","PhD","Single Vehicle Collision","Total Loss","Police","11/10/2024","10","1","0","0","70700","7","20","Full","Michael","Thompson","20/10/2024","open","","pending","","","",""
