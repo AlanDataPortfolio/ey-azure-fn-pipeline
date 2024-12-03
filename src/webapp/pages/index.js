@@ -532,7 +532,7 @@ export default function Home() {
                           {claimDetails.timeAsCustomer}
                         </div>
                         <div>
-                          <span className="font-semibold">Insurance Access ($):</span>{' '}
+                          <span className="font-semibold">Insurance Excess ($):</span>{' '}
                           {claimDetails.insuranceAccess}
                         </div>
                         <div>
